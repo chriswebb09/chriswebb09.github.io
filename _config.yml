@@ -1,0 +1,35 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               Chris Webb
+tagline:             iOS Dev Student
+url:                 chriswebb09.github.io
+paginate:            1
+baseurl:             ""
+pages_list:
+  About: '/about'
+  Posts: '/posts'
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Christopher Webb
+  url:               https://github.com/chriswebb09
+  email:
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/poole/poole
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
