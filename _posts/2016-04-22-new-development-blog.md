@@ -11,7 +11,7 @@ The journey of one thousand apps starts with a single key press...
 
 Well, it looks as if I am enrolling in the Flatiron School iOS immersive program. I'm going to use this place to document my experience as best as I can. Feel free to follow along.
 
-So far, my only experience with the Flatiron program has their prerequisite work that must complete during the application process. Given that you can access it for free regardless of whether you are accepted to their program, I find it pretty useful and informative.  Even if you're not not 100% percent sure you are ready to apply, but you're looking to get started on Objective-C programming or Ruby web development, I recommend checking out the pre-work courses. Who knows, you might even enjoy it enough to send in an application.
+So far, my only experience with the Flatiron program is with the prerequisite work that must be completed during the application process. You can access it for free regardless of whether you are accepted to the program. I find it pretty useful and informative.  Even if you're not not 100% percent sure you are ready to apply, but you're looking to get started on Objective-C programming or Ruby web development, I recommend checking out the pre-work courses. Who knows, you might even enjoy it enough to send in an application.
 
 You can check it their online pre-work and education here:
 
