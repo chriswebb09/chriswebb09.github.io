@@ -26,5 +26,6 @@ override func viewDidLoad() {
 
         
     }
+}
 
 {% endhighlight %}
