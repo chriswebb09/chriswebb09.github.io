@@ -15,14 +15,25 @@ Some Swift code from one of the assignments:
 
 {% highlight swift linenos %}
 
-override func viewDidLoad() {
-        super.viewDidLoad()
-        if let htmlFile = NSBundle.mainBundle().pathForResource("BullsEye", ofType: "html") {
-            if let htmlData = NSData(contentsOfFile: htmlFile) {
-                let baseURL = NSURL(fileURLWithPath: NSBundle.mainBundle().bundlePath)
-                webView.loadData(htmlData, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: baseURL)
-            }
+func updateOperation() {
+        operationalIndex = Int(arc4random_uniform(4))
+        switch operationalIndex {
+        case 1 :
+            operationLabel.text = String("+")
+            operational = 1
+        case 2 :
+            operationLabel.text = String("-")
+            operational = 2
+        case 3 :
+            operationLabel.text = String("÷")
+            operational = 3
+        case 4 :
+            operationLabel.text = String("x")
+            operational = 4
+        default :
+            operationLabel.text = String("+")
+            operational = 1
         }
-}
+    }
 
 {% endhighlight %}
