@@ -15,7 +15,7 @@ So far, my only experience with the Flatiron program is with the prerequisite wo
 
 You can check out their online pre-work education here:
 
-* [Flation School's Learn Co](https://learn.co)
+* [Flatiron School's Learn Co](https://learn.co)
 
 This is an example of a pretty basic exercise. The work doesn't get too complicated, it mainly familiarizes you with concepts enough so that you can A. do the coding exercise to discuss for the technical interview and B. have enough knowledge to hit the ground running on day one should you be accepted.  Since I'm doing the iOS immersive the code is in Objective-C:
 
