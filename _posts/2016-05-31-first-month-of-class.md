@@ -23,9 +23,6 @@ override func viewDidLoad() {
                 webView.loadData(htmlData, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: baseURL)
             }
         }
-
-        
-    }
 }
 
 {% endhighlight %}
