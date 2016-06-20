@@ -21,7 +21,7 @@ When tackling this process let's first consider the steps involved in getting th
 
 
 ### Extra Info
-When you send request a URL on the web it looks roughly something like this: 
+When you send request a URL on the web it looks roughly (most of the time) something like this (source objc.io post on tcp/ip http): 
 
 {% highlight http linenos %}
 GET /about.html HTTP/1.1
@@ -36,6 +36,8 @@ Referer: http://www.objc.io/
 DNT: 1
 Accept-Language: en-us
 {% endhighlight %}
+
+While networking, TCP/IP, HTTP or the OSI model are not necesary to know to complete this exercise and probably not something you'll need to know the ins and outs of on a daily basis as a developer, its definitely handy knowledge.
 
 ### Raw Web Data
  To get started, let's get our data from the web by creating a method that takes an NSString parameter, passedURL, which returns an NSString of the raw web content.
