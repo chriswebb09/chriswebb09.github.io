@@ -11,6 +11,7 @@ The journey of one thousand apps starts with a single key press...
 
 Using Objective C get and format web data is not an overly complicated process, but it isn’t something that can be (*should be done) straightforwardly within a single method.
 
+### Getting Started 
 When tackling this, we need to consider what is required to get the data, and then format in a way which you will find meaningful/useful. Luckily, there are two classes that Apple provides in the Foundation Library that will simplify this process immensely.  These are NSURL and NSRegularExpression. We will be using NSURL to pass in a web url and return the raw web data from the request. NSRegularExpression will take in a set of parameters which it uses to find matching content within whatever data it must search through. You may have heard of regular expressions or regexes before. In general it’s not necessary to learn regexes too in depth. Most patterns can be found easily through Googling. In this example we are going to be specifying a general url pattern which looks like: 
 
 {% highlight objc linenos %}
@@ -49,3 +50,4 @@ http://www.<whateveritfinds>.com
 }
 {% endhighlight %}
 
+In the next post, part 2, we'll go over what you should with that data you just scraped. 
