@@ -38,15 +38,13 @@ http://www.<whateveritfinds>.com
  - (NSString*)getURLContentFromURL:(NSString *)passedURL {
     
     NSError* error = nil;
-    NSURL *url = [NSURL URLWithString:passedURL];
     //Set url
+    NSURL *url = [NSURL URLWithString:passedURL];
     NSString *htmlData = [NSString stringWithContentsOfURL:url encoding:NSASCIIStringEncoding error:&error];
     //Get content from web using url variable are target.
     if (htmlData) {
-        //If the response from the web request was htmlData
         NSLog(@"%@", htmlData);
     } else {
-        //If response wasn't htmlData return error.
         NSLog(@"%@", error);
     }
     return htmlData;
