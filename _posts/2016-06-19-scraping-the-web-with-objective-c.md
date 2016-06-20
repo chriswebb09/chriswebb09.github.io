@@ -70,4 +70,4 @@ If you did this correctly, you can use NSLog(@"%@", htmlData) to see the overwhe
 Lovely isn't it?
 ![placeholder](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/screenshot.png "Raw web content")
 
-In part 2, we'll go over what you should with that data you just scraped. 
+In part 2, we'll go over what we need to do with that data to make sense of it in a way that a reasonable person could work with.
