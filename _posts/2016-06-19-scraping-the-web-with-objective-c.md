@@ -9,28 +9,36 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
-Using Objective C to get and format web data is not an overly complicated process, but it isn’t something that can be, (*or should be) done straight forward within a single method.
+Using Objective-C to get and format web data is not an overly complicated process, but it isn’t something that should be done straight forward within a single method. We will be using NSURL class to pass in a web url and return raw webpage and NSRegularExpression to make sense of that data. Part one will be primarily confined to the web request aspect of our task. In part two we will go over using NSRegularExpression to filter through the noise that the raw request returns so that you can find something useful.
 
-### Getting Started 
-When tackling this process we need to consider what is required to get the data, then to format it in a way which will be meaningful or useful. Luckily, there are two classes that Apple provides in the Foundation Library that will simplify this process immensely. These are NSURL and NSRegularExpression classes. We will be using NSURL to pass in a web url and return the raw web data from the request. NSRegularExpression takes in a provided pattern which can then be used to find matching content within whatever data set you provide.
 
-### Regex 
-You may have heard of regular expressions or regexes before. Regexes are a way of specifying a pattern within data that is provided. It's why for example, a site will know whether or not a email address is in a valid format or whether a password is strong enough. In general it’s not necessary to learn regexes too in depth. Most patterns can be found easily through Googling. In this example we are going to be specifying a general url pattern which looks like: 
+### Brief Overview
+When tackling this process let's first consider the steps involved in getting the final result. In this order (roughly) we need to do the following:
 
-{% highlight objc linenos %}
-@"http?://([-\\w\\.]+)+(:\\d+)?(/([\\w/_\\.]*(\\?\\S+)?)?)?";
+-specify the url to scrape data from 
+-make our web request 
+-store the return in a data structure to be used later
+
+
+### Extra Info
+When you send request a URL on the web it looks roughly something like this: 
+
+{% highlight http linenos %}
+GET /about.html HTTP/1.1
+Host: www.objc.io
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+If-None-Match: "a54907f38b306fe3ae4f32c003ddd507"
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+If-Modified-Since: Mon, 10 Feb 2014 18:08:48 GMT
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.74.9 (KHTML, like Gecko) Version/7.0.2 Safari/537.74.9
+Referer: http://www.objc.io/
+DNT: 1
+Accept-Language: en-us
 {% endhighlight %}
-
-We want our program to grab the raw text response from our web request so that it can then hand that off to the regular expression finder which will then go through all that data and find anything that matches
-
-{% highlight html linenos %}
-http://www.<whateveritfinds>.com 
-{% endhighlight %}
-
- Every time it finds a match it should add that match to a data structure which can be returned at the end of the function.
 
 ### Raw Web Data
- First things first. Let's get our data from the web by creating a method that takes an NSString parameter, passedURL, and returns an NSString of the raw web content.
+ To get started, let's get our data from the web by creating a method that takes an NSString parameter, passedURL, which returns an NSString of the raw web content.
 
 
 {% highlight objc linenos %}
