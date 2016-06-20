@@ -30,7 +30,7 @@ http://www.<whateveritfinds>.com
  Every time it finds a match it should add that match to a data structure which can be returned at the end of the function.
 
 ### Raw Web Data
- First things first. Let's get our data from the web by creating a class method that takes an NSString parameter passedURL and returns an NSString of raw web content.
+ First things first. Let's get our data from the web by creating a method that takes an NSString parameter, passedURL, and returns an NSString of the raw web content.
 
 
 {% highlight objc linenos %}
@@ -53,4 +53,4 @@ http://www.<whateveritfinds>.com
 }
 {% endhighlight %}
 
-In the next post, part 2, we'll go over what you should with that data you just scraped. 
+If you use NSLog(@"%@", htmlData) you should see the overwhelming chaos that an unfiltered web request can return. In the next post, part 2, we'll go over what you should with that data you just scraped. 
