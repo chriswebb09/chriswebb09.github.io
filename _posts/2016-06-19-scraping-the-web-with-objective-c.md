@@ -17,7 +17,8 @@ When tackling this process let's first consider the steps involved in accomplish
 
 * Specify the url to scrape data from 
 * Make our web request 
-* Store the return in a data structure to be used later
+* Store what is returned to us in a data structure to be used later
+
 
 
 ### Extra Info
@@ -39,10 +40,10 @@ Accept-Language: en-us
 
 {% endhighlight %}
 
-While networking, TCP/IP, HTTP or the OSI model are not necesary to know to complete this exercise and probably not something you'll need to know the ins and outs of on a daily basis as a developer, its definitely handy knowledge.
+While networking, TCP/IP, HTTP or the OSI model are not necesary to know to complete this exercise and probably not something you'll need to know the ins and outs of on a daily basis as a developer, its definitely handy knowledge. NSURL comes standard in Apple's Foundation Library and it provides us with most of the functionality we need without requiring much input from the developer. 
 
 ### Raw Web Data
- To get started, let's get our data from the web by creating a method that takes an NSString parameter, passedURL, which returns an NSString of the raw web content.
+ To get started, let's get our data from the web by creating a method getWebContentFromURL that takes an NSString parameter, passedURL, and which returns an NSString of the raw web content. 
 
 
 {% highlight objc linenos %}
