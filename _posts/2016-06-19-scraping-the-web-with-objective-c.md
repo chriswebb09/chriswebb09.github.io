@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scraping The Web Objective-C 
+title: Scraping The Web With Objective-C 
 ---
 
 <p class="message">
