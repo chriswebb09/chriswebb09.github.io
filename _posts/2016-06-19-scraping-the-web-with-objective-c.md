@@ -9,11 +9,11 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
-Using Objective-C to get and format web data is not an overly complicated process, but it isn’t something that should be done straight forward within a single method. We will be using NSURL class to pass in a web url and return raw webpage and NSRegularExpression to make sense of that data. Part one will be primarily confined to the web request aspect of our task. In part two we will go over using NSRegularExpression to filter through the noise that the raw request returns so that you can find something useful.
+Using Objective-C to get and format web data is not an overly complicated process, but it isn’t something that should be done straight forward within a single method. In this example we will be using NSURL class to pass in a web url and return raw webpage and the NSRegularExpression class to make sense of that data. Part one will be primarily confined to the web request aspect of our task. In part two we will go over using NSRegularExpression to filter through the noise that the raw request returns so that you can find something useful.
 
 
 ### Brief Overview
-When tackling this process let's first consider the steps involved in getting the final result. In this order (roughly) we need to do the following:
+When tackling this process let's first consider the steps involved in accomplishing our goal in this first part and setting ourselves up for the working with that data.. In this order (roughly) we need to do the following:
 
 * Specify the url to scrape data from 
 * Make our web request 
@@ -24,6 +24,7 @@ When tackling this process let's first consider the steps involved in getting th
 When you send request a URL on the web it looks roughly (most of the time) something like this (source objc.io post on tcp/ip http): 
 
 {% highlight http linenos %}
+
 GET /about.html HTTP/1.1
 Host: www.objc.io
 Accept-Encoding: gzip, deflate
@@ -35,6 +36,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.74.9 
 Referer: http://www.objc.io/
 DNT: 1
 Accept-Language: en-us
+
 {% endhighlight %}
 
 While networking, TCP/IP, HTTP or the OSI model are not necesary to know to complete this exercise and probably not something you'll need to know the ins and outs of on a daily basis as a developer, its definitely handy knowledge.
@@ -45,7 +47,7 @@ While networking, TCP/IP, HTTP or the OSI model are not necesary to know to comp
 
 {% highlight objc linenos %}
 
- - (NSString*)getURLContentFromURL:(NSString *)passedURL {
+ - (NSString*)getWebContentFromURL:(NSString *)passedURL {
     
     NSError* error = nil;
     //Set url
