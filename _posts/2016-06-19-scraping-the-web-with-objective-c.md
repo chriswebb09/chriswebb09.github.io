@@ -64,4 +64,12 @@ While networking, TCP/IP, HTTP or the OSI model are not necesary to know to comp
 }
 {% endhighlight %}
 
-If you use NSLog(@"%@", htmlData) you should see the overwhelming chaos that an unfiltered web request can return. In the next post, part 2, we'll go over what you should with that data you just scraped. 
+If you did this correctly, you can use NSLog(@"%@", htmlData) to see the overwhelming chaos that is an unfiltered web request. 
+
+
+![placeholder](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/screenshot.png "Raw web content")
+
+
+Lovely isn't it?
+
+In part 2, we'll go over what you should with that data you just scraped. 
