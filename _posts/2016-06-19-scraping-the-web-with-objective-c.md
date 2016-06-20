@@ -52,5 +52,5 @@ We want our program to grab the raw text response from our web request so that i
     return htmlData;
 }
 
-{% highlight objc linenos %}
+{% endhighlight %}
 
