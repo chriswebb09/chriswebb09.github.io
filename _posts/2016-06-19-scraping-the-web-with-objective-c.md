@@ -15,9 +15,9 @@ Using Objective-C to get and format web data is not an overly complicated proces
 ### Brief Overview
 When tackling this process let's first consider the steps involved in getting the final result. In this order (roughly) we need to do the following:
 
-* specify the url to scrape data from 
-* make our web request 
-* store the return in a data structure to be used later
+* Specify the url to scrape data from 
+* Make our web request 
+* Store the return in a data structure to be used later
 
 
 ### Extra Info
