@@ -34,7 +34,7 @@ When you send request a URL on the web it looks roughly (most of the time) somet
 * Connected to flatironschool.com (104.236.44.135) port 80 (#0)
 {% endhighlight %}
 
-*HTTP GET request*
+HTTP GET request
 
 {% highlight http linenos %}
 
@@ -46,7 +46,7 @@ Accept: */*
 {% endhighlight %}
 
 
-*HTTP response 200 - everything is a-okay*
+HTTP response 200 - everything is a-okay
 
 {% highlight http linenos %}
 
