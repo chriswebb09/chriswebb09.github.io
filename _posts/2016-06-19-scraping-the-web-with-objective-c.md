@@ -32,7 +32,7 @@ When you send request a URL on the web it looks roughly (most of the time) somet
 * Rebuilt URL to: http://flatironschool.com/
 *   Trying 104.236.44.135...
 * Connected to flatironschool.com (104.236.44.135) port 80 (#0)
-* 
+
 {% endhighlight %}
 
 *HTTP GET request*
@@ -47,7 +47,7 @@ Accept: */*
 {% endhighlight %}
 
 
-*HTTP response 200 - everything is a-okay 
+*HTTP response 200 - everything is a-okay*
 
 {% highlight http linenos %}
 
@@ -93,8 +93,8 @@ For our purposes, NSURL comes standard in Apple's Foundation Library and it prov
 If you did this correctly, you can use NSLog(@"%@", htmlData) to see the overwhelming chaos that is an unfiltered web request. 
 
 
-*Lovely isn't it?*
+### Lovely isn't it?
 
 ![placeholder](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/screenshot.png "Raw web content")
 
-In **part 2**, we'll go over what we need to do with that data to make sense of it in a way that a reasonable person could work with.
+In **Part 2**, we'll go over what we need to do with that data to make sense of it in a way that a reasonable person could work with.
