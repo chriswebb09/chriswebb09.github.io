@@ -32,7 +32,6 @@ When you send request a URL on the web it looks roughly (most of the time) somet
 * Rebuilt URL to: http://flatironschool.com/
 *   Trying 104.236.44.135...
 * Connected to flatironschool.com (104.236.44.135) port 80 (#0)
-
 {% endhighlight %}
 
 *HTTP GET request*
