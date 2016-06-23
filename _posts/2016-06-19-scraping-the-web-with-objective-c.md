@@ -13,7 +13,7 @@ Using Objective-C to get and format web data is not an overly complicated proces
 
 
 ### Brief Overview
-When tackling this process let's first consider the steps involved in accomplishing our goal in this first part and setting ourselves up for the working with that data.. In this order (roughly) we need to do the following:
+When tackling this process, first we should consider the steps involved in accomplishing our goal as well as what we need to do to be able to move on to the second part. In this order (roughly) we need to do the following:
 
 * Specify the url to scrape data from 
 * Make our web request 
@@ -22,9 +22,9 @@ When tackling this process let's first consider the steps involved in accomplish
 
 
 ### What's going on behind the scenes when you surf the web...
-Let's briefly go over what happens when you type in a url in your web browser and hit return. Without going into much detail, broadly speaking, your computer breaks down your your attempt to visit a web address into an HTTP GET request which is then packaged within TCP/IP and sent out into big wide internet as packets. This glosses over, ignores or is flat out wrong in many cases, I know. Networking is an incredibly complicated subject, with massive books devoted to teaching it. If you are at all concerned you can go buy one of those books. For the purposes of this example, we're going to be simplifying things. 
+Let's briefly go over what happens when you type in an address into your web browser and hit return. Without going into much detail, broadly speaking, your computer breaks down your your attempt to visit a web address into an HTTP GET request which is then packaged within TCP/IP and sent out into big wide internet as packets. This glosses over, ignores or is flat out wrong in many cases, I know. Networking is an incredibly complicated subject, with massive books devoted to teaching it. If you are at all concerned you can go buy one of those books. For the purposes of this example, we're going to be simplifying things. 
 
-When you send request a URL on the web it looks roughly (most of the time) something like this: 
+When you send your request on the web it looks roughly (most of the time) something like this: 
 
 {% highlight  linenos %}
 
