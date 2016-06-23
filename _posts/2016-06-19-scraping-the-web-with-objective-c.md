@@ -9,7 +9,7 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
-Using Objective-C to get and format web data is not an overly complicated process, but it isn’t something that should be done straight forward within a single method. In this example we will be using NSURL class to pass in a url and return raw webpage and the NSRegularExpression class to filter through and make sense of that data. Part one will be primarily confined to the web request aspect of our task. In part two, we will use NSRegularExpression to filter through the noise that the raw request returns, so that you can find something useful.
+Using Objective-C to get and format web data is not an overly complicated process, but it isn’t something that should be done straight in as forward fashion within a single method. In this example we will be using NSURL class to pass in a url and return a raw webpage and the NSRegularExpression class to filter through and make sense of that data. Part one will be primarily confined to the web request aspect of our task. In part two, we will use NSRegularExpression to filter through the noise that the raw request returns, so that you can find something useful.
 
 
 ### Brief Overview
@@ -22,7 +22,7 @@ When tackling this process, first we should consider the steps involved in accom
 
 
 ### What's going on behind the scenes when you surf the web...
-Let's briefly go over what happens when you type in an address into your web browser and hit return. Without going into much detail, broadly speaking, your computer breaks down your your attempt to visit a web address into an HTTP GET request which is then packaged within TCP/IP and sent out into big wide internet as packets. This glosses over, ignores or is flat out wrong in many cases, I know. Networking is an incredibly complicated subject, with massive books devoted to teaching it. If you are at all concerned you can go buy one of those books. For the purposes of this example, we're going to be simplifying things. 
+Let's briefly go over what happens when you type in an address into your web browser and hit return. Without going into much detail, broadly speaking, your computer breaks down you attempt to visit a web address into an HTTP GET request which is then packaged within TCP/IP and sent out into big wide internet as packets. This glosses over, ignores or is flat out wrong in many cases, I know. Networking is an incredibly complicated subject, with massive books devoted to teaching it. If you are at all concerned you can go buy one of those books. For the purposes of this example, we're going to be simplifying things. 
 
 When you send your request on the web it looks roughly (most of the time) something like this: 
 
