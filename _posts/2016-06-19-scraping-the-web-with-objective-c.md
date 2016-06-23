@@ -9,7 +9,7 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
-Using Objective-C to get and format web data is not an overly complicated process, but it isn’t something that should be done straight forward within a single method. In this example we will be using NSURL class to pass in a web url and return raw webpage and the NSRegularExpression class to make sense of that data. Part one will be primarily confined to the web request aspect of our task. In part two we will go over using NSRegularExpression to filter through the noise that the raw request returns so that you can find something useful.
+Using Objective-C to get and format web data is not an overly complicated process, but it isn’t something that should be done straight forward within a single method. In this example we will be using NSURL class to pass in a url and return raw webpage and the NSRegularExpression class to filter through and make sense of that data. Part one will be primarily confined to the web request aspect of our task. In part two, we will use NSRegularExpression to filter through the noise that the raw request returns, so that you can find something useful.
 
 
 ### Brief Overview
