@@ -71,6 +71,6 @@ newMatch.search()
 
 And I got the following output in response: 
 
-![placeholder](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/screenshot.png "Raw web content")
+![placeholder](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/screenshot-2.png "Filtered Web Content")
 
 Now we can clearly find the relevant data in our unorganized input.
