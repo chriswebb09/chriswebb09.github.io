@@ -10,7 +10,7 @@ The journey of one thousand apps starts with a single key press...
 ---
 
 ### Brief Overview
-In part two we are going to switch from writing our code in Objective-C to writing in Swift. Before we get started, let's take a moment to go over what a regular expression is. Regular expressions are a way of defining broader text patterns, like phone numbers or urls, which you can then use to filter a larger block of text data and return only the relevant parts. Regexs are commonly used as a way to verify that a user input is in the correct format. In our case, we want to look at the webdata we retrieved earlier to find strings that conform to a basic http://<www.whateveritfinds.com>
+In part two we are going to switch from writing our code in Objective-C to writing in Swift. Before we get started, let's take a moment to go over what regular expressions are. Regular expressions are a way of defining broader text patterns, like phone numbers or urls, which you can then use to filter a larger block of text data and return only the relevant parts. Regexs are commonly used as a way to verify that a user input is in the correct format. In our case, we want to look at the webdata we retrieved earlier to find strings that conform to a basic http://www.whateveritfinds.com
 
 
 ### Implementing Our Code 
