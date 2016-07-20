@@ -10,19 +10,17 @@ The journey of one thousand apps starts with a single key press...
 ---
 
 ### Brief Overview
-In part two we are switching from Objective-C to Swift. Before we get started let's take a moment to go over what a regular expression is. Regular expressions are a way of defining broader text patterns which you can then use to filter your data. In many cases regexes are a way to verify that user input in correct like a telephone number isn't just some random string but actually matches the format for a standard phone number. In our case, we want to look at the webdata we've gotten and find strings that conform to a basic “http://<www.whateveritfinds.com>”
+In part two we are going to switch from writing our code in Objective-C to writing in Swift. Before we get started, let's take a moment to go over what a regular expression is. Regular expressions are a way of defining broader text patterns, like phone numbers or urls, which you can then use to filter a larger block of text data and return only the relevant parts. Regexs are commonly used as a way to verify that a user input is in the correct format. In our case, we want to look at the webdata we retrieved earlier to find strings that conform to a basic http://<www.whateveritfinds.com>
 
 
 ### Implementing Our Code 
 This is the regex pattern that gives us the basic pattern for the url: 
 
 {% highlight swift linenos %}
-
 "http?://([-\\w\\.]+)+(:\\d+)?(/([\\w/_\\.]*(\\?\\S+)?)?)?"
-
 {% endhighlight %}
 
-We will use the NSRegularExpression that Apple provides to us in the Foundation library. In my case I create a class SearchForURL: 
+Apple provides us with a NSRegularExpression class in the Foundation Library. It simplifies the whole process for us immensely. The way I implemented the search was in a class called SearchForURL:
 
 {% highlight swift linenos %}
 
@@ -60,7 +58,7 @@ class SearchForURL {
 
 {% endhighlight %}
 
-In my ViewController I added the following lines to test my code:
+To check whether my implementation works, in my ViewController I added the following lines of code:
 
 {% highlight swift linenos %}
 
@@ -73,4 +71,4 @@ And I got the following output in response:
 
 ![placeholder](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/screenshot-2.png "Filtered Web Content")
 
-Now we can clearly find the relevant data in our unorganized input.
+Now we can clearly find the relevant data in our unorganized input. 
