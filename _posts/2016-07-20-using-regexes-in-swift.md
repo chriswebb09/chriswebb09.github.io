@@ -23,7 +23,6 @@ This is the regex pattern that gives us the basic pattern for the url:
 Apple provides us with a NSRegularExpression class in the Foundation Library. It simplifies the whole process for us immensely. The way I implemented the search was in a class called SearchForURL:
 
 {% highlight swift linenos %}
-
 class SearchForURL {
     let input: String
     let pattern: String
@@ -55,16 +54,13 @@ class SearchForURL {
     }
     
 }
-
 {% endhighlight %}
 
 To check whether my implementation works, in my ViewController I added the following lines of code:
 
 {% highlight swift linenos %}
-
 let newMatch = SearchForURL(input: "http://www.someurl.com ht  www.newcode.com http://www.newcode.com")
 newMatch.search()
-
 {% endhighlight %}
 
 And I got the following output in response: 
