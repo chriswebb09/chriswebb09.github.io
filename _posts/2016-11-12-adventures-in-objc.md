@@ -43,6 +43,12 @@ It was one of those problems where the part that seems hard is easy, and the lit
 ### The case of the hard to access position ivar 
 The first problem I ran into was the projectile ivar for position was either null or when I tried to access it inside the animation was protected. Some additional complications that I ran into were that a lot of the functionality revolved around C++, which is a language I haven't explored yet. Just as I was about to try calculating the geometry for the intersection between the projectile and the enemy I found a simpler solution. If the I added physics to the scene and gave the bodies physics properties I could access the collision detection delegate. 
 
+{% highlight objc linenos %}
+self.physics = [CCPhysicsNode node];
+self.physics.gravity = ccp(0,0);
+self.physics.collisionDelegate = self;
+{% endhighlight %}
+
 ### Wrap up 
 After that, it was simply a matter of creating this method:
 
