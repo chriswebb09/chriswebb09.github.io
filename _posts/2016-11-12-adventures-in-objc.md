@@ -53,7 +53,7 @@ After that, it was simply a matter of creating this method:
 {% endhighlight %}
 
 and implementing code I wanted to run on collision. 
-As weird as the adjustment can be, overall Objective-C-land is an interesting place to explore and is a place I will make an effort to travel to more from now on. 
+As weird as the adjustment can be, overall Objective-C-land is an interesting place to explore. It is definitely a destination that I will make an effort to travel to more, from now on. 
 
 Sources: 
 
