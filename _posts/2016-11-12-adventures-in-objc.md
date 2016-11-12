@@ -14,8 +14,31 @@ So back into the land of Objective-C. It has definitely been an interesting fora
 Why not just dive right in with Cocos2D? I’ll admit the adjustment took some time, but the muscle memory comes back to life after a bit coding.
 
 ### Struggles and Observations  
-What was the hardest part? Collision detection was easily the part that I struggle with the most, although that is mainly be due more to my approach to solving it at first. The actual solution was relatively straight forward. The initial approach to solving it led to a dead end. I tried to find the the position of the projectile while it was in motion and check it against the enemy location.
+Overall I think the trickiest thing I've run across so far was making the sprite shoot and projectile and have it do some action on intersection with the enemy.
 
+ {% highlight objc linenos %}
+
+
+- (void)shootBulletsOnTouch:(UITouch *)touch {
+    
+    CCSprite *bullet = [CCSprite spriteWithImageNamed:@"bullet.png"];
+    [bullet setPosition:ccp(self.screenWidth/2, self.screenHeight/2)];
+    
+    id shoot = [CCActionMoveTo actionWithDuration:0.5 position:ccp(self.screenHeight, self.screenWidth/2)];
+    id ease = [CCActionEaseOut actionWithAction:shoot rate:1];
+    id speed = [CCActionSpeed actionWithAction:ease speed:1];
+    
+    [bullet runAction:speed];
+    
+    bullet.physicsBody = [CCPhysicsBody bodyWithCircleOfRadius:bullet.contentSize.width/2.0f andCenter:bullet.anchorPointInPoints];
+    bullet.physicsBody.collisionGroup = @"playerGroup";
+    bullet.physicsBody.collisionType  = @"projectileCollision";
+    [self.physics addChild:bullet];
+}
+
+{% endhighlight %}
+
+It was one of those problems where the part that seems hard is easy and the little things are where that are the most frustrating. Making the sprite shoot a projectile, what I would call the flashy aspect of the problem was relatively straightforward to figure out. What was the hardest part? Collision detection was easily the part that I struggled with the most, although that is mainly be due more to my approach to solving it at first. The actual solution was relatively straight forward. The initial approach to solving it led to a dead end. I tried to find the the position of the projectile while it was in motion and check it against the enemy location. 
 
 ### The case of the hard to access position ivar 
 The first problem I ran into was the projectile ivar for position was either null or when I tried to access it inside the animation was protected. Some additional complications that I ran into were that a lot of the functionality revolved around C++, which is a language I haven't explored yet. Just as I was about to try calculating the geometry for the intersection between the projectile and the enemy I found a simpler solution. If the I added physics to the scene and gave the bodies physics properties I could access the collision detection delegate. 
