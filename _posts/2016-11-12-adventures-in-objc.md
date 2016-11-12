@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adventures in Objective-C and Cocos2D
+title: Adventures in Cocos2D
 ---
 
 <p class="message">
