@@ -21,4 +21,12 @@ What was the hardest part? Collision detection was easily the part that I strugg
 The first problem I ran into was the projectile ivar for position was either null or when I tried to access it inside the animation was protected. Just as I was about to try calculating the geometry for the intersection between the projectile and the enemy I found a simpler solution. If the I added physics to the scene and gave the bodies physics properties I could access the collision detection delegate. 
 
 ### Wrap up 
-After that it’s simply a matter of creating this method (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair enemyCollision:(CCNode *)enemy bulletCollision:(CCNode *)bullet and implementing code I wanted to run on collision. 
+After that it’s simply a matter of creating this method
+
+{% highlight objc linenos %}
+
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair enemyCollision:(CCNode *)enemy bulletCollision:(CCNode *)bullet;
+
+{% endhighlight %}
+
+and implementing code I wanted to run on collision. 
