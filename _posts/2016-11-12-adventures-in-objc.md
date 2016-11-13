@@ -65,9 +65,9 @@ As weird as the adjustment can be, overall Objective-C-land is an interesting pl
 
 Sources: 
 
-- https://www.raywenderlich.com/61391/how-to-make-a-simple-iphone-game-with-cocos2d-3-0-tutorial
-- http://cocos2d.spritebuilder.com/docs/api/Classes/CCPhysicsBody.html
-- http://kirillmuzykov.com/cocos2d-iphone-easing-examples/
-- http://www.cocos2d-swift.org/docs/api/Protocols/CCPhysicsCollisionDelegate.html 
+- [https://www.raywenderlich.com/61391/how-to-make-a-simple-iphone-game-with-cocos2d-3-0-tutorial](https://www.raywenderlich.com/61391/how-to-make-a-simple-iphone-game-with-cocos2d-3-0-tutorial)
+- [http://cocos2d.spritebuilder.com/docs/api/Classes/CCPhysicsBody.html](http://cocos2d.spritebuilder.com/docs/api/Classes/CCPhysicsBody.html)
+- [http://kirillmuzykov.com/cocos2d-iphone-easing-examples/](http://kirillmuzykov.com/cocos2d-iphone-easing-examples/)
+- [http://kirillmuzykov.com/cocos2d-iphone-easing-examples/](http://www.cocos2d-swift.org/docs/api/Protocols/CCPhysicsCollisionDelegate.html) 
 
 
