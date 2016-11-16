@@ -10,11 +10,11 @@ The journey of one thousand apps starts with a single key press...
 ---
 
 ### Brief Overview
-So back into the land of Objective-C. It has definitely been an interesting foray after having spent the last three months in Swiftland. 
-Why not just dive right in with Cocos2D? I’ll admit the adjustment took some time, but the muscle memory comes back to life after a bit coding.
+So back into the land of Objective-C. It was definitely been an interesting foray after having spent the last three months in Swiftland. 
+Why not just dive right in with Cocos2D? I’ll admit, the adjustment took some time, but the muscle memory comes back to life after a bit coding.
 
 ### Struggles and Observations  
-Overall, I think the trickiest thing I've run across so far, was making the sprite shoot a projectile and have it do some action on intersection with the enemy.
+Overall, I think the trickiest thing I've run across was making the sprite shoot a projectile and having it do some action on intersection with the enemy.
 
  {% highlight objc linenos %}
 
