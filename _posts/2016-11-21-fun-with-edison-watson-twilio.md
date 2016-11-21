@@ -13,7 +13,7 @@ The journey of one thousand apps starts with a single key press...
 
 Sometimes it’s nice to step away from the familiar Apply-world that I find myself working in so often and try new things.
 This weekend I was able took just such an opportunity while participating in the AT&T Mobile IOT Hackathon to explore some new technology.
-Some of the coolest explorations involved Intel’s Edison board, IBM’s Watson’s, server-side Swift and the Twilio platform. 
+Some of the coolest explorations involved Intel’s Edison board, IBM’s Watson, server-side Swift with IBM's Bluemix and Kitura and Twilio's message platform.
 
 ### Working with Edison
 
