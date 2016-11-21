@@ -29,7 +29,7 @@ ALSA. After hooking the microphone into the the board, we were able to record a 
 
 {% highlight  linenos %}
 
-arecord -f cd -c 1 -D hw:2,0 mono.wav
+root@device:~# arecord -f cd -c 1 -D hw:2,0 mono.wav
 
 {% endhighlight %}
 
