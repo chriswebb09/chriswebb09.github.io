@@ -15,9 +15,14 @@ Sometimes it’s nice to step away from the familiar Apply-world that I find mys
 This weekend I was able took just such an opportunity while participating in the AT&T Mobile IOT Hackathon to explore some new technology.
 Some of the coolest explorations involved Intel’s Edison board, IBM’s Watson’s, server-side Swift and the Twilio platform. 
 
+### Working with Edison
+
 Edison ended up being one of the biggest challenges. We decided to use it to transcribe sound to text for two reasons.
 First: the external microphone add-on was more sensitive than the iPhone’s, also using Edison was one of the criteria for the Hackathon. 
 Beyond that, it’s always interesting to learn new things. 
+
+
+### ALSA for sound
 
 After flashing a new install to the board, we ssh’d our way onto it and used the package manager, opkg to install the linux sound library,
 ALSA. After hooking the microphone into the the board, we were able to record a wav file sound file by using the following command
