@@ -19,6 +19,8 @@ Edison ended up being one of the biggest challenges. We decided to use it to tra
 First: the external microphone add-on was more sensitive than the iPhone mic. Also using Edison was one of the criteria for the Hackathon. 
 Beyond that, it’s always interesting to explore new things. 
 
+[Edison Board](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/437f929f-bb3e-499f-b49b-aded7a3838d8-imageId%3D7796fe05-9f70-4a00-8303-e1ea5755cdec.png)
+
 
 ### ALSA for sound
 
