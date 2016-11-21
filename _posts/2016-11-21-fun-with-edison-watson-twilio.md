@@ -33,6 +33,8 @@ arecord -f cd -c 1 -D hw:2,0 mono.wav
 
 {% endhighlight %}
 
+### Curl it up to the Watson cloud
+
 Once the desired length of sound had been recorded, you press control-c to exit and now there is a mono.wav sound file saved onto your 
 Edison board filesystem. In order to work with that sound file, you can use SFTP and download it onto your computer. 
 Or you can do what we did, which is send it up to Watson for speech-to-text analysis. 
