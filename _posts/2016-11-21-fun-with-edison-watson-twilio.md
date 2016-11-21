@@ -16,14 +16,13 @@ Sometimes it can be refreshing to step away from the familiar Apply-world that I
 ### Working with Edison
 
 Edison ended up being one of the biggest challenges. We decided to use it to transcribe sound to text for two reasons.
-First: the external microphone add-on was more sensitive than the iPhone’s, also using Edison was one of the criteria for the Hackathon. 
-Beyond that, it’s always interesting to learn new things. 
+First: the external microphone add-on was more sensitive than the iPhone mic. Also using Edison was one of the criteria for the Hackathon. 
+Beyond that, it’s always interesting to explore new things. 
 
 
 ### ALSA for sound
 
-After flashing a new install to the board, we ssh’d our way onto it and used the package manager, opkg to install the linux sound library,
-ALSA. After hooking the microphone into the the board, we were able to record a wav file sound file by using the following command
+After flashing a new install to the board, we ssh’d our way onto it and used the package manager, opkg, to install the linux sound library, ALSA. After hooking external the microphone into the the board, we were able to record a wav file sound file by using the following command
 
 {% highlight  linenos %}
 
@@ -33,8 +32,7 @@ root@device:~# arecord -f cd -c 1 -D hw:2,0 mono.wav
 
 ### Curl it up to the Watson cloud
 
-Once the desired length of sound had been recorded, you press control-c to exit and now there is a mono.wav sound file saved onto your 
-Edison board filesystem. In order to work with that sound file, you can use SFTP and download it onto your computer. 
+Once the desired length of sound had been recorded, it is a matter of pressing control-c to exit and now a mono.wav sound file is saved onto the Edison board filesystem. In order to work with that sound file, you can use SFTP to download it onto your computer. 
 Or you can do what we did, which is send it up to Watson for speech-to-text analysis. 
 
 {% highlight  linenos %}
