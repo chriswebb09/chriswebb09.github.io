@@ -11,7 +11,7 @@ The journey of one thousand apps starts with a single key press...
 
 ### IBM, Intel and Twilio
 
-Sometimes it can be refreshing to step away from the familiar Appley-world that I find myself working in most of the time and try new things. This weekend I was able to take just such an opportunity while participating in the AT&T Mobile IOT Hackathon to explore some new technology. Some of the coolest explorations involved Intel’s Edison board, IBM’s Watson, server-side Swift with IBM's Bluemix and Kitura and Twilio's message platform.
+Sometimes it can be refreshing to step away from the familiar Appley-world that I find myself working in most of the time and try new things. This weekend I was able to take just such an opportunity while participating in the AT&T Mobile IOT Hackathon to explore some new technology. Some of the coolest explorations involved Intel’s Edison board, IBM’s Watson, server-side Swift with IBM's Bluemix and Kitura and Twilio's messaging platform.
 
 ### Working with Edison
 
@@ -24,7 +24,7 @@ Beyond that, it’s always interesting to explore new things.
 
 ### ALSA for sound
 
-After flashing a new install to the board, we ssh’d our way onto it and used the package manager, opkg, to install the linux sound library, ALSA. After hooking external the microphone into the the board, we were able to record a wav file sound file by using the following command
+After flashing a new install to the board, we ssh’d our way onto it and used the package manager, opkg, to install the linux sound library ALSA. After hooking the external microphone into the the board, we were able to record a wav file sound file by using the following command
 
 {% highlight  linenos %}
 
@@ -34,8 +34,7 @@ root@device:~# arecord -f cd -c 1 -D hw:2,0 mono.wav
 
 ### Curl it up to the Watson cloud
 
-Once the desired length of sound had been recorded, it is a matter of pressing control-c to exit and now a mono.wav sound file is saved onto the Edison board filesystem. In order to work with that sound file, you can use SFTP to download it onto your computer. 
-Or you can do what we did, which is send it up to Watson for speech-to-text analysis. 
+Once the desired length of sound had been recorded, it is a matter of pressing control-c to exit and now a mono.wav sound file is saved onto the Edison board filesystem. In order to work with that sound file, you can use SFTP to download it onto your computer. Or you can do what we did, which is send it up to Watson for speech-to-text analysis. 
 
 {% highlight  linenos %}
 
