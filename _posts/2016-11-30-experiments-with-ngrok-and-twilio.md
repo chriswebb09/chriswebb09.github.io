@@ -74,6 +74,8 @@ user:~# >> openssl pkcs12 -in ~/dev/certs/VoIPTwil.p12 -clcerts -nokeys -out cer
  
 Next post, part 2, we’ll dive into the workarounds needed to get the example app off the ground and running.
 
+
+
 Resources:
 
 - [CallKit](https://developer.apple.com/reference/callkit)
