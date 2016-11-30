@@ -40,6 +40,8 @@ user:~# python server.py
 
 ### Meet ngrok
 
+![ngrok](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/ngrok.png)
+
 One last note before we move on the iOSie aspects, Twilio recommends that you use ngrok to make a web URL from which you can 
 tunnel into localhost. Ngrok is cool and will come in handy for a lot of projects going forward. I suggest using Homebrew to i
 nstall it. 
