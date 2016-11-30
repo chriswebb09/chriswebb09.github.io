@@ -76,7 +76,7 @@ Next post, part 2, we’ll dive into the workarounds needed to get the example a
 
 
 
-Resources:
+## Resources:
 
 - [CallKit](https://developer.apple.com/reference/callkit)
 - [Getting Started with Programmable Voice SDK](https://www.twilio.com/docs/api/voice-sdk/ios/getting-started)
