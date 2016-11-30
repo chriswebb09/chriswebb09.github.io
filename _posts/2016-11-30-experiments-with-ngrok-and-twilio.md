@@ -19,7 +19,7 @@ framework directly and drag it into your project.
 
 ### Getting Started
 
-Additionally, if you look at the Swift code for the basic Swift project that does not use[CallKit](https://github.com/twilio/voice-callkit-quickstart-swift), it is written in older style Swift, using semicolons at the end of lines and working with depreciated features from Foundation. I’d recommend skipping that version because it will take you down the iOS 10 [UserNotifications](https://developer.apple.com/reference/usernotifications) rabbit hole. Not that it is a bad rabbit hole to [dive down](https://realm.io/news/tryswift-ellen-shapiro-pushing-envelope-ios-10-notifications/), but if you want to get familiar with what is possible with Twilio, it’s a bit beside the point or off-topic.
+Additionally, if you look at the Swift code for the basic Swift project that does not use [CallKit](https://github.com/twilio/voice-callkit-quickstart-swift), it is written in older style Swift, using semicolons at the end of lines and working with depreciated features from Foundation. I’d recommend skipping that version because it will take you down the iOS 10 [UserNotifications](https://developer.apple.com/reference/usernotifications) rabbit hole. Not that it is a bad rabbit hole to [dive down](https://realm.io/news/tryswift-ellen-shapiro-pushing-envelope-ios-10-notifications/), but if you want to get familiar with what is possible with Twilio, it’s a bit beside the point or off-topic.
 
 ### Using Flask
 
