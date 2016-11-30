@@ -31,9 +31,9 @@ setup, and it uses the Python framework [Flask](http://flask.pocoo.org), which i
 
 {% highlight  linenos %}
 
-user:~# sudo pip install requirements.txt
+user:~# >> sudo pip install requirements.txt
 
-user:~# python server.py
+user:~# >> python server.py
 
 {% endhighlight %}
 
@@ -46,9 +46,9 @@ nstall it.
 
 {% highlight  linenos %}
 
-user:~# brew cask install ngrok
+user:~# >> brew cask install ngrok
 
-user:~# ngrok http 5000
+user:~# >> ngrok http 5000
 
 {% endhighlight %}
 
@@ -66,6 +66,12 @@ VoIP Services Certificate to enable communication. This process is relatively st
 
 ### Wrap-up
 
- Once you’ve downloaded your VoIP, in your keychain access, you will need to export it to a [.p12](https://en.wikipedia.org/wiki/PKCS_12) file and extract the cert and private keys which you will need to add to your application setup on Twilio. Now you can go to your Twilio Dashboard and create a new Push Credential, pasting in the private and Cert keys when your configuring. Be sure to check ‘Sandbox’ in the options before you create the credentials.
-
+ Once you’ve downloaded your VoIP, in your keychain access, you will need to export it to a [.p12](https://en.wikipedia.org/wiki/PKCS_12) file and extract the cert and private keys which you will need to add to your application setup on Twilio. Now you can go to your Twilio Dashboard and create a new Push Credential, pasting in the private and Cert keys when your configuring. Be sure to check ‘Sandbox’ in the options before you create the credentials. Below is the way that Twilio recommends you get the key and cert files. 
+ 
+{% highlight  linenos %}
+user:~# >> openssl pkcs12 -in ~/dev/certs/VoIPTwil.p12 -nocerts -out key.pem
+user:~# >> openssl rsa -in key.pem -out key.pem
+user:~# >> openssl pkcs12 -in ~/dev/certs/VoIPTwil.p12 -clcerts -nokeys -out cert.pem
+{% endhighlight %}
+ 
 Next post, part 2, we’ll dive into the workarounds needed to get the example app off the ground and running.
