@@ -39,3 +39,5 @@ Apparently, there is some rivalry within the Apple programming universe between 
 - [https://github.com/apple/swift/blob/master/docs/proposals/ObjCInteroperation.rst](https://github.com/apple/swift/blob/master/docs/proposals/ObjCInteroperation.rst)
 
 - [http://www.drdobbs.com/class-hierarchy-graphs-function-devirtua/184401938](http://www.drdobbs.com/class-hierarchy-graphs-function-devirtua/184401938)
+
+- [https://en.wikipedia.org/wiki/Virtual_function](https://en.wikipedia.org/wiki/Virtual_function)
