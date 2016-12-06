@@ -26,7 +26,7 @@ Think of it conceptually as sort of like an optional for runtime in the sense th
 
 [NSHipster](http://nshipster.com/swift-objc-runtime/): "Method swizzling lets you swap the implementations of two methods, essentially overriding an existing method with your own while keeping the original around." 
 
-In Apple’s write-up for Swift optimization, they recommend that you do this as little as possible because it will make your code slower. The drawback to this way thinking is that, down the line, should someone else build something on top of your code, if you haven’t thought ahead and implemented it, it limits their capacity to change it as they might want. And it goes without saying that:
+[In Apple’s write-up for Swift optimization, they recommend that you do this as little as possible because it will make your code slower.](https://developer.apple.com/swift/blog/?id=27) The drawback to this way thinking is that, down the line, should someone else build something on top of your code, if you haven’t thought ahead and implemented it, it limits their capacity to change it as they might want. And it goes without saying that:
 
 ![neutralness](https://i.imgur.com/jRF1hwd.jpg)
 
