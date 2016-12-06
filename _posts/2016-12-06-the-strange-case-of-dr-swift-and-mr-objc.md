@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Strange Case Of Dr. Swift and Mr. Objc
+title: The Case Of Dr. Swift and Mr. Objc
 ---
 
 <p class="message">
