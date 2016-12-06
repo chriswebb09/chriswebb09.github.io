@@ -29,3 +29,11 @@ In Apple’s write-up for Swift optimization, they recommend that you do this as
 Apparently, there is some rivalry within the Apple programming universe between [Swifter and Objective-Cers.](https://ashfurrow.com/blog/contempt-in-swift/) I don’t know, and frankly, I couldn’t care any less what programming language you prefer.  Ultimately, use whatever works best for you.  
 
 ![neutralness](https://i.imgur.com/jRF1hwd.jpg)
+
+### Sources
+ 
+- [https://www.uraimo.com/2015/10/23/effective-method-swizzling-with-swift/](https://www.uraimo.com/2015/10/23/effective-method-swizzling-with-swift/)
+
+- [https://en.wikipedia.org/wiki/Inline_expansion](https://en.wikipedia.org/wiki/Inline_expansion)
+
+- [https://github.com/apple/swift/blob/master/docs/proposals/ObjCInteroperation.rst](https://github.com/apple/swift/blob/master/docs/proposals/ObjCInteroperation.rst)
