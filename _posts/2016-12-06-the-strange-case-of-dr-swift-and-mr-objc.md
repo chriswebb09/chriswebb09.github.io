@@ -9,7 +9,7 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
-
+## Diving In
 In Swift, you have the option of invoking the Objective-C runtime by using two different keywords: @objc and dynamic. This post endeavors to explain a tiny fraction of the information out there on what these keywords do and how they differ. 
 
 Apple describes the Objective-C runtime as follows:  “The runtime system acts as a kind of operating system for the Objective-C language; it’s what makes the language work” Which is sort of like BMW saying the “engine makes the wheels spin.”
@@ -18,6 +18,7 @@ Apple describes the Objective-C runtime as follows:  “The runtime system acts 
 
 ![neutralness](http://i.imgur.com/GCuxx.jpg)
 
+## Inlining and Virtualization
 Inlining is when the compiler replaces a method/function call with the actual implementation. Essentially, it hardcodes. This can remove the computational overhead of the more dynamic method calls, but it comes at the expense of hardcoding the implementation. Your code will now take up more space. It’s a tradeoff between optimizing for space and optimizing for performance. 
 
 Without getting too sidetracked, virtualization is when your program figures out which implementation of the code it is going to use at runtime, instead of compile time. The rabbit hole goes deep here, and is beyond the scope of what I want to cover. When you use "@objc" type annotation, you are making the modified code available to the Objective-C runtime. This does not, however, guarantee that the compiler, in its wisdom, will decide to use that option. 
@@ -30,6 +31,7 @@ Think of it conceptually as sort of like an optional for runtime, in the sense t
 
 ![neutralness](https://i.imgur.com/jRF1hwd.jpg)
 
+## Wrap Up
 Apparently, there is some rivalry within the Apple programming universe between [Swifters and Objective-Cers.](https://ashfurrow.com/blog/contempt-in-swift/) If you look around at blog posts, there is a fair amount of snark leveled towards eachother regarding this topic. I don’t know, and frankly, I couldn’t care any less what programming language you prefer. Ultimately, use whatever works best for you.  
 
 
