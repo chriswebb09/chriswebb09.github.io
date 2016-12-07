@@ -30,7 +30,7 @@ Think of it conceptually as sort of like an optional for runtime, in the sense t
 
 ![neutralness](https://i.imgur.com/jRF1hwd.jpg)
 
-Apparently, there is some rivalry within the Apple programming universe between [Swifter and Objective-Cers.](https://ashfurrow.com/blog/contempt-in-swift/) If you look around at blog posts, there is a fair amount of snark leveled towards eachother regarding this topic. I don’t know, and frankly, I couldn’t care any less what programming language you prefer. Ultimately, use whatever works best for you.  
+Apparently, there is some rivalry within the Apple programming universe between [Swifters and Objective-Cers.](https://ashfurrow.com/blog/contempt-in-swift/) If you look around at blog posts, there is a fair amount of snark leveled towards eachother regarding this topic. I don’t know, and frankly, I couldn’t care any less what programming language you prefer. Ultimately, use whatever works best for you.  
 
 
 
