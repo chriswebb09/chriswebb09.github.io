@@ -12,7 +12,7 @@ The journey of one thousand apps starts with a single key press...
 
 In Swift, you have the option of invoking the Objective-C runtime by using two different keywords: @objc and dynamic. This post endeavors to explain a tiny fraction of the information out there on what these keywords do and how they differ. 
 
-Apple describes the Object-C runtime as follows:  “The runtime system acts as a kind of operating system for the Objective-C language; it’s what makes the language work” Which is sort of like BMW saying the “engine makes the wheels spin.”
+Apple describes the Objective-C runtime as follows:  “The runtime system acts as a kind of operating system for the Objective-C language; it’s what makes the language work” Which is sort of like BMW saying the “engine makes the wheels spin.”
 
 [There is a lengthy write-up on the topic of the Objective-C runtime on developer.apple.com](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Introduction/Introduction.html) if you care to read it. “In Objective-C, messages aren’t bound to method implementations until runtime. The compiler converts a message expression, into a call to a messaging function, objc_msgSend.” In Swift, the compiler can do optimizations that make it incompatible with the Objective-C runtime.  These include method inlining and devirtualization. 
 
