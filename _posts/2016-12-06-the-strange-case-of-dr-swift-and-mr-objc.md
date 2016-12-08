@@ -25,6 +25,14 @@ Without getting too sidetracked, virtualization is when your program figures out
 
 Think of it conceptually as sort of like an optional for runtime, in the sense that it could be this, or it could be that, and we’ll let fate sort it all out later. Much in the same sense that you can force unwrap an optional, you can also force the Objective-C runtime by using the type annotation "dynamic. This ensures that it is dynamically dispatched in the Objective-C runtime using objc_msgSend(). If you want to use dynamic you will need to have the Foundation library imported into your file.  
 
+{% highlight swift linenos %} 
+
+@objc var = ["A", "B", "C"]
+
+dynamic var = ["A", "B", "C"]
+
+{% endhighlight %}
+
 ## Wrap Up
 Why might you want to do this? That's an interesting question. As Apple notes, even when running Objective-C you should rarely need to interact with the Objective-C runtime. Using it can be handy to implement things like method swizzling, to modify existing code that you would otherwise have trouble accessing. 
 
