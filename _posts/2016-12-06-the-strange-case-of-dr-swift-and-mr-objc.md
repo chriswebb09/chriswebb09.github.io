@@ -14,7 +14,7 @@ In Swift, you have the option of invoking the Objective-C runtime by using two d
 
 Apple describes the Objective-C runtime as follows:  “The runtime system acts as a kind of operating system for the Objective-C language; it’s what makes the language work” Which is sort of like BMW saying the “engine makes the wheels spin.”
 
-[There is a lengthy write-up on the topic of the Objective-C runtime on developer.apple.com](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Introduction/Introduction.html) if you care to read it. “In Objective-C, messages aren’t bound to method implementations until runtime. The compiler converts a message expression, into a call to a messaging function, objc_msgSend.” In Swift, the compiler can do optimizations that make it incompatible with the Objective-C runtime.  These include method inlining and devirtualization. Wheneven it can, Swift will optimize by using static dispatching, which is the fastest implementation for method dispatch. 
+[There is a lengthy write-up on the topic of the Objective-C runtime on developer.apple.com](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Introduction/Introduction.html) if you care to read it. “In Objective-C, messages aren’t bound to method implementations until runtime. The compiler converts a message expression, into a call to a messaging function, objc_msgSend.” In Swift, the compiler can do optimizations that make it incompatible with the Objective-C runtime.  These include method inlining and devirtualization. When ever it can, Swift will optimize by using static dispatching, which is the fastest implementation for method dispatch. 
 
 ![neutralness](http://i.imgur.com/GCuxx.jpg)
 
