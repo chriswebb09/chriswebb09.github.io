@@ -39,6 +39,8 @@ While a task and work are intimately related, they are not the same thing. Think
 OperationQueue and Operation are higher level abstractions from Apple’s [Grand Central Dispatch](https://developer.apple.com/reference/dispatch). What this means is that they are built on 
 top of the Grand Central Dispatch codebase. So when you implement an Operation, you are using GCD. 
 
+![Dispatch Queue](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/dispatchQueues.png)
+
 As a higher level abstraction, it is subject to less change when Apple tweaks the underlying code in as it progresses through of versions 
 numbers. In general, you should try to use the highest level abstraction that you can, because it means you will most likely have to change less of your code to work with newer versions. 
 
