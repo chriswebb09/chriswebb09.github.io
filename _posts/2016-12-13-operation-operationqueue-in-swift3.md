@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Operation and OperationQueue in Swift 3
+title: Operation and OperationQueue in Swift
 ---
 
 <p class="message">
