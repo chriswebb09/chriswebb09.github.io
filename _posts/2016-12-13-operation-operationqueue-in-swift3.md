@@ -34,6 +34,7 @@ top of the Grand Central Dispatch codebase. So when you implement an Operation, 
 As a higher level abstraction, it is subject to less change when Apple tweaks the underlying code in as it progresses through of versions 
 numbers. In general, you should try to use the highest level abstraction that you can, because it means you will most likely have to change less of your code to work with newer versions. 
 
+## Wrap Up
 GCD is ideal for quickly dispatching queues to their proper threads like when you need to do a quick update on your UI. But, if you have a 
 self-contained set of functionality and data you might be better off creating an Operation subclass. You can then have more fine-grained control over the execution of your Operation than you would by using GCD by itself.  
 
