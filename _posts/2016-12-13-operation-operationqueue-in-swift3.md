@@ -40,5 +40,6 @@ self-contained set of functionality and data you might be better off creating an
 
 In your custom Operation you can implement a custom version of the start() and cancel() methods to perform a unique process for the 
 initialization and ending of your sequence. As a simple example, you could log every time the operation gets canceled.  An example of where you would use Operation is for downloading an image. Network tasks are full of behaviors and data that you can plausibly encapsulate in a single operation. If you wanted to download several pictures, they could be added to their own image download OperationQueue. 
+
 ![puppyimg](https://github.com/chriswebb09/chriswebb09.github.io/blob/master/public/5ac1apZ.jpg)
 
