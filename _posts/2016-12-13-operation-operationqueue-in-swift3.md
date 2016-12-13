@@ -50,5 +50,7 @@ initialization and ending of your sequence. As a simple example, you could log e
 ### Sources 
 * [https://developer.apple.com/library/content/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationObjects/OperationObjects.html#//apple_ref/doc/uid/TP40008091-CH101-SW36](https://developer.apple.com/library/content/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationObjects/OperationObjects.html#//apple_ref/doc/uid/TP40008091-CH101-SW36)
 
+* [https://developer.apple.com/videos/play/wwdc2016/720/](https://developer.apple.com/videos/play/wwdc2016/720/)
+
 
 * [https://medium.com/@raulriera/nsoperations-nsoperationqueue-oh-my-88b707f9ba2e#.kf38sa61r](https://medium.com/@raulriera/nsoperations-nsoperationqueue-oh-my-88b707f9ba2e#.kf38sa61r)
