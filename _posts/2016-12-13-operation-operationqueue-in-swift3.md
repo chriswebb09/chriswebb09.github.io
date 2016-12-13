@@ -45,6 +45,8 @@ initialization and ending of your sequence. As a simple example, you could log e
 
 ![puppyimg](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/5ac1apZ.jpg)
 
+### Link to gist with example code will be added in near future.
+
 ### Sources 
 * [https://developer.apple.com/library/content/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationObjects/OperationObjects.html#//apple_ref/doc/uid/TP40008091-CH101-SW36](https://developer.apple.com/library/content/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationObjects/OperationObjects.html#//apple_ref/doc/uid/TP40008091-CH101-SW36)
 
