@@ -9,10 +9,12 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
+![GCD](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/train-symbol.jpg)
+
 ## Diving In
 Today I’m going to take a look as Operation, what it is exactly, and what you can do with it.  Hopefully, I can shed some light on it 
 if you’ve been confused. With the advent of Swift 3 and “the great renaminging,” much of the Swift code written from now onward will no
-longer have a large dose of NS prefixed classes within them. This the case with Operation and OperationQueue in Swift.
+longer have a large dose of NS prefixed classes within them. This the case with [Operation](https://developer.apple.com/reference/foundation/operation) and [OperationQueue](https://developer.apple.com/reference/foundation/operationqueue) in Swift.
 
 ### Operation
 Operation, the abstract class that was formally known as NSOperation, is the tool that Apple provides to developers for encapsulating 
@@ -28,7 +30,7 @@ Similarly, OperationQueue is what Apple uses to encapsulate work. While a task a
  Operations,throw them into an OperationQueue. 
 
 ### Appley-stuff
-OperationQueue and Operation are higher level abstractions from Apple’s Grand Central Dispatch. What this means is that they are built on 
+OperationQueue and Operation are higher level abstractions from Apple’s [Grand Central Dispatch](https://developer.apple.com/reference/dispatch). What this means is that they are built on 
 top of the Grand Central Dispatch codebase. So when you implement an Operation, you are using GCD. 
 
 As a higher level abstraction, it is subject to less change when Apple tweaks the underlying code in as it progresses through of versions 
