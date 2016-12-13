@@ -25,7 +25,7 @@ operation has states which clearly demarcate the stages of the process.
 Similarly, OperationQueue is what Apple uses to encapsulate work. 
 
 > An operation queue is the Cocoa equivalent of a concurrent dispatch queue and is implemented by the NSOperationQueue class. Whereas
-> dispatch queues always execute tasks in first-in, first-out order, operation queues take other factors into account when determining the > execution order of tasks. 
+> dispatch queues always execute tasks in first-in, first-out order, operation queues take other factors into account when determining the execution order of tasks. 
 -Apple
 
 While a task and work are intimately related, they are not the same thing. Think of Operation almost like a unit that makes up an OperationQueue. Filing papers may be a single task, but most likely, the work you do for your job encompasses more than that single task.  Or take for instance going to the supermarket. You go to the store, and getting each item on your list could be plausibly broken down in single operation package. Stepping out from there, your might have to take your laundry and go to the bank, etc. Now your trip to the supermarket was one Operation in a set of Operations called “errands” While each errand is an operation, it encapsulated inside the OperationQueue errands.
