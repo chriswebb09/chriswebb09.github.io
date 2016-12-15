@@ -65,6 +65,8 @@ func downloadImage(with completion: @escaping (Bool) -> ()) {
 
     }
 
+{% endhighlight %}
+{% highlight swift linenos %}
 func downloadButtonTapped() {
         switch (downloadImage.state) {
         case .preparing:
