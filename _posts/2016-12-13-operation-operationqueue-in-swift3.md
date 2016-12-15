@@ -27,16 +27,8 @@ Operation, the abstract class that was formally known as NSOperation, is the too
 the data and behaviors that make up the execution of a single task, regardless of complexity. The most important aspect here is that your 
 operation has states which clearly demarcate the stages of the process. 
 
-### OperationQueue
-Similarly, OperationQueue is what Apple uses to encapsulate work. 
+{% highlight swift linenos %}
 
-> An operation queue is the Cocoa equivalent of a concurrent dispatch queue and is implemented by the NSOperationQueue class. Whereas
-> dispatch queues always execute tasks in first-in, first-out order, operation queues take other factors into account when determining the execution order of tasks. 
--Apple
-
-While a task and work are intimately related, they are not the same thing. Think of Operation almost like a unit that makes up an OperationQueue. Filing papers may be a single task, but most likely, the work you do for your job encompasses more than that single task.  Or take for instance going to the supermarket. You going to the store and getting each item on your list could be plausibly broken down in single operation package. Stepping out from there, you might have to take your laundry to the dry claaner and stop by the bank, etc. Now your trip to the supermarket was one Operation in a set of Operations called “errands” While each errand is an operation, it encapsulated inside the OperationQueue errands.
-
- {% highlight swift linenos %}
 class DownloadOp: Operation {
     
     let downloadImage: DownloadImage
@@ -136,6 +128,17 @@ class DownloadOp: Operation {
 
 {% endhighlight %}
 
+
+### OperationQueue
+Similarly, OperationQueue is what Apple uses to encapsulate work. 
+
+> An operation queue is the Cocoa equivalent of a concurrent dispatch queue and is implemented by the NSOperationQueue class. Whereas
+> dispatch queues always execute tasks in first-in, first-out order, operation queues take other factors into account when determining the execution order of tasks. 
+-Apple
+
+While a task and work are intimately related, they are not the same thing. Think of Operation almost like a unit that makes up an OperationQueue. Filing papers may be a single task, but most likely, the work you do for your job encompasses more than that single task.  Or take for instance going to the supermarket. You going to the store and getting each item on your list could be plausibly broken down in single operation package. Stepping out from there, you might have to take your laundry to the dry claaner and stop by the bank, etc. Now your trip to the supermarket was one Operation in a set of Operations called “errands” While each errand is an operation, it encapsulated inside the OperationQueue errands.
+
+ 
 
  The important thing here is the clear delineation between Operations. You walk to the dairy isle and which kicks off the set of behaviors 
  and information which make up the "get milk" task. When you pay for your groceries, your errand “Get groceries” is finished. etc. If it
