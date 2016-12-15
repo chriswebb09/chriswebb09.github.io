@@ -42,6 +42,68 @@ class DownloadOp: Operation {
     let downloadImage: DownloadImage
     let session = URLSession(configuration: URLSessionConfiguration.default)
     
+     private var _ready = false {
+        willSet {
+            willChangeValue(forKey: "isReady")
+        }
+        didSet {
+            didChangeValue(forKey: "isReady")
+        }
+    }
+    
+    override var isReady: Bool {
+        return _ready
+    }
+    
+    private var _executing = false {
+        willSet {
+            willChangeValue(forKey: "isExecuting")
+        }
+        didSet {
+            didChangeValue(forKey: "isExecuting")
+        }
+    }
+    
+    override var isExecuting: Bool {
+        return _executing
+    }
+    
+    private var _finished = false {
+        willSet {
+            willChangeValue(forKey: "isFinished")
+        }
+        
+        didSet {
+            didChangeValue(forKey: "isFinished")
+        }
+    }
+    
+    override var isFinished: Bool {
+        return _finished
+    }
+    
+    override func start() {
+        _ready = true
+        super.start()
+        _executing = true
+        execute()
+    }
+
+    func execute() {
+        _ready = false
+        downloadImage(url: URL(string:"http://i.imgur.com/5ac1apZ.jpg")!, handler: { image in
+            OperationQueue.main.addOperation({
+                self.downloadImage.image = image
+            })
+        })
+    }
+    
+    func finish() {
+        _executing = false
+        _finished = true
+        _ready = true
+    }
+    
     init(downloadImage: DownloadImage) {
         self.downloadImage = downloadImage
     }
