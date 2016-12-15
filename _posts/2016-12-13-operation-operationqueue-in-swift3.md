@@ -101,12 +101,12 @@ class DownloadOp: Operation {
     }
     
     override func main() {
-        downloadImage(url: URL(string:"http://i.imgur.com/5ac1apZ.jpg")!, handler: { image in
-            OperationQueue.main.addOperation({
-                self.downloadImage.image = image
-            })
-        })
+        super.main()
+        downloadImage.state = .preparing
+        _ready = true
+        _finished = false
     }
+    
     
     func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
         let urlRequest = URLRequest(url:url)
