@@ -40,6 +40,46 @@ aeh
  and information which make up the "get milk" task. When you pay for your groceries, your errand “Get groceries” is finished. etc. If it
  can be plausibly be explained as a single task, then you can wrap it an NSOperation subclass.  If there are a set of interrelated 
  Operations,throw them into an OperationQueue. 
+ 
+ 
+ {% highlight swift linenos %}
+func downloadImage(with completion: @escaping (Bool) -> ()) {
+        
+        let queue = OperationQueue()
+        queue.name = "Image Download queue"
+        queue.maxConcurrentOperationCount = 2
+        queue.qualityOfService = .userInteractive
+        
+        self.downloadImage.state = .downloaded
+        queue.addOperation { () -> Void in
+            let downloader = DownloadOp(downloadImage: self.downloadImage)
+            downloader.downloadImage(url:URL(string:"http://i.imgur.com/5ac1apZ.jpg")! , handler: { image in
+                OperationQueue.main.addOperation({
+                    print("done")
+                    self.imageView.image = image
+                })
+                
+            })
+        }
+        completion(true)
+
+    }
+
+func downloadButtonTapped() {
+        switch (downloadImage.state) {
+        case .preparing:
+            downloadImage(with: { result in
+                print(result)
+                dump(self.downloadImage.image)
+            })
+        case .downloading:
+            print("nope")
+        case .downloaded:
+            print("already downloaded")
+        }
+        
+    }
+{% endhighlight %}
 
 ### Appley-stuff
 OperationQueue and Operation are higher level abstractions from Apple’s [Grand Central Dispatch](https://developer.apple.com/reference/dispatch). What this means is that they are built on 
