@@ -35,7 +35,46 @@ Similarly, OperationQueue is what Apple uses to encapsulate work.
 -Apple
 
 While a task and work are intimately related, they are not the same thing. Think of Operation almost like a unit that makes up an OperationQueue. Filing papers may be a single task, but most likely, the work you do for your job encompasses more than that single task.  Or take for instance going to the supermarket. You going to the store and getting each item on your list could be plausibly broken down in single operation package. Stepping out from there, you might have to take your laundry to the dry claaner and stop by the bank, etc. Now your trip to the supermarket was one Operation in a set of Operations called “errands” While each errand is an operation, it encapsulated inside the OperationQueue errands.
-aeh
+
+ {% highlight swift linenos %}
+class DownloadOp: Operation {
+    
+    let downloadImage: DownloadImage
+    let session = URLSession(configuration: URLSessionConfiguration.default)
+    
+    init(downloadImage: DownloadImage) {
+        self.downloadImage = downloadImage
+    }
+    
+    override func main() {
+        downloadImage(url: URL(string:"http://i.imgur.com/5ac1apZ.jpg")!, handler: { image in
+            OperationQueue.main.addOperation({
+                self.downloadImage.image = image
+            })
+        })
+    }
+    
+    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        let urlRequest = URLRequest(url:url)
+        session.dataTask(with: urlRequest, completionHandler: { data, response, error in
+            completion(data, response, error)
+        }).resume()
+    }
+    
+    func downloadImage(url: URL, handler: @escaping (UIImage) -> Void) {
+        print("Download Started")
+        getDataFromUrl(url: url) { (data, response, error)  in
+            guard let data = data, error == nil else { return }
+            OperationQueue.main.addOperation({
+                handler(UIImage(data:data)!)
+            })
+        }
+    }
+}
+
+{% endhighlight %}
+
+
  The important thing here is the clear delineation between Operations. You walk to the dairy isle and which kicks off the set of behaviors 
  and information which make up the "get milk" task. When you pay for your groceries, your errand “Get groceries” is finished. etc. If it
  can be plausibly be explained as a single task, then you can wrap it an NSOperation subclass.  If there are a set of interrelated 
