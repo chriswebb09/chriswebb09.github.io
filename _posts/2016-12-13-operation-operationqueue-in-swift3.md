@@ -13,6 +13,7 @@ The journey of one thousand apps starts with a single key press...
 
 ## Diving In
 [Example Code](https://gist.github.com/chriswebb09/3a3ba23641b3f1452951727a2f9af914)
+
 Today I’m going to take a look as Operation, what it is exactly, and what you can do with it.  Hopefully, I can shed some light on it 
 if you’ve been confused. With the advent of Swift 3 and “the great renaminging,” much of the Swift code written from now onward will no
 longer have a large dose of NS prefixed classes within them. This the case with [Operation](https://developer.apple.com/reference/foundation/operation) and [OperationQueue](https://developer.apple.com/reference/foundation/operationqueue) in Swift.
