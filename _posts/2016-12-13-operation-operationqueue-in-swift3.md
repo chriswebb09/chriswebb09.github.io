@@ -32,15 +32,22 @@ operation has states which clearly demarcate the stages of the process.
 class DownloadOp: Operation {
     
     let downloadImage: DownloadImage
+    
     let session = URLSession(configuration: URLSessionConfiguration.default)
     
-     private var _ready = false {
+    private var _ready = false {
         willSet {
             willChangeValue(forKey: "isReady")
         }
         didSet {
             didChangeValue(forKey: "isReady")
         }
+    }
+    
+    var completion: (UIImage) -> ()
+    
+    override var isAsynchronous: Bool {
+        return true
     }
     
     override var isReady: Bool {
@@ -74,55 +81,34 @@ class DownloadOp: Operation {
         return _finished
     }
     
-    override func start() {
+    init(downloadImage: DownloadImage, completion: @escaping (UIImage) ->()) {
+        self.downloadImage = downloadImage
+        self.completion = completion
+        super.init()
         _ready = true
-        super.start()
-        _executing = true
-        execute()
-    }
-
-    func execute() {
-        _ready = false
-        downloadImage(url: URL(string:"http://i.imgur.com/5ac1apZ.jpg")!, handler: { image in
-            OperationQueue.main.addOperation({
-                self.downloadImage.image = image
-            })
-        })
     }
     
-    func finish() {
+    func completeOperation () {
+        _ready = false
         _executing = false
         _finished = true
-        _ready = true
-    }
-    
-    init(downloadImage: DownloadImage) {
-        self.downloadImage = downloadImage
     }
     
     override func main() {
-        super.main()
-        downloadImage.state = .preparing
-        _ready = true
-        _finished = false
-    }
-    
-    
-    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
-        let urlRequest = URLRequest(url:url)
-        session.dataTask(with: urlRequest, completionHandler: { data, response, error in
-            completion(data, response, error)
-        }).resume()
-    }
-    
-    func downloadImage(url: URL, handler: @escaping (UIImage) -> Void) {
-        print("Download Started")
-        getDataFromUrl(url: url) { (data, response, error)  in
-            guard let data = data, error == nil else { return }
-            OperationQueue.main.addOperation({
-                handler(UIImage(data:data)!)
-            })
+        if self.isCancelled {
+            return
         }
+        start()
+        completeOperation()
+    }
+    
+    override func start() {
+        _executing = true
+        _finished = false
+        imageDownload(url: downloadImage.url, handler: { image in
+            self.downloadImage.image = image
+            self.completion(image)
+        })
     }
 }
 
