@@ -162,20 +162,18 @@ func downloadImage(with completion: @escaping (Bool) -> ()) {
 {% highlight swift linenos %}
 
 func downloadButtonTapped() {
-        switch (downloadImage.state) {
-        case .preparing:
-            downloadImage(with: { result in
-                print(result)
-                dump(self.downloadImage.image)
-            })
-        case .downloading:
-            print("nope")
-        case .downloaded:
-            print("already downloaded")
-        }
+        var downloadOp1 = DownloadOp(downloadImage: image1, completion: {_ in
+            self.imageView.image = self.image1.image
+        })
+         var downloadOp2 = DownloadOp(downloadImage: image2, completion: {_ in
+            self.imageView2.image = self.image2.image
+        })
         
+        queue.addOperation {
+            downloadOp1.main()
+        }
     }
-    
+      
 {% endhighlight %}
 
 ### Appley-stuff
