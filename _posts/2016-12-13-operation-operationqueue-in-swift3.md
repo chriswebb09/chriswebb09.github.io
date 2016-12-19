@@ -134,8 +134,8 @@ Similarly, OperationQueue is what Apple uses to encapsulate work.
 
 > Operation queues are Objective-C objects that act very much like dispatch queues. You define the tasks you want to execute and then add
 > them to an operation queue, which handles the scheduling and execution of those tasks. Like GCD, operation queues handle all of the 
-> thread
-> management for you, ensuring that tasks are executed as quickly and as efficiently as possible on the system.
+> thread management for you, ensuring that tasks are executed as quickly and as efficiently as possible on the system.
+
 > An operation queue is the Cocoa equivalent of a concurrent dispatch queue and is implemented by the NSOperationQueue class. Whereas
 > dispatch queues always execute tasks in first-in, first-out order, operation queues take other factors into account when determining the execution order of tasks. 
 -Apple
