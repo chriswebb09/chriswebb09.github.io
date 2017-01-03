@@ -9,6 +9,9 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
+![ems](http://il8.picdn.net/shutterstock/videos/3003820/thumb/12.jpg)
+
+
 ## Newton's laws will always bring you down to Earth
 
 When studying to become an EMT, you receive a massive book filled with the detailed descriptions of symptoms for both minor scrapes and sicknesses and near fatal traumas or illnesses. The first law of emergency services states: ninety-nine percent of your calls will be distributed between these two extremes. The second law of emergency services states: Ninety-nine percent of these calls will be glorified home checkup services, delivered with lights, sirens, and police.
