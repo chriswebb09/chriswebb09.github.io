@@ -1,6 +1,6 @@
 ---
 layout: post
-title: On Ambulance and Fridays 
+title: On Ambulances and Fridays 
 ---
 
 <p class="message">
