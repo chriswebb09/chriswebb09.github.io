@@ -24,6 +24,6 @@ On the ride back to the station, all our patient interaction was thrown back to 
 All of this was in service to a greater purpose. Mark made us take what had been an exercise in memorizing facts for state exams and start applying that knowledge to real-world situations we were likely to encounter in the field. Because reality is less clear-cut than symptoms in a textbook, the exercise forced us to leave to leave the safety of predefined scenarios. We had to take information that gave us, at best, an incomplete picture of our situation and apply it as best as we could to the framework of emergency medicine. 
 
 
-## Sometimes Books Just Don't Reflect Reality, Who Knew?
+## Wait, you can't believe everything you read? 
 
 Not every case was a textbook presentation, and sometimes textbook presentations can share enough symptoms to masquerade as each other. The job was not to diagnose — an EM_r — it was to assess. It is a subtle but important distinction. At what point does post-exercise chest tightness and back pain warrant a paramedic intercept with lights and sirens all the way to the ER? At what point is it just an exercise-induced cramp? When in doubt, always err on the side of getting the patient to the doctor more quickly, but try not to be in doubt in the first place, because emergency vehicles going through intersections have created more than their share of new patients
