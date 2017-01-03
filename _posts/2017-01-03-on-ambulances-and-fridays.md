@@ -9,8 +9,11 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
+
 ![ems](http://il8.picdn.net/shutterstock/videos/3003820/thumb/12.jpg)
 
+
+---
 
 ## Newton's laws will always bring you down to Earth
 
