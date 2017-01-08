@@ -15,13 +15,16 @@ title: Projects
 </h2>
 
 
+
 ![TaskHero](https://raw.githubusercontent.com/chriswebb09/taskhero/master/Assets/edittasklist.png)
+
 
 ---
 
 <h2 align="center">
   Movies
 </h2>
+
 
 
 ![Movies](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Simulator%20Screen%20Shot%20Jan%203%2C%202017%2C%201.01.59%20PM.png)
