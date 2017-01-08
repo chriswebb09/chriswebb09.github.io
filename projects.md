@@ -9,4 +9,6 @@ title: Projects
 
 ---
 
-# Projects
+# TaskHero
+
+![TaskHero](https://raw.githubusercontent.com/chriswebb09/taskhero/master/Assets/edittasklist.png)
