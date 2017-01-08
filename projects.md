@@ -14,7 +14,7 @@ title: Projects
   TaskHero
 </h2>
 
-
+<p></p>
 
 ![TaskHero](https://raw.githubusercontent.com/chriswebb09/taskhero/master/Assets/edittasklist.png)
 
@@ -25,6 +25,6 @@ title: Projects
   Movies
 </h2>
 
-
+<p></p>
 
 ![Movies](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Simulator%20Screen%20Shot%20Jan%203%2C%202017%2C%201.01.59%20PM.png)
