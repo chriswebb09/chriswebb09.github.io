@@ -14,7 +14,7 @@ title: Projects
   TaskHero
 </h2>
 
-<p align="center">\
+<p align="center">
 ![TaskHero](https://raw.githubusercontent.com/chriswebb09/taskhero/master/Assets/edittasklist.png)
 </p>
 
