@@ -15,9 +15,9 @@ The journey of one thousand apps starts with a single key press...
 
 Recently, I’ve been working on the overall architecture of my application, TaskHero. I'm going to be polite here and leave it at: It's been a great learning experience.
 
----
+
 ## It begins...
----
+
 
 When I initially built it, my goal was to get it into the App Store as quickly as possible. 
 
@@ -28,9 +28,9 @@ When I initially built it, my goal was to get it into the App Store as quickly a
 
 
 
----
+
 ## Three months later 
----
+
 
 Fast forward a few months later, and the file count has ballooned to 72. So now I want to make updates, make it fancy and whatnot. Not so easy to do when it’s 72 files and changing my code in one part of the application ends up breaking a different piece. 
 
@@ -42,9 +42,9 @@ Fast forward a few months later, and the file count has ballooned to 72. So now 
  
 ![computer-guy](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Computer-Guy-2.png)
 
----
+
 ## Simple principles to code by, not simple to clean up after.
----
+
 
 How did we get here: 
 
@@ -71,9 +71,9 @@ Alright, if we have coherently designed and properly functioning application at 
 I think it is important to examine my the first dilemma, the number of files. It’s an atrocity, a crime against code. This application is far simpler than 72 files. The number alone is a neon sign that there is something terribly awry here. If for some reason it did require 72 files, should because the code is so modularly perfect that I thought every function should have the honor of its very own .swift file. I’m not sure what my code could possibly have done to deserve this lavish treatment but whatever. 
 
 
----
+
 ## Questions Need Answers
----
+
 
 I still haven’t answered the fundamental issue, how did I get here. It’s simple: I was focusing on making it work far too much and neglecting the making it right part. But what about making it nice? Making it nice isn’t nearly as important as making it right. Making it right can exist without making it nice, making it nice existence depends entirely on the application being built right. 
 
