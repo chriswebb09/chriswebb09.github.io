@@ -40,6 +40,7 @@ Fast forward a few months later, and the file count has ballooned to 72. So now 
 ![computer-guy](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Computer-Guy-2.png)
 
 <br>
+
 ## Simple principles to code by, not simple to clean up after.
 
 
