@@ -16,6 +16,8 @@ The journey of one thousand apps starts with a single key press...
 Recently, I’ve been working on the overall architecture of my application, TaskHero. I'm going to be polite here and leave it at: It's been a great learning experience.
 
 <br>
+
+
 ## It begins...
 
 When I initially built it, my goal was to get it into the App Store as quickly as possible. 
