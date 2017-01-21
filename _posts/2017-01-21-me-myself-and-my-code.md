@@ -18,8 +18,7 @@ Recently, I’ve been working on the overall architecture of my application, Tas
 ## It begins...
 
 When I initially built it, my goal was to get it into the App Store as quickly as possible. 
-
-> Me in October:  What’s next?
+Me in October:
 
 ![satisfied-seal](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/satisfied-seal-2.jpg)
 
@@ -29,9 +28,9 @@ Fast forward a few months later, and the file count has ballooned to 72. So now 
 
 **Bottom line**: October me is not nearly as clever as he thought he was. 
 
+ Me in January:
+ 
 ![computer-guy](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Computer-Guy-2.png)
-
-> Me in January: “……”
 
 ## Simple principles to code by, not simple to clean up after.
 
