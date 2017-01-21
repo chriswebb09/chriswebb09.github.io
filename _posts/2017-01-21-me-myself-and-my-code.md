@@ -45,6 +45,7 @@ How did we get here:
 
 > Make it work. Make it right. Make it nice. 
 
+
 *Some guy named Joe*
 
 First off, I want to define my interpretation of what each of these should mean.
