@@ -31,7 +31,7 @@ How did we get here:
 
 > Make it nice. 
 
-> - Some guy named Joe
+> *Some guy named Joe*
 
 Simple principles to code by, not so simple to clean up after. 
 
