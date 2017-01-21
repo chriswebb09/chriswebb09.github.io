@@ -44,11 +44,8 @@ Fast forward a few months later, and the file count has ballooned to 72. So now 
 How did we get here: 
 
 > Make it work.
-
 > Make it right.
-
 > Make it nice. 
-
 > *Some guy named Joe*
 
 First off, I want to define my interpretation of what each of these should mean.
