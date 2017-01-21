@@ -1,10 +1,11 @@
 
 Recently, I’ve been working on the overall architecture of my application, TaskHero. I'm going to be polite here and leave it at: It's been a great learning experience.
 
-
 ## It begins...
 
 When I initially built it my goal was to get it into the App Store as quickly as possible. 
+
+![satisfied-seal](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/satisfied-seal.jpg)
 
 > Me in October:  What’s next?
 
@@ -12,7 +13,7 @@ When I initially built it my goal was to get it into the App Store as quickly as
 
 Fast forward a few months later, and the number of files has ballooned to 72.
 
-> Me in January: “……..”
+> Me in January: “……”
 
 So now I want to make updates, make it fancy and whatnot. Not so easy to do when it’s 72 files and changing my code in one part of the application ends up breaking a different piece. 
 
@@ -31,7 +32,7 @@ Simple principles to code by, not so simple to clean up after.
 
 First off, I want to define my interpretation of what each of these should mean.
 
-Making it work:
+###Making it work:
 This is the stage where you concentrate on the functionality of the application. Things like when the user clicks a button, 
 they should get logged in go here. 
 
