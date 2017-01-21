@@ -25,16 +25,13 @@ When I initially built it, my goal was to get it into the App Store as quickly a
 
 ## Three months later 
 
-Fast forward a few months later, and the file count has ballooned to 72.
-
-> Me in January: “……”
-
-So now I want to make updates, make it fancy and whatnot. Not so easy to do when it’s 72 files and changing my code in one part of the application ends up breaking a different piece. 
+Fast forward a few months later, and the file count has ballooned to 72. So now I want to make updates, make it fancy and whatnot. Not so easy to do when it’s 72 files and changing my code in one part of the application ends up breaking a different piece. 
 
 **Bottom line**: October me is not nearly as clever as he thought he was. 
 
 ![computer-guy](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Computer-Guy-2.png)
 
+> Me in January: “……”
 
 ## Simple principles to code by, not simple to clean up after.
 
