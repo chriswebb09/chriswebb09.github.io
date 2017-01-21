@@ -19,7 +19,7 @@ Fast forward a few months later, and the number of files has ballooned to 72.
 
 So now I want to make updates, make it fancy and whatnot. Not so easy to do when it’s 72 files and changing my code in one part of the application ends up breaking a different piece. 
 
-Bottom line: October me is not as clever as he thought he was. 
+**Bottom line**: October me is not nearly as clever as he thought he was. 
 
 ## Autopsy
 
@@ -37,18 +37,18 @@ Simple principles to code by, not so simple to clean up after.
 
 First off, I want to define my interpretation of what each of these should mean.
 
-###Making it work:
+#### Making it work:
 This is the stage where you concentrate on the functionality of the application. Things like when the user clicks a button, 
 they should get logged in go here. 
 
-Making it right:
+#### Making it right:
 This is a stage where you concentrate on the overall architecture. How does the functionality fit into the overall application? 
 How do they interact with each other? If I change something over here, will it break everything?  Can I swap this function out for a better implementation, or have
 I handicapped myself by tethering it to other parts too closely to the functionality of another Class? 
 
 Hint: Figuring this stuff out sooner, rather than later, will save you from some major headaches. 
 
-Make it nice: 
+#### Make it nice: 
 Alright, if we have coherently designed and properly functioning application at this point. You may now lavish attention on the small details and be fancy. 
 If you do this right, you should be able to look at your code and think: "Hmm, that looks fancy." If you're lucky, someone else might look at it and say "Hmm, that looks fancy." 
 
