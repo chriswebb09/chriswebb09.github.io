@@ -61,7 +61,7 @@ they should get logged in go into this stage. This is the fun part of the cycle.
 
 ##### Making it right:
 This is a stage where you concentrate on the overall architecture. How does the functionality fit into the overall application? 
-How do they interact with each other? If I change something over here, will it break everything?  Can I swap this function out for a better implementation, or have I handicapped myself by tethering it to other parts too closely to the functionality of another class? 
+How do they interact with each other? If I change something over here, will it break everything?  Can I swap this function out for a better implementation, or have I handicapped myself by tethering it too closely to the functionality of another class? 
 
 *Hint: This is the time to adult and plan ahead. 
 
