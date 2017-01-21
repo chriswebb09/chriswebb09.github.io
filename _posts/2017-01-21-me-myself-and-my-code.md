@@ -33,7 +33,7 @@ So now I want to make updates, make it fancy and whatnot. Not so easy to do when
 
 **Bottom line**: October me is not nearly as clever as he thought he was. 
 
-## Simple principles to code by, not so simple to clean up after.
+## Simple principles to code by, not simple to clean up after.
 
 How did we get here: 
 
