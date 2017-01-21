@@ -66,7 +66,7 @@ How do they interact with each other? If I change something over here, will it b
 *Hint: This is the time to adult and plan ahead. 
 
 ##### Make it nice: 
-Alright, if we at this stage, you have a coherently designed and properly functioning application, we're in good shape. You may now lavish attention on the small details and be fancy. If you do this right, you should be able to look at your code and think: "Hmm, that looks fancy." If you're lucky, someone else might look at it and say "Hmm, that looks fancy." 
+Alright, if we at are this stage, you have a coherently designed and properly functioning application, we're in good shape. You may now lavish attention on the small details and be fancy. If you do this right, you should be able to look at your code and think: "Hmm, that looks fancy." If you're lucky, someone else might look at it and say "Hmm, that looks fancy." 
 
 ## Moving Right Along
 I think it is important to examine my the first dilemma, the number of files. It’s an atrocity, a crime against code. This application is far simpler than 72 files. The number alone is a neon sign that there is something terribly awry here. If for some reason it did require 72 files, should because the code is so modularly perfect that I thought every function should have the honor of its very own .swift file. I’m not sure what my code could possibly have done to deserve this lavish treatment but whatever. 
