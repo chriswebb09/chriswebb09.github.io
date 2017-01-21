@@ -24,8 +24,8 @@ When I initially built it, my goal was to get it into the App Store as quickly a
 
 ##### Me in October:
 
-
 ![satisfied-seal](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/satisfied-seal-2.jpg)
+
 
 
 ---
