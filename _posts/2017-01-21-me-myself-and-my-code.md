@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Simple Principles to Code By
+title: Simple Principles To Code By
 ---
 
 <p class="message">
