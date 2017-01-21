@@ -13,7 +13,7 @@ When I initially built it my goal was to get it into the App Store as quickly as
 
 Fast forward a few months later, and the number of files has ballooned to 72.
 
-![computer-guy](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Computer-Guy.png)
+![computer-guy](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Computer-Guy-2.png)
 
 > Me in January: “……”
 
