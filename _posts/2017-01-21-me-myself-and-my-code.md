@@ -26,8 +26,11 @@ Bottom line: October me is not as clever as he thought he was.
 How did we get here: 
 
 > Make it work.
+
 > Make it right.
+
 > Make it nice. 
+
 > - Some guy named Joe
 
 Simple principles to code by, not so simple to clean up after. 
