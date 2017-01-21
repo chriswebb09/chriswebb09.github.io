@@ -13,6 +13,8 @@ When I initially built it my goal was to get it into the App Store as quickly as
 
 Fast forward a few months later, and the number of files has ballooned to 72.
 
+![computer-guy](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Computer-Guy.png)
+
 > Me in January: “……”
 
 So now I want to make updates, make it fancy and whatnot. Not so easy to do when it’s 72 files and changing my code in one part of the application ends up breaking a different piece. 
