@@ -10,6 +10,7 @@ title: Projects
 ---
 
 <br>
+<p align="left">
 <h2 align="left">
   TaskHero
 </h2>
@@ -18,12 +19,11 @@ title: Projects
 
 
 <img src="https://raw.githubusercontent.com/chriswebb09/taskhero/master/Assets/edittasklist.png" alt="taskHero" width="281" height="500">
-
+</p>
 
 <h2 align="center">
   Movies
 </h2>
-
 
 <a href="https://github.com/chriswebb09/MoviesApp">Github Repo</a>
 
