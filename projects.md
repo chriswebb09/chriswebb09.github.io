@@ -16,9 +16,8 @@ title: Projects
 
 <p align="left">
 <a href="https://github.com/chriswebb09/taskhero">Github Repo</a>
-</p>
 
-<p align="left">
+
 <img src="https://raw.githubusercontent.com/chriswebb09/taskhero/master/Assets/edittasklist.png" alt="taskHero" width="281" height="500">
 </p>
 
