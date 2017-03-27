@@ -35,7 +35,7 @@ As you can see, we are caching an image which can access with an NSString. A goo
 downloaded. That way we can do a check before we start our network request. If it exists, we can then skip the whole networking business. 
 
 
-### Wrap up 
+### Defining our method
 Define a function like the following: 
 
 {% highlight swift linenos %}
@@ -53,6 +53,9 @@ code.
  {% endhighlight %}
 
 If the image exists, we immediately pass it to our completion and exit the function. 
+
+
+### Wrap up 
 
 Example:
 
