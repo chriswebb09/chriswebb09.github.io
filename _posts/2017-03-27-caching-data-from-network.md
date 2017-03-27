@@ -29,7 +29,7 @@ more space or is no longer in use. This is unlike CoreData or user UserDefaults 
 
 As wikipedia helpfully puts it:
 
-_In computing, a cache /ˈkæʃ/ kash,[1] is a hardware or software component that stores data so future requests for that data can be served faster; the data stored in a cache might be the result of an earlier computation, or the duplicate of data stored elsewhere._
+_In computing, a cache is a hardware or software component that stores data so future requests for that data can be served faster; the data stored in a cache might be the result of an earlier computation, or the duplicate of data stored elsewhere._
 
 ### Let's get started! 
 To start off, let's define our image cache like so:
