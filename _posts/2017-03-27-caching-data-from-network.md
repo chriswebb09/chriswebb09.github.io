@@ -81,19 +81,6 @@ static func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
             }
         }
     }
-
-static func downloadData(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
-        let session = URLSession(configuration: .ephemeral)
-        let urlRequest = URLRequest(url: url)
-        session.dataTask(with: urlRequest) { data, response, error in
-            print("Data: \(data)")
-            print("Response: \(response)")
-            print("Error: \(error?.localizedDescription)")
-            print("URL: \(url.absoluteString)")
-            completion(data, response, error)
-            }.resume()
-    }
-
 {% endhighlight %}
 
 
