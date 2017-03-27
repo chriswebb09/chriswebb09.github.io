@@ -62,7 +62,6 @@ Example:
 {% highlight swift linenos %}
 
 static func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
-        print(url)
         if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
             completion(cachedImage)
         }
@@ -81,6 +80,7 @@ static func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
             }
         }
     }
+
 {% endhighlight %}
 
 
