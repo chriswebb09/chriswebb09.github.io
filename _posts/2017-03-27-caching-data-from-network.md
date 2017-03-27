@@ -17,9 +17,9 @@ information, particularly resource heavy data like images. Here is where NSCache
 
 Apple defines NSCache like this: 
 
-An NSCache object is a mutable collection that stores key-value pairs, similar to an NSDictionary object. The NSCache class provides a
+__An NSCache object is a mutable collection that stores key-value pairs, similar to an NSDictionary object. The NSCache class provides a
 programmatic interface to adding and removing objects and setting eviction policies based on the total cost and number of objects in the 
-cache.
+cache.__
 
 This is a unecessarily wordy explanation for a data structure, similar to a dictionary, that temporarily stores information until it needs
 more space or is no longer in use. This is unlike CoreData or user UserDefaults in that there is no permanence to it. 
