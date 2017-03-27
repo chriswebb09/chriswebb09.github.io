@@ -83,6 +83,7 @@ static func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
 
 {% endhighlight %}
 
+[Example Gist](https://gist.github.com/chriswebb09/ef9e780872174af102d82fda23e980ae#file-mtapiclient-swift)
 
 ### Sources 
 
