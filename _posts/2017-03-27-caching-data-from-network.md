@@ -7,6 +7,9 @@ The journey of one thousand apps starts with a single key press...
 ---
 
 ### Brief Overview
+
+[Example Gist](https://gist.github.com/chriswebb09/ef9e780872174af102d82fda23e980ae#file-mtapiclient-swift)
+
 Networking requests in your application can be detrimental to your user experience. This applies in particular when downloading images. 
 You have to take into account that not all users will have blazing fast internet. Some of these users can have their internet throttled
 which will slow down your download rates to a snail's pace. You also don’t want to harm your users by using up their allotted data 
@@ -17,12 +20,16 @@ information, particularly resource heavy data like images. Here is where NSCache
 
 Apple defines NSCache like this: 
 
-__An NSCache object is a mutable collection that stores key-value pairs, similar to an NSDictionary object. The NSCache class provides a
+_An NSCache object is a mutable collection that stores key-value pairs, similar to an NSDictionary object. The NSCache class provides a
 programmatic interface to adding and removing objects and setting eviction policies based on the total cost and number of objects in the 
-cache.__
+cache._
 
 This is a unecessarily wordy explanation for a data structure, similar to a dictionary, that temporarily stores information until it needs
 more space or is no longer in use. This is unlike CoreData or user UserDefaults in that there is no permanence to it. 
+
+As wikipedia helpfully puts it:
+
+_In computing, a cache /ˈkæʃ/ kash,[1] is a hardware or software component that stores data so future requests for that data can be served faster; the data stored in a cache might be the result of an earlier computation, or the duplicate of data stored elsewhere._
 
 ### Let's get started! 
 To start off, let's define our image cache like so:
@@ -83,9 +90,12 @@ static func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
 
 {% endhighlight %}
 
-[Example Gist](https://gist.github.com/chriswebb09/ef9e780872174af102d82fda23e980ae#file-mtapiclient-swift)
+I posted a link for a gist with an example of how I used it in an api client. 
 
 ### Sources 
 
 * [Apple documentation for NSCache](https://developer.apple.com/reference/foundation/nscache)
+* [Wikipedia article on caching](https://en.wikipedia.org/wiki/Cache_(computing)#Web_cache)
+
+
 
