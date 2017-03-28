@@ -13,6 +13,8 @@ The journey of one thousand apps starts with a single key press...
 
 ## Hello
 
+_Post has been updated as of March 27th, 2017. Updated comments are at the bottom._
+
 Recently, I’ve been working on the overall architecture of my application, [TaskHero](https://github.com/chriswebb09/taskhero). So how's that been working out for me... I'm going to be polite here and leave it at: It's been a great learning experience.
 
 <br>
