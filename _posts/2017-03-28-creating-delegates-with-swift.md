@@ -105,6 +105,7 @@ class MainView: UIView {
  }
  {% endhighlight %}
  
+ We can now do something with the textfield text in our ViewController without having to access it directly. 
  
  ## Wrap up
  
