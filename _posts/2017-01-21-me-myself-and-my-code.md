@@ -75,9 +75,16 @@ I think it is important to examine my the first dilemma, the number of files. It
 
 ## Questions Need Answers
 
-
 I still haven’t answered the fundamental issue, how did I get here. It’s simple: I was focusing on making it work far too much and neglecting the making it right part. But what about making it nice? Making it nice isn’t nearly as important as making it right. Making it right can exist without making it nice, making it nice existence depends entirely on the application being built right. 
 
 **Bottom line**: Delaying the satifisfaction of having a finished product and taking the time to think about the future of your project is like the developement equivilent of buying Google stock at it's initial offering price, you will be richly rewarded for your investment. 
 
 That's all I have for now, but this is something I've been thinking about a lot lately so I'm pretty sure there will be a follow up. 
+
+
+## Update
+
+So in my search for a solution if been looking at different architectures. MVVM (better defined as MVC-VM), MVP and VIPER/B-VIPER. To be honest, the VIPERs and MVP can be a bit overkill for most cases. Unless it's a particularly large and important project, a collaborative effort or something you plan on maintaining, it's more work than it is worth. In most cases, some derivative of MVC should suit your purposes just fine. MVVM seems like we are kidding ourselves. You get a beautiful ViewController, but the dirty secret is now hidden inside your ViewModel. It's like shoving your clothing into the closet when your parents ask you to clean your room, the mess is hidden, but it's still there and it's still a mess. 
+
+
+If I had to boil it down, the biggest problem was that I was trying to insert a base class after the fact. I don't think that is something that can be solved by architecture. The best solution might be to use protocols and avoid the whole subclassing debacle in the first place. I'm still thinking this over. There isn't any perfect solution to this. I saw a talk on B-VIPER recently, the presenter said something that stuck with me: If you can put off the decision until later, do it, because you will have more freedom overall. I think that's a pretty good principle to code by. 
