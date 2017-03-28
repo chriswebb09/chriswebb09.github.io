@@ -104,7 +104,7 @@ static func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
 
 {% endhighlight %}
 
-I posted a link for a gist with an example of how I used it in an api client. 
+I posted a link for a gist with an example of how I used it in an API client. 
 
 ### Sources 
 
