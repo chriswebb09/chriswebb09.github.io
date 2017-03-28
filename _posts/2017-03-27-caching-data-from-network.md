@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Caching images in Swift
+title: Caching Images In Swift
 ---
 
 <p class="message">
