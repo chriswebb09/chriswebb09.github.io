@@ -9,6 +9,8 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
+![Print commands](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Screen%20Shot%202017-03-28%20at%204.07.26%20PM.png)
+
 ## Overview
 
 As you might have noticed, Apple is pretty trigger happy when it comes to providing delegate in its libraries. 
