@@ -105,7 +105,9 @@ class MainView: UIView {
  }
  {% endhighlight %}
  
+ 
  ## Wrap up
+ 
  
  The final ViewController code for this example looks something like:
  
