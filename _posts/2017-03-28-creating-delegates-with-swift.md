@@ -123,9 +123,10 @@ class ViewController: UIViewController, MainViewDelegate {
     }
 }
 {% endhighlight %}
+
+![Example code](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Screen%20Shot%202017-03-28%20at%203.31.43%20PM.png)
  
-The great thing about delegation is that there are a wealth of ways to implement them beyond this example. Figuring out where and when to use them
-is the key. 
+The great thing about delegation is that there are a wealth of ways to implement them beyond this example. Figuring out where and when to use them is the key. 
  
 ### Sources 
 
