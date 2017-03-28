@@ -70,6 +70,7 @@ code.
 {% highlight swift linenos %}
   if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
             completion(cachedImage)
+            return
         }
  {% endhighlight %}
 
@@ -85,6 +86,7 @@ Example:
 static func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
         if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
             completion(cachedImage)
+            return
         }
         MTAPIClient.downloadData(url: url) { data, response, error in
             if error != nil {
