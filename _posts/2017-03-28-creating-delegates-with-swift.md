@@ -15,7 +15,7 @@ The journey of one thousand apps starts with a single key press...
 
 As you might have noticed, Apple is pretty trigger happy when it comes to providing delegate in its libraries. 
 There is UITableViewDelegate, UITextFieldDelegate and of course, your AppDelegate.  Delegation is one of the key software design 
-patterns in Object-Oriented programming. Delegation allow one class to hand off some functionality to another. 
+patterns in Object-Oriented programming. Delegation allows one class to hand off some functionality to another. 
 
 ## The Apple-y explanation
 
@@ -61,8 +61,7 @@ class ViewController: UIViewController, MainViewDelegate {
 ## Analysis 
 
 Does it work? Sure, but there is another way to do this where we don’t have to attach our button and ViewController directly.
-We can create a delegate method to be the intermediary between the two. Doing this allows better encapsulation of data and behaviors 
-within respective classes. 
+We can create a delegate method to have MainView be the intermediary between the two. Doing this allows better for encapsulation of data and behaviors within respective classes. 
 
 Let's first create our protocol:
 
@@ -73,15 +72,15 @@ protocol MainViewDelegate: class {
  {% endhighlight %}
  
 
-This is relatively straight forward. We have a class protocol called MainViewDelegate which specifies the method: func searchButtonTappedWithTerm(with searchTerm: String)
-To be able to use this delegate in code we need to add it our MainView as a weak optional property. Why weak? Because we don't want to have our
-ViewController and delegate locked in a strong reference cycle that does stays in memory without being deallocated. That's a great way to cause a memory leak. 
+This is relatively straight forward. We have a class protocol called MainViewDelegate which specifies the method: 
+func searchButtonTappedWithTerm(with searchTerm: String)
+To be able to use this delegate in code we need to add it our MainView as a weak optional property. Why weak? Because we don't want to have our ViewController and delegate locked in a strong reference cycle that does stays in memory without being deallocated. That's a great way to cause a memory leak. 
 
 {% highlight swift linenos %}
 class MainView: UIView {
 
-    @IBOutlet weak var myTextfield: UITextField!
-    @IBOutlet weak var myButton: UIButton!
+    @IBOutlet private weak var myTextfield: UITextField!
+    @IBOutlet private weak var myButton: UIButton!
     
     weak var delegate: MainViewDelegate?
     
