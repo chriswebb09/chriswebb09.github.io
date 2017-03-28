@@ -98,7 +98,7 @@ static func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
                 DispatchQueue.main.async {
                     if let downloadedImage = UIImage(data: imageData) {
                         imageCache.setObject(downloadedImage, forKey: url.absoluteString as NSString)
-                        completion(UIImage(data: imageData))
+                        completion(downloadedImage)
                         return 
                     }
                 }
