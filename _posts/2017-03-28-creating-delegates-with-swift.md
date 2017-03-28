@@ -15,7 +15,7 @@ The journey of one thousand apps starts with a single key press...
 
 As you might have noticed, Apple is pretty trigger happy when it comes to providing delegate in its libraries. 
 There is UITableViewDelegate, UITextFieldDelegate and of course, your AppDelegate.  Delegation is one of the key software design 
-patterns in Object-Oriented programming. Delegation allows one class to hand off some functionality to another. 
+patterns in Object-Oriented programming. This pattern allows one class to hand off some functionality to another. 
 
 ## The Apple-y explanation
 
