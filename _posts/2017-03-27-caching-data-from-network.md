@@ -92,12 +92,14 @@ static func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
             if error != nil {
                 print(error?.localizedDescription ?? "Unable to get specific error")
                 completion(nil)
+                return
             }
             if let imageData = data {
                 DispatchQueue.main.async {
                     if let downloadedImage = UIImage(data: imageData) {
                         imageCache.setObject(downloadedImage, forKey: url.absoluteString as NSString)
                         completion(UIImage(data: imageData))
+                        return 
                     }
                 }
             }
