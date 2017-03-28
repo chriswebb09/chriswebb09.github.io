@@ -31,7 +31,7 @@ programmatic interface to adding and removing objects and setting eviction polic
 cache._
 
 This is a unecessarily wordy explanation for a data structure, similar to a dictionary, that temporarily stores information until it needs
-more space or is no longer in use. This is unlike CoreData or user UserDefaults in that there is no permanence to it. 
+more space or is no longer in use. This is unlike CoreData or UserDefaults in that there is no permanence to it.
 
 __As wikipedia helpfully puts it__:
 
