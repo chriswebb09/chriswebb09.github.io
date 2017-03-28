@@ -1,10 +1,16 @@
 ---
+layout: post
+title: Caching images in Swift
+---
 
 <p class="message">
 The journey of one thousand apps starts with a single key press...
 </p>
 
 ---
+
+![Loading...](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/loading%20screen.png)
+
 
 ### Brief Overview
 
