@@ -24,7 +24,7 @@ information, particularly resource heavy data like images. Here is where NSCache
 
 ### What is NSCache? 
 
-Apple defines NSCache like this: 
+__Apple defines NSCache like this__: 
 
 _An NSCache object is a mutable collection that stores key-value pairs, similar to an NSDictionary object. The NSCache class provides a
 programmatic interface to adding and removing objects and setting eviction policies based on the total cost and number of objects in the 
@@ -33,9 +33,16 @@ cache._
 This is a unecessarily wordy explanation for a data structure, similar to a dictionary, that temporarily stores information until it needs
 more space or is no longer in use. This is unlike CoreData or user UserDefaults in that there is no permanence to it. 
 
-As wikipedia helpfully puts it:
+__As wikipedia helpfully puts it__:
 
 _In computing, a cache is a hardware or software component that stores data so future requests for that data can be served faster; the data stored in a cache might be the result of an earlier computation, or the duplicate of data stored elsewhere._
+
+### Side Note 
+
+I think it's important to mention here, in the example that I am using, the URLSession is ephemeral. Ephemeral means to be fleeting, or short lived. What that means for a URLSession is that everything is stored to RAM instead of the disk and purged automatically when the session is over. 
+
+__Apple-y definition__:
+_Ephemeral sessions do not store any data to disk; all caches, credential stores, and so on are kept in RAM and tied to the session. Thus, when your app invalidates the session, they are purged automatically
 
 ### Let's get started! 
 To start off, let's define our image cache like so:
@@ -102,6 +109,4 @@ I posted a link for a gist with an example of how I used it in an api client.
 
 * [Apple documentation for NSCache](https://developer.apple.com/reference/foundation/nscache)
 * [Wikipedia article on caching](https://en.wikipedia.org/wiki/Cache_(computing)#Web_cache)
-
-
-
+* [Apple documentation for URLSession](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/URLLoadingSystem/Articles/UsingNSURLSession.html)
