@@ -107,9 +107,9 @@ class MainView: UIView {
  
  We can now do something with the textfield text in our ViewController without having to access it directly. 
  
- ## Wrap up
- 
- 
+
+## Recap
+  
  The final ViewController code for this example looks something like:
  
 {% highlight swift linenos %}
