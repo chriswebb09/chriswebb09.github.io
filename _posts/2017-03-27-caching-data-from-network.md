@@ -39,7 +39,7 @@ _In computing, a cache is a hardware or software component that stores data so f
 
 ### Side Note 
 
-I think it's important to mention here, in the example that I am using, the URLSession is ephemeral. Ephemeral means to be fleeting, or short lived. What that means for a URLSession is that everything is stored to RAM instead of the disk and purged automatically when the session is over. 
+I think it's important to mention here, in the example that I am using, the URLSession is ephemeral. Ephemeral means to be fleeting, or short lived. What that means for a URLSession is that everything is stored to RAM instead of the disk and is purged automatically when the session is over. 
 
 __Apple-y definition__:
 
