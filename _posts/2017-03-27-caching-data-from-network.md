@@ -52,8 +52,7 @@ To start off, let's define our image cache like so:
 let imageCache = NSCache<NSString, UIImage>()
 {% endhighlight %}
 
-As you can see, we are caching an image which can access with an NSString. A good key to store your image by is the URL from where it was 
-downloaded. That way we can do a check before we start our network request. If it exists, we can then skip the whole networking business. 
+As you can see, we are caching an image which we can access with an NSString as the key. A good key to store your image by is the URL from where it was downloaded. That way we can do a check before we start our network request. If it exists, we can then skip the whole networking business. 
 
 
 ### Defining our method
@@ -63,9 +62,8 @@ Define a function like the following:
 func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) 
 {% endhighlight %}
 
-This function takes in an URL and returns a UIImage in the completion. We need to get the string format for our URL which we can do using
-url.absoluteString and then casting it type NSString.  Let’s check to see whether our image exists in the cache with the following bit of
-code.
+This function takes in a URL and returns a UIImage in the completion. We need to get the string format for our URL which we can do using
+url.absoluteString and then casting it to type NSString.  Let’s check to see whether our image exists in the cache with the following bit of code:
 
 {% highlight swift linenos %}
   if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
