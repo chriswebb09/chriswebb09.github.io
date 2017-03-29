@@ -80,30 +80,23 @@ If the image exists, we immediately pass it to our completion and exit the funct
 Example:
 
 {% highlight swift linenos %}
-
-static func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
+    static func downloadImage(url: URL, completion: @escaping (_ image: UIImage?, _ error: Error? ) -> Void) {
         if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
-            completion(cachedImage)
-            return
-        }
-        MTAPIClient.downloadData(url: url) { data, response, error in
-            if error != nil {
-                print(error?.localizedDescription ?? "Unable to get specific error")
-                completion(nil)
-                return
-            }
-            if let imageData = data {
-                DispatchQueue.main.async {
-                    if let downloadedImage = UIImage(data: imageData) {
-                        imageCache.setObject(downloadedImage, forKey: url.absoluteString as NSString)
-                        completion(downloadedImage)
-                        return 
-                    }
+            completion(cachedImage, nil)
+        } else {
+            MTAPIClient.downloadData(url: url) { data, response, error in
+                if let error = error {
+                    completion(nil, error)
+                    
+                } else if let data = data, let image = UIImage(data: data) {
+                    imageCache.setObject(image, forKey: url.absoluteString as NSString)
+                    completion(image, nil)
+                } else {
+                    completion(nil, NSError.generalParsingError(domain: url.absoluteString))
                 }
             }
         }
     }
-
 {% endhighlight %}
 
 I posted a link at the top for a gist with an example of how I used image caching in an API client. 
