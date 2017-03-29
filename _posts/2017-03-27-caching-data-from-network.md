@@ -66,10 +66,8 @@ This function takes in a URL and returns a UIImage in the completion. We need to
 url.absoluteString and then casting it to type NSString.  Let’s check to see whether our image exists in the cache with the following bit of code:
 
 {% highlight swift linenos %}
-  if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
-            completion(cachedImage)
-            return
-        }
+     if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
+            completion(cachedImage, nil)
  {% endhighlight %}
 
 If the image exists, we immediately pass it to our completion and exit the function. 
@@ -80,6 +78,7 @@ If the image exists, we immediately pass it to our completion and exit the funct
 Example:
 
 {% highlight swift linenos %}
+
     static func downloadImage(url: URL, completion: @escaping (_ image: UIImage?, _ error: Error? ) -> Void) {
         if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
             completion(cachedImage, nil)
