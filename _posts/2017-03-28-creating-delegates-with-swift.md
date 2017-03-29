@@ -30,7 +30,7 @@ in one central object._
 
 ## Diving In
 
-Let’s imagine for a second you want to detect a button tap in your view and do something accordingly in your view controller.
+Let’s imagine for a second you want to detect a button tap in your view and do something accordingly in your ViewController.
 
 {% highlight swift linenos %}
 class MainView: UIView {
@@ -73,8 +73,10 @@ protocol MainViewDelegate: class {
  
 
 This is relatively straight forward. We have a class protocol called MainViewDelegate which specifies the method: 
-func searchButtonTappedWithTerm(with searchTerm: String)
-To be able to use this delegate in code we need to add it our MainView as a weak optional property. Why weak? Because we don't want to have our ViewController and delegate locked in a strong reference cycle that does stays in memory without being deallocated. That's a great way to cause a memory leak. 
+
+func searchButtonTappedWithTerm(with searchTerm: String) 
+
+To be able to use this delegate in code we need to add it our MainView as a weak optional property. Why weak? Because we don't want to have our ViewController and delegate locked in a strong reference cycle that stays in memory without being deallocated. That's a great way to cause a memory leak. 
 
 {% highlight swift linenos %}
 class MainView: UIView {
