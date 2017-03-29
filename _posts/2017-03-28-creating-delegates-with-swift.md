@@ -55,6 +55,7 @@ class ViewController: UIViewController, MainViewDelegate {
     func buttonTap() {
        print("Button was tapped")
     }
+}
     
 {% endhighlight %}
 
