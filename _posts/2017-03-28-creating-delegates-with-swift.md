@@ -103,7 +103,12 @@ class MainView: UIView {
  
  {% highlight swift linenos %}
  class ViewController: UIViewController, MainViewDelegate {
+ 
       // View controller stuff 
+      
+      func searchButtonTappedWithTerm(with searchTerm: String) {
+        print("The text in UITextField is: \(searchTerm)")
+    }
  }
  {% endhighlight %}
  
