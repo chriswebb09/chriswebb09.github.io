@@ -78,7 +78,7 @@ it on the end by using join and `__dirname`.
 var path = path.join(__dirname, 'movie.json');
 {% endhighlight %}
 
-That should look something like: /Users/YourUsername/server/movie.json or some dirivative of that depending on where your server directory is located. To read the JSON file at that location, we have to access the filesystem with the fs module and calling readFile. This takes in the path to the file being read and an anonymous function with the parameter error and data. The function that you're passing is a callback function that returns either error or data at the end (think of it as the completion handler that Swift uses.)  
+That should look something like: /Users/YourUsername/server/movie.json or some derivative of that depending on where your server directory is located. To read the JSON file at that location, we have to access the filesystem with the fs module and calling readFile. This takes in the path to the file being read and an anonymous function with the parameter error and data. The function that you're passing is a callback function that returns either error or data at the end (think of it as the completion handler that Swift uses.)   
 
 {% highlight js linenos %}
 fs.readFile(path, function(error, data) {
