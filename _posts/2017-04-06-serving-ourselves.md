@@ -157,8 +157,10 @@ At the end of our index.js file we need to add the following.
 I've posted the Swift api call playground and index.js in a gist which I will link to.
 
 [index.js](https://gist.github.com/chriswebb09/59e96cd2e2c086b83540b5156d6c7513#file-index-js)
+
 [APIClientPlayground.swift](https://gist.github.com/chriswebb09/59e96cd2e2c086b83540b5156d6c7513#file-apiclientplayground-swift)
 
+---
 
 * [npm documentation for require](https://www.npmjs.com/package/require)
 * [Stackoverflow for anonymous functions Javascript](http://stackoverflow.com/questions/9901082/what-is-this-javascript-require)
