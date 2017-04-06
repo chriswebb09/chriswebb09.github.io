@@ -120,6 +120,10 @@ your terminal by running the following in your project directory:
 node index.js
 {% endhighlight %}
 
+If you get it right, your terminal should look something like this:
+
+![Terminal](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/nodeserver.png)
+
 We can see if it works by creating a Playground in XCode and using and testing our APIClient 
 
 {% highlight swift linenos %}
