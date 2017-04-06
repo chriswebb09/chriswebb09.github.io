@@ -11,30 +11,30 @@ The journey of one thousand apps starts with a single key press...
 
 ![requests-library-logo](https://raw.githubusercontent.com/kennethreitz/requests/master/docs/_static/requests-logo-small.png)
 
-### Getting Started
+## Overview
 
 [Gist to example code](https://gist.github.com/chriswebb09/8dbd3eadbe75ca37bcb54465e29f5749)
 
-If you have ever wanted to build a web-crawler, Python is a great language to use to. Python concise, widely installed across platforms and 
-it has a multitude of networking and parsing related libraries for you to leverage. This post will go over the beginnings of building a webcrawler, 
-the functionality that scrapes urls from sites. For this example, I’m going to be using the [Requests](http://docs.python-requests.org/en/master/), [sys](https://docs.python.org/2/library/sys.html) and [re](https://docs.python.org/2/library/re.html) libraries.
+If you have ever wanted to build a web-crawler, Python is a great language to use to. Python concise, widely installed across platforms and it has a multitude of networking and parsing related libraries for you to leverage. This post will go over the beginnings of building a webcrawler, the functionality that scrapes urls from sites. For this example, I’m going to be using the [Requests](http://docs.python-requests.org/en/master/), [sys](https://docs.python.org/2/library/sys.html) and [re](https://docs.python.org/2/library/re.html) libraries.
 
-### Requests
+### Installing Prerequisites
 
-The people behind [Requests](http://docs.python-requests.org/en/master/) call it HTTP for Humans, and that’s exactly what it is. It’s one the of most beautiful works of code that I have
-come across. It is eminently readable and logically constructed. There's actually a word to describe this in the python community: Pythonic
-
-A good definition for Pythonic that I've come across is:
-
-_Exploiting the features of the Python language to produce code that is clear, concise and maintainable.Pythonic means code that doesn't just 
-get the syntax right but that follows the conventions of the Python community and uses the language in the way it is intended to be used._
-
-If you don’t have lots of experience working HTTP or Python, Requests is a great library to get started. If the Requests library isn't already installed on 
-your machine go ahead a do that using pip:
+If you don’t have lots of experience working HTTP or Python, Requests is a great library to get started. If the Requests library isn't already installed on your machine go ahead a do that using pip:
 
 {% highlight bash linenos %}
 pip install requests
 {% endhighlight %}
+
+
+## Python Modules
+
+### Requests
+
+The people behind [Requests](http://docs.python-requests.org/en/master/) call it HTTP for Humans, and that’s exactly what it is. It’s one the of most beautiful works of code that I have come across. It is eminently readable and logically constructed. There's actually a word to describe this in the python community: Pythonic
+
+A good definition for Pythonic that I've come across is:
+
+_Exploiting the features of the Python language to produce code that is clear, concise and maintainable.Pythonic means code that doesn't just get the syntax right but that follows the conventions of the Python community and uses the language in the way it is intended to be used._
 
 ### sys
 
@@ -59,9 +59,7 @@ Python classes provide all the standard features of Object Oriented Programming:
 class can override any methods of its base class or classes, and a method can call the method of a base class with the same name. Objects can contain arbitrary amounts and kinds of data. As is true for
 modules, classes partake of the dynamic nature of Python: they are created at runtime, and can be modified further after creation._
 
-To define one, prefix your class names with the word class and put a colon at the end of 
-the declaration. What makes classes in Python interesting is that you have to pass in self as a parameter in every function block.
-To make the initialization method we need to add __init__(self): 
+To define one, prefix your class names with the word class and put a colon at the end of  the declaration. What makes classes in Python interesting is that you have to pass in self as a parameter in every function block. To make the initialization method we need to add __init__(self): 
 
 {% highlight py linenos %}
 def __init__(self):
@@ -115,7 +113,7 @@ This could be a phone number or email address or in this case, URLs. This strang
 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
 {% endhighlight %}
 
-### Wrapping Up
+## Wrapping Up
 
 Now that we have that finished with our class we need to add a main function that will get called when our file is run directly from the commandline. In main
 we will need to create an instance of our class, call our our request_resource method and for now, just print out the urls if they exist.
