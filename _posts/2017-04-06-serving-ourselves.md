@@ -50,7 +50,7 @@ Moving on to our server, let’s open the index.js file up in our text editor. Y
 
 ### Overview of Require
 
-Require is not part of standard Javascript. Node uses it to load modules. It’s similar to import in Swift.
+Require is not part of standard Javascript. Node uses it to load modules. Importing in Swift is similar.
 
 [npmjs.com](https://www.npmjs.com/package/require) defines require with the following:
 
@@ -71,8 +71,7 @@ var port = 3000
 ### Accessing the Filesystem
 
 To access the movie.json file, we need to create a file path variable with the location of it. We can do that by using our path module and 
-calling join. `__dirname`  is the file path for the directory where index.js is located. Since movie.json is in the same directory we can tack
-it on the end by using join and `__dirname`. 
+calling join. `__dirname`  is the file path for the directory where index.js is located. Since movie.json is in the same directory we can tack it on the end by using join and `__dirname`. 
 
 {% highlight js linenos %}
 var path = path.join(__dirname, 'movie.json');
