@@ -11,6 +11,8 @@ The journey of one thousand apps starts with a single key press...
 
 ### Brief Overview
 
+[Gist for code examples](https://gist.github.com/chriswebb09/59e96cd2e2c086b83540b5156d6c7513)
+
 Networks go down. This was probably one of the more obvious statements that I’ve made. There are also times when you just don’t have 
 access to a reliable internet connection for whatever reason. Knowing this fact, we can start going about mitigating the consequences 
 ahead of time. 
@@ -92,6 +94,53 @@ that pagination from the network. If there is no error, we can return our data i
     })
 {% endhighlight %}
 
+For now, just give the default case response a string, I used "Default, but you're free to use whatever catches your fancy. 
+
 ### Wrap-up
 
+Node is a great and easy way to create a server to send your application some dummy data. To check that your server works, start it up in
+your terminal by running the following in your project directory:
 
+{% highlight bash linenos %}
+node index.js
+{% endhighlight %}
+
+We can see if it works by creating a Playground in XCode and using and testing our APIClient 
+
+{% highlight swift linenos %}
+
+import UIKit
+import PlaygroundSupport
+
+PlaygroundPage.current.needsIndefiniteExecution = true
+
+class APIClient {
+    
+    typealias JSON = [String: Any]
+    
+    // search functionality stuff 
+}
+
+
+APIClient.search(for: "new", page: 1) { movieData, error in
+    print(movieData)
+}
+
+
+{% endhighlight %}
+
+At the end of our index.js file we need to add the following. 
+
+{% highlight js linenos %}
+  }).listen(port, (error) => {
+    if (error) {
+      console.log(`error ${ error }`)
+    }
+    console.log(`listening on ${ port }`)
+  });
+{% endhighlight %}
+
+I've posted the Swift api call playground and index.js in a gist which I will link to.
+
+[index.js](https://gist.github.com/chriswebb09/59e96cd2e2c086b83540b5156d6c7513#file-index-js)
+[APIClientPlayground.swift](https://gist.github.com/chriswebb09/59e96cd2e2c086b83540b5156d6c7513#file-apiclientplayground-swift)
