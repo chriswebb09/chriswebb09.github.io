@@ -73,15 +73,23 @@ Inside of this block, we can create a switch statement that switches on the URL 
 that pagination from the network. If there is no error, we can return our data in our response.end call. 
 
 {% highlight js linenos %}
-switch(url.parse(request.url).pathname) {
-       case '/p1':
-       if (!error) {
-       response.end(data);
+  switch(url.parse(request.url).pathname) {
+      case '/p1':
+      if (!error) {
+        response.end(data);
+      } else {
+          console.log(error);
         }
-       default:
-       response.end(default);
-       }
-       
+      case '/p2':
+      if (!error) {
+        response.end("Page 2");
+      } else {
+          console.log(error);
+        }
+      default:
+        response.end("Default")
+      }
+    })
 {% endhighlight %}
 
 ### Wrap-up
