@@ -162,6 +162,8 @@ I've posted the Swift api call playground and index.js in a gist which I will li
 
 ---
 
+##### Sources
+
 * [npm documentation for require](https://www.npmjs.com/package/require)
 * [Stackoverflow for anonymous functions Javascript](http://stackoverflow.com/questions/9901082/what-is-this-javascript-require)
 * [Stackoverflow for require](http://stackoverflow.com/questions/9901082/what-is-this-javascript-require)
