@@ -23,6 +23,14 @@ node server that you can use to serve dummy data to your app.
 
 ### Let's get started!
 
+If you don't have node installed on your computer you should do that now, because otherwise you won't be able to try your own code out. You can install node using the Mac packages manager [Homebrew](https://brew.sh/). When you've installed homebrew run the following commands:
+
+{% highlight bash linenos %}
+
+brew install node
+
+{% endhighlight %}
+
 To start let’s create our server directory and add our server index file and JSON file.
 
 {% highlight bash linenos %}
@@ -144,3 +152,8 @@ I've posted the Swift api call playground and index.js in a gist which I will li
 
 [index.js](https://gist.github.com/chriswebb09/59e96cd2e2c086b83540b5156d6c7513#file-index-js)
 [APIClientPlayground.swift](https://gist.github.com/chriswebb09/59e96cd2e2c086b83540b5156d6c7513#file-apiclientplayground-swift)
+
+
+* [npm documentation for require](https://www.npmjs.com/package/require)
+* [Stackoverflow for anonymous functions Javascript](http://stackoverflow.com/questions/9901082/what-is-this-javascript-require)
+* [Stackoverflow for require](http://stackoverflow.com/questions/9901082/what-is-this-javascript-require)
