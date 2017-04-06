@@ -44,13 +44,19 @@ touch movies.json
 
 Open your movies.json file and copy and paste your JSON into it and save it. 
 
-Moving on to our server, let’s open the index.js file up in our text editor. You can see here at the top that a there are a bunch of global
-variables defined. 
+Moving on to our server, let’s open the index.js file up in our text editor. You can see here at the top that a there are a bunch of global variables defined. 
 
 ### Overview of Require
 
-Require is not part of standard Javascript. Node uses it to load modules. It’s similar to import in Swift.  We are using it to import the 
-http, url, fs (filesystem) and path modules into our index.js file. We’re also going to specify the port that our server will run on, 3000. 
+Require is not part of standard Javascript. Node uses it to load modules. It’s similar to import in Swift.
+
+npmjs.com defines require with the following:
+
+_Node's require() is the de facto javascript dependency statement.
+npm is the de facto javascript module manager.
+require brings both of them to the browser.
+
+We are using it to import the http, url, fs (filesystem) and path modules into our index.js file. We’re also going to specify the port that our server will run on, 3000. 
 
 {% highlight js linenos %}
 var http = require('http');
