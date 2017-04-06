@@ -15,9 +15,9 @@ The journey of one thousand apps starts with a single key press...
 
 [Gist for code examples](https://gist.github.com/chriswebb09/59e96cd2e2c086b83540b5156d6c7513)
 
-Networks go down. That is one of the more obvious statements that I’ve made on this blog. There are also times when you just don’t have access to a reliable internet connection for whatever reason. In short, it's one of those factors in development that you can lose control over. Knowing this, we can start going about mitigating the consequences ahead of time. 
+Networks go down. That is one of the more obvious statements that I’ve made on this blog. There are also times when you just don’t have access to a reliable internet connection for whatever reason. In short, using data from the internet brings into play factors that you don't have one hundred percent control over. Knowing this, we can start going about mitigating the consequences ahead of time. One way to do this is to have some data (most likely JSON) stored locally that can be called upon whenever the need may arise. It doesn’t need to be entire databases worth, just enough to simulate proper functionality. In this post, I’ll show you how to construct a simple Node.js server that you can use to serve dummy data to your app. 
 
-One way to do this is to have some data (most likely JSON) stored locally that can be called upon whenever the need may arise. It doesn’t need to be entire databases worth, just enough to simulate proper functionality. In this post, I’ll show you how to construct a simple Node.js server that you can use to serve dummy data to your app. 
+I got the idea to write this post recently when I was moving. The place where I was staying temporarily did not have internet hooked up, and I had gone way over the data allotment on my mobile plan for the month and the phone company was throttling my connection. Having a server send my application 'dummy data' would have been a quick fix for my situation. Even if you don't have a specific reason right now, working with node is a handy skill to have and something that could prove useful to you further down the line.
 
 ### Installation
 
