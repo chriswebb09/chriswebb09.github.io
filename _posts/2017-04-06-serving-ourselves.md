@@ -74,7 +74,14 @@ that pagination from the network. If there is no error, we can return our data i
 
 {% highlight js linenos %}
 switch(url.parse(request.url).pathname) {
-      case '/p1':
+       case '/p1':
+       if (!error) {
+       response.end(data);
+        }
+       default:
+       response.end(default);
+       }
+       
 {% endhighlight %}
 
 ### Wrap-up
