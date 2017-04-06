@@ -15,7 +15,7 @@ The journey of one thousand apps starts with a single key press...
 
 [Gist to example code](https://gist.github.com/chriswebb09/8dbd3eadbe75ca37bcb54465e29f5749)
 
-If you have ever wanted to build a web-crawler, Python is a great language to use to. Python concise, widely installed across platforms and it has a multitude of networking and parsing related libraries for you to leverage. This post will go over the beginnings of building a webcrawler, the functionality that scrapes urls from sites. For this example, I’m going to be using the [Requests](http://docs.python-requests.org/en/master/), [sys](https://docs.python.org/2/library/sys.html) and [re](https://docs.python.org/2/library/re.html) libraries.
+If you have ever wanted to build a web-crawler, Python is a great language to use too. Python concise, widely installed across platforms and it has a multitude of networking and parsing related libraries for you to leverage. This post will go over the beginnings of building a web crawler, the functionality that scrapes URLs from sites. For this example, I’m going to be using the [Requests](http://docs.python-requests.org/en/master/), [sys](https://docs.python.org/2/library/sys.html) and [re](https://docs.python.org/2/library/re.html) libraries.
 
 ### Installing Prerequisites
 
@@ -30,7 +30,7 @@ pip install requests
 
 ### Requests
 
-The people behind [Requests](http://docs.python-requests.org/en/master/) call it HTTP for Humans, and that’s exactly what it is. It’s one the of most beautiful works of code that I have come across. It is eminently readable and logically constructed. There's actually a word to describe this in the python community: Pythonic
+The people behind [Requests](http://docs.python-requests.org/en/master/) call it HTTP for Humans, and that’s precisely what it is. It’s one the of most beautiful works of code that I have come across. It is eminently readable and logically constructed. There's a word to describe this in the Python community: Pythonic
 
 A good definition for Pythonic that I've come across is:
 
@@ -44,8 +44,7 @@ I want to setup our Python script so that we can specify our url directly from t
 python linkcrawler.py www.google.com
 {% endhighlight %}
 
-The documentation in the Python standard library for [sys](https://docs.python.org/2/library/sys.html) calls it: System-specific parameters and functions In this case, we’re going to use it to
-access the URL that gets entered when our file is called on the command line using the sys.argv command. This gives us an array everything typed in after the word python. If we wrote sys.argv[0] the interpreters would give us ‘linkcrawler.py’ while sys.argv[1] would give us www.google.com.
+The documentation in the Python standard library for [sys](https://docs.python.org/2/library/sys.html) calls it: System-specific parameters and functions In this case, we’re going to use it to access the URL that gets entered when our file is called on the command line using the sys.argv command. The sys.argv method returns an array with strings for everything typed in after the word python. Each additional entry in into the command line gets its own index. So inputting sys.argv[0] would have the interpreter return to us ‘linkcrawler.py’ while sys.argv[1] would give us www.google.com.
 
 ### Classes in Python
 
@@ -55,7 +54,7 @@ Python standard library definition for [classes](https://docs.python.org/2.7/tut
 
 _Compared with other programming languages, Python’s class mechanism adds classes with a minimum of new syntax and semantics. It is a mixture of the class mechanisms found in C++ and Modula-3. Python classes provide all the standard features of Object Oriented Programming: the class inheritance mechanism allows multiple base classes, a derived class can override any methods of its base class or classes, and a method can call the method of a base class with the same name. Objects can contain arbitrary amounts and kinds of data. As is true for modules, classes partake of the dynamic nature of Python: they are created at runtime, and can be modified further after creation._
 
-To define one, prefix your class names with the word class and put a colon at the end of  the declaration. What makes classes in Python interesting is that you have to pass in self as a parameter in every function block. To make the initialization method we need to add __init__(self): 
+To define one, prefix your class names with the word class and put a colon at the end of the declaration. What makes classes in Python interesting is that you have to pass in self as a parameter in every function block. To give our class an init method we need to add '__init__(self)': 
 
 {% highlight py linenos %}
 def __init__(self):
@@ -66,19 +65,19 @@ def __init__(self):
             self.url = "https://" + sys.argv[1]
 {% endhighlight %}
 
-The self is important, if you leave out the self, you will get this error: 
+Specifying self as a paramter is not optional, if you leave out the self, you will get this error: 
 
 {% highlight bash linenos %}
 TypeError: __init__() takes no arguments (1 given)
 {% endhighlight %}
 
-In the init, we can instantiate our class properties.  In this case, I gave the class an URL properties: 
+In the init method, we can instantiate our class properties. In this case, I gave the class a URL property: 
 
 {% highlight py linenos %}
 self.url = sys.argv[1]
 {% endhighlight %}
 
-This uses the sys.argv method to get the URL that is entered in when you run the file. 
+This uses the sys.argv method that we talked about earlier to get the URL that is entered in when you run the file. 
 
 ### Python Methods
 
@@ -91,17 +90,17 @@ The majority of the logic for this piece will go in a method I named request_res
         return urls
 {% endhighlight %}
 
-This method takes in self as a parameter as well. We set our variable r to the results of a HTTP GET request to the url we specified initially.Using re.findall we look through r.text for text that match url patterns. These are stored in our urls variable and returned at the end of the method.
+This method takes in self as a parameter as well. We set our variable r to the results of an HTTP GET request to the URL we specified initially.Using re.findall we look through r.text for text that matches URL patterns. These are stored in our URLs variable and returned at the end of the method.
 
 ### Python re Module
 
-The Python re module is provided in the Python standard library and gives the language Perl-like regular expression patterns. Regular expressions are a way ofspecifying certain patterns within strings. 
+The Python re module is provided in the Python standard library and gives the language Perl-like regular expression patterns. Regular expressions are a way of specifying certain patterns within strings. 
 
 Wikipedia entry for Regular Expressions: 
 _A regular expression, regex or regexp[1] (sometimes called a rational expression) is, in theoretical computer science and formal language theory, a sequence of characters that define a search pattern. 
 Usually this pattern is then used by string searching algorithms for "find" or "find and replace" operations on strings._
 
-This could be a phone number or email address or in this case, URLs. This strange looking string is a regex pattern for matching text to URLs:
+A regular expression could match phone number or email address or in this case, URLs. This strange looking string is a regex pattern for matching text to URLs:
 
 {% highlight py linenos %}
 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
@@ -109,7 +108,7 @@ This could be a phone number or email address or in this case, URLs. This strang
 
 ## Wrapping Up
 
-Now that we have that finished with our class we need to add a main function that will get called when our file is run directly from the commandline. In main we will need to create an instance of our class, call our our request_resource method and for now, just print out the urls if they exist.
+Now that we have that finished with our class we need to add a main function that will get called when our file is run directly from the command line. In main we will need to create an instance of our class, call our request_resource method and for now, just print out the URLs if they exist.
 
 {% highlight py linenos %}
 def main():
@@ -120,15 +119,15 @@ def main():
             print(url)
 {% endhighlight %}
 
-Once we have our main method figured out, we now need to ensure that it gets called when the file is run. We can add some 
-if __name__ magic to get this all setup properly. 
+Once we have our main function figured out, we now need to ensure that it gets called when the file is run. We can add some 
+'if __name__ magic' to get this all setup correctly.  
 
 {% highlight py linenos %}
 if __name__ == '__main__':
     main()
 {% endhighlight %}
 
-What we're specifying here is that if Python calls our file directly (the if __name__ == '__main__':) it should run our main function. This is different than if it is imported into another file and called and it needs specification so we can run it from the commandline. 
+What we're specifying here is that if Python calls our file directly (the if __name__ == '__main__':) it should run our file's main function. This is different than if it is imported into another file and called and it needs specification so we can run it from the command line. 
 
 If you got everything right it should look something like:
 
