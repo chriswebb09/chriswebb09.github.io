@@ -9,6 +9,8 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
+![Node logo](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Node.js_logo.png)
+
 ### Brief Overview
 
 [Gist for code examples](https://gist.github.com/chriswebb09/59e96cd2e2c086b83540b5156d6c7513)
