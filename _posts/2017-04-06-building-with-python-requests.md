@@ -142,7 +142,7 @@ is different than if it is imported into another file and called and it needs sp
 
 If you got everything right it should look something like:
 
-![Example](https://github.com/chriswebb09/chriswebb09.github.io/blob/master/public/pythoncrawler.png)
+![Example](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/pythoncrawler.png)
 
 ---
 
