@@ -11,27 +11,25 @@ The journey of one thousand apps starts with a single key press...
 
 ![Node logo](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Node.js_logo.png)
 
-### Brief Overview
+## Brief Overview
 
 [Gist for code examples](https://gist.github.com/chriswebb09/59e96cd2e2c086b83540b5156d6c7513)
 
-Networks go down. This was probably one of the more obvious statements that I’ve made. There are also times when you just don’t have 
-access to a reliable internet connection for whatever reason. Knowing this fact, we can start going about mitigating the consequences 
-ahead of time. 
+Networks go down. That is one of the more obvious statements that I’ve made on this blog. There are also times when you just don’t have access to a reliable internet connection for whatever reason. In short it's one of those factors in development that you can lose control over. Knowing this, we can start going about mitigating the consequences ahead of time. 
 
-One way to do this is to have some data (most likely JSON) stored locally that can be called upon whenever the need may arise. It doesn’t 
-need to be entire databases worth, just enough to simulate proper functionality. In this post, I’ll show you how to construct a simple 
-Node.js server that you can use to serve dummy data to your app. 
+One way to do this is to have some data (most likely JSON) stored locally that can be called upon whenever the need may arise. It doesn’t need to be entire databases worth, just enough to simulate proper functionality. In this post, I’ll show you how to construct a simple Node.js server that you can use to serve dummy data to your app. 
 
-### Let's get started!
+### Installation
 
-If you don't have node installed on your computer you should do that now, because otherwise you won't be able to try your own code out. You can install node using the Mac packages manager [Homebrew](https://brew.sh/). When you've installed homebrew run the following commands:
+If you don't have node installed on your computer you should do that now, because otherwise you can't run a node server. You can install node using the Mac package manager [Homebrew](https://brew.sh/). When you've installed homebrew run the following commands:
 
 {% highlight bash linenos %}
 
 brew install node
 
 {% endhighlight %}
+
+### Let's get started...with installations
 
 To start let’s create our server directory and add our server index file and JSON file.
 
@@ -45,6 +43,8 @@ touch movies.json
 {% endhighlight %}
 
 Open your movies.json file and copy and paste your JSON into it and save it. For this example I'm going to use the response from [OMDb API](http://www.omdbapi.com/). To get some JSON, copy and paste into your movie.json from the following page: [http://www.omdbapi.com/?s=Batman&page=2](http://www.omdbapi.com/?s=Batman&page=2)
+
+## Let's Build Our Server
 
 Moving on to our server, let’s open the index.js file up in our text editor. You can see that at the top of the file there are a several of global variables that get defined. All but on of these variables uses something called require. 
 
@@ -111,7 +111,7 @@ This switch statement can help with simulating pagination or different response 
 
 For now, just give the default case response a string, I used "Default, but you're free to use whatever catches your fancy. 
 
-### Wrap-up
+## Wrap-up
 
 Node is a great and easy way to create a server to send your application some dummy data. To check that your server works, start it up in
 your terminal by running the following in your project directory:
