@@ -45,8 +45,7 @@ python linkcrawler.py www.google.com
 {% endhighlight %}
 
 The documentation in the Python standard library for [sys](https://docs.python.org/2/library/sys.html) calls it: System-specific parameters and functions In this case, we’re going to use it to
-access the URL that gets entered when our file is called on the command line using the sys.argv command. This gives us an array everything typed in after 
-the word python. If we wrote sys.argv[0] the interpreters would give us ‘linkcrawler.py’ while sys.argv[1] would give us www.google.com.
+access the URL that gets entered when our file is called on the command line using the sys.argv command. This gives us an array everything typed in after the word python. If we wrote sys.argv[0] the interpreters would give us ‘linkcrawler.py’ while sys.argv[1] would give us www.google.com.
 
 ### Classes in Python
 
@@ -54,10 +53,7 @@ Creating classes in Python is interesting slightly different than in Swift.
 
 Python standard library definition for [classes](https://docs.python.org/2.7/tutorial/classes.html): 
 
-_Compared with other programming languages, Python’s class mechanism adds classes with a minimum of new syntax and semantics. It is a mixture of the class mechanisms found in C++ and Modula-3.
-Python classes provide all the standard features of Object Oriented Programming: the class inheritance mechanism allows multiple base classes, a derived 
-class can override any methods of its base class or classes, and a method can call the method of a base class with the same name. Objects can contain arbitrary amounts and kinds of data. As is true for
-modules, classes partake of the dynamic nature of Python: they are created at runtime, and can be modified further after creation._
+_Compared with other programming languages, Python’s class mechanism adds classes with a minimum of new syntax and semantics. It is a mixture of the class mechanisms found in C++ and Modula-3. Python classes provide all the standard features of Object Oriented Programming: the class inheritance mechanism allows multiple base classes, a derived class can override any methods of its base class or classes, and a method can call the method of a base class with the same name. Objects can contain arbitrary amounts and kinds of data. As is true for modules, classes partake of the dynamic nature of Python: they are created at runtime, and can be modified further after creation._
 
 To define one, prefix your class names with the word class and put a colon at the end of  the declaration. What makes classes in Python interesting is that you have to pass in self as a parameter in every function block. To make the initialization method we need to add __init__(self): 
 
@@ -95,13 +91,11 @@ The majority of the logic for this piece will go in a method I named request_res
         return urls
 {% endhighlight %}
 
-This method takes in self as a parameter as well. We set our variable r to the results of a HTTP GET request to the url we specified initially.
-Using re.findall we look through r.text for text that match url patterns. These are stored in our urls variable and returned at the end of the method.
+This method takes in self as a parameter as well. We set our variable r to the results of a HTTP GET request to the url we specified initially.Using re.findall we look through r.text for text that match url patterns. These are stored in our urls variable and returned at the end of the method.
 
 ### Python re Module
 
-The Python re module is provided in the Python standard library and gives the language Perl-like regular expression patterns. Regular expressions are a way of
-specifying certain patterns within strings. 
+The Python re module is provided in the Python standard library and gives the language Perl-like regular expression patterns. Regular expressions are a way ofspecifying certain patterns within strings. 
 
 Wikipedia entry for Regular Expressions: 
 _A regular expression, regex or regexp[1] (sometimes called a rational expression) is, in theoretical computer science and formal language theory, a sequence of characters that define a search pattern. 
@@ -115,8 +109,7 @@ This could be a phone number or email address or in this case, URLs. This strang
 
 ## Wrapping Up
 
-Now that we have that finished with our class we need to add a main function that will get called when our file is run directly from the commandline. In main
-we will need to create an instance of our class, call our our request_resource method and for now, just print out the urls if they exist.
+Now that we have that finished with our class we need to add a main function that will get called when our file is run directly from the commandline. In main we will need to create an instance of our class, call our our request_resource method and for now, just print out the urls if they exist.
 
 {% highlight py linenos %}
 def main():
@@ -135,8 +128,7 @@ if __name__ == '__main__':
     main()
 {% endhighlight %}
 
-What we're specifying here is that if Python calls our file directly (the if __name__ == '__main__':) it should run our main function. This 
-is different than if it is imported into another file and called and it needs specification so we can run it from the commandline. 
+What we're specifying here is that if Python calls our file directly (the if __name__ == '__main__':) it should run our main function. This is different than if it is imported into another file and called and it needs specification so we can run it from the commandline. 
 
 If you got everything right it should look something like:
 
