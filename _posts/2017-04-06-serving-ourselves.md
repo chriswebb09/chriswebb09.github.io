@@ -21,7 +21,7 @@ ahead of time.
 
 One way to do this is to have some data (most likely JSON) stored locally that can be called upon whenever the need may arise. It doesn’t 
 need to be entire databases worth, just enough to simulate proper functionality. In this post, I’ll show you how to construct a simple 
-node server that you can use to serve dummy data to your app. 
+Node.js server that you can use to serve dummy data to your app. 
 
 ### Let's get started!
 
@@ -44,9 +44,9 @@ touch movies.json
 
 {% endhighlight %}
 
-Open your movies.json file and copy and paste your JSON into it and save it. 
+Open your movies.json file and copy and paste your JSON into it and save it. For this example I'm going to use the response from [OMDb API](http://www.omdbapi.com/). To get some JSON, copy and paste into your movie.json from the following page: [http://www.omdbapi.com/?s=Batman&page=2](http://www.omdbapi.com/?s=Batman&page=2)
 
-Moving on to our server, let’s open the index.js file up in our text editor. You can see here at the top that a there are a bunch of global variables defined. 
+Moving on to our server, let’s open the index.js file up in our text editor. You can see that at the top of the file there are a several of global variables that get defined. All but on of these variables uses something called require. 
 
 ### Overview of Require
 
@@ -78,8 +78,7 @@ it on the end by using join and __dirname.
 var path = path.join(__dirname, 'movie.json');
 {% endhighlight %}
 
-To read it, we have to access the filesystem with the fs module. We have to pass in the file path of the file being read and an anonymous 
-callback function that returns either error or data at the end (think of it as the completion handler that Swift uses.)  
+That should look something like: /Users/YourUsername/server/movie.json or some dirivative of that depending on where your server directory is located. To read the JSON file at that location, we have to access the filesystem with the fs module and calling readFile. This takes in the path to the file being read and an anonymous function with the parameter error and data. The function that you're passing is a callback function that returns either error or data at the end (think of it as the completion handler that Swift uses.)  
 
 {% highlight js linenos %}
 fs.readFile(path, function(error, data) {
@@ -87,8 +86,8 @@ fs.readFile(path, function(error, data) {
 
 ### URLs! 
 
-Inside of this block, we can create a switch statement that switches on the URL used to access it. This allows you to simulate something 
-that pagination from the network. If there is no error, we can return our data in our response.end call. 
+Inside of this block we need to traverse a switch statement that does something depending on the URL that was used to access the server.
+This switch statement can help with simulating pagination or different response type. If there is no error, we can return our data in our response.end call. 
 
 {% highlight js linenos %}
   switch(url.parse(request.url).pathname) {
