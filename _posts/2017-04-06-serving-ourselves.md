@@ -54,7 +54,7 @@ npmjs.com defines require with the following:
 
 _Node's require() is the de facto javascript dependency statement.
 npm is the de facto javascript module manager.
-require brings both of them to the browser.
+require brings both of them to the browser._
 
 We are using it to import the http, url, fs (filesystem) and path modules into our index.js file. We’re also going to specify the port that our server will run on, 3000. 
 
