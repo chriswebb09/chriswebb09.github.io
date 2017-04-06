@@ -50,7 +50,7 @@ Moving on to our server, let’s open the index.js file up in our text editor. Y
 
 Require is not part of standard Javascript. Node uses it to load modules. It’s similar to import in Swift.
 
-npmjs.com defines require with the following:
+[npmjs.com](https://www.npmjs.com/package/require) defines require with the following:
 
 _Node's require() is the de facto javascript dependency statement.
 npm is the de facto javascript module manager.
