@@ -148,9 +148,9 @@ At the end of our index.js file we need to add the following.
 {% highlight js linenos %}
   }).listen(port, (error) => {
     if (error) {
-      console.log(`error ${ error }`)
+      console.log('error ${ error }')
     }
-    console.log(`listening on ${ port }`)
+    console.log('listening on ${ port }')
   });
 {% endhighlight %}
 
