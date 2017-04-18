@@ -16,7 +16,7 @@ The journey of one thousand apps starts with a single key press...
 
 [Example Gist](https://gist.github.com/chriswebb09/dff9d5bd0964d817ac22d75d092733ba)
 
-Recently I’ve been interested in building something that streams media. So last week, I started an example project, which streams ma4 music files from Apple’s iTunes Preview API. It’s been an interesting experience. In the process managed to touch some features in iOS that I had I been interested in looking at but hadn't had the chance to use. I’ll be posting some examples in the next few posts. To start with, I want to go over monitoring the progress of a download in your application from both a data and UI perspective. 
+Recently I’ve been interested in building something that streams media. So last week, I started an example project, which streams ma4 music files from Apple’s iTunes Preview API. It’s been an interesting experience. If you are interested, you can check it out here: [Musicly](https://github.com/chriswebb09/Musicly). In the process managed to touch some features in iOS that I had I been interested in looking at but hadn't had the chance to use. I’ll be posting some examples in the next few posts. To start with, I want to go over monitoring the progress of a download in your application from both a data and UI perspective.
 
 The final project I've built using the example code in the post looks like this:
 
