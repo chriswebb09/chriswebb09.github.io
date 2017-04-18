@@ -24,8 +24,7 @@ It’s been an interesting experience. In the process managed to touch some feat
 The URL Loading System is a set or 'family' of classes that Apple provides for dealing with URLs and accessing data on the internet. 
 
 __Apple describes the URL Loading System as__:
-_The URL loading system is a set of classes and protocols that allow your app to access content referenced by a URL. At the heart of this technology is the NSURL class, which lets 
-your app manipulate URLs and the resources they refer to._
+_The URL loading system is a set of classes and protocols that allow your app to access content referenced by a URL. At the heart of this technology is the NSURL class, which lets your app manipulate URLs and the resources they refer to._
 
 One of the most common ways it is used is working with the URL class. This allows us to access resources over the network as well as ones that are stored locally in the filesystem.
 
@@ -75,8 +74,8 @@ Apple has it's rundown of the aspects of networking that it believes are relevan
 
 Apple specifies two methods that are relevant to this project in URLSessionDownloadDelegate. They are:
 
-urlSessionDidFinishEvents 
-didWriteData:totalBytesExpectedToWrite 
+_urlSessionDidFinishEvents_ 
+_didWriteData:totalBytesExpectedToWrite_ 
 
 The first method allows us to run networking calls on a background session. The second method gives us the data we need to monitor the progress of our download.
 
