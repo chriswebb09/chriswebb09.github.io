@@ -20,7 +20,7 @@ Recently I’ve been interested in building something that streams media. So las
 
 In the process, I managed to touch some features in iOS that I had I been interested in looking at, but hadn't had the chance to use. I’ll be posting some examples of those features for the next few posts. To start off with, I want to go over monitoring the progress of a download in your application from both a data and UI perspective.
 
-The the example project for this post, which you can find in the gist link at the top, looks like this:
+The example project for this post, which you can find in the gist link at the top, looks like this:
 
 ![Example](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/examplerecording.gif)
 
