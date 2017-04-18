@@ -102,7 +102,7 @@ extension iTunesAPIClient: URLSessionDelegate {
 
 {% endhighlight %}
 
-### Delegates, Sessions and Models
+### Delegates, Sessions and Models, Oh My!
 
 Let's create a model class for the state of our the data in between the final data object your class app uses and the URL. 
 
