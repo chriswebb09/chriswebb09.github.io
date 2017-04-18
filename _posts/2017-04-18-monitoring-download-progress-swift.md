@@ -16,8 +16,7 @@ The journey of one thousand apps starts with a single key press...
 
 [Example Gist](https://gist.github.com/chriswebb09/dff9d5bd0964d817ac22d75d092733ba)
 
-Recently I’ve been interested in building something that streams media. So last week, I started an example project, which streams ma4 music files from Apple’s iTunes Preview API. 
-It’s been an interesting experience. In the process managed to touch some features in iOS that I had I been interested in looking at but hadn't had the chance to use. I’ll be posting some examples here. 
+Recently I’ve been interested in building something that streams media. So last week, I started an example project, which streams ma4 music files from Apple’s iTunes Preview API. It’s been an interesting experience. In the process managed to touch some features in iOS that I had I been interested in looking at but hadn't had the chance to use. I’ll be posting some examples here. 
 
 ### Brief Overview Of URLSession 
 
@@ -47,7 +46,8 @@ of how iOS deals with networking tasks.
 
 ### Getting Started
 
-To start with, let’s go over monitoring the progress of a download. This can be done visually with a progress bar or by giving a readout on a text label of the percentage complete. 
+To start with, let’s go over monitoring the progress of a download. This can be done visually with a progress bar or by giving a readout on a text label of the percentage complete.
+
 {% highlight swift linenos %}
 
 @IBOutlet weak var progressView: UIProgressView!
@@ -55,8 +55,7 @@ To start with, let’s go over monitoring the progress of a download. This can b
 
 {% endhighlight %}
 
-To access the data, we’ll need to make our API client conform to URLSessionDownloadDelegate. This adventure will take us into the land of the Objective-C runtime. What this means in practical 
-terms is that we will have our APIClient class to be a subclass of NSObject.
+To access the data, we’ll need to make our API client conform to URLSessionDownloadDelegate. This adventure will take us into the land of the Objective-C runtime. What this means in practical terms is that we will have our APIClient class to be a subclass of NSObject.
 
 {% highlight swift linenos %}
 
@@ -136,8 +135,7 @@ final class Download {
 
 {% endhighlight %}
 
-As you might notice, this class has a delegate which is the intermediary between our APIClient, and it's presentation to the
-user. To create it, make as class-bound protocol called DownloadDelegate and add it as a weak property to our Download model class. 
+As you might notice, this class has a delegate which is the intermediary between our APIClient, and it's presentation to the user. To create it, make as class-bound protocol called DownloadDelegate and add it as a weak property to our Download model class. 
 
 {% highlight swift linenos %}
 
