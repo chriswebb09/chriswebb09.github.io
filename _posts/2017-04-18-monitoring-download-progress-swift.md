@@ -75,6 +75,7 @@ Apple has it's rundown of the aspects of networking that it believes are relevan
 Apple specifies two methods that are relevant to this project in URLSessionDownloadDelegate. They are:
 
 _urlSessionDidFinishEvents_ 
+
 _didWriteData:totalBytesExpectedToWrite_ 
 
 The first method allows us to run networking calls on a background session. The second method gives us the data we need to monitor the progress of our download.
