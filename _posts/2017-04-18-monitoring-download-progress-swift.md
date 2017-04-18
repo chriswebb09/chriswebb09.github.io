@@ -16,7 +16,7 @@ The journey of one thousand apps starts with a single key press...
 
 [Example Gist](https://gist.github.com/chriswebb09/dff9d5bd0964d817ac22d75d092733ba)
 
-Recently I’ve been interested in building something that streams media. So last week, I started an example project, which streams ma4 music files from Apple’s iTunes Preview API. It’s been an interesting experience. If you are interested, you can check it out here: [Musicly](https://github.com/chriswebb09/Musicly). The gif at the top of this post is a recording of the project in use. 
+Recently I’ve been interested in building something that streams media. So last week, I started an example project, which streams ma4 music files from Apple’s iTunes Preview API. It’s been a fascinating learning experience. If you are interested, you can check it out here: [Musicly](https://github.com/chriswebb09/Musicly). The gif at the top of this post is a recording of the project in use. 
 
 In the process, I managed to touch some features in iOS that I had I been interested in looking at, but hadn't had the chance to use. I’ll be posting some examples of those features for the next few posts. To start off with, I want to go over monitoring the progress of a download in your application from both a data and UI perspective.
 
@@ -26,7 +26,7 @@ The example project for this post, which you can find in the gist link at the to
 
 ### Brief Overview Of URLSession 
 
-The [URL Loading System](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html) is a set or 'family' of classes that Apple provides for dealing with URLs and accessing data on the internet. 
+Before we get started, let's review some of the features that Apple provides for managing network requests. The [URL Loading System](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html) is a set or 'family' of classes that Apple provides for dealing with URLs and accessing data on the internet. 
 
 __Apple describes the URL Loading System as__:
 
@@ -40,7 +40,7 @@ let url = URL(string: "http://www.google.com")
 
 {% endhighlight %}
 
-One of the most useful sets of functionality is provided by the URLSession class which gives us the ability to manipulate how our application interacts with the data it wants to access over the network. 
+One of the most useful sets of functionality is encapsulated within the URLSession class, and its associated delegates. This suite of functions gives us the ability to manipulate how our application interacts with the data it wants to access over the network.
 
 {% highlight swift linenos %}
 
@@ -48,8 +48,7 @@ var defaultSession = URLSession(configuration: .default)
 
 {% endhighlight %}
 
-A lot the magic that makes this work is provided by Apple and happens under the hood, it's a higher-level abstraction 
-of how iOS deals with networking tasks.
+This isn't the whole story. A lot the magic that makes this work is provided by Apple and happens under the hood, it's a higher-level abstraction of how iOS deals with networking tasks. 
 
 ### Getting Started
 
@@ -82,7 +81,7 @@ It's a bit of an understatement but it illustrates my point. Apple has it's rund
 
 ### URLSessionDelegate and URLSessionDownloadDelegate
 
-Apple specifies two methods that are relevant to this project in URLSessionDownloadDelegate. They are:
+Apple specifies two methods that are relevant to this project in URLSession and URLSessionDownloadDelegate. They are:
 
 _urlSessionDidFinishEvents_ 
 
@@ -104,6 +103,46 @@ extension iTunesAPIClient: URLSessionDelegate {
    }
 }
 
+{% endhighlight %}
+
+### Side Note on BackgroundSessions and AppDelegates 
+
+When use background sessions you need to account for situations where the task is completed when your application is no longer running. If your network request completes when your application is no long active, the OS will relaunch it. In our AppDelegate we can handle this sort of relaunch by add this method
+
+{% highlight swift linenos %}
+func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+    // Background completion called here.
+}
+{% endhighlight %}
+
+We can then add an optional completion property to the AppDelegate which we can then access inside our APIClient. 
+
+{% highlight swift linenos %}
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    var backgroundSessionCompletionHandler: (() -> Void)?
+    
+    // AppDelegate functionality. 
+ }
+{% endhighlight %}
+
+To call this completion we add this functionality to our APIClient: 
+
+{% highlight swift linenos %}
+extension iTunesAPIClient: URLSessionDelegate {
+    
+    internal func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+            let completionHandler = appDelegate.backgroundSessionCompletionHandler {
+            appDelegate.backgroundSessionCompletionHandler = nil
+            DispatchQueue.main.async {
+                completionHandler()
+            }
+        }
+    }
+    
+    // Other networking functionality
+}
 {% endhighlight %}
 
 ### Delegates, Sessions and Models, Oh My!
@@ -154,7 +193,7 @@ protocol DownloadDelegate: class {
 
 {% endhighlight %}
 
-This delegate specifies a method 
+This delegate specifies a method: 
 
 {% highlight swift linenos %}
 
