@@ -80,6 +80,8 @@ _The world of networking is complex._
 
 It's a bit of an understatement but it illustrates my point. Apple has it's rundown of the aspects of networking that it believes are relevant to developers in their ecosystem. [You can find that guide here](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/NetworkingConcepts/Introduction/Introduction.html).
 
+### URLSessionDelegate and URLSessionDownloadDelegate
+
 Apple specifies two methods that are relevant to this project in URLSessionDownloadDelegate. They are:
 
 _urlSessionDidFinishEvents_ 
