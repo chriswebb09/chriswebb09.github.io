@@ -27,6 +27,7 @@ The final project I've built using the example code in the post looks like this:
 The [URL Loading System](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html) is a set or 'family' of classes that Apple provides for dealing with URLs and accessing data on the internet. 
 
 __Apple describes the URL Loading System as__:
+
 _The URL loading system is a set of classes and protocols that allow your app to access content referenced by a URL. At the heart of this technology is the NSURL class, which lets your app manipulate URLs and the resources they refer to._
 
 One of the most common ways it is used is working with the URL class. This allows us to access resources over the network as well as ones that are stored locally in the filesystem.
