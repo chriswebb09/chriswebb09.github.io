@@ -24,7 +24,7 @@ The final project I've built using the example code in the post looks like this:
 
 ### Brief Overview Of URLSession 
 
-The URL Loading System is a set or 'family' of classes that Apple provides for dealing with URLs and accessing data on the internet. 
+The [URL Loading System](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html) is a set or 'family' of classes that Apple provides for dealing with URLs and accessing data on the internet. 
 
 __Apple describes the URL Loading System as__:
 _The URL loading system is a set of classes and protocols that allow your app to access content referenced by a URL. At the heart of this technology is the NSURL class, which lets your app manipulate URLs and the resources they refer to._
@@ -209,3 +209,4 @@ Obviously this isn't the entire project, but it should be enough to get your sta
 * [Apple docs for URLSessionDelegate](https://developer.apple.com/reference/foundation/urlsessiondelegate)
 * [Apple docs for URLSessionDownloadDelegate](https://developer.apple.com/reference/foundation/urlsessiondownloaddelegate)
 * [Apple docs for URL Loading System](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html)
+* [Objc.io Article on TCP/IP and HTTP](https://www.objc.io/issues/10-syncing-data/ip-tcp-http/)
