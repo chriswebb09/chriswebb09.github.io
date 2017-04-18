@@ -69,8 +69,10 @@ final class iTunesAPIClient: NSObject {
 ### Side Note
 
 So far I've briefly touched on the topic of networking. The subject is immense, and this doesn't ever scratch the surface of what there is to learn about it. In fact, this is the opening sentence to Apple's 'About Networking' in 'Networking Overview':
+
 _The world of networking is complex._
-Apple has it's rundown of the aspects of networking that it believes are relevant to developers in their ecosystem. [You can find that guide here](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/NetworkingConcepts/Introduction/Introduction.html).
+
+It's a bit of an understatement but it illustrates my point. Apple has it's rundown of the aspects of networking that it believes are relevant to developers in their ecosystem. [You can find that guide here](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/NetworkingConcepts/Introduction/Introduction.html).
 
 Apple specifies two methods that are relevant to this project in URLSessionDownloadDelegate. They are:
 
@@ -81,6 +83,7 @@ _didWriteData:totalBytesExpectedToWrite_
 The first method allows us to run networking calls on a background session. The second method gives us the data we need to monitor the progress of our download.
 
 {% highlight swift linenos %}
+
 extension iTunesAPIClient: URLSessionDelegate {
     internal func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
          // Calls background session completion in AppDelegate
@@ -88,10 +91,11 @@ extension iTunesAPIClient: URLSessionDelegate {
     
     internal func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64,totalBytesExpectedToWrite: Int64) {
         // Gives you the URLSessionDownloadTask that is being executed
-        // along with the total file length - totalBytesExpectedToWrite
-        // and the current amount of data that has received up to this point - totalBytesWritten
+         // along with the total file length - totalBytesExpectedToWrite
+         // and the current amount of data that has received up to this point - totalBytesWritten
    }
 }
+
 {% endhighlight %}
 
 ### Delegates, Sessions and Models
@@ -146,9 +150,11 @@ protocol DownloadDelegate: class {
 This delegate specifies a method 
 
 {% highlight swift linenos %}
+
 protocol DownloadDelegate: class {
     func downloadProgressUpdate(for progress: Float)
 }
+
 {% endhighlight %}
 
 In our Download model we can call the downloadProgressUpdate delegate method in the following manner:
