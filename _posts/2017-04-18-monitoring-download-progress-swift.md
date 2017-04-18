@@ -82,10 +82,10 @@ The first method allows us to run networking calls on a background session. The 
 
 {% highlight swift linenos %}
 extension iTunesAPIClient: URLSessionDelegate {
-internal func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
+    internal func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
          // Calls background session completion in AppDelegate
          }
-internal func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64,totalBytesExpectedToWrite: Int64) {
+    internal func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64,totalBytesExpectedToWrite: Int64) {
        // Gives you the URLSessionDownloadTask that is being executed
     // along with the total file length - totalBytesExpectedToWrite
     // and the current amount of data that has received up to this point - totalBytesWritten
