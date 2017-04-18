@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keeping Track Of Download Progress In Swift
+title: Tracking Download Progress With Swift
 ---
 
 <p class="message">
