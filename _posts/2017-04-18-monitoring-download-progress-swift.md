@@ -178,8 +178,7 @@ final class Download {
 
 {% endhighlight %}
 
-Now we can make our ViewController conform to the download delegate protocol. Since we're modifying the layout every time the delegate gets called, 
-you will need to specify that this update happens on the main thread (otherwise your application will crash.)
+Now we can make our ViewController conform to the download delegate protocol. Since we're modifying the layout every time the delegate gets called, you will need to specify that this update happens on the main thread (otherwise your application will crash.)
 
 {% highlight swift linenos %}
 
@@ -195,4 +194,10 @@ extension ExampleViewController: DownloadDelegate {
 
 {% endhighlight %}
 
+Obviously this isn't the entire project, but it should be enough to get your started. If you want to see how everything is done, I've provided a link to a Gist at the top of this entry that has all the code you need to get up and running. 
+
 ### Sources 
+* [Apple docs for URLSession](https://developer.apple.com/reference/foundation/urlsession)
+* [Apple docs for URLSessionDelegate](https://developer.apple.com/reference/foundation/urlsessiondelegate)
+* [Apple docs for URLSessionDownloadDelegate](https://developer.apple.com/reference/foundation/urlsessiondownloaddelegate)
+* [Apple docs for URL Loading System](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html)
