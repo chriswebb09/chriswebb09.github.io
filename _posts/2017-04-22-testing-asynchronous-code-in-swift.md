@@ -9,13 +9,16 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
-![Loading...](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Test2.png)
+![XC Test](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Test2.png)
 [Gist](https://gist.github.com/chriswebb09/526c511b7faaa6c71f0bc32b8f894aa8)
 
 ### Brief Overview
 
-In Apple’s XCTest framework, most test function will execute synchronously. You can run into problems when you test asynchronous code 
-in the same way you would synchronous code. Code testing relies on the fundamental principle of running code and then checking to see 
+Testing in iOS development is becoming more and more common. While not as big a feature as in languages like Ruby, it's adoption is increasingly widespread. As iOS development has becoming more and more professionalized, with business models revolving around it, it becomes less and less acceptable to have applications without tests. As your application grows over time, one of the more tasking aspects is to ensure that your new code plays well with what has already been written. Writing tests can help maintain performances as the codebase grows. 
+
+There are many frameworks for testing in iOS. One of the most commonly used third party libraries for unit tests is [Quick](https://github.com/Quick/Quick). LinkedIn recently released a coding framework called [Blue Pill](https://github.com/linkedin/bluepill) For this post, I'll stick with the default XCTest that Apple provides. 
+
+In Apple’s XCTest framework, most test function will execute synchronously. You can run into problems when you test asynchronous code in the same way you would synchronous code. Code testing relies on the fundamental principle of running code and then checking to see 
 whether it computes to predefined parameters. 
 
 _Math.swift_
@@ -66,7 +69,6 @@ But, as Apple helpfully points out:
 _But more and more code executes asynchronously._
 
 There's a simple reason behind this phenomenon:
-
 More and more, code relies on data from network requests to function. The inherent unpredictability of networking, the fact that there is 
 no guarantee of when your data will arrive, means these request need to be handled asynchronously. 
 
