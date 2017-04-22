@@ -18,7 +18,7 @@ In Apple’s XCTest framework, most test function will execute synchronously. Yo
 in the same way you would synchronous code. Code testing relies on the fundamental principle of running code and then checking to see 
 whether it computes to predefined parameters. 
 
-Math.swift 
+_Math.swift_
 
 {% highlight swift linenos %}
 
@@ -30,7 +30,7 @@ class Math {
 
 {% endhighlight %}
 
-ExampleProjectTests.swift
+_ExampleProjectTests.swift_
 
 {% highlight swift linenos %}
 
@@ -133,3 +133,10 @@ As you can see from the code above, XCTestExpectation doesn't only provide a des
 
 In the code above we call waitForExpections and give it a timeframe within which the code that you are testing should return the expected answer. If this doesn't happen, it asserts XCFail and logs and the error. 
 
+#### Sources 
+
+* [Apple Docs](https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/04-writing_tests.html)
+
+* [Mokacoding](http://www.mokacoding.com/blog/testing-callbacks-in-swift-with-xctest/)
+
+* [Road Fire Software](http://roadfiresoftware.com/2016/08/testing-asynchronous-code-in-swift-with-xctest-expectations/)
