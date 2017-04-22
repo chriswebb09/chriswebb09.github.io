@@ -14,13 +14,9 @@ The journey of one thousand apps starts with a single key press...
 
 ### Brief Overview
 
-Testing in iOS development is becoming more and more common. While not as prominent a feature as in languages like Ruby, it's adoption is increasingly widespread. As iOS development has become more and more professionalized, with business models revolving around it, it becomes less and less acceptable to have applications without tests. As your application grows over time, one of the more tasking aspects is to ensure that your new code plays well with what has already been written. Writing tests can help maintain performance as the codebase grows. 
+Testing in iOS development is becoming more and more common. While not as prominent a feature as in languages like Ruby, it's adoption is increasingly widespread. As iOS development has become more and more professionalized, with business models revolving around it, it becomes less and less acceptable to have applications without tests. As your application grows over time, one of the more tasking aspects is to ensure that your new code plays well with what has already been written. Writing tests can help maintain performance as the codebase grows. If you're interested in learning more about the larger subject of what to test for in iOS, there's a great book on the subject by Orta Therox called [Pragmatic Testing](https://github.com/orta/pragmatic-testing). He is head of mobile at Art.sy in New York and has good deal of wisdom on the topic. 
 
-If you're interested in learning more about the larger subject of what to test for in iOS, there's a great book on the subject by Orta Therox called [Pragmatic Testing](https://github.com/orta/pragmatic-testing). He is head of mobile at Art.sy in New York and has good deal of wisdom on the topic. 
-
-There are many frameworks for testing in iOS. One of the most commonly used third party libraries for unit tests is [Quick](https://github.com/Quick/Quick). LinkedIn recently released a coding framework called [Blue Pill](https://github.com/linkedin/bluepill) For this post, I will stick with the default XCTest that Apple provides. 
-
-In Apple’s XCTest framework, most test function will execute synchronously. You can run into problems when you test asynchronous code in the same way you would synchronous code. Code testing relies on the fundamental principle of running code and then checking to see whether it computes to predefined parameters. 
+There are many frameworks for testing in iOS. One of the most commonly used third party libraries for unit tests is [Quick](https://github.com/Quick/Quick). LinkedIn recently released a coding framework called [Blue Pill](https://github.com/linkedin/bluepill) For this post, I will stick with the default XCTest that Apple provides. In Apple’s XCTest framework, most test function will execute synchronously. You can run into problems when you test asynchronous code in the same way you would synchronous code. Code testing relies on the fundamental principle of running code and then checking to see whether it computes to predefined parameters. 
 
 _Math.swift_
 
@@ -104,6 +100,7 @@ class MusiclyTests: XCTestCase {
 }
 
 {% endhighlight %}
+
 The class that is the intermediary in my application is the iTrackDataStore. It takes in search paramters from the ViewController, sends them to the APIClient, and then takes the APIClient response and constructs an array of iTrack data objects. These objects are then passed back to the ViewController. Like with most code that relies on the network, iTrackDataStore executes asynchronously.  
 
 {% highlight swift linenos %}
@@ -121,7 +118,6 @@ func testDataStore() {
 {% endhighlight %}
 
 As you can see from the code above, XCTestExpectation doesn't only provide a description of what you are expecting, it also specifies when the expectation has been fufilled using the aptly names .fulfill() method. But what happens if something goes wrong?
-
 
 {% highlight swift linenos %}
  func testDataStore() {
