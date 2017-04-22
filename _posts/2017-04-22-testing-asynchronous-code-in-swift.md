@@ -9,8 +9,8 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
-![Loading...](https://raw.githubusercontent.com/chriswebb09/Musicly/master/Assets/playlist-skip.gif)
-
+![Loading...](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Test2.png)
+[Gist](https://gist.github.com/chriswebb09/526c511b7faaa6c71f0bc32b8f894aa8)
 
 ### Brief Overview
 
@@ -98,8 +98,7 @@ class MusiclyTests: XCTestCase {
 
 {% endhighlight %}
 
-In the example about I'm test my iTrackDataStore, which acts as an intermediary between the ViewController and the APIClient. It executes asynchronously
-and returns an array of iTrack objects. 
+In the example about I'm test my iTrackDataStore, which acts as an intermediary between the ViewController and the APIClient. It executes asynchronously and returns an array of iTrack objects. 
 
 {% highlight swift linenos %}
 
@@ -115,8 +114,7 @@ func testDataStore() {
 
 {% endhighlight %}
 
-As you can see from the code above, XCTestExpectation doesn't only provide a description of what you are expecting, it also specifies when the expectation has been fufilled
-using the aptly names .fulfill() method. But what happens if something goes wrong?
+As you can see from the code above, XCTestExpectation doesn't only provide a description of what you are expecting, it also specifies when the expectation has been fufilled using the aptly names .fulfill() method. But what happens if something goes wrong?
 
 
 {% highlight swift linenos %}
@@ -133,6 +131,5 @@ using the aptly names .fulfill() method. But what happens if something goes wron
     }
 {% endhighlight %}
 
-In the code above we call waitForExpections and give it a timeframe within which the code that you are testing should return the expected answer. If this 
-doesn't happen, it asserts XCFail and logs and the error. 
+In the code above we call waitForExpections and give it a timeframe within which the code that you are testing should return the expected answer. If this doesn't happen, it asserts XCFail and logs and the error. 
 
