@@ -76,7 +76,7 @@ Some good things to test in your application are complex sets of logic and logic
 ## Living Up To Expectations
 
 To begin with, let's create our expectation. An Expectation is a predefined outcome that you want your asynchronous code to perform. 
-To do this, we'll need to create an instance of the XCTestExpectation class. When we create our expectation, we give it a string which 
+To do this, we'll need to create an instance of the [XCTestExpectation class](https://developer.apple.com/reference/xctest/xctestexpectation). When we create our expectation, we give it a string which 
 describes the what we are expecting. While writing out a good description may not be necessary to run your test, the test log might be 
 meaningless without it.
 
