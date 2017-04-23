@@ -32,7 +32,7 @@ __Wikipeida__
 If you're interested in learning more about the larger subject of what to test for in iOS, there's a great open source book on the subject by Orta Therox called [Pragmatic Testing](https://github.com/orta/pragmatic-testing). He is head of mobile at Art.sy in New York and has good deal of wisdom on the topic. 
 
 ### Tools for Testing
-
+---
 There are many frameworks for testing in iOS. One of the most commonly used third party libraries for unit tests is [Quick](https://github.com/Quick/Quick). LinkedIn recently released a coding framework called [Blue Pill](https://github.com/linkedin/bluepill) For this post, I will stick with the default XCTest that Apple provides. 
 
 #### Synchronous vs. Asynchronous 
@@ -98,6 +98,8 @@ More and more, code relies on data from network requests to function. The inhere
 no guarantee of when your data will arrive, means these request need to be handled asynchronously. 
 
 ### Getting Started 
+
+---
 
 Some good things to test in your application complex blocks of logic. Consistent aspects on your code, like your model classes are not necessarily first priority. For this example I'm going to test the intermediary between the networking functionality and what is displayed on the screen.
 
@@ -171,7 +173,7 @@ As you can see from the code above, XCTestExpectation doesn't only provide a des
 {% endhighlight %}
 
 ### Wrap Up
-
+---
 In the code above we call waitForExpections and give it a timeframe within which the code that you are testing should return the expected answer. If this doesn't happen, it asserts XCFail and logs and the error. 
 
 #### Sources 
