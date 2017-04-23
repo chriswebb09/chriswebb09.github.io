@@ -32,13 +32,13 @@ If you're interested in learning more about the larger subject of what to test f
 
 There are many frameworks for testing in iOS. One of the most commonly used third party libraries for unit tests is [Quick](https://github.com/Quick/Quick). LinkedIn recently released a coding framework called [Blue Pill](https://github.com/linkedin/bluepill) For this post, I will stick with the default XCTest that Apple provides. 
 
-### Synchronous vs. Asynchronous 
+#### Synchronous vs. Asynchronous 
 
 Let's define some terminology first. Asynchronous code is any code in your application that the executes out of order. Why would your application run out of order? The reasons are numerous, but I will give an explanation that hopefully clarifies this for you. Say you want to grab some JSON for an application. For whatever reason, the network is slow, the server is overloaded, the request takes longer than you were expecting. If that network request is executed synchronous, the rest of the application needs to wait for it to finish to move on. Particularly with a platform like iOS, where user experience is central to success, that is unacceptable. To provide a responsive experience, we can send our request and let our application do other things while we wait for the response. Networking is just one reason. You could also asynchronously execute code that is computationally taxing on your CPU.
 
 There are a variety of ways to run tests while taking into account asynchronous code execution in your application. Each of these methods has their benefits and downsides. One common way to do this is by Mocking. Mocking is when you simulate some code execution. A lot of use cases for mocking revolves around network requests. There are a few good reasons you might want to mock a web request.  One reason you might use mocking is so you can ensure your tests are consistent. Like any good science experiment, you want to test against a control group. This ensures that you test against the exact outcome each time your test runs. 
 
-### XCTest 
+#### XCTest 
 
 In Apple’s XCTest framework, most test functions will execute synchronously. You can run into problems when you test asynchronous code in the same way you would synchronous code. Code testing relies on the fundamental principle of running code and then checking to see whether it computes to predefined parameters. 
 
@@ -79,7 +79,7 @@ class ExampleProjectTests: XCTestCase {
 
 {% endhighlight %}
 
-### Some Notes On Asynchronous Testing 
+#### Some Notes On Asynchronous Testing 
 
 __The Apple-y explanation__:
 
