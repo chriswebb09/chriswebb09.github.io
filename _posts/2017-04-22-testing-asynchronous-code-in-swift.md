@@ -14,11 +14,19 @@ The journey of one thousand apps starts with a single key press...
 
 ### Brief Introduction Testing on iOS
 
-Testing is fast approaching standard operating procedure for iOS development. While it is not as prominent like in Ruby, its adoption is increasingly widespread which means it's important to grasp the basic concepts. As iOS development continuea to grow into a more professionalized field, with business models revolving around it, it becomes less and less acceptable to have applications without tests. As your application grows over time, one of the more tasking aspects for developers is to ensure that your new code plays well with the code that is there. Writing tests can help maintain performance as the codebase grows. 
+Testing is fast approaching standard operating procedure for iOS development. While it is not as prominent like in Ruby, its adoption is increasingly widespread which means it's important to grasp the basic concepts. As iOS development continues to grow to be professionalized field, with business models revolving around it, it becomes less and less acceptable to have applications written without tests. 
 
-#### Side note: test coverage
+### Why?
 
-It might seem conterintuitive, but one of the hardest aspects of testing is deciding what you should test. There are blog posts devoted to this question, there are book devoted to it to! While you want your code to be well tested, like everything in life, it takes time. If you're developing on a small team or by yourself, time is of the essence. If you're interested in learning more about the larger subject of what to test for in iOS, there's a great open source book on the subject by Orta Therox called [Pragmatic Testing](https://github.com/orta/pragmatic-testing). He is head of mobile at Art.sy in New York and has good deal of wisdom on the topic. 
+As your application grows over time, one of the more tasking aspects for developers is to ensure that your new code plays well with the code that is there. Writing tests can help maintain performance as the codebase grows. 
+
+#### Test Coverage
+
+It might seem conterintuitive, but one of the hardest aspects of testing is deciding what you should test. There are blog posts devoted to this question, there are book devoted to it! While you want your code to be well tested, like everything in life, it takes time. If you're developing on a small team or by yourself, time is of the essence. 
+
+### Open Source iOS Testing Book! 
+
+If you're interested in learning more about the larger subject of what to test for in iOS, there's a great open source book on the subject by Orta Therox called [Pragmatic Testing](https://github.com/orta/pragmatic-testing). He is head of mobile at Art.sy in New York and has good deal of wisdom on the topic. 
 
 ### Tools for Testing
 
@@ -77,24 +85,32 @@ __The Apple-y explanation__:
 
 _Tests execute synchronously because each test is invoked independently one after another._
 
-But, as Apple helpfully points out:
+As Apple helpfully points out:
 
 _But more and more code executes asynchronously._
 
 There's a simple reason behind this phenomenon:
+
 More and more, code relies on data from network requests to function. The inherent unpredictability of networking, the fact that there is 
 no guarantee of when your data will arrive, means these request need to be handled asynchronously. 
 
 ### Getting Started 
 
-Some good things to test in your application are complex sets of logic and logic the deals with data that is subject to change. Consistent aspects on your code, like a model is not necessarily the first priority. For this example I'm going to test the intermediary between the networking functionality and what is displayed on the screen.
+Some good things to test in your application complex blocks of logic. Consistent aspects on your code, like your model classes are not necessarily first priority. For this example I'm going to test the intermediary between the networking functionality and what is displayed on the screen.
 
-## Living Up To Expectations
+### Living Up To Expectations
 
 To begin with, let's create our expectation. An Expectation is a predefined outcome that you want your asynchronous code to perform. 
-To do this, we'll need to create an instance of the [XCTestExpectation class](https://developer.apple.com/reference/xctest/xctestexpectation). When we create our expectation, we give it a string which 
-describes the what we are expecting. While writing out a good description may not be necessary to run your test, the test log might be 
-meaningless without it.
+To do this, we'll need to create an instance of the [XCTestExpectation class](https://developer.apple.com/reference/xctest/xctestexpectation). 
+
+#### Appley Words:
+_An expected outcome in an asynchronous test._
+
+Apple can be hit or miss when it come to explaining stuff concisely and clearly, but in this case they're dead on. Couldn't have said it any better.
+
+### Creating Expectations
+
+When we create our expectation, we give it a string which  describes the what we are expecting. While writing out a good description may not be necessary to run your test, the test log might be meaningless without it.
 
 {% highlight swift linenos %}
 
@@ -116,6 +132,8 @@ class MusiclyTests: XCTestCase {
 }
 
 {% endhighlight %}
+
+### Fulfilling Expectations
 
 The class that is the intermediary in my application is the iTrackDataStore. It takes in search paramters from the ViewController, sends them to the APIClient, and then takes the APIClient response and constructs an array of iTrack data objects. These objects are then passed back to the ViewController. Like with most code that relies on the network, iTrackDataStore executes asynchronously.  
 
@@ -148,6 +166,8 @@ As you can see from the code above, XCTestExpectation doesn't only provide a des
         }
     }
 {% endhighlight %}
+
+### Wrap Up
 
 In the code above we call waitForExpections and give it a timeframe within which the code that you are testing should return the expected answer. If this doesn't happen, it asserts XCFail and logs and the error. 
 
