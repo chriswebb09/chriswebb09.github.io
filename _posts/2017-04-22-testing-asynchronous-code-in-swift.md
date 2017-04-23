@@ -108,7 +108,7 @@ _An expected outcome in an asynchronous test._
 
 Apple can be hit or miss when it come to explaining stuff concisely and clearly, but in this case they're dead on. Couldn't have said it any better.
 
-### Creating Expectations
+#### Creating Expectations
 
 When we create our expectation, we give it a string which  describes the what we are expecting. While writing out a good description may not be necessary to run your test, the test log might be meaningless without it.
 
@@ -133,7 +133,7 @@ class MusiclyTests: XCTestCase {
 
 {% endhighlight %}
 
-### Fulfilling Expectations
+#### Fulfilling Expectations
 
 The class that is the intermediary in my application is the iTrackDataStore. It takes in search paramters from the ViewController, sends them to the APIClient, and then takes the APIClient response and constructs an array of iTrack data objects. These objects are then passed back to the ViewController. Like with most code that relies on the network, iTrackDataStore executes asynchronously.  
 
