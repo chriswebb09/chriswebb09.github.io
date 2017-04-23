@@ -24,6 +24,9 @@ As your application grows over time, one of the more tasking aspects for develop
 
 It might seem conterintuitive, but one of the hardest aspects of testing is deciding what you should test. There are blog posts devoted to this question, there are book devoted to it! While you want your code to be well tested, like everything in life, it takes time. If you're developing on a small team or by yourself, time is of the essence. 
 
+_In computer science, code coverage is a measure used to describe the degree to which the source code of a program is executed when a particular test suite runs._
+__Wikipeida__
+
 #### Open Source iOS Testing Book! 
 
 If you're interested in learning more about the larger subject of what to test for in iOS, there's a great open source book on the subject by Orta Therox called [Pragmatic Testing](https://github.com/orta/pragmatic-testing). He is head of mobile at Art.sy in New York and has good deal of wisdom on the topic. 
