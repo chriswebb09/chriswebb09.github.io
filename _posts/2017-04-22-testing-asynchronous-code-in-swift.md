@@ -16,7 +16,7 @@ The journey of one thousand apps starts with a single key press...
 
 Testing is fast approaching standard operating procedure for iOS development. While it is not as prominent like in Ruby, its adoption is increasingly widespread which means it's important to grasp the basic concepts. As iOS development continues to grow to be professionalized field, with business models revolving around it, it becomes less and less acceptable to have applications written without tests. 
 
-### Why?
+#### Why?
 
 As your application grows over time, one of the more tasking aspects for developers is to ensure that your new code plays well with the code that is there. Writing tests can help maintain performance as the codebase grows. 
 
