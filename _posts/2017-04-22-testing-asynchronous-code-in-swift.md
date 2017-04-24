@@ -22,7 +22,7 @@ As your application grows over time, one of the more tasking aspects for develop
 
 #### Test Coverage
 
-It might seem conterintuitive, but one of the hardest aspects of testing is deciding what you should test. There are blog posts devoted to this question, there are book devoted to it! While you want your code to be well tested, like everything in life, it takes time. If you're developing on a small team or by yourself, time is of the essence. 
+It might seem conterintuitive, but one of the hardest aspects of testing is deciding what you should test. There are blog posts devoted to this question, there are books devoted to it! While you want your code to be well tested, like everything in life, it takes time. If you're developing on a small team or by yourself, time is of the essence. 
 
 _In computer science, code coverage is a measure used to describe the degree to which the source code of a program is executed when a particular test suite runs._
 __Wikipeida__
@@ -39,7 +39,7 @@ There are many frameworks for testing in iOS. One of the most commonly used thir
 
 Let's define some terminology first. Asynchronous code is any code in your application that the executes out of order. Why would your application run out of order? The reasons are numerous, but I will give an explanation that hopefully clarifies this for you. Say you want to grab some JSON for an application. For whatever reason, the network is slow, the server is overloaded, the request takes longer than you were expecting. If that network request is executed synchronous, the rest of the application needs to wait for it to finish to move on. Particularly with a platform like iOS, where user experience is central to success, that is unacceptable. To provide a responsive experience, we can send our request and let our application do other things while we wait for the response. Networking is just one reason. You could also asynchronously execute code that is computationally taxing on your CPU.
 
-There are a variety of ways to run tests while taking into account asynchronous code execution in your application. Each of these methods has their benefits and downsides. One common way to do this is by Mocking. Mocking is when you simulate some code execution. A lot of use cases for mocking revolves around network requests. There are a few good reasons you might want to mock a web request.  One reason you might use mocking is so you can ensure your tests are consistent. Like any good science experiment, you want to test against a control group. This ensures that you test against the exact outcome each time your test runs. 
+There are a variety of ways to run tests while taking into account asynchronous code execution in your application. Each of these methods has their benefits and downsides. One common way to do this is by Mocking. Mocking is when you simulate some code execution. A lot of use cases for mocking revolves around network requests. There are a few good reasons you might want to mock a web request.  One reason you might use mocking is so you can ensure your tests are consistent. Like any good science experiment, you want to test against a control group. This ensures that you test against the exact outcome each time your test runs. One of the upsides of the Mocking also contains the major pitfall: mocking simulates behavior, but it is necessarily an accurate reflection of how it is performing the in the real world. 
 
 #### XCTest 
 
