@@ -14,7 +14,7 @@ The journey of one thousand apps starts with a single key press...
 
 ### Brief Introduction Testing on iOS
 
-Testing is fast approaching standard operating procedure for iOS development. While it is not as prominent like in Ruby, its adoption is increasingly widespread which means it's important to grasp the basic concepts. As iOS development continues to grow to be professionalized field, with business models revolving around it, it becomes less and less acceptable to have applications written without tests. 
+Testing is fast approaching standard operating procedure for iOS development. While it is not as prominent as in Ruby, its adoption is increasingly widespread. This means it's important to grasp the basic concepts. As iOS development continues to grow into a professionalized field, with business models revolving around it, it becomes less acceptable to have applications written without tests. 
 
 #### Why?
 
