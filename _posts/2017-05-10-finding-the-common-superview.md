@@ -9,6 +9,8 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
+![View Hierachy](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/hit-test-view-hierarchy.png)
+
 ### Brief Introduction To The View Hierarchy In iOS
 
 When programming your iOS application, one thing you will need to be aware of is the view hierarchy. At it’s most basic level, the view hierarchy
@@ -17,8 +19,11 @@ looks and you can interactive with it.
 
 ##### Superviews
 
-A superview is a view that higher on the view tree than it’s subviews. Another way to put this is that a superview is the parent view of a subview.  
-It’s position is higher on the view tree and closer to the root view.
+A superview is a view that higher on the view tree than it’s subviews. Another way to put this is that a superview is the parent view of a subview.  Its position is higher on the view tree and closer to the root view.
+
+##### Subviews 
+
+It logically goes, that subviews are the child views of a parent and are further down the view hierarchy than their parent. In  fact you can check for a views subviews by accessing the subviews property which will return an array of views that are subviews, if there are any subviews.
 
 ### Getting Started
 
