@@ -23,16 +23,15 @@ _When one view contains another, a parent-child relationship is created between 
 
 ##### Superviews
 
-A superview is a view that higher on the view tree than it’s subviews. Another way to put this is that a superview is the parent view of a subview. Its position is higher on the view tree and closer to the root view.
+A superview is a view that is higher on the view tree than it’s subviews. Another way to put this is that a superview is the parent view of a subview. Being higher on the view tree means it is closer to the rootview.
 
 ##### Subviews 
 
-It logically goes, that subviews are the child views of a parent and are further down the view hierarchy than their parent. In  fact you can check for a views subviews by accessing the subviews property which will return an array of views that are subviews, if there are any subviews.
+It logically goes, that subviews are the child views of a parent and are further down the view hierarchy than their parent. In fact you can check for a view's subviews by accessing the subviews property which will return an array of views that are subviews if there are any subviews.
 
 ### Getting Started
 
-Sometimes it is not be immediately obvious which view is the superview. So how would we go about finding the common superview for two views? To begin
-with lets focus on the first input view. We can create array of views to represent the view hierarchy by looping through the superview like so:
+Sometimes it is not immediately obvious which view is the superview. So how would we go about finding the common superview for two views? To begin with, lets focus on the first input view. We can create an array of views to represent the view hierarchy by looping through the superview like so:
 
 {% highlight swift linenos %}
 
