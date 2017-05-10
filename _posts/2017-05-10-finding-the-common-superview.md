@@ -100,7 +100,7 @@ class ViewTraverser {
  
 Hopefully this adds some clarity to the relationships between views and how to work with them. Checkout the gist link to see the full implementation.
  
- #### Credit 
+ Sources:
  
  * [http://smnh.me/images/hit-test-view-hierarchy.png](http://smnh.me/images/hit-test-view-hierarchy.png)
  * [Apple Docs: View and Window Architecture](https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/WindowsandViews/WindowsandViews.html#//apple_ref/doc/uid/TP40009503-CH2-SW1)
