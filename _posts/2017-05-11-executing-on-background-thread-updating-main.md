@@ -105,3 +105,5 @@ class ViewControllerOne: UIViewController, ImageDownloadProtocol {
 }
 
 {% endhighlight %}
+
+Since our completion is dispatched to main, the closure is executed on the main thread. You can check this with the following: Thread.isMainThread 
