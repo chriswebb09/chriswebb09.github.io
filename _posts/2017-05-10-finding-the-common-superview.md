@@ -31,7 +31,7 @@ It logically goes, that subviews are the child views of a parent and are further
 
 ### Getting Started
 
-Sometimes it is not immediately obvious which view is the superview. So how would we go about finding the common superview for two views? To begin with, lets focus on the first input view. We can create an array of views to represent the view hierarchy by looping through the superview like so:
+Sometimes it is not immediately obvious which view is the superview. So how would we go about finding the common superview for two views? To begin, lets focus on the first input view. We can create an array of views to represent the view hierarchy by looping through the superview like so:
 
 {% highlight swift linenos %}
 
