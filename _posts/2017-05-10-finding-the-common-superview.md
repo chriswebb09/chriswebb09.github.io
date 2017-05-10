@@ -11,6 +11,8 @@ The journey of one thousand apps starts with a single key press...
 
 ![View Hierachy](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/hit-test-view-hierarchy.png)
 
+[Gist](https://gist.github.com/chriswebb09/1e4e5a1aa5f2e6fa3896c0a28975c5e7)
+
 ### Brief Introduction To The View Hierarchy In iOS
 
 When programming your iOS application, one thing you will need to be aware of is the view hierarchy. At it’s most basic level, the view hierarchy
