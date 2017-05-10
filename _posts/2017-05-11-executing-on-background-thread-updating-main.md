@@ -9,7 +9,7 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
-![Downloaded Image](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Screen%20Shot%202017-05-10%20at%207.02.01%20PM.png)
+![Downloaded Image](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/doggo.png)
 
 ### Background
 
