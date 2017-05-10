@@ -15,13 +15,15 @@ The journey of one thousand apps starts with a single key press...
 
 ### Brief Introduction To The View Hierarchy In iOS
 
-When programming your iOS application, one thing you will need to be aware of is the view hierarchy. At it’s most basic level, the view hierarchy
-encompasses the parent-child relationships between different views in your application. How you structure this will determine how your application
-looks and you can interactive with it.
+When programming your iOS application, one thing you will need to be aware of is the view hierarchy. At it’s most basic level, the view hierarchy encompasses the parent-child relationships between different views in your application. How you structure this will determine how your application looks and you can interactive with it.
+
+#### Apple-y Definition: 
+
+_When one view contains another, a parent-child relationship is created between the two views. The child view in the relationship is known as the subview and the parent view is known as the superview. The creation of this type of relationship has implications for both the visual appearance of your application and the application’s behavior._
 
 ##### Superviews
 
-A superview is a view that higher on the view tree than it’s subviews. Another way to put this is that a superview is the parent view of a subview.  Its position is higher on the view tree and closer to the root view.
+A superview is a view that higher on the view tree than it’s subviews. Another way to put this is that a superview is the parent view of a subview. Its position is higher on the view tree and closer to the root view.
 
 ##### Subviews 
 
