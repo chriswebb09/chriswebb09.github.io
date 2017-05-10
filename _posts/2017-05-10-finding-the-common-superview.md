@@ -98,6 +98,8 @@ class ViewTraverser {
  
  {% endhighlight %}
  
+Hopefully this adds some clarity to the relationships between views and how to work with them. Checkout the gist link to see the full implementation.
+ 
  #### Credit 
  
  * [http://smnh.me/images/hit-test-view-hierarchy.png](http://smnh.me/images/hit-test-view-hierarchy.png)
