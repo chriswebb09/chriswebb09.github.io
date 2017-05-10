@@ -9,6 +9,8 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
+![Downloaded Image](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Screen%20Shot%202017-05-10%20at%207.02.01%20PM.png)
+
 ### Background
 
 As I’ve written here before, network requests can throw a wildcard into the performance of your application. The nature of these problems can vary, from response time to the amount information a request returns. One way you can mitigate issues is by performing these requests on background
