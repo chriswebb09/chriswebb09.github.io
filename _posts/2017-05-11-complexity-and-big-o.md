@@ -9,8 +9,6 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
-# Complexity and Big O 
-
 ![Complexity graph](https://i.stack.imgur.com/Aq09a.png)
 
 ### Introduction 
