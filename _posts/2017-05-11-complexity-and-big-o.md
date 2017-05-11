@@ -102,6 +102,30 @@ An O(n) operation’s complexity scales linearly with the number of inputs. If y
 * _Traversing an array or linked list_
 * _Removing a node from a specific index of a linked list_ 
 
+_Remove Node At Index_:
+
+{% highlight swift linenos %}
+
+func remove(node: Node) -> T {
+    let prev = node.previous
+    let next = node.next
+
+    if let prev = prev {
+      prev.next = next
+    } else {
+      head = next
+    }
+    next?.previous = prev
+
+    node.previous = nil
+    node.next = nil
+    return node.value
+  }
+  
+{% endhighlight %}
+
+_Traverse Array_:
+
 {% highlight swift linenos %}
 
 let arrOne = [1, 2, 3, 4, 5, 6]
