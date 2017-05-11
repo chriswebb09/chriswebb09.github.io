@@ -19,7 +19,7 @@ In this post, I will touch on **complexity** and **Big O Notation**. The term co
 
 "_Asymptotic analysis is the process of describing the efficiency of algorithms as their input size (n) grows._" 
 
- **Swift Algorithms and Data Structures**
+ **-Swift Algorithms and Data Structures**
 
 In programming, asymptotic analysis is generally described using Big O Notation. 
 
