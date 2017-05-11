@@ -32,7 +32,11 @@ Views are layered on top of each other creating the view hierarchy.
 
 ![Pizza](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/error-sadPizza.jpg)
 
-Think of your application's views as a pizza. The root is the dough layer, which the sauce layer sits on top of. Most pizzas have cheese and possibly other toppings. When you order a pizza with half pepperoni and half olive, both of these toppings sit on the same level, which is on top of the cheese. Views can also sit on the same level and have a common parent or 'superview'. How the views are layered and at which level defines our application's view hierarchy. When you build your application, it is something to try to stay aware of. At the most basic level, the view hierarchy encompasses the parent-child relationships between different views in your application. How you structure this will determine how your application looks and how you can interact with it.
+Think of your application's views as a pizza. The root is the dough layer, which the sauce layer sits on top of. Most pizzas have cheese and possibly other toppings. When you order a pizza with half pepperoni and half olive, both of these toppings sit on the same level, which is on top of the cheese. Views can also sit on the same level and have a common parent or 'superview'. 
+
+##### How The View Hierarchy Relates To Development
+
+How the views are layered and at which level defines our application's view hierarchy. When you build your application, it is something to try to stay aware of. At the most basic level, the view hierarchy encompasses the parent-child relationships between different views in your application. How you structure this will determine how your application looks and how you can interact with it.
 
 ##### Superviews
 
