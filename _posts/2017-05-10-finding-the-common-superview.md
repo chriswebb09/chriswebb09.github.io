@@ -16,7 +16,7 @@ The journey of one thousand apps starts with a single key press...
 
 ### Brief Introduction To The View Hierarchy In iOS
 
-One of the most basic building blocks of any iOS app is the UIKit class UIView. Almost all the elements in your application will be some form of view. Those elements that aren't, like UIImage, will be attached to a view type when displayed. If your application displays more than one view at a time, you will need to add these views to your root view. If you haven't created views programmatically, you can add a child view to a view calling the addSubview method from the parent view and specifying the child view you want to add like so: 
+One of the most basic building blocks of any iOS app is the UIKit class UIView. UIViews or Views, define what happens within a given rectangular area of your screen. Almost all the elements in your application will be some form of view. Those elements that aren't, like UIImage, will be attached to a view type when displayed. If your application displays more than one view at a time, you will need to add these views to your root view. If you haven't created views programmatically, you can add a child view to a view calling the addSubview method from the parent view and specifying the child view you want to add like so: 
 
 {% highlight swift linenos %}
 
@@ -32,9 +32,11 @@ Views are layered on top of each other creating the view hierarchy.
 
 ![Pizza](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/error-sadPizza.jpg)
 
-Think of your application's views as a pizza. The root is the dough layer, which the sauce layer sits on top of. Most pizzas have cheese and possibly other toppings. When you order a pizza with half pepperoni and half olive, both of these toppings sit on the same level, which is on top of the cheese. Views can also sit on the same level and have a common parent or 'superview'. 
+Think of your application's views as a pizza. The root is the dough layer, which the sauce layer sits on top of. Most pizzas have cheese and possibly other toppings. When you order a pizza with half pepperoni and half olive, both of these toppings sit on the same level, which is on top of the cheese. Views can also sit on the same level and have a common parent or 'superview.' 
 
 ##### How The View Hierarchy Relates To Development
+
+![View Hierarchy](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/ViewHierarchy0_alt.png)
 
 How the views are layered and at which level defines our application's view hierarchy. When you build your application, it is something to try to stay aware of. At the most basic level, the view hierarchy encompasses the parent-child relationships between different views in your application. How you structure this will determine how your application looks and how you can interact with it.
 
@@ -106,12 +108,12 @@ _When one view contains another, a parent-child relationship is created between 
 
 ### Getting Started
 
-Sometimes it is not immediately obvious which view is the common superview for two different views. So, how would we go about finding the common superview? There are a few steps we need to go through first. Let's take this problem one view at a time. To begin with let's create a class called ViewTraverser which will be responsible for functionality for finding our common superview (if it exists!) 
+Sometimes it is not immediately obvious which view is the common superview for two different views. So, how would we go about finding the common superview? There are a few steps we need to go through first. Let's take this problem one view at a time. To begin with, let's create a class called ViewTraverser which will be responsible for functionality for finding our common superview (if it exists!) 
 
 
 ### Creating A View-Tag Table
 
-To start with let's create a private function **traverseSuperViews(view: UIView) -> [Int : UIView]**. This should take in a view parameter and return a table/dictionary with the parameter's superviews. For the sake of this exercise I'm going to assume that each view has been given a unique integer as a tag property. We are going to use that tag as the key for each corresponding view in the table. Why should this method be private? This traverseSuperViews is just one piece of the puzzel. It will only be used by a method within the ViewTraverser class.
+To start with let's create a private function **traverseSuperViews(view: UIView) -> [Int : UIView]**. This should take in a view parameter and return a table/dictionary with the parameter's superviews. For the sake of this exercise, I'm going to assume that each view has been given a unique integer as a tag property. We are going to use that tag as the key for each corresponding view in the table. Why should this method be private? This traverseSuperViews is just one piece of the puzzle. It will only be used by a method within the ViewTraverser class.
 
 {% highlight swift linenos %}
 
@@ -130,11 +132,11 @@ class ViewTraverser {
 
 {% endhighlight %}
 
-This should give us our dictionary with the view tag key, view value. We can now use this table to lookup of the tags from our other view's superviews. If that lookup returns a value that is not nil we know that we have found a common superview and we can return it. 
+This should give us our *dictionary* with the *view tag key, view value*. We can now use this table to lookup of the tags from our other view's superviews. If that lookup returns a value that is not nil we know that we have found a common superview and we can return it. 
 
 ### Checking For A Superview 
 
-Let's create a method called **checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView?** This method should also be private and it should take in a view and dictionary with Int, View pairs as parameters and returns an optional view. Why is our return type optional? Because our views could be completely unrelated and therefore have no common superview. 
+Let's create a method called **checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView?** This method should also be private and it should take in a view and dictionary with *Int : View* pairs as parameters and returns an *optional view*. Why is our return type optional? Because our views could be completely unrelated and therefore have no common superview. 
 
 {% highlight swift linenos %}
 
@@ -155,7 +157,7 @@ class ViewTraverser {
 
 ### Putting It All Together
 
-Finally, let's combine our functionality into a method called **commonSuper(viewOne: UIView, viewTwo: UIView) -> UIView?**  which takes in two views as parameters and returns an optional view. This the main interface for our class and should not be private like the other methods.
+Finally, let's combine our functionality into a method called **commonSuper(viewOne: UIView, viewTwo: UIView) -> UIView?**  which takes in two views as parameters and returns an optional view. This method will be the main interface for our ViewTraverser class and should not get set to private like the other methods.
 
 {% highlight swift linenos %}
 
@@ -245,11 +247,11 @@ Optional(12)
 
 {% endhighlight %}
 
-The first common superview for viewOne and viewTwo should be the ViewController's view, which was given the tag 12. 
+The first common superview for *viewOne* and *viewTwo* should be the ViewController's view, which was given the tag *12*. 
 
 ### Wrap Up 
 
-Hopefully this adds some clarity to the relationships between views and how to work with them. Checkout the gist link to see the full implementation.
+Hopefully, this adds some clarity to the relationships between views and how to work with them. Checkout the gist link to see the full implementation.
  
  Sources:
  
