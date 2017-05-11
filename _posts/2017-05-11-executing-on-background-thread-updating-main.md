@@ -31,11 +31,11 @@ In practical terms what this means is it allows developers to decide on which th
 
 #### The main thread.
 
-The main thread executes synchronously. Why is this important? Synchronous means that they run one after the other. For development purposes what that means is that if something is running synchronously, it waits for each operation to finish before moving on to the next one.
+In iOS the main thread executes synchronously. Why is this important? Synchronous queue means that operations run one after the other in order. For development purposes what that means is that if something is running synchronously, it waits for each operation to finish before moving on to the next one.
 
 #### UIApplication and Main 
 
-One other thing I should mention, UIApplication executes on the main thread. So, if something on your main thread takes a long time to complete, it will hold up your entire application. That means, for the most part, you should only use the main thread for processes that you know will finish in a short period, like for instance UI updates. Running a long and complicated operation on the main thread will destroy your Application's responsiveness. Another issue that can come up with sychronous queues but is particularly problematic on the main thread is deadlock. This is when two processes are waiting for each other to finish executing. Since they are both waiting, they never execute. 
+One other thing I should mention, UIApplication executes on the main thread. So, if something on your main thread takes a long time to complete, it will hold up your entire application. That means, for the most part, you should only use the main thread for processes that you know will finish in a short period, like for instance UI updates. Running a long and complicated operation on the main thread will destroy your Application's responsiveness. 
 
 #### Code
 
@@ -50,7 +50,7 @@ protocol ImageDownloadProtocol {
 
 {% endhighlight %}
 
-Any class that conforms to the ImageDownloadProtocol must have a image property and a func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) method. Another thing we could do is add a default implementation for our method in a protocol extension. That will allow any class that conforms to that protocol to use a default download image implementation. 
+Any class that conforms to the ImageDownloadProtocol must have a image property and a func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) method. One thing we could do to simplify our code is to add a default implementation for our method in a protocol extension. That will allow any class that conforms to that protocol to use a default download image implementation. 
 
 Let's extend ImageDownloadProtocol to give a default implementation for the method:
 
@@ -104,4 +104,10 @@ class ViewControllerOne: UIViewController, ImageDownloadProtocol {
 
 {% endhighlight %}
 
-Since our completion is dispatched to main, the closure is executed on the main thread. You can check this with the following: Thread.isMainThread 
+Since our completion is dispatched to the main the, the code within the closure is executed on the main thread. You can check to make sure of this with the following: Thread.isMainThread 
+
+Sources: 
+
+[raywenderlich.com - GCD in Swift 3](https://www.raywenderlich.com/148513/grand-central-dispatch-tutorial-swift-3-part-1)
+[Apple Docs - Dispatch](https://developer.apple.com/reference/dispatch)
+[Apple Docs - DispatchQueue](https://developer.apple.com/reference/dispatch/dispatchqueue)
