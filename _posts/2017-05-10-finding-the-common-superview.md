@@ -243,7 +243,7 @@ class ViewController: UIViewController {
 
 {% endhighlight %}
 
-If everything goes according to plan, the follow should be printed to your terminal:
+If everything goes according to plan, the following should get printed to your terminal:
 
 {% highlight swift linenos %}
 
