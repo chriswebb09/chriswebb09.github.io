@@ -111,7 +111,7 @@ Sometimes it is not immediately obvious which view is the common superview for t
 
 ### Creating A View-Tag Table
 
-To start with let's create a private function traverseSuperViews(view: UIView) -> [Int : UIView]. This should take in a view parameter and return a table/dictionary with the parameter's superviews. For the sake of this exercise I'm going to assume that each view has been given a unique integer as a tag property. We are going to use that tag as the key for each corresponding view in the table. Why should this method be private? This traverseSuperViews is just one piece of the puzzel. It will only be used by a method within the ViewTraverser class.
+To start with let's create a private function *traverseSuperViews(view: UIView) -> [Int : UIView]*. This should take in a view parameter and return a table/dictionary with the parameter's superviews. For the sake of this exercise I'm going to assume that each view has been given a unique integer as a tag property. We are going to use that tag as the key for each corresponding view in the table. Why should this method be private? This traverseSuperViews is just one piece of the puzzel. It will only be used by a method within the ViewTraverser class.
 
 {% highlight swift linenos %}
 
@@ -134,7 +134,7 @@ This should give us our dictionary with the view tag key, view value. We can now
 
 ### Checking For A Superview 
 
-Let's create a method called checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView? This method should also be private and it should take in a view and dictionary with Int, View pairs as parameters and returns an optional view. Why is our return type optional? Because our views could be completely unrelated and therefore have no common superview. 
+Let's create a method called *checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView?* This method should also be private and it should take in a view and dictionary with Int, View pairs as parameters and returns an optional view. Why is our return type optional? Because our views could be completely unrelated and therefore have no common superview. 
 
 {% highlight swift linenos %}
 
@@ -155,7 +155,7 @@ class ViewTraverser {
 
 ### Putting It All Together
 
-Finally, let's combine our functionality into a method called commonSuper(viewOne: UIView, viewTwo: UIView) -> UIView?  which takes in two views as parameters and returns an optional view. This the main interface for our class and should not be private like the other methods.
+Finally, let's combine our functionality into a method called *commonSuper(viewOne: UIView, viewTwo: UIView) -> UIView?*  which takes in two views as parameters and returns an optional view. This the main interface for our class and should not be private like the other methods.
 
 {% highlight swift linenos %}
 
@@ -186,7 +186,7 @@ You should now be able to check whether any two given superviews have a common s
 
 ### Making Sure It Works
 
-Let's see if our ViewTraverser can find a common superview. To test this, create a ViewController class and add the following:
+Let's see if our *ViewTraverser* can find a common superview. To test this, create a *ViewController* class and add the following:
 
 {% highlight swift linenos %}
  
@@ -219,7 +219,7 @@ class ViewController: UIViewController {
 
  {% endhighlight %}
  
-We're almost there, let's finish this up! There are two lines that you need to add at the bottom of your viewDidLoad to run the check for the common superview:
+We're almost there, let's finish this up! There are two lines that you need to add at the bottom of your *viewDidLoad* to run the check for the common superview:
  
  {% highlight swift linenos %}
  
