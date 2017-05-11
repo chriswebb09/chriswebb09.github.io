@@ -31,6 +31,16 @@ When dealing with an O(log n) complexity operation, each cycle should reduce the
 
 An O(n) operation’s complexity scales linearly with the number of inputs. If you iterate through all the elements in an array, it is O(n), because the the operation is dependent on the number of elements in your array. Going through 10 elements in an array requires 10 cycles. If you multiply the array count by 10, the cycles increase to 100 or 10 times times as much as 10 elements. 
 
+{% highlight swift linenos %}
+
+let arrOne = [1, 2, 3, 4, 5, 6]
+
+for i in arrOne {
+    print(i)
+}
+
+{% endhighlight %}
+
 ### O(n^2)
 
 An O(n^2) operation’s complexity scales exponentially with the number of inputs. A simple example of an O(n^2) is an operation with a loop within a loop. If you took an array with 6 elements and for each element in the array accessed nth element in the range of 0..<array.count you would access your array 36 times.  Your complexity is not scaling directly with input, but for input squared. A worst case scenario for a bubble sort is O(n^2) 
