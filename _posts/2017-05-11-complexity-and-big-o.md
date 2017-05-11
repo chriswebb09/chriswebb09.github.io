@@ -13,7 +13,13 @@ The journey of one thousand apps starts with a single key press...
 
 ### Introduction 
 
-In this post, I will touch on complexity and big O notation. Complexity regarding programming doesn't necessarily mean one thing. It could be time complexity - which is the number of operations in regards to input or space complexity, which is the number of places used for storage in a given operation in regards to its input. For simplicities sake, in this post, I will be referring to time complexity.  
+In this post, I will touch on **complexity** and **Big O Notation**. The term complexity as it relates to programming doesn't necessarily mean one thing. There are different types of computational complexity. The two most common types of complexity are time complexity - which is the number of operations in regards to input and space complexity, which is the number of places used for storage in a given operation in regards to its input. For simplicities sake, in this post, I will be referring to time complexity.  
+
+### Asymptotic Analysis
+
+"Asymptotic analysis is the process of describing the efficiency of algorithms as their input size (n) grows." - Swift Algorithms and Data Structures 
+
+In programming, asymptotic analysis is generally described using Big O Notation. 
 
 ### Worst case scenario 
 
@@ -162,3 +168,4 @@ Sources:
 * [Stack Overflow](http://stackoverflow.com/questions/1592649/examples-of-algorithms-which-has-o1-on-log-n-and-olog-n-complexities)
 * [Wikipedia - Complexity Logarithm](https://en.wikipedia.org/wiki/Complex_logarithm) 
 * [Wikipedia - Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+* [Big O Cheat Sheet](http://bigocheatsheet.com/)
