@@ -46,7 +46,7 @@ _Managing view hierarchies is a crucial part of developing your application’s 
 
 ##### Superviews
 
-A superview is a view that is higher on the view tree than it’s subviews. Another way to put this is that a superview is the parent view of a subview. Being higher on the view tree means it is closer to the root view.
+In the parent-child view relationshi a superview is the parent view. All views have a superview property which is an optional view. As the parent view, the superview is higher up in the view tree than it's children (or subviews.) Being higher on the view tree means it is closer to the root view.
 
 {% highlight swift linenos %}
 
@@ -77,7 +77,7 @@ The property is optional because it could be the root view and have no superview
 
 ##### Subviews 
 
-All views have an array property called subviews. This array contains views for which it is the parent view. 
+All views have an array property called subviews. This array contains views for which it is the parent view. This array is not optional, because views can add subviews, but there may or may not be any elements in the subviews array property. 
 
 {% highlight swift linenos %}
 
