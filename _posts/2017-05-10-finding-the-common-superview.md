@@ -13,13 +13,14 @@ The journey of one thousand apps starts with a single key press...
 
 [Gist](https://gist.github.com/chriswebb09/1e4e5a1aa5f2e6fa3896c0a28975c5e7)
 
+
 ### Brief Introduction To The View Hierarchy In iOS
 
-When programming your iOS application, one thing you will need to be aware of is the view hierarchy. At its most basic level, the view hierarchy encompasses the parent-child relationships between different views in your application. How you structure this will determine how your application looks and how you can interact with it.
+One of the most basic building blocks of any iOS app is the UIKit class UIView. Almost all the elements in your application will be some form of view. Those elements that aren't, like UIImage, will be attached to a view type when displayed. If your application displays more than one view at a time, you will need to add these views to your root view. If you haven't created views programmatically, you can add a child view to a view calling the addSubview method from the parent view and specifying the child view you want to add like so: yourViewName.addSubview(view: childView). Views are layered on top of each other creating the view hierarchy. 
 
-#### Apple-y Definition: 
+### The View Hierarchy
 
-_When one view contains another, a parent-child relationship is created between the two views. The child view in the relationship is known as the subview and the parent view is known as the superview. The creation of this type of relationship has implications for both the visual appearance of your application and the application’s behavior._
+Think of your application's views as a pizza. The root is the dough layer, which the sauce layer sits on top of. Most pizzas have cheese and possibly other toppings. When you order a pizza with half pepperoni and half olive, both of these toppings sit on the same level, which is on top of the cheese. Views can also sit on the same level and have a common parent or 'superview'. How the views are layered and at which level defines our application's view hierarchy. When you build your application, it is something to try to stay aware of. At the most basic level, the view hierarchy encompasses the parent-child relationships between different views in your application. How you structure this will determine how your application looks and how you can interact with it.
 
 ##### Superviews
 
@@ -80,6 +81,12 @@ This should print out something that looks similar to:
 [<UIView: 0x7fc1be800da0; frame = (0 0; 0 0); tag = 2; layer = <CALayer: 0x610000037080>>, <UIView: 0x7fc1be801050; frame = (0 0; 0 0); tag = 3; layer = <CALayer: 0x6100000370a0>>]
 
 {% endhighlight %}
+
+#### Apple-y Definition: 
+
+Apple describes superview, subviews in the following manner: 
+
+_When one view contains another, a parent-child relationship is created between the two views. The child view in the relationship is known as the subview and the parent view is known as the superview. The creation of this type of relationship has implications for both the visual appearance of your application and the application’s behavior._
 
 ### Getting Started
 
