@@ -19,7 +19,7 @@ In this post, I will touch on complexity and big O notation. Complexity regardin
 
 When referring to the worst-case scenario with complexity, we are referring to an input that causes maximum complexity. The difference between a best/worst case scenario for complexity may be significant. The difference between best case scenario and worst scenario for searching a hash table can go from constant O(1) time to linear O(n) time.  
 
-### O(1)
+### O(1) - Constant Time
 
 An O(1) operation’s complexity is constant regardless of the number of inputs. Accessing the first element in an array will always be O(1). It is the same for an array with 1000 elements as it is for an array with 10.  In fact accessing any element in your array by its index should be a constant complexity operation regardless of whether it is the first item or the 1000th. 
 
@@ -54,7 +54,7 @@ func append(value: T) {
   
 {% endhighlight %}
 
-### O(log n) 
+### O(log n) - Logarithmic Time
 
 When dealing with an O(log n) complexity operation, each cycle should reduce the complexity in relation to input. A prime example of this is a binary search. Each iteration halves the interval within which it searches. 
 
@@ -93,7 +93,7 @@ binarySearch([1, 2, 3, 4, 5], element: 2)
 
 {% endhighlight %}
 
-### O(n)
+### O(n) - Linear Time
 
 An O(n) operation’s complexity scales linearly with the number of inputs. If you iterate through all the elements in an array, it is O(n), because the operation is dependent on the number of items in your collection. Going through 10 elements in an array requires ten cycles. If you multiply the array count by 10, the cycles increase to 100 or 10 times as much as ten elements. 
 
@@ -136,7 +136,7 @@ for i in arrOne {
 
 {% endhighlight %}
 
-### O(n^2)
+### O(n^2) - Exponential Time
 
 An O(n^2) operation’s complexity scales exponentially with the number of inputs. A simple example of an O(n^2) is a process with a loop within a loop. If you took an array with six elements and for each element of the array accessed nth element in the range of 0..<array.count you would access your array 36 times.  Your complexity is not scaling directly with input, but for input squared. A worst case scenario for a bubble sort is O(n^2).
 
