@@ -23,7 +23,7 @@ When referring to worst case scenario with complexity, we are referring to an in
 
 An O(1) operation’s complexity is constant regardless of the number of inputs. Accessing the first element in an array will always be O(1). It is the same for an array with 1000 elements as it is for an array with 10.  In fact accessing any element in your array by it’s index should be a constant complexity operation regardless of whether it is the first element or the 1000th. 
 
-Examples of 0(1) operations:
+##### Examples of 0(1) operations:
 
 _Looking up element in a hashtable._
 _Inserting adding a node to linked list_ 
@@ -58,7 +58,7 @@ func append(value: T) {
 
 When dealing with an O(log n) complexity operation, each cycle should reduce the complexity in relation to input. A prime example of this is a binary search. Each iteration halves the interval within which it searches. 
 
-Examples of 0(log n) operations:
+##### Examples of 0(log n) operations:
 
 _Binary search_
 
@@ -68,7 +68,7 @@ _Binary search_
 
 An O(n) operation’s complexity scales linearly with the number of inputs. If you iterate through all the elements in an array, it is O(n), because the the operation is dependent on the number of elements in your array. Going through 10 elements in an array requires 10 cycles. If you multiply the array count by 10, the cycles increase to 100 or 10 times times as much as 10 elements. 
 
-Examples of 0(n) operations:
+##### Examples of 0(n) operations:
 
 _Traversing an array or linked list_
 _Removing a node from a specific index of a linked list_ 
@@ -87,7 +87,8 @@ for i in arrOne {
 
 An O(n^2) operation’s complexity scales exponentially with the number of inputs. A simple example of an O(n^2) is an operation with a loop within a loop. If you took an array with 6 elements and for each element in the array accessed nth element in the range of 0..<array.count you would access your array 36 times.  Your complexity is not scaling directly with input, but for input squared. A worst case scenario for a bubble sort is O(n^2) 
 
-Examples of 0(n^2) operations:
+##### Examples of 0(n^2) operations:
+
 _Traversing a 2D array_ 
 
 {% highlight swift linenos %}
