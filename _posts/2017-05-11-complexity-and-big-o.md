@@ -136,7 +136,7 @@ for i in arrOne {
 
 {% endhighlight %}
 
-### O(n^2) - Exponential Time
+### O(n^2) - Quadratic Time
 
 An O(n^2) operation’s complexity scales exponentially with the number of inputs. A simple example of an O(n^2) is a process with a loop within a loop. If you took an array with six elements and for each element of the array accessed nth element in the range of 0..<array.count you would access your array 36 times.  Your complexity is not scaling directly with input, but for input squared. A worst case scenario for a bubble sort is O(n^2).
 
