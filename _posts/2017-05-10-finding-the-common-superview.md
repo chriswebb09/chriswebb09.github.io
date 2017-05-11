@@ -38,7 +38,11 @@ Think of your application's views as a pizza. The root is the dough layer, which
 
 ![View Hierarchy](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/ViewHierarchy0_alt.png)
 
-How the views are layered and at which level defines our application's view hierarchy. When you build your application, it is something to try to stay aware of. At the most basic level, the view hierarchy encompasses the parent-child relationships between different views in your application. How you structure this will determine how your application looks and how you can interact with it.
+How the views are layered and at which level defines our application's view hierarchy. When you build your application, it is something to try to stay aware of. At the most basic level, the view hierarchy encompasses the parent-child relationships between different views in your application. How you structure this will determine how your application looks and how you can interact with it. The view hierarchy is an important enough aspect of iOS development that Apple devotes a section of its View Programming Guide to the topic.
+
+From Apple's View Programming Guide: 
+
+_Managing view hierarchies is a crucial part of developing your application’s user interface. The organization of your views influences both the visual appearance of your application and how your application responds to changes and events. For example, the parent-child relationships in the view hierarchy determine which objects might handle a specific touch event. Similarly, parent-child relationships define how each view responds to interface orientation changes._
 
 ##### Superviews
 
