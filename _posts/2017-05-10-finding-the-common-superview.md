@@ -31,18 +31,18 @@ It logically goes, that subviews are the child views of a parent and are further
 
 ### Getting Started
 
-Sometimes it is not immediately obvious which view is the superview. So how would we go about finding the common superview for two views? To begin, lets focus on the first input view. We can create an array of views to represent the view hierarchy by looping through the superview like so:
+Sometimes it is not immediately obvious which view is the superview. So how would we go about finding the common superview for two views? To begin, lets focus on the first input view. For the sake of this exercise I'm going to assume that each view has been given a unique integer for its tag property. We can create a dictionary and use this tag as the key for each value which will be it's view. 
 
 {% highlight swift linenos %}
 
 class ViewTraverser {
-    func traverseSuperViews(view: UIView) -> [UIView] {
-        var views: [UIView] = []
-        var inputView: UIView = view
-        views.append(inputView)
-        while inputView.superview != nil {
-            inputView = inputView.superview!
-            views.append(inputView)
+    func traverseSuperViews(view: UIView) -> [Int : UIView] {
+        var views: [Int: UIView] = [:]
+        var inputView: UIView? = view
+        while inputView != nil {
+            guard let tag = inputView?.tag, let view = inputView else { continue }
+            views[tag] = view
+            inputView = view.superview
         }
         return views
     }
@@ -50,8 +50,7 @@ class ViewTraverser {
 
 {% endhighlight %}
 
-You should now have the view hierarchy for one view in an array which we can now use for comparison. Lets create a method that takes in a view 
-and compares it to an array of views. If the view is contained within the array, return true else return false. 
+You should now have the view hierarchy for the first view store in a dictionary. We can now check to see whether a tag has a view value attached to it. Lets create a method that takes in a view and lookups up the views tag in the dictionary to see if there is a corresponding view. If the view exists, we can return it. 
 
 {% highlight swift linenos %}
 
@@ -59,19 +58,18 @@ class ViewTraverser {
 
   // Traverse superviews 
   
-    func checkForSuper(view: UIView?, views: [UIView]) -> Bool {
-        guard let view = view else { return false }
-        if views.contains(view) {
-            return true
+    func checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView? {
+        guard let view = view else { return nil }
+        if views[view.tag] != nil {
+            return view
         }
-        return false
+        return nil
     }
 }
 
 {% endhighlight %}
 
-Now we can combine the two into a method that takes in two views and returns an optional view. The view should be optional because there may not be a 
-common superview. 
+Now we can combine the two into a method that takes in two views and returns an optional view. The return value should be optional because there may not be a common superview. 
 
 {% highlight swift linenos %}
 
@@ -81,11 +79,11 @@ class ViewTraverser {
   
   // Check for superview 
   
-      func commonSuper(viewOne: UIView, viewTwo: UIView) -> UIView? {
+     func commonSuper(viewOne: UIView, viewTwo: UIView) -> UIView? {
         var inputTwo: UIView? = viewTwo
-        let superViews: [UIView] = traverseSuperViews(view: viewOne)
+        let superViews: [Int: UIView] = traverseSuperViews(view: viewOne)
         while inputTwo != nil {
-            if checkForSuper(view: inputTwo, views: superViews) {
+            if checkForSuper(view: inputTwo, views: superViews) != nil {
                 return inputTwo
             } else {
                 inputTwo = inputTwo?.superview
@@ -93,6 +91,7 @@ class ViewTraverser {
         }
         return nil
     }
+    
  }
  
  {% endhighlight %}
