@@ -86,9 +86,9 @@ This should print out something that looks similar to:
 Sometimes it is not immediately obvious which view is the common superview for two different views. So, how would we go about finding the common superview? There are a few steps we need to go through first. Let's take this problem one view at a time. To begin with let's create a class called ViewTraverser which will be responsible for functionality for finding our common superview (if it exists!) 
 
 
-### Creating View-Tag Table
+### Creating A View-Tag Table
 
-To start with let's create a private function func traverseSuperViews(view: UIView) -> [Int : UIView]. This should take in a view and return a table with the views superviews. For the sake of this exercise I'm going to assume that each view has been given a unique integer as a tag property. We are going to use that tag as the key for each corresponding view in the table. Why should this method be private? This traverseSuperViews is just one piece of the puzzel. It will only be used by a method within the ViewTraverser class.
+To start with let's create a private function traverseSuperViews(view: UIView) -> [Int : UIView]. This should take in a view parameter and return a table/dictionary with the parameter's superviews. For the sake of this exercise I'm going to assume that each view has been given a unique integer as a tag property. We are going to use that tag as the key for each corresponding view in the table. Why should this method be private? This traverseSuperViews is just one piece of the puzzel. It will only be used by a method within the ViewTraverser class.
 
 {% highlight swift linenos %}
 
