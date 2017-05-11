@@ -130,7 +130,7 @@ This should give us our dictionary with the view tag key, view value. We can now
 
 ### Checking For A Superview 
 
-Let's create a method called checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView? This method should also be private takes in a view and dictionary with Int, View pairs as parameters and returns an optional view. Why is our return type optional? Because our views could be completely unrelated and therefore have no common superview. 
+Let's create a method called checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView? This method should also be private and it should take in a view and dictionary with Int, View pairs as parameters and returns an optional view. Why is our return type optional? Because our views could be completely unrelated and therefore have no common superview. 
 
 {% highlight swift linenos %}
 
@@ -215,7 +215,7 @@ class ViewController: UIViewController {
 
  {% endhighlight %}
  
- There are two lines that you need to add at the bottom of your viewDidLoad to check:
+We're almost there, let's finish this up! There are two lines that you need to add at the bottom of your viewDidLoad to run the check for the common superview:
  
  {% highlight swift linenos %}
  
@@ -233,7 +233,7 @@ class ViewController: UIViewController {
 
 {% endhighlight %}
 
-If everything goes according to plan your you should get the following printed to the terminal:
+If everything goes according to plan, the follow should be printed to your terminal:
 
 {% highlight swift linenos %}
 
