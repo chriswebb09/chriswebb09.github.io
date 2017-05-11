@@ -109,7 +109,7 @@ class ViewTraverser {
 
 This should give us our dictionary with the view tag key, view value. We can now use this table to lookup of the tags from our other view's superviews. If that lookup returns a value that is not nil we know that we have found a common superview and we can return it. 
 
-### Checking For Superview 
+### Checking For A Superview 
 
 Let's create a method called checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView? This method should also be private takes in a view and dictionary with Int, View pairs as parameters and returns an optional view. Why is our return type optional? Because our views could be completely unrelated and therefore have no common superview. 
 
