@@ -83,7 +83,7 @@ This should print out something that looks similar to:
 
 ### Getting Started
 
-Sometimes it is not immediately obvious which view is the superview. So how would we go about finding the common superview for two views? To begin, lets focus on the first input view. For the sake of this exercise I'm going to assume that each view has been given a unique integer for its tag property. We can create a dictionary and use the tags as the keys for each value. The value will be the view for which the key is a tag.  
+Sometimes it is not immediately obvious which view is the common superview for two different views. So, how would we go about finding the common superview? Let's take this problem one view at a time. To begin with let's create a table to store the superviews we find. For the sake of this exercise I'm going to assume that each view has been given a unique integer as a tag property. We are going to use that tag as the key for each corresponding view in the table.
 
 {% highlight swift linenos %}
 
@@ -102,7 +102,7 @@ class ViewTraverser {
 
 {% endhighlight %}
 
-The dictionary will should have a the view hierarchy stored in key value pairing with each view tag serving as the key for the view. We can now check the superviews of our second view using the tags of its superviews to lookup the view in the dictionary. Lets create a method that takes in a view uses the tag of that view as a key to check if there is a corresponding view in the dictionary. If the view exists, we return it. 
+This should give us our dictionary with a tag key, view value. We can now use this table to lookup of the tags from our other view's superviews. If that lookup returns a value that is not nil we know that we have found a common superview and we can return it. Let's create a method called checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView? This method takes in a view and dictionary with Int, View pairs and returns an optional view. Why is our return type optional? Because our views could be completely unrelated and therefore have no common superview. 
 
 {% highlight swift linenos %}
 
@@ -121,7 +121,7 @@ class ViewTraverser {
 
 {% endhighlight %}
 
-Let's combine this functionality into a method that takes in two views and returns an optional view. The return value should be optional because there may not be a common superview. 
+Finally, let's combine our functionality into a method called commonSuper(viewOne: UIView, viewTwo: UIView) -> UIView?  which takes in two views and returns an optional view. 
 
 {% highlight swift linenos %}
 
