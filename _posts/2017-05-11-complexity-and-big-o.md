@@ -25,9 +25,9 @@ An O(1) operation’s complexity is constant regardless of the number of inputs.
 
 ##### Examples of 0(1) operations:
 
-_Looking up element in a hashtable._
-_Inserting adding a node to linked list_ 
-_Accessing an element in an array by index_
+* _Looking up element in a hashtable._
+* _Inserting adding a node to linked list_ 
+* _Accessing an element in an array by index_
 
 
 {% highlight swift linenos %}
@@ -60,7 +60,7 @@ When dealing with an O(log n) complexity operation, each cycle should reduce the
 
 ##### Examples of 0(log n) operations:
 
-_Binary search_
+* _Binary search_
 
 ![Binary search](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/220px-Binary_Search_Depiction.png)
 
@@ -99,8 +99,8 @@ An O(n) operation’s complexity scales linearly with the number of inputs. If y
 
 ##### Examples of 0(n) operations:
 
-_Traversing an array or linked list_
-_Removing a node from a specific index of a linked list_ 
+* _Traversing an array or linked list_
+* _Removing a node from a specific index of a linked list_ 
 
 {% highlight swift linenos %}
 
@@ -118,7 +118,7 @@ An O(n^2) operation’s complexity scales exponentially with the number of input
 
 ##### Examples of 0(n^2) operations:
 
-_Traversing a 2D array_ 
+* _Traversing a 2D array_ 
 
 {% highlight swift linenos %}
 
