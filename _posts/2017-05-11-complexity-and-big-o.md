@@ -17,7 +17,7 @@ In this post, I will touch on complexity and big O notation. Complexity regardin
 
 ### Worst case scenario 
 
-When referring to the worst-case scenario with complexity, we are referring to an input that causes maximum complexity. The difference between a best/worst case scenario for complexity may be significant. The difference between best case scenario and worst scenario for searching a hash table can go from constant O(1) time to linear O(n) time.  
+When referring to the worst-case scenario with complexity, we are referring to an input that causes maximum complexity. The difference between a best/worst case scenario for complexity may be significant. The difference between best case scenario and worst scenario for searching a hash table can go from constant O(1) time to linear O(n) time. If you are searching for an element in an array by iterating over each item and that element is the first item in the array, you will have a pretty good runtime. It's another story if that item is the element in the array. Generally speaking, you don't want to pretend like every situation is going to give you the optimal time. 
 
 ### O(1) - Constant Time
 
