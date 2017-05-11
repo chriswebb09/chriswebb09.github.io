@@ -13,8 +13,7 @@ The journey of one thousand apps starts with a single key press...
 
 ### Background
 
-As I’ve written here before, network requests can throw a wildcard into the performance of your application. The nature of these problems can vary, from response time to the amount information a request returns. One way you can mitigate issues is by performing these requests on background
-threads and dispatching the UI updates that result from them to the main thread. 
+As I’ve written here before, network requests can throw a wildcard into the performance of your application. The nature of these problems can vary, from response time to the amount information a request returns. One way you can mitigate issues is by performing these requests on background threads and dispatching the UI updates that result from them to the main thread. 
 
 ### Dispatch Framework
 
@@ -32,12 +31,11 @@ In practical terms what this means is it allows developers to decide on which th
 
 #### The main thread.
 
-The main thread executes synchronously. Why is this important? Synchronous means that they run one after the other. For development purposes
-what that means is that if something is running synchronously, it waits for each operation to finish before moving on to the next one.
+The main thread executes synchronously. Why is this important? Synchronous means that they run one after the other. For development purposes what that means is that if something is running synchronously, it waits for each operation to finish before moving on to the next one.
 
-#### UIApplication 
+#### UIApplication and Main 
 
-One other thing I should mention, UIApplication executes on the main thread. So, if something on your main thread takes a long time to complete, it will hold up your entire application. That means, for the most part, you should only use the main thread for processes that you know will finish in a short period, like for instance UI updates. Running a long and complicated operation on the main thread will destroy your Application's responsiveness. 
+One other thing I should mention, UIApplication executes on the main thread. So, if something on your main thread takes a long time to complete, it will hold up your entire application. That means, for the most part, you should only use the main thread for processes that you know will finish in a short period, like for instance UI updates. Running a long and complicated operation on the main thread will destroy your Application's responsiveness. Another issue that can come up with sychronous queues but is particularly problematic on the main thread is deadlock. This is when two processes are waiting for each other to finish executing. Since they are both waiting, they never execute. 
 
 #### Code
 
@@ -52,9 +50,9 @@ protocol ImageDownloadProtocol {
 
 {% endhighlight %}
 
-Any class that conforms to the ImageDownloadProtocol must have a image property and a func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) method. 
+Any class that conforms to the ImageDownloadProtocol must have a image property and a func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) method. Another thing we could do is add a default implementation for our method in a protocol extension. That will allow any class that conforms to that protocol to use a default download image implementation. 
 
-Now let's extend ImageDownloadProtocol to give a default implementation for the method:
+Let's extend ImageDownloadProtocol to give a default implementation for the method:
 
 {% highlight swift linenos %}
 
