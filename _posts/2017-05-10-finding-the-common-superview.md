@@ -16,7 +16,15 @@ The journey of one thousand apps starts with a single key press...
 
 ### Brief Introduction To The View Hierarchy In iOS
 
-One of the most basic building blocks of any iOS app is the UIKit class UIView. Almost all the elements in your application will be some form of view. Those elements that aren't, like UIImage, will be attached to a view type when displayed. If your application displays more than one view at a time, you will need to add these views to your root view. If you haven't created views programmatically, you can add a child view to a view calling the addSubview method from the parent view and specifying the child view you want to add like so: yourViewName.addSubview(view: childView). Views are layered on top of each other creating the view hierarchy. 
+One of the most basic building blocks of any iOS app is the UIKit class UIView. Almost all the elements in your application will be some form of view. Those elements that aren't, like UIImage, will be attached to a view type when displayed. If your application displays more than one view at a time, you will need to add these views to your root view. If you haven't created views programmatically, you can add a child view to a view calling the addSubview method from the parent view and specifying the child view you want to add like so: 
+
+{% highlight swift linenos %}
+
+yourViewName.addSubview(childView)
+
+{% endhighlight %}
+
+Views are layered on top of each other creating the view hierarchy. 
 
 ### The View Hierarchy
 
