@@ -31,7 +31,7 @@ Subviews are the child views of a parent and are further down the view hierarchy
 
 ### Getting Started
 
-Sometimes it is not immediately obvious which view is the superview. So how would we go about finding the common superview for two views? To begin, lets focus on the first input view. For the sake of this exercise I'm going to assume that each view has been given a unique integer for its tag property. We can create a dictionary and use this tag as the key for each value which will be it's view. 
+Sometimes it is not immediately obvious which view is the superview. So how would we go about finding the common superview for two views? To begin, lets focus on the first input view. For the sake of this exercise I'm going to assume that each view has been given a unique integer for its tag property. We can create a dictionary and use the tags as the keys for each value. The value will be the view for which the key is a tag.  
 
 {% highlight swift linenos %}
 
