@@ -23,7 +23,7 @@ _When one view contains another, a parent-child relationship is created between 
 
 ##### Superviews
 
-A superview is a view that is higher on the view tree than it’s subviews. Another way to put this is that a superview is the parent view of a subview. Being higher on the view tree means it is closer to the rootview.
+A superview is a view that is higher on the view tree than it’s subviews. Another way to put this is that a superview is the parent view of a subview. Being higher on the view tree means it is closer to the root view.
 
 {% highlight swift linenos %}
 
