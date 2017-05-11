@@ -83,12 +83,17 @@ This should print out something that looks similar to:
 
 ### Getting Started
 
-Sometimes it is not immediately obvious which view is the common superview for two different views. So, how would we go about finding the common superview? Let's take this problem one view at a time. To begin with let's create a table to store the superviews we find. For the sake of this exercise I'm going to assume that each view has been given a unique integer as a tag property. We are going to use that tag as the key for each corresponding view in the table.
+Sometimes it is not immediately obvious which view is the common superview for two different views. So, how would we go about finding the common superview? There are a few steps we need to go through first. Let's take this problem one view at a time. To begin with let's create a class called ViewTraverser which will be responsible for functionality for finding our common superview (if it exists!) 
+
+
+### Creating View-Tag Table
+
+To start with let's create a private function func traverseSuperViews(view: UIView) -> [Int : UIView]. This should take in a view and return a table with the views superviews. For the sake of this exercise I'm going to assume that each view has been given a unique integer as a tag property. We are going to use that tag as the key for each corresponding view in the table. Why should this method be private? This traverseSuperViews is just one piece of the puzzel. It will only be used by a method within the ViewTraverser class.
 
 {% highlight swift linenos %}
 
 class ViewTraverser {
-    func traverseSuperViews(view: UIView) -> [Int : UIView] {
+    private func traverseSuperViews(view: UIView) -> [Int : UIView] {
         var views: [Int: UIView] = [:]
         var inputView: UIView? = view
         while inputView != nil {
@@ -102,7 +107,11 @@ class ViewTraverser {
 
 {% endhighlight %}
 
-This should give us our dictionary with a tag key, view value. We can now use this table to lookup of the tags from our other view's superviews. If that lookup returns a value that is not nil we know that we have found a common superview and we can return it. Let's create a method called checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView? This method takes in a view and dictionary with Int, View pairs and returns an optional view. Why is our return type optional? Because our views could be completely unrelated and therefore have no common superview. 
+This should give us our dictionary with the view tag key, view value. We can now use this table to lookup of the tags from our other view's superviews. If that lookup returns a value that is not nil we know that we have found a common superview and we can return it. 
+
+### Checking For Superview 
+
+Let's create a method called checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView? This method should also be private takes in a view and dictionary with Int, View pairs as parameters and returns an optional view. Why is our return type optional? Because our views could be completely unrelated and therefore have no common superview. 
 
 {% highlight swift linenos %}
 
@@ -110,7 +119,7 @@ class ViewTraverser {
 
   // Traverse superviews 
   
-    func checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView? {
+    private func checkForSuper(view: UIView?, views: [Int: UIView]) -> UIView? {
         guard let view = view else { return nil }
         if views[view.tag] != nil {
             return view
@@ -121,7 +130,9 @@ class ViewTraverser {
 
 {% endhighlight %}
 
-Finally, let's combine our functionality into a method called commonSuper(viewOne: UIView, viewTwo: UIView) -> UIView?  which takes in two views and returns an optional view. 
+### Putting It All Together
+
+Finally, let's combine our functionality into a method called commonSuper(viewOne: UIView, viewTwo: UIView) -> UIView?  which takes in two views as parameters and returns an optional view. This the main interface for our class and should not be private like the other methods.
 
 {% highlight swift linenos %}
 
@@ -148,6 +159,71 @@ class ViewTraverser {
  
  {% endhighlight %}
  
+ ### Making Sure It Works
+ 
+ Let's see if our ViewTraverser can find a common superview. To test this, create a ViewController class and add the following:
+ 
+ {% highlight swift linenos %}
+ 
+import UIKit
+
+class ViewController: UIViewController {
+    
+    let viewOne = UIView()
+    let viewTwo = UIView()
+    let viewThree = UIView()
+    let intermediaryView = UIView()
+    let viewSuper = UIView()
+    let traverser = ViewTraverser()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewOne.tag = 22
+        viewTwo.tag = 23
+        viewSuper.tag = 10
+        view.tag = 12
+        intermediaryView.addSubview(viewOne)
+        intermediaryView.tag = 8
+        viewThree.tag = 33
+        viewThree.addSubview(viewTwo)
+        view.addSubview(viewThree)
+        view.addSubview(intermediaryView)
+        // logic to check our common superviews goes here
+    }
+}
+
+ {% endhighlight %}
+ 
+ There are two lines that you need to add at the bottom of your viewDidLoad to check:
+ 
+ {% highlight swift linenos %}
+ 
+import UIKit
+
+class ViewController: UIViewController {
+    // Properties 
+    
+     override func viewDidLoad() {
+        // setup 
+        let nameView = traverser.commonSuper(viewOne: viewOne, viewTwo: viewTwo)
+        print(nameView?.tag)
+     }   
+}
+
+{% endhighlight %}
+
+If everything goes according to plan your you should get the following printed to the terminal:
+
+{% highlight swift linenos %}
+
+Optional(12)
+
+{% endhighlight %}
+
+The first common superview for viewOne and viewTwo should be the ViewController's view, which was given the tag 12. 
+
+### Wrap Up 
+
 Hopefully this adds some clarity to the relationships between views and how to work with them. Checkout the gist link to see the full implementation.
  
  Sources:
