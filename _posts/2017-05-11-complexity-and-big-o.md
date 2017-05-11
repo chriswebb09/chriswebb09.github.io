@@ -23,6 +23,15 @@ When referring to worst case scenario with complexity, we are referring to an in
 
 An O(1) operation’s complexity is constant regardless of the number of inputs. Accessing the first element in an array will always be O(1). It is the same for an array with 1000 elements as it is for an array with 10.  In fact accessing any element in your array by it’s index should be a constant complexity operation regardless of whether it is the first element or the 1000th. 
 
+{% highlight swift linenos %}
+
+let arrOne = [1, 2, 3, 4, 5, 6]
+
+arrOne[0]
+arrOne[2]
+
+{% endhighlight %}
+
 ### O(log n) 
 
 When dealing with an O(log n) complexity operation, each cycle should reduce the complexity in relation to input. A prime example of this is a binary search. Each iteration halves the interval within which it searches. 
