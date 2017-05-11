@@ -25,9 +25,61 @@ _When one view contains another, a parent-child relationship is created between 
 
 A superview is a view that is higher on the view tree than it’s subviews. Another way to put this is that a superview is the parent view of a subview. Being higher on the view tree means it is closer to the rootview.
 
+{% highlight swift linenos %}
+
+let viewOne = UIView()
+let viewTwo = UIView()
+let viewThree = UIView()
+
+viewOne.tag = 1
+viewTwo.tag = 2
+viewThree.tag = 3
+
+viewOne.addSubview(viewTwo)
+viewOne.addSubview(viewThree)
+
+print(viewTwo.superview)
+
+{% endhighlight %}
+
+This should print out something that looks like: 
+
+{% highlight swift linenos %}
+
+Optional(<UIView: 0x7ffde0500250; frame = (0 0; 0 0); tag = 1; layer = <CALayer: 0x6080000273c0>>)
+
+{% endhighlight %}
+
+The property is optional because it could be the root view and have no superview. 
+
 ##### Subviews 
 
-Subviews are the child views of a parent and are further down the view hierarchy. In fact you can check for a view's subviews by accessing the subviews property which will return an array of views that are subviews if there are any subviews.
+All views have an array property called subviews. This array contains views for which it is the parent view. 
+
+{% highlight swift linenos %}
+
+let viewOne = UIView()
+let viewTwo = UIView()
+let viewThree = UIView()
+
+viewOne.tag = 1
+viewTwo.tag = 2
+viewThree.tag = 3
+
+viewOne.addSubview(viewTwo)
+viewOne.addSubview(viewThree)
+
+print(viewOne.subviews)
+
+{% endhighlight %}
+
+This should print out something that looks similar to:
+
+{% highlight swift linenos %}
+
+[<UIView: 0x7fc1be800da0; frame = (0 0; 0 0); tag = 2; layer = <CALayer: 0x610000037080>>, <UIView: 0x7fc1be801050; frame = (0 0; 0 0); tag = 3; layer = <CALayer: 0x6100000370a0>>]
+
+{% endhighlight %}
 
 ### Getting Started
 
