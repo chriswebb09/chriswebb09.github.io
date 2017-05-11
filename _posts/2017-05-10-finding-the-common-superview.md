@@ -159,6 +159,8 @@ class ViewTraverser {
  
  {% endhighlight %}
  
+ You should now be able to check whether any two given superviews have a common superview. 
+ 
  ### Making Sure It Works
  
  Let's see if our ViewTraverser can find a common superview. To test this, create a ViewController class and add the following:
