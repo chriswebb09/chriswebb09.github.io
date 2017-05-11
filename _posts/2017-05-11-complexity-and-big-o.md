@@ -122,11 +122,11 @@ An O(n^2) operation’s complexity scales exponentially with the number of input
 
 {% highlight swift linenos %}
 
-let arrOne = [1, 2, 3, 4, 5, 6]
+var twoDimensionalArray: [[Int]] = [[0, 1], [2, 3]]
 
-for i in arrOne {
-    for n in 0..<arrOne.count {
-        print(arrOne[n])
+for i in 0..<twoDimensionalArray.count {
+    for n in 0..<twoDimensionalArray[i].count {
+        print(twoDimensionalArray[i][n])
     }
 }
 
