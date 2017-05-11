@@ -15,7 +15,7 @@ The journey of one thousand apps starts with a single key press...
 
 ### Brief Introduction To The View Hierarchy In iOS
 
-When programming your iOS application, one thing you will need to be aware of is the view hierarchy. At it’s most basic level, the view hierarchy encompasses the parent-child relationships between different views in your application. How you structure this will determine how your application looks and you can interactive with it.
+When programming your iOS application, one thing you will need to be aware of is the view hierarchy. At its most basic level, the view hierarchy encompasses the parent-child relationships between different views in your application. How you structure this will determine how your application looks and how you can interact with it.
 
 #### Apple-y Definition: 
 
@@ -27,7 +27,7 @@ A superview is a view that is higher on the view tree than it’s subviews. Anot
 
 ##### Subviews 
 
-It logically goes, that subviews are the child views of a parent and are further down the view hierarchy than their parent. In fact you can check for a view's subviews by accessing the subviews property which will return an array of views that are subviews if there are any subviews.
+Subviews are the child views of a parent and are further down the view hierarchy. In fact you can check for a view's subviews by accessing the subviews property which will return an array of views that are subviews if there are any subviews.
 
 ### Getting Started
 
@@ -50,7 +50,7 @@ class ViewTraverser {
 
 {% endhighlight %}
 
-You should now have the view hierarchy for the first view store in a dictionary. We can now check to see whether a tag has a view value attached to it. Lets create a method that takes in a view and lookups up the views tag in the dictionary to see if there is a corresponding view. If the view exists, we can return it. 
+The dictionary will should have a the view hierarchy stored in key value pairing with each view tag serving as the key for the view. We can now check the superviews of our second view using the tags of its superviews to lookup the view in the dictionary. Lets create a method that takes in a view uses the tag of that view as a key to check if there is a corresponding view in the dictionary. If the view exists, we return it. 
 
 {% highlight swift linenos %}
 
@@ -69,7 +69,7 @@ class ViewTraverser {
 
 {% endhighlight %}
 
-Now we can combine the two into a method that takes in two views and returns an optional view. The return value should be optional because there may not be a common superview. 
+Let's combine this functionality into a method that takes in two views and returns an optional view. The return value should be optional because there may not be a common superview. 
 
 {% highlight swift linenos %}
 
