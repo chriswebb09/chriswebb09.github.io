@@ -34,7 +34,7 @@ An O(1) operation’s complexity is constant regardless of the number of inputs.
 ##### Examples of 0(1) operations:
 
 * _Looking up element in a hashtable._
-* _Inserting adding a node to linked list_ 
+* _Adding a node to linked list_ 
 * _Accessing an element in an array by index_
 
 
