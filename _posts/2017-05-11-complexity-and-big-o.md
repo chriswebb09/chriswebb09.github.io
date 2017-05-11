@@ -64,6 +64,35 @@ _Binary search_
 
 ![Binary search](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/220px-Binary_Search_Depiction.png)
 
+{% highlight swift linenos %}
+
+let arrOne = [1, 2, 3, 4, 5, 6]
+
+func binarySearch(_ inputArray: [Int], element: Int) -> Int? {
+    
+    var begin = 0
+    var end = inputArray.count
+    
+    while begin < end {
+        let mid = begin + (end - begin) / 2
+        
+        if inputArray[mid] == element {
+            return mid
+        } else if inputArray[mid] < element {
+            begin = mid
+        } else {
+            end = mid
+        }
+        
+    }
+    
+    return nil
+}
+
+binarySearch([1, 2, 3, 4, 5], element: 2)
+
+{% endhighlight %}
+
 ### O(n)
 
 An O(n) operation’s complexity scales linearly with the number of inputs. If you iterate through all the elements in an array, it is O(n), because the the operation is dependent on the number of elements in your array. Going through 10 elements in an array requires 10 cycles. If you multiply the array count by 10, the cycles increase to 100 or 10 times times as much as 10 elements. 
