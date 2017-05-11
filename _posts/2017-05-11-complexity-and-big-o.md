@@ -36,6 +36,8 @@ arrOne[2]
 
 When dealing with an O(log n) complexity operation, each cycle should reduce the complexity in relation to input. A prime example of this is a binary search. Each iteration halves the interval within which it searches. 
 
+![Binary search](https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/220px-Binary_Search_Depiction.png)
+
 ### O(n)
 
 An O(n) operation’s complexity scales linearly with the number of inputs. If you iterate through all the elements in an array, it is O(n), because the the operation is dependent on the number of elements in your array. Going through 10 elements in an array requires 10 cycles. If you multiply the array count by 10, the cycles increase to 100 or 10 times times as much as 10 elements. 
