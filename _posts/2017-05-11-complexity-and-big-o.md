@@ -105,6 +105,6 @@ for i in arrOne {
 
 Sources: 
 
-[Stack Overflow](http://stackoverflow.com/questions/1592649/examples-of-algorithms-which-has-o1-on-log-n-and-olog-n-complexities)
-[Wikipedia - Complexity Logarithm](https://en.wikipedia.org/wiki/Complex_logarithm) 
-[Wikipedia - Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+* [Stack Overflow](http://stackoverflow.com/questions/1592649/examples-of-algorithms-which-has-o1-on-log-n-and-olog-n-complexities)
+* [Wikipedia - Complexity Logarithm](https://en.wikipedia.org/wiki/Complex_logarithm) 
+* [Wikipedia - Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
