@@ -78,3 +78,33 @@ extension ImageDownloadProtocol {
 ### ViewController Conform To Protocol
 Finally we can make our ViewController conform to our ImageDowloadProtocol:
 
+{% highlight swift linenos %}
+
+class ViewController: UIViewController {
+    
+  let imageViewOne = UIImageView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imageViewOne.frame = UIScreen.main.bounds
+        view.addSubview(imageViewOne)
+        setImage()
+    }
+}
+
+extension ViewController: ImageDownloadProtocol {
+    
+    func setImage() {
+        let url = URL(string: "http://cdn-www.dailypuppy.com/dog-images/colby-the-golden-retriever_77539_2016-09-16_w450.jpg")!
+        downloadImage(from: url) { image in
+            if Thread.isMainThread {
+                print("Thread is main")
+            }
+            self.imageViewOne.image = image
+            print("Done")
+        }
+    }
+}
+{% endhighlight %}
+
+
