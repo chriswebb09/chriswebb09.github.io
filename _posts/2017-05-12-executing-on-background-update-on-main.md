@@ -107,4 +107,5 @@ extension ViewController: ImageDownloadProtocol {
 }
 {% endhighlight %}
 
-
+# Wrap Up
+Since our completion is dispatched to the main the, the code within the closure is executed on the main thread. You can check to make sure of this with the following: Thread.isMainThread.
