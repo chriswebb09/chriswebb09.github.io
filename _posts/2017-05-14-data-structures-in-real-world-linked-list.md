@@ -1,3 +1,4 @@
+---
 layout: post
 title: Linked Lists - Data Structures In Real World
 ---
@@ -8,8 +9,9 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
-Overview
-When you first start diving into data structures, a lot of the discussions/reading tend to be abstract or even academic. While it can be good to learn these concepts in isolation, adding some real world context can help give a fuller picture of the purpose a data structures can serve.
+### Overview
+When you first start diving into data structures, a lot of the discussions/reading tend to be abstract or even academic. While it can 
+be good to learn these concepts in isolation, adding some real world context can help give a fuller picture of the purpose a data structures can serve.
 My Experience with Applying Data Structures
 Recently, when building a music streaming application, I had the opportunity to apply real-world context to a data structure. I was able to implement a modified double-linked list as the data structure for my playlist.
 What is a Linked List?
