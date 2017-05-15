@@ -121,6 +121,23 @@ Our linked list has a private head and tail property as well as a first and last
 
 Let’s see if you can recognize the LLNode inside the PlaylistItem.
 
+{% highlight swift linenos %}
+
+import UIKit
+
+class PlaylistItem {
+    var track: iTrack?
+    var next: PlaylistItem?
+    weak var previous: PlaylistItem?
+}
+
+extension PlaylistItem: Equatable {
+    static func ==(lhs: PlaylistItem, rhs: PlaylistItem) -> Bool {
+        return lhs.track!.previewUrl! == rhs.track!.previewUrl!
+    }
+}
+{% endhighlight %}
+
 As you can see we’ve substituted the Generic T for a optional iTrack properties and made our PlaylistItem conform to the Equatable protocol. Besides that, it is pretty much the same as the LLNode.
 
 ### The Playlist
@@ -131,6 +148,115 @@ Our playlist structure is very similar to a normal double linked list. There is 
 
 ### Optimizing Item Count
 You might noticed that I’ve added an integer property called itemCount. Some implementations of a linked list will use a computed property for the itemCount. The more optimized solution is to update the item count in your code. Computing the count requires traversing your list. This adds a hefty dose of complexity. While it may be more annoying in the short term to update the item count value depending on the operation, there is a performance bonus from doing this.
+
+{% highlight swift linenos %}
+
+import UIKit
+
+class Playlist {
+    
+    private var head: PlaylistItem?
+    
+    var itemCount: Int = 0
+    
+    var isEmpty: Bool? {
+        return head == nil
+    }
+    
+    private var last: PlaylistItem? {
+        if var track = head {
+            while case let next? = track.next {
+                track = next
+            }
+            return track
+        } else {
+            return nil
+        }
+    }
+    
+    func append(newPlaylistItem: PlaylistItem?) {
+        itemCount += 1
+        if let lastItem = last {
+            newPlaylistItem?.previous = lastItem
+            lastItem.next = newPlaylistItem
+        } else if head == nil {
+            head = newPlaylistItem
+        }
+    }
+    
+    func printAllKeys() {
+        var current: PlaylistItem! = head
+        var i = 1
+        while current != nil {
+            i += 1
+            current = current.next
+        }
+    }
+    
+    func playlistItem(at index: Int) -> PlaylistItem? {
+        
+        if index >= 0 {
+            var trackItem = head
+            var i = index
+            while let trackAt = trackItem, trackItem != nil {
+                if i == 0 {
+                    return trackAt
+                }
+                i -= 1
+                trackItem = trackAt.next
+            }
+        }
+        return nil
+    }
+    
+    func reverse() {
+        var track = head
+        while let currentTrack = track {
+            track = currentTrack.next
+            swap(&currentTrack.next, &currentTrack.previous)
+            head = currentTrack
+        }
+    }
+    
+    func removeFromPlaylist(for playlistItem: PlaylistItem?) -> iTrack? {
+        let previous = playlistItem?.previous
+        let next = playlistItem?.next
+        
+        if let previous = previous {
+            previous.next = next
+        } else {
+            head = next
+        }
+        next?.previous = previous
+        
+        playlistItem?.previous = nil
+        playlistItem?.next = nil
+        guard let trackItem = playlistItem?.track else { return nil }
+        return trackItem
+    }
+    
+    func removeAll() {
+        var track = head
+        
+        while let next = track?.next {
+            track?.previous = nil
+            track = nil
+            track = next
+        }
+    }
+    
+    func contains(playlistItem item: PlaylistItem) -> Bool {
+        guard let currentTrack = head else { return false }
+        while currentTrack != item && currentTrack.next != nil {
+            guard let currentTrack = currentTrack.next else { return false }
+            if currentTrack == item {
+                return true
+            }
+        }
+        return false
+    }
+}
+{% endhighlight %}
 
 ### Benefits and Drawbacks
 There are benefits and drawbacks to the using a LinkedList data structure. One of the biggest drawbacks is that, given there items are not stored in adjacent memory, operations like itemAtIndex will have a O(n) complexity because you will need to traverse your input to get to the specified index.
