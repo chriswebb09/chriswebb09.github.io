@@ -1,7 +1,3 @@
----
-layout: post
-title: Executing In Background Update On Main
----
 
 <p class="message">
 The journey of one thousand apps starts with a single key press...
