@@ -58,19 +58,75 @@ Finally, because a linked list has head and tail properties, this provides for a
 ### List Node
 Let’s create a basic list node for a doubly-linked list. We can do this by specifying a class called LLNode which has a Generic T. We can use T as our value:
 
+
+{% highlight swift linenos %}
+
+class LLNode<T> {
+    
+    var value: T
+    var next: LLNode?
+    weak var previous: LLNode?
+    
+    init(value: T) {
+        self.value = value
+    }
+}
+
+{% endhighlight %}
+
 ### Linked List
 Now let’s create our Linked List class. This class should also specify a generic T which can be the value for nodes.
+
+{% highlight swift linenos %}
+
+class LinkedList<T> {
+    
+    public typealias Node = LLNode<T>
+    
+    private var head: Node?
+    private var tail: Node?
+    
+    var isEmpty: Bool {
+        return head == nil
+    }
+    
+    var first: Node? {
+        return head
+    }
+    
+    var last: Node? {
+        return tail
+    }
+    
+    func append(value: T) {
+        let newNode = Node(value: value)
+        if let lastNode = last {
+            newNode.previous = lastNode
+            lastNode.next = newNode
+        } else {
+            head = newNode
+        }
+    }
+}
+
+{% endhighlight %}
 
 Our linked list has a private head and tail property as well as a first and last property. Additionally it has a boolean property, isEmpty, and an append method. There are other properties and methods that a linked list can implement, like removeAll, reverse ect. For this example, this should give you a basic idea of the structure.
 
 # Modifying Our Linked List To Make A Playlist
 
 ### The PlaylistItem
+
+![PlaylistItem](https://cdn-images-1.medium.com/max/1600/1*kOainj-jJVM-_4mQd2m8fg.png)
+
 Let’s see if you can recognize the LLNode inside the PlaylistItem.
 
 As you can see we’ve substituted the Generic T for a optional iTrack properties and made our PlaylistItem conform to the Equatable protocol. Besides that, it is pretty much the same as the LLNode.
 
 ### The Playlist
+
+![Playlist](https://cdn-images-1.medium.com/max/1600/1*csHCtmDQ3z-z8i7FOKb-1w.jpeg)
+
 Our playlist structure is very similar to a normal double linked list. There is a head, which is the first item in our playlist, and tail which is the last item.
 
 ### Optimizing Item Count
