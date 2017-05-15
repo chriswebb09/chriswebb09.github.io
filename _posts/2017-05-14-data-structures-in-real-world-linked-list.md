@@ -136,6 +136,7 @@ extension PlaylistItem: Equatable {
         return lhs.track!.previewUrl! == rhs.track!.previewUrl!
     }
 }
+
 {% endhighlight %}
 
 As you can see we’ve substituted the Generic T for a optional iTrack properties and made our PlaylistItem conform to the Equatable protocol. Besides that, it is pretty much the same as the LLNode.
