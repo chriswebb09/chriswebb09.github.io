@@ -36,18 +36,22 @@ In a double linked list, each node contains a reference to the previous node and
 The reason I chose a double linked list was that the structure suited the behavior of a music playlist.
 
 ![Skip](https://cdn-images-1.medium.com/max/1600/1*Mz4CcX2rZaTJpAdWBqx9sQ.png)
+
 **Skip Back/Forward**
 Because each node in a double linked list has a pointer the previous and next node, it is easy to implement skip forward/backward functionality.
 
 ![Play next](https://cdn-images-1.medium.com/max/1600/1*ss6V0n9MwHFme-gzee00Wg.png)
+
 **Play Next Track **
 The pointer to the next node also makes it quite easy to start the next track when a track is over.
 
 ![Append](https://cdn-images-1.medium.com/max/1600/1*Xf7Og9y2kjnObjcg05tILg.jpeg)
+
 **Append**
 When you add a new track to a playlist, you tack it on to the end. In a linked list, adding a new element is constant time — O(1) operation.
 
 ![Replay](https://cdn-images-1.medium.com/max/1600/1*nMilfFlm4MwPgStuSzabkw.png)
+
 **Beginning/End**
 Finally, because a linked list has head and tail properties, this provides for an easy way to delineate the beginning and end of a playlist.
 
