@@ -45,3 +45,36 @@ protocol ImageDownloadProtocol {
 
 {% endhighlight %}
 
+Any class that conforms to the ImageDownloadProtocol must have an implementation of the downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) method.
+
+### Extending Our Protocol With Default Implementation
+One thing we could do to simplify our code is to add a default implementation for our method in a protocol extension. That will allow any class that conforms to that protocol to use a default download image implementation.
+Let’s extend ImageDownloadProtocol to give a default implementation for the method:
+
+
+{% highlight swift linenos %}
+extension ImageDownloadProtocol {
+    func downloadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+        let session = URLSession(configuration: .default)
+        DispatchQueue.global(qos: .background).async {
+            print("In background")
+            session.dataTask(with: URLRequest(url: url)) { data, response, error in
+                if error != nil {
+                    print(error?.localizedDescription ?? "Unknown error")
+                }
+                if let data = data, let image = UIImage(data: data) {
+                    print("Downloaded image")
+                    DispatchQueue.main.async {
+                        print("dispatched to main")
+                        completion(image)
+                    }
+                }
+                }.resume()
+        }
+    }
+}
+{% endhighlight %}
+
+### ViewController Conform To Protocol
+Finally we can make our ViewController conform to our ImageDowloadProtocol:
+
