@@ -42,7 +42,7 @@ Because each node in a double linked list has a pointer the previous and next no
 
 ![Play next](https://cdn-images-1.medium.com/max/1600/1*ss6V0n9MwHFme-gzee00Wg.png)
 
-**Play Next Track **
+**Play Next**
 The pointer to the next node also makes it quite easy to start the next track when a track is over.
 
 ![Append](https://cdn-images-1.medium.com/max/1600/1*Xf7Og9y2kjnObjcg05tILg.jpeg)
