@@ -75,8 +75,10 @@ In Swift you may have seen a protocol called Hashable. Anything that conforms to
 
 [Apple Docs for Hashable Protocol](https://developer.apple.com/reference/swift/hashable)
 
-_You can use any type that conforms to the Hashable protocol in a set or as a dictionary key. Many types in the standard library conform to Hashable: strings, integers, floating-point and Boolean values, and even sets provide a hash value by default. Your own custom types can be hashable as well. When you define an enumeration without associated values, it gains Hashable conformance automatically, and you can add Hashable conformance to your other custom types by adding a single hashValue property.
-A hash value, provided by a type’s hashValue property, is an integer that is the same for any two instances that compare equally. That is, for two instances a and b of the same type, if a == b then a.hashValue == b.hashValue. The reverse is not true: Two instances with equal hash values are not necessarily equal to each other._
+<blockquote>
+<p> You can use any type that conforms to the Hashable protocol in a set or as a dictionary key. Many types in the standard library conform to Hashable: strings, integers, floating-point and Boolean values, and even sets provide a hash value by default. Your own custom types can be hashable as well. When you define an enumeration without associated values, it gains Hashable conformance automatically, and you can add Hashable conformance to your other custom types by adding a single hashValue property.
+A hash value, provided by a type’s hashValue property, is an integer that is the same for any two instances that compare equally. That is, for two instances a and b of the same type, if a == b then a.hashValue == b.hashValue. The reverse is not true: Two instances with equal hash values are not necessarily equal to each other. </p>
+</blockquote>
 
 
 {% highlight swift linenos %}
