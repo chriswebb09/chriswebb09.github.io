@@ -109,6 +109,9 @@ The better the hashing algorithm, the less often this happens. At the same time,
 One way of dealing with collisions is with open addressing. Open addressing resolves a collision by finding the next available slot. This solution can quickly run up the time complexity and turn operations that should be O(1) — constant to O(n) linear time — meaning the time scales directly with the number of inputs. For this article I won’t go further into depth on Open Addressing.
 
 ## Separate chaining
+
+![Separate Chaining](https://cdn-images-1.medium.com/max/1600/1*ItGUOu_Oun1vOF_ro_kCcA.png)
+
 One way to solve collisions is to create buckets that have some sort list structure which elements that compute to that bucket’s index are appended to. For this post, I will use that method.
 
 # Getting Started
