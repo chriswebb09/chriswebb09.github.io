@@ -30,6 +30,7 @@ _A key-value pair is a combination of a key and a value._
 One place you come across key-value pairing is when using dictionaries.
 
 {% highlight swift linenos %}
+
 class Test {
   var hello: [String: Int] = [:]
   
@@ -38,6 +39,7 @@ class Test {
     hello[“one”] // 1
   }
 }
+
 {% endhighlight %}
 
 ## What are hash tables?
@@ -87,6 +89,7 @@ extension Element: Equatable {
         return lhs.hashValue == rhs.hashValue
     }
 }
+
 {% endhighlight %}
 
 ### Buckets
@@ -122,13 +125,15 @@ class HashElement<T: Hashable, U> {
         self.value = value
     }
 }
+
 {% endhighlight %}
 
 ## Setting Up The Hash Table
 
 When we create our hash table, we should give it a capacity.
 
-{% highlight swift linenos %}'
+{% highlight swift linenos %}
+
 struct HashTable<Key: Hashable, Value> {
     
     typealias Bucket = [HashElement<Key, Value>]
@@ -140,6 +145,7 @@ struct HashTable<Key: Hashable, Value> {
         buckets = Array<Bucket>(repeatElement([], count: capacity))
     }
 }
+
 {% endhighlight %}
 
 You might have noticed the typealias Bucket. Bucket specifies that a data structures that is an array of HashElement items. Our buckets variable is a two-dimensional array containing arrays of HashElements. In our initialization, we assert that our given capacity is greater than zero.
@@ -170,6 +176,7 @@ Using [unicodeScalars](https://developer.apple.com/reference/swift/string.unicod
 Now we need need to create a way to retrieve value using our key. Let’s create method value(for key: Key) that return an optional value. The return type should be optional to account for cases where there are is no value associated with a given key.
 
 {% highlight swift linenos %}
+
 struct HashTable<Key: Hashable, Value> {
     
     typealias Bucket = [HashElement<Key, Value>]
@@ -200,4 +207,8 @@ struct HashTable<Key: Hashable, Value> {
         return nil
     }
 }
+
 {% endhighlight %}
+
+# Wrap-Up
+This concludes the first part. In part two we will finish implementing our hash table and go over the costs and benefits of using it.
