@@ -27,7 +27,7 @@ you can imagine, this can come in quite handy with large or expanding data sets.
 Key-value pairing is found throughout Swift and Apple’s frameworks/libraries.
 
 *Apple Docs*:
-_A key-value pair is a combination of a key and a value._
+> _A key-value pair is a combination of a key and a value._
 
 One place you come across key-value pairing is when using dictionaries.
 
@@ -61,7 +61,7 @@ different ways that you can implement a hash function. After calculating the ind
 corresponds to that index.
 
 [Ray Wenderlich Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Hash%20Table)
-_A hash table allows you to store and retrieve objects by a “key”.A hash table is used to implement structures, such as a dictionary, a map, and an associative array. These structures can be implemented by a tree or a plain array, but it is efficient to use a hash table.
+> _A hash table allows you to store and retrieve objects by a “key”.A hash table is used to implement structures, such as a dictionary, a map, and an associative array. These structures can be implemented by a tree or a plain array, but it is efficient to use a hash table.
 This should explain why Swift’s built-in Dictionary type requires that keys conform to the Hashable protocol: internally it uses a hash table, like the one you will learn about here._
 
 ### Hashable Protocol
