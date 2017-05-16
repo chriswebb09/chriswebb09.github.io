@@ -46,7 +46,8 @@ class Test {
 
 {% endhighlight %}
 
-## What are hash tables?
+
+# What are hash tables?
 
 ![Hash Table](https://cdn-images-1.medium.com/max/1600/1*6l31RV3i4xl2eo6WisGP0g.png)
 
