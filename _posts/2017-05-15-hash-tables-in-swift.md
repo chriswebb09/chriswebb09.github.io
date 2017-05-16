@@ -104,9 +104,11 @@ One way of dealing with collisions is with open addressing. Open addressing reso
 One way to solve collisions is to create buckets that have some sort list structure which elements that compute to that bucket’s index are appended to. For this post, I will use that method.
 
 # Getting Started
+
 Finally, let’s write some code! Our hash table will be implemented separate chaining to account for any collisions.
 
 ## Creating Our Hash Element
+
 To get started let’s create our hash element. To do this, let’s make a class with the generic parameter’s T and U. T will be the key and U is our value. Because our key needs to be Hashable, we should specify that T needs to conform to the Hashable protocol.
 
 {% highlight swift linenos %}
@@ -120,12 +122,13 @@ class HashElement<T: Hashable, U> {
         self.value = value
     }
 }
+{% endhighlight %}
 
 ## Setting Up The Hash Table
 
 When we create our hash table, we should give it a capacity.
 
-{% highlight swift linenos %}
+{% highlight swift linenos %}'
 struct HashTable<Key: Hashable, Value> {
     
     typealias Bucket = [HashElement<Key, Value>]
