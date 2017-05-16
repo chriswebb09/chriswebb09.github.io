@@ -161,3 +161,40 @@ struct HashTable<Key: Hashable, Value> {
 {% endhighlight %}
 
 Using [unicodeScalars](https://developer.apple.com/reference/swift/string.unicodescalarview) gives a consistent value to compute our hash function with. Once we’ve computed our divisor value we use the modulo function for the buckets count and return that value.
+
+## Retrieving Data From Table
+
+Now we need need to create a way to retrieve value using our key. Let’s create method value(for key: Key) that return an optional value. The return type should be optional to account for cases where there are is no value associated with a given key.
+
+{% highlight swift linenos %}
+struct HashTable<Key: Hashable, Value> {
+    
+    typealias Bucket = [HashElement<Key, Value>]
+    
+    var buckets: [Bucket]
+    
+    init(capacity: Int) {
+        assert(capacity > 0)
+        buckets = Array<Bucket>(repeatElement([], count: capacity))
+    }
+    
+     func index(for key: Key) -> Int {
+        var divisor: Int = 0
+        for key in String(describing: key).unicodeScalars {
+            divisor += abs(Int(key.value.hashValue))
+        }
+        return abs(divisor) % buckets.count
+    }
+    
+    func value(for key: Key) -> Value? {
+        let index = self.index(for: key)
+        
+        for element in buckets[index] {
+            if element.key == key {
+                return element.value
+            }
+        }
+        return nil
+    }
+}
+{% endhighlight %}
