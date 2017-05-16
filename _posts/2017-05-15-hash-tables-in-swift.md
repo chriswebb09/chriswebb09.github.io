@@ -18,12 +18,12 @@ This post will continue my series on data structures and will touch on the conce
 are one of the most commonly used data structures in development. In fact, even if you haven’t heard the term before, you have probably
 used them in one form or another.
 
-## O(1) Complexity
+### O(1) Complexity
 One of the reasons you find hash tables used so often is that they are very efficient. The time complexities for a hash table search, item 
 insertion and item deletion are on average O(1). This means the time operation time stays constant regardless of the size of the input. As 
 you can imagine, this can come in quite handy with large or expanding data sets.
 
-## Key Value Pairing
+### Key Value Pairing
 Key-value pairing is found throughout Swift and Apple’s frameworks/libraries.
 
 *Apple Docs*:
