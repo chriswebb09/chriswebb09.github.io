@@ -12,7 +12,7 @@ The journey of one thousand apps starts with a single key press...
 ![Hash Table](https://cdn-images-1.medium.com/max/1600/1*ZzVm_vJS1nIl9oB7NDR3Ug.png)
 
 # Adventures In Data Structures
-
+---
 ## Overview
 This post will continue my series on data structures and will touch on the concepts behind and implementation of hash tables. Hash tables
 are one of the most commonly used data structures in development. In fact, even if you haven’t heard the term before, you have probably
@@ -49,7 +49,7 @@ class Test {
 ![Hash Table](https://cdn-images-1.medium.com/max/1600/1*6l31RV3i4xl2eo6WisGP0g.png)
 
 # What are hash tables?
-
+---
 Hash tables are data structures or ‘associative arrays’ that work by storing and retrieving data using key-value mapping. Hash tables use 
 the key from the hash element to compute a value which is the index where you store the value.
 
@@ -108,7 +108,7 @@ extension Element: Equatable {
 Buckets are the index slots in which our hash elements are placed. A bucket corresponds to a specific index.
 
 # Collisions
-
+---
 Collisions happen when your hashing function creates duplicate indexes for different keys. In an ideal world, every element in a hash table would calculate a unique index. Unfortunately, most hashing algorithms will return a non-unique index from time to time.
 The better the hashing algorithm, the less often this happens. At the same time, the point of using a hash-table is that its performance, if you create an incredibly complex algorithm for calculating the index, this can cut down on that. There is a middle ground in using relatively good hashing function along with logic to handle collisions when they happen.
 
@@ -122,7 +122,7 @@ One way of dealing with collisions is with open addressing. Open addressing reso
 One way to solve collisions is to create buckets that have some sort list structure which elements that compute to that bucket’s index are appended to. For this post, I will use that method.
 
 # Getting Started
-
+---
 Finally, let’s write some code! Our hash table will be implemented separate chaining to account for any collisions.
 
 ## Creating Our Hash Element
@@ -226,4 +226,5 @@ struct HashTable<Key: Hashable, Value> {
 {% endhighlight %}
 
 # Wrap-Up
+---
 This concludes the first part. In part two we will finish implementing our hash table and go over the costs and benefits of using it.
