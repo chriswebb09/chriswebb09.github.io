@@ -9,6 +9,8 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
+![Hash Table](https://cdn-images-1.medium.com/max/1600/1*ZzVm_vJS1nIl9oB7NDR3Ug.png)
+
 # Adventures In Data Structures
 
 ## Overview
