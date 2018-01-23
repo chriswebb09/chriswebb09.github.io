@@ -59,10 +59,10 @@ The computation of the hash element key is commonly called a hash function. A go
 [Ray Wenderlich Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Hash%20Table)
 
 
-<p>There are many different ways that you can implement a hash function. After calculating the index, you can insert that hash element into the bucket that corresponds to that index.<p>
+There are many different ways that you can implement a hash function. After calculating the index, you can insert that hash element into the bucket that corresponds to that index.
 
-<p> A hash table allows you to store and retrieve objects by a “key”.A hash table is used to implement structures, such as a dictionary, a map, and an associative array. These structures can be implemented by a tree or a plain array, but it is efficient to use a hash table.
-This should explain why Swift’s built-in Dictionary type requires that keys conform to the Hashable protocol: internally it uses a hash table, like the one you will learn about here.</p>
+A hash table allows you to store and retrieve objects by a “key”.A hash table is used to implement structures, such as a dictionary, a map, and an associative array. These structures can be implemented by a tree or a plain array, but it is efficient to use a hash table.
+This should explain why Swift’s built-in Dictionary type requires that keys conform to the Hashable protocol: internally it uses a hash table, like the one you will learn about here.
 
 
 ### Hashable Protocol In Swift
@@ -71,11 +71,10 @@ In Swift, you may have seen a protocol called Hashable. Anything that conforms t
 
 [Apple Docs for Hashable Protocol](https://developer.apple.com/reference/swift/hashable)
 
-<blockquote>
-<p>You can use any type that conforms to the Hashable protocol in a set or as a dictionary key. Many types in the standard library conform to Hashable: strings, integers, floating-point and Boolean values, and even sets provide a hash value by default. Your own custom types can be hashable as well. When you define an enumeration without associated values, it gains Hashableconformance automatically, and you can add Hashable conformance to your other custom types by adding a single hashValue property</p>
 
-<p>A hash value, provided by a type’s hashValue property, is an integer that is the same for any two instances that compare equally. That is, for two instances aand b of the same type, if a == b then a.hashValue == b.hashValue. The reverse is not true: Two instances with equal hash values are not necessarily equal to each other.</p>
-</blockquote>
+> You can use any type that conforms to the Hashable protocol in a set or as a dictionary key. Many types in the standard library conform > to Hashable: strings, integers, floating-point and Boolean values, and even sets provide a hash value by default. Your own custom types > can be hashable as well. When you define an enumeration without associated values, it gains Hashableconformance automatically, and you > can add Hashable conformance to your other custom types by adding a single hashValue property
+
+A hash value, provided by a type’s hashValue property, is an integer that is the same for any two instances that compare equally. That is, for two instances aand b of the same type, if a == b then a.hashValue == b.hashValue. The reverse is not true: Two instances with equal hash values are not necessarily equal to each other
 
 
 {% highlight swift linenos %}
