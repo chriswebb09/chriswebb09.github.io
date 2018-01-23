@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Making A Hash Table In Swift - Part One
+title: Making A Hash Data Structure In Swift
 ---
 
 <p class="message">
