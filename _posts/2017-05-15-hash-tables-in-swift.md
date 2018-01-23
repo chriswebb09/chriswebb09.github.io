@@ -54,8 +54,7 @@ You may have heard of hashing or a hash before now. Programmers use the concept 
 
 The computation of the hash element key is commonly called a hash function. A good definition of a hash function is:
 
-<blockquote>A hash function is any function that can be used to map a data set of an arbitrary size to a data set of a fixed size, which falls into the hash table. The values returned by a hash function are called hash values, hash codes, hash sums, or simply hashes.
-</blockquote>
+> A hash function is any function that can be used to map a data set of an arbitrary size to a data set of a fixed size, which falls into > the hash table. The values returned by a hash function are called hash values, hash codes, hash sums, or simply hashes.
 
 [Ray Wenderlich Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Hash%20Table)
 
