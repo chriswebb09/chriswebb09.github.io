@@ -10,7 +10,7 @@ The journey of one thousand apps starts with a single key press...
 ---
 
 
-![](https://cdn-images-1.medium.com/max/549/1*cZaRcQPvTZ-BMCLUMkeeBA.jpeg)<figcaption>Special case data type: fox-star</figcaption>
+![](https://cdn-images-1.medium.com/max/549/1*cZaRcQPvTZ-BMCLUMkeeBA.jpeg)
 
 #### Brief Overview
 
