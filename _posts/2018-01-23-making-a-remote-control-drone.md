@@ -15,7 +15,7 @@ The journey of one thousand apps starts with a single key press...
 
 
 <p class="message">
-[Demo Code](https://github.com/chriswebb09/ARKitDrone)
+<a href="https://github.com/chriswebb09/ARKitDrone">Demo Code</a>
 </p>
 
 
