@@ -100,15 +100,14 @@ extension Element: Equatable {
 }
 {% endhighlight %}
 
-### Buckets
+# Buckets
 
 ![Bucket](https://cdn-images-1.medium.com/max/1440/1*zqqF5H8KtX9P61GvxCW62Q.png)!
----
-<blockquote>Buckets are the index slots in which our hash elements are placed. A bucket corresponds to a specific index.
-In general, a hashing function may map several different keys to the same index. Therefore, each slot of a hash table is associated with (implicitly or explicitly) a set of records, rather than a single record. For this reason, each slot of a hash table is often called a bucket, and hash values are also called bucket indices.</blockquote>
+
+<p>Buckets are the index slots in which our hash elements are placed. A bucket corresponds to a specific index.
+In general, a hashing function may map several different keys to the same index. Therefore, each slot of a hash table is associated with (implicitly or explicitly) a set of records, rather than a single record. For this reason, each slot of a hash table is often called a bucket, and hash values are also called bucket indices.<p>
 
 # Collisions
----
 Collisions happen when your hashing function creates duplicate indexes for different keys. In an ideal world, every element in a hash table would calculate a unique index. Unfortunately, most hashing algorithms will return a non-unique index from time to time.
 The better the hashing algorithm, the less often this happens. At the same time, the point of using a hash-table is that its performance, if you create an incredibly complex algorithm for calculating the index, this can cut down on that. There is a middle ground in using relatively good hashing function along with logic to handle collisions when they happen.
 
