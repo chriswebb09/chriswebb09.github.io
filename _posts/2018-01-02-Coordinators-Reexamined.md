@@ -420,12 +420,12 @@ Beyond pushing the logical flow out of the view controller, there’s no “one 
 #### Sources:
 
 - [P of EAA: Application Controller](https://martinfowler.com/eaaCatalog/applicationController.html)
-- [Khanlou | The Coordinator](http://khanlou.com/2015/01/the-coordinator/)
+- [Khanlou The Coordinator](http://khanlou.com/2015/01/the-coordinator/)
 
 If you’re interested, there are some really great blog posts out there with people demoing their take on the&nbsp;concept:
 
 - [Navigation coordinators](http://irace.me/navigation-coordinators)
-- [Skye Freeman | Swift - Coordinators](http://skyefreeman.io/programming/2016/02/23/playing_with_app_coordinators.html)
+- [Skye Freeman Swift - Coordinators](http://skyefreeman.io/programming/2016/02/23/playing_with_app_coordinators.html)
 - [An iOS Coordinator Pattern](https://will.townsend.io/2016/an-ios-coordinator-pattern)
 - [I am Simme](https://www.iamsim.me/the-coordinator-pattern/)
 
