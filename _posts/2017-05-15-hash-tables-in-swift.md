@@ -23,9 +23,7 @@ One of the reasons you find hash tables used so often is that they are very effi
 The concept of key-value pairing is found throughout Swift and Apple’s frameworks/libraries.
 
 *Apple Docs*:
-<blockquote>
 <p>A key-value pair is a combination of a key and a value.</p>
-</blockquote>
 
 One place you come across key-value pairing is when using dictionaries.
 
@@ -62,11 +60,11 @@ The computation of the hash element key is commonly called a hash function. A go
 [Ray Wenderlich Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Hash%20Table)
 
 
-<blockquote> <p>There are many different ways that you can implement a hash function. After calculating the index, you can insert that hash element into the bucket that corresponds to that index.<p>
+<p>There are many different ways that you can implement a hash function. After calculating the index, you can insert that hash element into the bucket that corresponds to that index.<p>
 
 <p> A hash table allows you to store and retrieve objects by a “key”.A hash table is used to implement structures, such as a dictionary, a map, and an associative array. These structures can be implemented by a tree or a plain array, but it is efficient to use a hash table.
 This should explain why Swift’s built-in Dictionary type requires that keys conform to the Hashable protocol: internally it uses a hash table, like the one you will learn about here.</p>
-</blockquote>
+
 
 ### Hashable Protocol In Swift
 
