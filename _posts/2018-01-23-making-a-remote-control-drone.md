@@ -58,8 +58,6 @@ Now that we have our model we can start coding our drone. I want to start off by
 We should give our DroneSceneView five properties which will be of type SCNNodes. The helicopterNode gives us a hook into the main body of the drone, the blade1 and blade2 nodes hook us into the the framework surrounding the drones left or right rotors and the rotorR and rotorL nodes hooks into the blade themselves.
 
 {% highlight swift linenos %}
-
-
 import ARKit
 import SceneKit
 
@@ -96,7 +94,6 @@ The first method we should create will be the overall setup method which I calle
 Next we’ll add a bit of styling to our drone. This part isn’t hugely important but it can help make it seem more realistic, which is generally a key aspect of augmented reality and it gives you a better visual sense of the different parts.
 
 {% highlight swift linenos %}
-
 import ARKit
 import SceneKit
 
@@ -131,7 +128,6 @@ let rotate = SCNAction.rotateBy(x: 0, y: 0, z: 200, duration: 0.5)
 ```
 
 {% highlight swift linenos %}
-
 import ARKit
 import SceneKit
 
@@ -180,7 +176,6 @@ helicopterNode.position = SCNVector3(helicopterNode.position.x - 0.5, helicopter
 To make our drone move to left or right we’ll manipulate the x element in its position property. To move to the left we’ll subtract a float value of -0.5 from x and conversely to move to the right we’ll add a float value of 0.5 to&nbsp;x.
 
 {% highlight swift linenos %}
-
 import ARKit
 import SceneKit
 
@@ -209,7 +204,6 @@ class DroneSceneView: ARSCNView {
         blade1Node.runAction(SCNAction.rotateBy(x: -0.3, y: -0.1, z: 0, duration: 0.25))
     }
 }
-
 {% endhighlight %}
 
 #### Forward/Back
@@ -228,7 +222,6 @@ To make our drone move forward or backward we’ll manipulate the z element in i
 
 
 {% highlight swift linenos %}
-
 import ARKit
 import SceneKit
 
@@ -256,7 +249,6 @@ class DroneSceneView: ARSCNView {
         blade1Node.runAction(SCNAction.rotateBy(x: -0.3, y: 0, z: 0, duration: 0.25))
     }
 }
-
 {% endhighlight %}
 
 #### Altitude
@@ -270,7 +262,6 @@ helicopterNode.position = SCNVector3(helicopterNode.position.x, value, helicopte
 To make our drone move up or down we’ll manipulate the y element in its position property. By add a flow value to the drones y position property value the drone will move up, if you subtract a float value from the drones y position property value it will&nbsp;descend.
 
 {% highlight swift linenos %}
-
 import ARKit
 import SceneKit
 
@@ -304,7 +295,36 @@ blade1Node.runAction(SCNAction.rotateBy(x: -0.3, y: 0, z: 0, duration: 0.25))
 
 As you can tell from the picture, I’ve constructed rudmentary UI to get us going. It’s basically some arrows and a slider. We’ll use the slider to control our altitude and the arrows to control the direction that our drone moves&nbsp;in.
 
-{% gist https://gist.github.com/chriswebb09/79f85eb63df38a4987575f371c2c3ba2 %}
+{% highlight swift linenos %}
+import UIKit
+import SceneKit
+import ARKit
+
+// MARK: - ARSCNViewDelegate
+extension ViewController: ARSCNViewDelegate {
+    
+    @IBAction func altitudeValueChanged(_ sender: Any) {
+        guard let slider = sender as? UISlider else { return }
+        sceneView.changeAltitude(value: slider.value)
+    }
+    
+    @IBAction func forwardButtonTapped(_ sender: Any) {
+        sceneView.moveForward()
+    }
+    
+    @IBAction func rightButtonTapped(_ sender: Any) {
+        sceneView.moveRight()
+    }
+    
+    @IBAction func reverseButtonTapped(_ sender: Any) {
+        sceneView.reverse()
+    }
+    
+    @IBAction func leftButtonTapped(_ sender: Any) {
+        sceneView.moveLeft()
+    }
+}
+{% endhighlight %}
 
 #### Sources:
 
