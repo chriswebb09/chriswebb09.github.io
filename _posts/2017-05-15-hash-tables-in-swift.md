@@ -40,8 +40,6 @@ class Test {
 
 {% endhighlight %}
 
-![Hash Table](https://cdn-images-1.medium.com/max/1600/1*6l31RV3i4xl2eo6WisGP0g.png)
-
 # What are hash tables?
 ---
 Hash tables are data structures or ‘associative arrays’ that work by storing and retrieving data using key-value mapping. Hash tables use the key from the hash element to compute a value which is the index where you store the value.
