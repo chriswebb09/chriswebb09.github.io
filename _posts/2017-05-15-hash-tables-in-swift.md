@@ -75,13 +75,13 @@ In Swift, you may have seen a protocol called Hashable. Anything that conforms t
 [Apple Docs for Hashable Protocol](https://developer.apple.com/reference/swift/hashable)
 
 <blockquote>
-<p> You can use any type that conforms to the Hashable protocol in a set or as a dictionary key. Many types in the standard library conform to Hashable: strings, integers, floating-point and Boolean values, and even sets provide a hash value by default. Your own custom types can be hashable as well. When you define an enumeration without associated values, it gains Hashable conformance automatically, and you can add Hashable conformance to your other custom types by adding a single hashValue property.
-A hash value, provided by a type’s hashValue property, is an integer that is the same for any two instances that compare equally. That is, for two instances a and b of the same type, if a == b then a.hashValue == b.hashValue. The reverse is not true: Two instances with equal hash values are not necessarily equal to each other. </p>
+<p>You can use any type that conforms to the Hashable protocol in a set or as a dictionary key. Many types in the standard library conform to Hashable: strings, integers, floating-point and Boolean values, and even sets provide a hash value by default. Your own custom types can be hashable as well. When you define an enumeration without associated values, it gains Hashableconformance automatically, and you can add Hashable conformance to your other custom types by adding a single hashValue property</p>
+
+<p>A hash value, provided by a type’s hashValue property, is an integer that is the same for any two instances that compare equally. That is, for two instances aand b of the same type, if a == b then a.hashValue == b.hashValue. The reverse is not true: Two instances with equal hash values are not necessarily equal to each other.</p>
 </blockquote>
 
 
 {% highlight swift linenos %}
-
 class Element: Hashable {
     
     var value: Int
@@ -100,11 +100,14 @@ extension Element: Equatable {
         return lhs.hashValue == rhs.hashValue
     }
 }
-
 {% endhighlight %}
 
 ### Buckets
-Buckets are the index slots in which our hash elements are placed. A bucket corresponds to a specific index.
+
+![Bucket](https://cdn-images-1.medium.com/max/1440/1*zqqF5H8KtX9P61GvxCW62Q.png)!
+---
+<blockquote>*Buckets are the index slots in which our hash elements are placed. A bucket corresponds to a specific index.
+In general, a hashing function may map several different keys to the same index. Therefore, each slot of a hash table is associated with (implicitly or explicitly) a set of records, rather than a single record. For this reason, each slot of a hash table is often called a bucket, and hash values are also called bucket indices.*</blockquote>
 
 # Collisions
 ---
