@@ -106,17 +106,20 @@ Buckets are the index slots in which our hash elements are placed. A bucket corr
 In general, a hashing function may map several different keys to the same index. Therefore, each slot of a hash table is associated with (implicitly or explicitly) a set of records, rather than a single record. For this reason, each slot of a hash table is often called a bucket, and hash values are also called bucket indices.
 
 # Collisions
+
 Collisions happen when your hashing function creates duplicate indexes for different keys. In an ideal world, every element in a hash table would calculate a unique index. Unfortunately, most hashing algorithms will return a non-unique index from time to time.
+
 The better the hashing algorithm, the less often this happens. At the same time, the point of using a hash-table is that its performance, if you create an incredibly complex algorithm for calculating the index, this can cut down on that. There is a middle ground in using relatively good hashing function along with logic to handle collisions when they happen.
 
 ## Open Addressing (Linear Probing)
-One way of dealing with collisions is with open addressing. Open addressing resolves a collision by finding the next available slot. This solution can quickly run up the time complexity and turn operations that should be O(1) — constant to O(n) linear time — meaning the time scales directly with the number of inputs. For this article I won’t go further into depth on Open Addressing.
+
+One way of dealing with collisions is with open addressing. Open addressing resolves a collision by finding the next available slot. If it is at the end of the table and cannot find an open bucket, it loops back to the beginning of our table. This solution can quickly run up the time complexity and turn operations that should be O(1) — constant to O(n) linear time — meaning the time scales directly with the number of inputs. For this article I won’t go further into depth on Open Addressing.
 
 ## Separate chaining
 
 ![Separate Chaining](https://cdn-images-1.medium.com/max/1600/1*ItGUOu_Oun1vOF_ro_kCcA.png)
 
-One way to solve collisions is to create buckets that have some sort list structure which elements that compute to that bucket’s index are appended to. For this post, I will use that method.
+One way to solve collisions is to create buckets that have some sort list structure which elements that compute to that bucket’s index are appended to. A linked list a great data structure to use here. For this post, I will use chaining.
 
 # Getting Started
 ---
@@ -185,11 +188,11 @@ Using [unicodeScalars](https://developer.apple.com/reference/swift/string.unicod
 
 ## Retrieving Data From Table
 
-Now we need need to create a way to retrieve value using our key. Let’s create method value(for key: Key) that return an optional value. The return type should be optional to account for cases where there are is no value associated with a given key.
+Now we need need to create a way to retrieve the value using our key. Let’s create method value(for key: Key) that returns an optional value. The return type should be optional to account for cases where there is no value associated with a given key.
 
 {% highlight swift linenos %}
 
-struct HashTable<Key: Hashable, Value> {
+truct HashTable<Key: Hashable, Value> {
     
     typealias Bucket = [HashElement<Key, Value>]
     
@@ -222,6 +225,111 @@ struct HashTable<Key: Hashable, Value> {
 
 {% endhighlight %}
 
+# Subscripts
+## What is a subscript?
+There are still a few things missing from our data structure which we will need to add. For one, we can’t add or update the values. Also, our hash table does not have a subscript implemented that you commonly see in collection types. Adding a subscript to our hash table will give the familiar key, value access that you get with dictionaries.
+
+myDictionary[“key”] = 0
+print(myDictionary[“key”]) // 0
+
+> The subscript we will implement in our hash table will be analogous with the implementation seen in a standard dictionary. Adding a 
+> subscript subscript simplifies the process of storing and retrieving specific key value pairs. It combines the setter and getters for
+> the values into one format instead of requiring two different methods.
+
+> Classes, structures, and enumerations can define subscripts, which are shortcuts for accessing the member elements of a collection,  
+> list, or sequence. You use subscripts to set and retrieve values by index without needing separate methods for setting and retrieval. 
+> For example, you access elements in an Array instance as someArray[index] and elements in a Dictionary instance as someDictionary[key].
+> You can define multiple subscripts for a single type, and the appropriate subscript overload to use is selected based on the type of 
+> index value you pass to the subscript. Subscripts are not limited to a single dimension, and you can define subscripts with multiple
+> input parameters to suit your custom type’s needs.
+
+## Implementing Our Subscript
+To start with, I added a model method which takes in a key and returns a string. While at the moment this may seem redundant or unnecessary, you’ll need to translate key data types to a consistent type that we can use as our hash value. Having this method in here now sets you up for later.
+
+Earlier I wrote that the subscript could substitute for retrieval and setter methods. To do this, we’ll need to create those methods and invoke them properly in our custom subscript.
+
+{% highlight swift linenos %}
+struct HashTable<Key: Hashable, Value> {
+  
+  // Prior Hash Table Implementation 
+  
+    func model(with element: Key) -> String? {
+        switch element {
+        case is String:
+            return String(describing: element)
+        case is Int:
+            let stringElement = String(describing: element)
+            return stringElement
+        default:
+            return nil
+        }
+    }
+    
+    subscript(key: Key) -> Value? {
+        get {
+            return value(for: key)
+        }
+        set {
+            if let value = newValue {
+                updateValue(value, forKey: key)
+            } else {
+                removeValue(for: key)
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+# Value Operations
+In the code below I’ve written the method signatures for functions to set and retrieve values:
+
+mutating func updateValue(_ value: Value, forKey key: Key) -> Value?
+
+mutating func removeValue(for key: Key) -> Value?
+
+## Side Note On @discarableResult
+
+If you haven’t seen ‘@discardableResult’ before, all that means is despite the fact that these mutating functions return a value, we may not need to use it so the compile can ignore that value.
+
+{% highlight swift linenos %}
+
+struct HashTable<Key: Hashable, Value> {
+  
+  // Code added earlier
+  
+    @discardableResult
+    mutating func updateValue(_ value: Value, forKey key: Key) -> Value? {
+        var itemIndex: Int
+        itemIndex = self.index(for: key)
+        for (i, element) in buckets[itemIndex].enumerated() {
+            if element.key == key {
+                let oldValue = element.value
+                buckets[itemIndex][i].value = value
+                return oldValue
+            }
+        }
+        buckets[itemIndex].append(HashElement(key: key, value: value))
+        return nil
+    }
+    
+    @discardableResult
+    mutating func removeValue(for key: Key) -> Value? {
+        let index = self.index(for: key)
+        for (i, element) in buckets[index].enumerated() {
+            if element.key == key {
+                buckets[index].remove(at: i)
+                return element.value
+            }
+        }
+        return nil
+    }
+}
+
+{% endhighlight %}
+
+
+
 # Wrap-Up
 ---
-This concludes the first part. In part two we will finish implementing our hash table and go over the costs and benefits of using it.
+We can now use those two methods as the getter/setters for our subscript. You can now store and retrieve values using yourObjectName[“key”].
