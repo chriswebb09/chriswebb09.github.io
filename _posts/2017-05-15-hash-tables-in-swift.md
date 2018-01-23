@@ -106,8 +106,8 @@ extension Element: Equatable {
 
 ![Bucket](https://cdn-images-1.medium.com/max/1440/1*zqqF5H8KtX9P61GvxCW62Q.png)!
 ---
-<blockquote>*Buckets are the index slots in which our hash elements are placed. A bucket corresponds to a specific index.
-In general, a hashing function may map several different keys to the same index. Therefore, each slot of a hash table is associated with (implicitly or explicitly) a set of records, rather than a single record. For this reason, each slot of a hash table is often called a bucket, and hash values are also called bucket indices.*</blockquote>
+<blockquote>Buckets are the index slots in which our hash elements are placed. A bucket corresponds to a specific index.
+In general, a hashing function may map several different keys to the same index. Therefore, each slot of a hash table is associated with (implicitly or explicitly) a set of records, rather than a single record. For this reason, each slot of a hash table is often called a bucket, and hash values are also called bucket indices.</blockquote>
 
 # Collisions
 ---
