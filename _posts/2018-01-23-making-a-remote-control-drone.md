@@ -13,9 +13,11 @@ The journey of one thousand apps starts with a single key press...
 
 ![](https://cdn-images-1.medium.com/max/300/1*LpNpWVlYHaa00I_66QAfAg.gif)
 
-```
+
+<p class="message">
 [Demo Code](https://github.com/chriswebb09/ARKitDrone)
-```
+</p>
+
 
 In the last few posts on ARKit, most of the content we placed was pretty static. For this example, I want to switch gears and make something in ARKit that is a bit more interactive.
 
