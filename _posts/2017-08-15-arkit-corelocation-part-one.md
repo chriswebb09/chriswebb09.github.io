@@ -9,11 +9,11 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
-#### Navigation With Linear Algebra (and&nbsp;Trig)
+#### Navigation With Linear Algebra 
 
 ![](https://cdn-images-1.medium.com/max/281/1*inlJCQcqA542ScuAbxgyrw.gif)
 
-```
+
 Demo Code
 
 ARKit and CoreLocation: Part One
@@ -21,7 +21,7 @@ ARKit and CoreLocation: Part One
 ARKit and CoreLocation: Part Two
 
 ARKit and CoreLocation: Part Three
-```
+
 
 #### **Background**
 
@@ -41,7 +41,9 @@ With [iOS 11](https://www.apple.com/ios/ios-11-preview/), Apple has unleashed th
 
 ### **First, Some Fundamentals**
 
-![](https://cdn-images-1.medium.com/max/281/1*z2dEldME3fyddalmq8fu2g.gif)Personal Project — August 20th
+![](https://cdn-images-1.medium.com/max/281/1*z2dEldME3fyddalmq8fu2g.gif)
+
+Personal Project — August 20th
 
 So, it’s magic right? I hate to be the one to say this but no, it’s just math. So if it isn’t magic how do they pull it off? Visual Inertial Odometry! (Say it ten times&nbsp;fast.)
 
