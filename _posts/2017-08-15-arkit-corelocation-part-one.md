@@ -14,13 +14,13 @@ The journey of one thousand apps starts with a single key press...
 ![](https://cdn-images-1.medium.com/max/281/1*inlJCQcqA542ScuAbxgyrw.gif)
 
 
-Demo Code
+[Demo Code](https://github.com/chriswebb09/ARKitNavigationDemo)
 
-ARKit and CoreLocation: Part One
+[ARKit and CoreLocation: Part One](http://chriswebb09.github.io/2017/08/15/arkit-corelocation-part-one/)
 
-ARKit and CoreLocation: Part Two
+[ARKit and CoreLocation: Part Two](https://medium.com/journey-of-one-thousand-apps/arkit-and-corelocation-part-two-7b045fb1d7a1)
 
-ARKit and CoreLocation: Part Three
+[ARKit and CoreLocation: Part Three](https://medium.com/journey-of-one-thousand-apps/arkit-and-corelocation-part-three-98b1d51e2eac)
 
 
 #### **Background**
@@ -429,7 +429,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, Lo
     }
 }
 {% endhighlight %}
-![](https://cdn-images-1.medium.com/max/281/1*4bNiloIDw6WN2Uc5gvv7jg.gif)<figcaption>Personal project — August 13th</figcaption>
+![](https://cdn-images-1.medium.com/max/281/1*4bNiloIDw6WN2Uc5gvv7jg.gif)Personal project — August 13th
 
 #### Sources:
 
