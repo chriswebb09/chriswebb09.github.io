@@ -11,7 +11,7 @@ The journey of one thousand apps starts with a single key press...
 
 #### Navigation With Linear Algebra (and&nbsp;Trig)
 
-![](https://cdn-images-1.medium.com/max/281/1*inlJCQcqA542ScuAbxgyrw.gif)<figcaption>Personal project — August 17th</figcaption>
+![](https://cdn-images-1.medium.com/max/281/1*inlJCQcqA542ScuAbxgyrw.gif)
 
 ```
 Demo Code
@@ -41,7 +41,7 @@ With [iOS 11](https://www.apple.com/ios/ios-11-preview/), Apple has unleashed th
 
 ### **First, Some Fundamentals**
 
-![](https://cdn-images-1.medium.com/max/281/1*z2dEldME3fyddalmq8fu2g.gif)<figcaption>Personal Project — August 20th</figcaption>
+![](https://cdn-images-1.medium.com/max/281/1*z2dEldME3fyddalmq8fu2g.gif)Personal Project — August 20th
 
 So, it’s magic right? I hate to be the one to say this but no, it’s just math. So if it isn’t magic how do they pull it off? Visual Inertial Odometry! (Say it ten times&nbsp;fast.)
 
@@ -67,7 +67,7 @@ Apple is a huge fan of organizing code around sessions. **Sessions** are a way o
 worldAlignment: The worldAlignment property on ARSession defines how the ARSession interprets the ARFrame’s motion data on a 3D coordinate mapping system that is uses to keep track of the world and build the Augmented Reality experience.
 ```
 
-![](https://cdn-images-1.medium.com/max/1024/1*j12eVe8hKvXq-CrbBzHMXA.png)<figcaption><a href="https://docs-assets.developer.apple.com/published/b99f86dcfb/f76d63a3-7620-40d1-9e52-0d9ad6329678.png">Source</a></figcaption>
+![](https://cdn-images-1.medium.com/max/1024/1*j12eVe8hKvXq-CrbBzHMXA.png)<a href="https://docs-assets.developer.apple.com/published/b99f86dcfb/f76d63a3-7620-40d1-9e52-0d9ad6329678.png">Source</a>
 
 [**worldAlignment — Apple&nbsp;Docs**](https://developer.apple.com/documentation/arkit/arconfiguration/2923550-worldalignment)
 
@@ -76,7 +76,7 @@ worldAlignment: The worldAlignment property on ARSession defines how the ARSessi
 gravity: By setting the alignment to gravity ARKit aligns the y-axis parallel to gravity and the z and x axes are oriented along the original heading of the device.
 ```
 
-![](https://cdn-images-1.medium.com/max/500/1*IRvOJvHSBOpLxbdGCzck-g.png)<figcaption><a href="https://docs-assets.developer.apple.com/published/ffb3831f78/d937c9e9-05fd-46e3-b72d-eb353b79bfbd.png">Source</a></figcaption>
+![](https://cdn-images-1.medium.com/max/500/1*IRvOJvHSBOpLxbdGCzck-g.png)<a href="https://docs-assets.developer.apple.com/published/ffb3831f78/d937c9e9-05fd-46e3-b72d-eb353b79bfbd.png">Source</a>
 
 [**worldAlignment.gravity — Apple&nbsp;Docs**](https://developer.apple.com/documentation/arkit/arconfiguration.worldalignment/2873778-gravity)
 
