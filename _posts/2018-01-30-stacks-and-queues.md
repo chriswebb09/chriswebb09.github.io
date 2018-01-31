@@ -60,7 +60,6 @@ struct Stack<T> {
 A queue is a **F** irst **I** n **F** irst **O** ut list data structure where items can only be inserted in the back and removed at the front. A queue can best be represented in the real world with how a line for movie tickets works. The first person who gets in line gets to buy their tickets first and everyone afterwards buys them in the order that they joined the line. In a FIFO data structure the first element added is the first element that is removed. Like with Stacks, the ordering of data removal from a queue is a critical to it functioning properly, so ensuring that access to the queue data is managed properly is&nbsp;key.
 
 {% highlight swift linenos %}
-
 struct Queue<T> {
   
    private var elements: [T] = []
@@ -87,4 +86,3 @@ struct Queue<T> {
 }
 {% endhighlight %}
 
-* * *
