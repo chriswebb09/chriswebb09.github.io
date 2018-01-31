@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Structures: Stacks and Queues
+title: Data Structures Stacks and Queues
 ---
 
 <p class="message">
