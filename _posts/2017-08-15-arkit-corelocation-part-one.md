@@ -104,7 +104,8 @@ Personal project — August 11th
 
 [**ARSCNView**](https://developer.apple.com/documentation/arkit/arscnview) **:** ARSCNView is a subclass of SCNView which is the standard SceneKit view for rendering 3D content. Because it is specialized for ARKit, it has some really cool features already baked in. For one, it provides seamless access to the phone’s camera. Even cooler, the world coordinate system for the view’s SceneKit scene directly responds to the AR world coordinate system established by the session configuration. It also automatically moves the SceneKit camera to match the real movement of the&nbsp;iPhone.
 
-![](https://cdn-images-1.medium.com/max/281/1*aPX9VBgkpO0en1reGyS0Mw.gif)<figcaption>Personal project — August 12th</figcaption>
+![](https://cdn-images-1.medium.com/max/281/1*aPX9VBgkpO0en1reGyS0Mw.gif)
+Personal project — August 12th
 
 [**ARSCNView Docs**](https://developer.apple.com/documentation/arkit/arscnview) **:**
 
