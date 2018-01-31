@@ -87,7 +87,8 @@ gravity: By setting the alignment to gravity ARKit aligns the y-axis parallel to
 gravityAndHeading: By setting the alignment to gravityAndHeading ARKit aligns the y-axis parallel to gravity and the z and x axes orient towards compass heading. The origin is placed at the initial location of the device. While this is accurate most of the time, it’s precision is not incredibly high so creating an immersive augmented reality experience while solely relying on this data can be tricky.
 ```
 
-![](https://cdn-images-1.medium.com/max/815/1*Q-2ce-YwHsHTDCaAFWcL9g.png)<figcaption><a href="https://docs-assets.developer.apple.com/published/ffb3831f78/0a0ac708-2357-4418-ad41-88711d290f8e.png">Source</a></figcaption>
+![](https://cdn-images-1.medium.com/max/815/1*Q-2ce-YwHsHTDCaAFWcL9g.png)
+<a href="https://docs-assets.developer.apple.com/published/ffb3831f78/0a0ac708-2357-4418-ad41-88711d290f8e.png">Source</a>
 
 [**worldAlignment.gravityAndHeading — Apple&nbsp;Docs**](https://developer.apple.com/documentation/arkit/arconfiguration.worldalignment/2873776-gravityandheading)
 
@@ -96,7 +97,8 @@ gravityAndHeading: By setting the alignment to gravityAndHeading ARKit aligns th
 
 One of the coolest things about ARKit is that it integrates well with Apple’s existing graphics rendering engines: SpriteKit, Metal and SceneKit. The one I’ve used the most has been SceneKit which is used for rendering 3D&nbsp;objects.
 
-![](https://cdn-images-1.medium.com/max/281/1*gPCWMK3EAYHTNGTVNc2bOQ.gif)<figcaption>Personal project — August 11th</figcaption>
+![](https://cdn-images-1.medium.com/max/281/1*gPCWMK3EAYHTNGTVNc2bOQ.gif)
+Personal project — August 11th
 
 #### Definition
 
@@ -109,7 +111,8 @@ One of the coolest things about ARKit is that it integrates well with Apple’s 
 > Because ARKit automatically matches SceneKit space to the real world, placing a virtual object such that it appears to maintain a real-world position requires only setting that object’s SceneKit position appropriately.> You don’t necessarily need to use the ARAnchor class to track positions of objects you add to the scene, but by implementing ARSCNViewDelegate methods, you can add SceneKit content to any anchors that are automatically detected by&nbsp;ARKit.
 ### Adding Node To&nbsp;Scene
 
-![](https://cdn-images-1.medium.com/max/633/1*WLaPipp1LqIdcwbWqCCtZg.png)<figcaption><a href="https://developer.apple.com/documentation/scenekit/scnsphere">Source</a></figcaption>
+![](https://cdn-images-1.medium.com/max/633/1*WLaPipp1LqIdcwbWqCCtZg.png)
+<a href="https://developer.apple.com/documentation/scenekit/scnsphere">Source</a>
 
 Before we go any further let’s get something basic out of the way. Let’s build our first augmented reality experience! To do this, we’re going to place a blue orb 1 meter in front of the&nbsp;camera.
 
@@ -222,7 +225,8 @@ To start off simply, well use a 2 by 1 matrix for our vector. Let’s give it a 
 
 We can express that same vector (1, 0) in a very simple&nbsp;matrix:
 
-![](https://cdn-images-1.medium.com/max/196/1*BbhJ9I91WMTrsbON2L4AZg.png)<figcaption>X over Y</figcaption>
+![](https://cdn-images-1.medium.com/max/196/1*BbhJ9I91WMTrsbON2L4AZg.png)
+X over Y
 
 As stated&nbsp;above:
 
