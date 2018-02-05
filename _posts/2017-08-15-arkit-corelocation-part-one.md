@@ -9,6 +9,7 @@ The journey of one thousand apps starts with a single key press...
 
 ---
 
+
 ## Navigation With Linear Algebra 
 
 ![](https://cdn-images-1.medium.com/max/281/1*inlJCQcqA542ScuAbxgyrw.gif)
