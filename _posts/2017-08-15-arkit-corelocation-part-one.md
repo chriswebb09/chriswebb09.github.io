@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ARKit and CoreLocation: Part One"
+title: "ARKit and CoreLocation: Part Two"
 ---
 
 <p class="message">
@@ -215,7 +215,8 @@ For now this approach works fine. Our sphere will automatically appear to track 
 
 ### Vectors and Matrice and Linear Algebra, Oh&nbsp;No!
 
-![](https://cdn-images-1.medium.com/max/200/1*MinQCMoywXYBW4FsDWt80A.png)<figcaption>A two by four matrix.</figcaption>
+![](https://cdn-images-1.medium.com/max/200/1*MinQCMoywXYBW4FsDWt80A.png)
+A two by four matrix.
 
 If you remember back to math class, a vector has a magnitude and a direction.
 
@@ -258,7 +259,8 @@ If you’ve worked with CoreGraphics before you’ve probably seen something cal
 
 [**Affine transformation**](https://www.mathworks.com/discovery/affine-transformation.html) is a linear mapping method that preserves points, straight lines, and&nbsp;planes.
 
-![](https://cdn-images-1.medium.com/max/430/1*tpTWHF7Uu1qCdDl2sKudEg.gif)<figcaption><a href="http://smashinghub.com/wp-content/uploads/2014/09/menu-animation-effects-3.gif">source</a></figcaption>
+![](https://cdn-images-1.medium.com/max/430/1*tpTWHF7Uu1qCdDl2sKudEg.gif)
+<a href="http://smashinghub.com/wp-content/uploads/2014/09/menu-animation-effects-3.gif">source</a>
 
 ### Rotating A Space&nbsp;Ship
 
