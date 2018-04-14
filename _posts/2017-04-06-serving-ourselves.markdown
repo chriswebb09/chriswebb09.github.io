@@ -2,7 +2,7 @@
 title: "Serving Ourselves! - With Node.js"
 layout: post
 date: 2017-04-06 01:48
-image: "public/node.png"
+image: "/node.png"
 headerImage: true
 tag:
 - Javascript
