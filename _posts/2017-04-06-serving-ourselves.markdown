@@ -1,7 +1,7 @@
 ---
 title: "Serving Ourselves! (With Node.js)"
 layout: post
-date: 2017-11-05 01:48
+date: 2017-04-06 01:48
 image: https://cdn-images-1.medium.com/max/1440/1*-zxO2kDwb-NP_RD-BLSHxg.png"
 headerImage: true
 tag:

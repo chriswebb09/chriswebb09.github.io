@@ -1,7 +1,7 @@
 ---
 title: "Building A Hash Data Structure In Swift"
 layout: post
-date: 2018-03-28 22:48
+date: 2017-05-19 22:48
 image: /11w5lxGBI8zAAIgSD1vJAEw.png
 headerImage: true
 tag:
