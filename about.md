@@ -12,7 +12,7 @@ Thanks for reading!</p>
 
 <h2 align="center">Skills</h2>
 
-<ul class="skill-list" align="center">
+<ul class="skill-list">
    <li align="center">Swift</li>
 	 <li align="center">ARKit</li>
 	 <li align="center">Objective-C</li>
@@ -25,7 +25,7 @@ Thanks for reading!</p>
 
 <h2 align="center">Projects</h2>
 
-<ul align="center">
+<ul>
 	<li align="center"><a href="https://github.com/chriswebb09/ARKitNavigationDemo">ARKitNavigationDemo</a></li>
 	<li align="center"><a href="https://github.com/chriswebb09/ARKitDrone">ARKit Drone</a></li>
 	<li align="center"><a href="https://github.com/chriswebb09/ARKitAirport">ARKit Airport</a></li>
