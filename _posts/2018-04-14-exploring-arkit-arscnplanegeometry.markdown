@@ -94,6 +94,8 @@ class ViewController: UIViewController {
 
 {% endhighlight %}
 
+---
+
 ## SCNNode Extension
 
 {% highlight swift %}
@@ -118,6 +120,8 @@ extension SCNNode {
 }
 
 {% endhighlight %}
+
+----
 
 ## ARSCNViewDelegate
 
