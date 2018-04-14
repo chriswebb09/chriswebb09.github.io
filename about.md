@@ -10,9 +10,9 @@ layout: page
 Have questions or suggestions? Feel free to  contact me on <a href="https://github.com/chriswebb09">Github</a>.
 Thanks for reading!</p>
 
-<h2>Skills</h2>
+<h2 align="center">Skills</h2>
 
-<ul class="skill-list">
+<ul class="skill-list" align="center">
    <li>Swift</li>
 	 <li>ARKit</li>
 	 <li>Objective-C</li>
