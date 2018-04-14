@@ -2,7 +2,7 @@
 title: "Creating Delegates in Swift"
 layout: post
 date: 2017-03-28 01:48
-image: "/assets/image/node.png"
+image: "/assets/image/apple-swift.png"
 headerImage: true
 tag:
 - Swift
