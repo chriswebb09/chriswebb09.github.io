@@ -11,13 +11,7 @@ tag:
 star: false
 category: blog
 author: chriswebb
-description: Regular expressions
----
-
-<p class="message">
-The journey of one thousand apps starts with a single key press...
-</p>
-
+description: "Regular expressions"
 ---
 
 ### Brief Overview

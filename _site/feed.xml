@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-14T00:19:34-04:00</updated><id>http://localhost:4000/</id><title type="html">Christopher Webb</title><subtitle>The journey of one thousand apps starts with a single key press...</subtitle><entry><title type="html">Application Data Flow: Part One</title><link href="http://localhost:4000/app-data-flow-pt-one/" rel="alternate" type="text/html" title="Application Data Flow: Part One" /><published>2018-03-28T22:48:00-04:00</published><updated>2018-03-28T22:48:00-04:00</updated><id>http://localhost:4000/app-data-flow-pt-one</id><content type="html" xml:base="http://localhost:4000/app-data-flow-pt-one/">&lt;p&gt;Before we get stated, if you saw store in the title and thought this was something to do with a commerce app, unfortunately it does not. In this instance, Store is in regards to a particular way of organizing storage and retrieval of data for the application.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-14T00:39:46-04:00</updated><id>http://localhost:4000/</id><title type="html">Christopher Webb</title><subtitle>The journey of one thousand apps starts with a single key press...</subtitle><entry><title type="html">Application Data Flow: Part One</title><link href="http://localhost:4000/app-data-flow-pt-one/" rel="alternate" type="text/html" title="Application Data Flow: Part One" /><published>2018-03-28T22:48:00-04:00</published><updated>2018-03-28T22:48:00-04:00</updated><id>http://localhost:4000/app-data-flow-pt-one</id><content type="html" xml:base="http://localhost:4000/app-data-flow-pt-one/">&lt;p&gt;Before we get stated, if you saw store in the title and thought this was something to do with a commerce app, unfortunately it does not. In this instance, Store is in regards to a particular way of organizing storage and retrieval of data for the application.&lt;/p&gt;
 
 &lt;p&gt;Okay, now that we have that out of the way, today we are going to be talking about application data flow. While the topic may not sound super interesting, having a good handle on the river the river of information flowing through your application will in the long run save you a lot time.&lt;/p&gt;
 
@@ -287,7 +287,7 @@
   &lt;li&gt;&lt;a href=&quot;https://www.objc.io/blog/&quot;&gt;Blog · objc.io&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://blog.githawk.com/&quot;&gt;GitHawk Blog&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.cocoawithlove.com/&quot;&gt;Cocoa with Love&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="iOS" /><category term="swift" /><category term="application data" /><summary type="html">Before we get stated, if you saw store in the title and thought this was something to do with a commerce app, unfortunately it does not. In this instance, Store is in regards to a particular way of organizing storage and retrieval of data for the application.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/11w5lxGBI8zAAIgSD1vJAEw.png" /></entry><entry><title type="html">Building A Hash Data Structure In Swift</title><link href="http://localhost:4000/building-a-hash-data-structure-in-swift/" rel="alternate" type="text/html" title="Building A Hash Data Structure In Swift" /><published>2018-03-28T22:48:00-04:00</published><updated>2018-03-28T22:48:00-04:00</updated><id>http://localhost:4000/building-a-hash-data-structure-in-swift</id><content type="html" xml:base="http://localhost:4000/building-a-hash-data-structure-in-swift/">&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="iOS" /><category term="swift" /><category term="application data" /><summary type="html">Before we get stated, if you saw store in the title and thought this was something to do with a commerce app, unfortunately it does not. In this instance, Store is in regards to a particular way of organizing storage and retrieval of data for the application.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/11w5lxGBI8zAAIgSD1vJAEw.png" /></entry><entry><title type="html">Building A Hash Data Structure In Swift</title><link href="http://localhost:4000/building-a-hash-data-structure-in-swift/" rel="alternate" type="text/html" title="Building A Hash Data Structure In Swift" /><published>2017-05-19T22:48:00-04:00</published><updated>2017-05-19T22:48:00-04:00</updated><id>http://localhost:4000/building-a-hash-data-structure-in-swift</id><content type="html" xml:base="http://localhost:4000/building-a-hash-data-structure-in-swift/">&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
 &lt;p&gt;This post will continue my series on data structures and will touch on the concepts behind and implementation of hash tables. Hash tables are one of the most commonly used data structures in development. In fact, even if you haven’t heard the term before, you have probably used them in one form or another.&lt;/p&gt;
 
@@ -885,7 +885,137 @@ One place where you would not want to use a hash table is when you have to itera
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://smnh.me/images/hit-test-view-hierarchy.png&quot;&gt;http://smnh.me/images/hit-test-view-hierarchy.png&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/WindowsandViews/WindowsandViews.html#//apple_ref/doc/uid/TP40009503-CH2-SW1&quot;&gt;Apple Docs: View and Window Architecture&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="UIView" /><category term="iOS" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Monitoring Download Progress Swift</title><link href="http://localhost:4000/monitoring-download-progress-swift/" rel="alternate" type="text/html" title="Monitoring Download Progress Swift" /><published>2017-04-18T00:00:00-04:00</published><updated>2017-04-18T00:00:00-04:00</updated><id>http://localhost:4000/monitoring-download-progress-swift</id><content type="html" xml:base="http://localhost:4000/monitoring-download-progress-swift/"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Serving Ourselves</title><link href="http://localhost:4000/serving-ourselves/" rel="alternate" type="text/html" title="Serving Ourselves" /><published>2017-04-06T00:00:00-04:00</published><updated>2017-04-06T00:00:00-04:00</updated><id>http://localhost:4000/serving-ourselves</id><content type="html" xml:base="http://localhost:4000/serving-ourselves/"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Building With Python Requests</title><link href="http://localhost:4000/building-with-python-requests/" rel="alternate" type="text/html" title="Building With Python Requests" /><published>2017-04-06T00:00:00-04:00</published><updated>2017-04-06T00:00:00-04:00</updated><id>http://localhost:4000/building-with-python-requests</id><content type="html" xml:base="http://localhost:4000/building-with-python-requests/"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Creating Delegates With Swift</title><link href="http://localhost:4000/creating-delegates-with-swift/" rel="alternate" type="text/html" title="Creating Delegates With Swift" /><published>2017-03-28T00:00:00-04:00</published><updated>2017-03-28T00:00:00-04:00</updated><id>http://localhost:4000/creating-delegates-with-swift</id><content type="html" xml:base="http://localhost:4000/creating-delegates-with-swift/"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Caching Data From Network</title><link href="http://localhost:4000/caching-data-from-network/" rel="alternate" type="text/html" title="Caching Data From Network" /><published>2017-03-27T00:00:00-04:00</published><updated>2017-03-27T00:00:00-04:00</updated><id>http://localhost:4000/caching-data-from-network</id><content type="html" xml:base="http://localhost:4000/caching-data-from-network/"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Fun with Edison, Watson and Twilio</title><link href="http://localhost:4000/fun-with-edison-watson-twilio/" rel="alternate" type="text/html" title="Fun with Edison, Watson and Twilio" /><published>2016-07-20T01:48:00-04:00</published><updated>2016-07-20T01:48:00-04:00</updated><id>http://localhost:4000/fun-with-edison-watson-twilio</id><content type="html" xml:base="http://localhost:4000/fun-with-edison-watson-twilio/">&lt;h3 id=&quot;ibm-intel-and-twilio&quot;&gt;IBM, Intel and Twilio&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="UIView" /><category term="iOS" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Monitoring Download Progress Swift</title><link href="http://localhost:4000/monitoring-download-progress-swift/" rel="alternate" type="text/html" title="Monitoring Download Progress Swift" /><published>2017-04-18T00:00:00-04:00</published><updated>2017-04-18T00:00:00-04:00</updated><id>http://localhost:4000/monitoring-download-progress-swift</id><content type="html" xml:base="http://localhost:4000/monitoring-download-progress-swift/"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Serving Ourselves! (With Node.js)</title><link href="http://localhost:4000/serving-ourselves/" rel="alternate" type="text/html" title="Serving Ourselves! (With Node.js)" /><published>2017-04-06T01:48:00-04:00</published><updated>2017-04-06T01:48:00-04:00</updated><id>http://localhost:4000/serving-ourselves</id><content type="html" xml:base="http://localhost:4000/serving-ourselves/">&lt;h1 id=&quot;brief-overview&quot;&gt;Brief Overview&lt;/h1&gt;
+
+&lt;p&gt;Networks go down. That is one of the more obvious statements that I’ve made on this blog. There are also times when you just don’t have access to a reliable internet connection for whatever reason. In short, using data from the internet brings into play factors that you don’t have one hundred percent control over. Knowing this, we can start going about mitigating the consequences ahead of time. One way to do this is to have some data (most likely JSON) stored locally that can be called upon whenever the need may arise. It doesn’t need to be entire databases worth, just enough to simulate proper functionality. In this post, I’ll show you how to construct a simple Node.js server that you can use to serve dummy data to your app.&lt;/p&gt;
+
+&lt;p&gt;I got the idea to write this post recently when I was moving. The place where I was staying temporarily did not have internet hooked up, and I had gone way over the data allotment on my mobile plan for the month and the phone company was throttling my connection. Having a server send my application ‘dummy data’ would have been a quick fix for my situation. Even if you don’t have a specific reason right now, working with node is a handy skill to have and something that could prove useful to you further down the line.&lt;/p&gt;
+
+&lt;p&gt;Let’s get started…with installations
+If you don’t have node installed on your machine you should do that now because otherwise, you can’t run a node server. You can install node using the Mac package manager Homebrew. When you’ve installed Homebrew execute the following commands:&lt;/p&gt;
+
+&lt;p&gt;brew install node&lt;/p&gt;
+
+&lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
+
+&lt;p&gt;To start let’s create our server directory and add our server index file and JSON file.&lt;/p&gt;
+
+&lt;p&gt;mkdir server
+cd server
+touch index.js
+touch movies.json&lt;/p&gt;
+
+&lt;p&gt;Open your movies.json file and copy and paste your JSON into it and save it. For this example, I’m going to use the response from OMDb API. To get some JSON, copy and paste into your movie.json from the following page: http://www.omdbapi.com/?s=Batman&amp;amp;page=2&lt;/p&gt;
+
+&lt;h2 id=&quot;lets-build-our-server&quot;&gt;Let’s Build Our Server&lt;/h2&gt;
+
+&lt;p&gt;Moving on to our server, let’s open the index.js file up in our text editor. You can see that at the top of the file there are several of global variables that get defined. All but on of these variables uses something called require.&lt;/p&gt;
+
+&lt;h2 id=&quot;overview-of-require&quot;&gt;Overview of Require&lt;/h2&gt;
+
+&lt;p&gt;Require is not part of standard Javascript. Node uses it to load modules. Importing in Swift is similar.&lt;/p&gt;
+
+&lt;p&gt;npmjs.com defines require with the following:&lt;/p&gt;
+
+&lt;p&gt;Node’s require() is the de facto javascript dependency statement.
+npm is the de facto javascript module manager.
+require brings both of them to the browser.&lt;/p&gt;
+
+&lt;p&gt;We are using it to import the http, url, fs (filesystem) and path modules into our index.js file. We’re also going to specify the port that our server will run on, 3000.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'http'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'url'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fs'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'path'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;port&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;accessing-the-filesystem&quot;&gt;Accessing the Filesystem&lt;/h2&gt;
+&lt;p&gt;To access the movie.json file, we need to create a file path variable with the location of it. We can do that by using our path module and
+calling join. “_dirname” is the file path for the directory where index.js is located. Since movie.json is in the same directory we can tack it on the end by using join and ‘_dirname’.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'movie.json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That should look something like: /Users/YourUsername/server/movie.json or some derivative of that depending on where your server directory is located. To read the JSON file at that location, we have to access the filesystem with the fs module and calling readFile. This takes in the path to the file being read and an anonymous function with the parameter error and data. The function that you’re passing is a callback function that returns either error or data at the end (think of it as the completion handler that Swift uses.)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pathname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/p1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/p2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Page 2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Default&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;urls&quot;&gt;URLs!&lt;/h2&gt;
+&lt;p&gt;Inside of this block we need to traverse a switch statement that does something depending on the URL that was used to access the server.
+This switch statement can help with simulating pagination or different response type. If there is no error, we can return our data in our response.end call.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pathname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/p1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/p2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Page 2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+     &lt;span class=&quot;nl&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+       &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Default&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;For now, just give the default case response a string, I used “Default, but you’re free to use whatever catches your fancy.&lt;/p&gt;
+
+&lt;p&gt;Wrap-up
+Node is a great and easy way to create a server to send your application some dummy data. To check that your server works, start it up in
+your terminal by running the following in your project directory:&lt;/p&gt;
+
+&lt;p&gt;node index.js&lt;/p&gt;
+
+&lt;p&gt;If you get it right, your terminal should look something like this:&lt;/p&gt;
+
+&lt;p&gt;We can see if it works by creating a Playground in XCode and using and testing our APIClient&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIKit&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PlaygroundSupport&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;PlaygroundPage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;needsIndefiniteExecution&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;APIClient&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;typealias&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;JSON&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// search functionality stuff&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+
+&lt;span class=&quot;kt&quot;&gt;APIClient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;new&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;movieData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movieData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;At the end of our index.js file we need to add the following:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'error ${ error }'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'listening on ${ port }'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Javascript" /><category term="Node" /><category term="Server" /><summary type="html">Brief Overview</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cdn-images-1.medium.com/max/1440/1*-zxO2kDwb-NP_RD-BLSHxg.png"" /></entry><entry><title type="html">Fun with Edison, Watson and Twilio</title><link href="http://localhost:4000/fun-with-edison-watson-twilio/" rel="alternate" type="text/html" title="Fun with Edison, Watson and Twilio" /><published>2016-11-21T01:48:00-05:00</published><updated>2016-11-21T01:48:00-05:00</updated><id>http://localhost:4000/fun-with-edison-watson-twilio</id><content type="html" xml:base="http://localhost:4000/fun-with-edison-watson-twilio/">&lt;h3 id=&quot;ibm-intel-and-twilio&quot;&gt;IBM, Intel and Twilio&lt;/h3&gt;
 
 &lt;p&gt;Sometimes it can be refreshing to step away from the familiar Appley-world that I find myself working in most of the time and try new things. This weekend I was able to take just such an opportunity while participating in the AT&amp;amp;T Mobile IOT Hackathon to explore some new technology. Some of the coolest explorations involved Intel’s Edison board, IBM’s Watson, server-side Swift with IBM’s Bluemix and Kitura and Twilio’s messaging platform.&lt;/p&gt;
 
@@ -909,13 +1039,7 @@ Beyond that, it’s always interesting to explore new things.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-line&quot; data-lang=&quot;line&quot;&gt;root@device:~# curl -X POST -u &quot;username&quot;:&quot;password&quot; --header &quot;Content-Type: audio/wav&quot; --data-binary @mono.wav &quot;https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?timestamps=true&amp;amp;word_alternatives_threshold=0.9&amp;amp;continuous=true&quot; &amp;gt; datafile.json&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;This saves the JSON response from the Watson analysis into a JSON file on the Edison’s filesystem.&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="IBM Watson" /><category term="iOS" /><category term="Twilio" /><summary type="html">IBM, Intel and Twilio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Using Regexes In Swift</title><link href="http://localhost:4000/using-regexes-in-swift/" rel="alternate" type="text/html" title="Using Regexes In Swift" /><published>2016-07-20T01:48:00-04:00</published><updated>2016-07-20T01:48:00-04:00</updated><id>http://localhost:4000/using-regexes-in-swift</id><content type="html" xml:base="http://localhost:4000/using-regexes-in-swift/">&lt;p class=&quot;message&quot;&gt;
-The journey of one thousand apps starts with a single key press...
-&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;brief-overview&quot;&gt;Brief Overview&lt;/h3&gt;
+&lt;p&gt;This saves the JSON response from the Watson analysis into a JSON file on the Edison’s filesystem.&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="IBM Watson" /><category term="iOS" /><category term="Twilio" /><summary type="html">IBM, Intel and Twilio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Using Regexes In Swift</title><link href="http://localhost:4000/using-regexes-in-swift/" rel="alternate" type="text/html" title="Using Regexes In Swift" /><published>2016-07-20T01:48:00-04:00</published><updated>2016-07-20T01:48:00-04:00</updated><id>http://localhost:4000/using-regexes-in-swift</id><content type="html" xml:base="http://localhost:4000/using-regexes-in-swift/">&lt;h3 id=&quot;brief-overview&quot;&gt;Brief Overview&lt;/h3&gt;
 &lt;p&gt;In part two we are going to switch from writing our code in Objective-C to writing in Swift. Before we get started, let’s take a moment to go over what regular expressions are. Regular expressions are a way of defining broader text patterns, like phone numbers or urls, which you can then use to filter a larger block of text data and return only the relevant parts. Regexs are commonly used as a way to verify that a user input is in the correct format. In our case, we want to look at the webdata we retrieved earlier to find strings that conform to a basic http://www.whateveritfinds.com&lt;/p&gt;
 
 &lt;h3 id=&quot;implementing-our-code&quot;&gt;Implementing Our Code&lt;/h3&gt;
@@ -966,4 +1090,65 @@ The journey of one thousand apps starts with a single key press...
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/screenshot-2.png&quot; alt=&quot;placeholder&quot; title=&quot;Filtered Web Content&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Now we can clearly find the relevant data in our unorganized input.&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="regular expressions" /><category term="iOS" /><summary type="html">The journey of one thousand apps starts with a single key press...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry></feed>
+&lt;p&gt;Now we can clearly find the relevant data in our unorganized input.&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="regular expressions" /><category term="iOS" /><summary type="html">Brief Overview In part two we are going to switch from writing our code in Objective-C to writing in Swift. Before we get started, let’s take a moment to go over what regular expressions are. Regular expressions are a way of defining broader text patterns, like phone numbers or urls, which you can then use to filter a larger block of text data and return only the relevant parts. Regexs are commonly used as a way to verify that a user input is in the correct format. In our case, we want to look at the webdata we retrieved earlier to find strings that conform to a basic http://www.whateveritfinds.com</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">New Development Blog</title><link href="http://localhost:4000/new-development-blog/" rel="alternate" type="text/html" title="New Development Blog" /><published>2016-02-24T22:48:00-05:00</published><updated>2016-02-24T22:48:00-05:00</updated><id>http://localhost:4000/new-development-blog</id><content type="html" xml:base="http://localhost:4000/new-development-blog/">&lt;p class=&quot;message&quot;&gt;
+The journey of one thousand apps starts with a single key press...
+&lt;/p&gt;
+
+&lt;p&gt;Well, it looks as if I am enrolling in the Flatiron School iOS immersive program. I’m going to use this place to document my experience as best as I can. Feel free to follow along.&lt;/p&gt;
+
+&lt;p&gt;So far, my only experience with the Flatiron program is with the prerequisite work that must be completed during the application process. You can access it for free regardless of whether you are accepted to the program. I find it pretty useful and informative.  Even if you’re not 100% percent sure you are ready to apply, but you’re looking to get started on Objective-C programming or Ruby web development, I would recommend checking out the pre-work courses. Who knows, you might even enjoy it enough to send in an application.&lt;/p&gt;
+
+&lt;p&gt;You can check out their online pre-work education here:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://learn.co&quot;&gt;Flatiron School’s Learn Co&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is an example of a pretty basic exercise. The work doesn’t get too complicated, it mainly familiarizes you with concepts enough so that you can A. do the coding exercise to discuss for the technical interview and B. have enough knowledge to hit the ground running on day one should you be accepted.  Since I’m doing the iOS immersive the code is in Objective-C:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objc&quot; data-lang=&quot;objc&quot;&gt;&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;stringByReversingString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUInteger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;NSUInteger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;unichar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;characterAtIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;stringByAppendingFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;%C&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Here is a similar outcome from a block of code using the Python 2.7 programming language:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;string_by_reversing_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[::&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Okay&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="objective-c" /><category term="dev-blog" /><category term="python" /><summary type="html">The journey of one thousand apps starts with a single key press...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">ARKit Projects</title><link href="http://localhost:4000/arkit-projects/" rel="alternate" type="text/html" title="ARKit Projects" /><published>2016-01-23T22:10:00-05:00</published><updated>2016-01-23T22:10:00-05:00</updated><id>http://localhost:4000/arkit-projects</id><content type="html" xml:base="http://localhost:4000/arkit-projects/">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Example of project&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Indigo Minimalist Jekyll Template&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sergiokopplin.github.io/indigo/&quot;&gt;Demo&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is a simple and minimalist template for Jekyll for those who likes to eat noodles.
+What has inside?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Gulp&lt;/li&gt;
+  &lt;li&gt;BrowserSync&lt;/li&gt;
+  &lt;li&gt;Stylus&lt;/li&gt;
+  &lt;li&gt;SVG&lt;/li&gt;
+  &lt;li&gt;Travis&lt;/li&gt;
+  &lt;li&gt;No JS&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F&quot;&gt;98/100&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://sergiokopplin.github.io/indigo/&quot;&gt;Check it out&lt;/a&gt; here.
+If you need some help, just &lt;a href=&quot;http://github.com/sergiokopplin/indigo/issues&quot;&gt;tell me&lt;/a&gt;.&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="project" /><category term="jekyll" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://koppl.in/indigo/assets/images/jekyll-logo-light-solid.png" /></entry></feed>
