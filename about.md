@@ -13,7 +13,7 @@ Thanks for reading!</p>
 <h2>Skills</h2>
 
 <ul>
-   <li>Multiple Years Of Experience Programming in Swift and Objective</li>
+   <li>3+ Years Experience Programming in Swift and Objective-C</li>
 	 <li>iOS Application and Architecture Development</li>
 	 <li>Server Side With Javascript on NodeJS and Python on Flask</li>
 	 <li>Python Machine Learning and Data Analysis</li>
@@ -22,7 +22,7 @@ Thanks for reading!</p>
 <h2>Projects</h2>
 
 <ul>
-	<li><a href="https://github.com/chriswebb09/ARKitNavigationDemo">ARKitNavigationDemo</a></li>
+	<li><a href="https://github.com/chriswebb09/ARKitNavigationDemo">ARKit Navigation Demo</a></li>
 	<li><a href="https://github.com/chriswebb09/ARKitDrone">ARKit Drone</a></li>
 	<li><a href="https://github.com/chriswebb09/ARKitAirport">ARKit Airport</a></li>
 	<li><a href="https://github.com/chriswebb09/podcatcher">PodCatch</a></li>
