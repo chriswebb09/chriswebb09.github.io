@@ -15,7 +15,7 @@ Thanks for reading!</p>
 <ul>
    <li>3+ Years Experience Programming in Swift and Objective-C</li>
 	 <li>iOS Application and Architecture Development</li>
-	 <li>Server Side With Javascript on NodeJS and Python on Flask/li>
+	 <li>Server Side With Javascript on NodeJS and Python on Flask</li>
 	 <li>Python Machine Learning and Data Analysis</li>
 </ul>
 
