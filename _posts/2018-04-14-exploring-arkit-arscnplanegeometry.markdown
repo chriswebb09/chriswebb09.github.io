@@ -59,8 +59,6 @@ To begin with, we were already headed here, with or without the latest update to
 
 {% highlight swift %}
 
-
-
 import UIKit
 import SceneKit
 import ARKit
