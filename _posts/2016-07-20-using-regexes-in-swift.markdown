@@ -2,8 +2,8 @@
 title: "Using Regexes In Swift"
 layout: post
 date: 2016-07-20 01:48
-image: /assets/images/markdown.jpg
-headerImage: false
+image: /assets/images/ios_logo_black.png
+headerImage: true
 tag:
 - Swift
 - regular expressions

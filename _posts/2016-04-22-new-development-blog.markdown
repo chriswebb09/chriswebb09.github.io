@@ -1,9 +1,9 @@
 ---
 title: "New Development Blog"
 layout: post
-date: 2016-02-24 22:48
-image: /assets/images/markdown.jpg
-headerImage: false
+date: 2016-04-22 22:48
+image: /assets/images/ios-logo.png
+headerImage: true
 tag:
 - objective-c
 - dev-blog
