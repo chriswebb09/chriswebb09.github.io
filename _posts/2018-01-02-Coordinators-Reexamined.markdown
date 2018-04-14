@@ -27,7 +27,9 @@ So it has been a few months since I wrote my previous post on coordinators. In t
 
 And I attended/volunteered at the [try! Swift Conference in New York&nbsp;City](https://medium.com/@jp_pancake/try-swift-nyc-2017-tryswiftnyc-ce3eab349914):
 
-![](https://cdn-images-1.medium.com/max/166/1*PKi25dN31KSAUjlT8SM22g.jpeg)Me
+![](https://cdn-images-1.medium.com/max/166/1*PKi25dN31KSAUjlT8SM22g.jpeg)
+---
+Me
 
 Along the way I’ve had a chance to explore the concept in greater detail and expirement to find what features have worked for&nbsp;me.
 
