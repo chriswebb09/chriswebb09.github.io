@@ -17,4 +17,4 @@ title: Projects
 
 <br>
 
-<p align="center"><img src="https://github.com/chriswebb09/ARKitNavigationDemo/blob/master/ARKitNavigationDemo/test4.gif" alt="ARKitNavigationDemo" width="281" height="500"></p>
+<p align="center"><img src="https://github.com/chriswebb09/ARKitNavigationDemo/blob/master/ARKitNavigationDemo/test4.gif" alt="ARKitNavigationDemo" width="300" height="534"></p>
