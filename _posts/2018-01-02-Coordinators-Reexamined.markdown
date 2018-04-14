@@ -17,6 +17,9 @@ description: "Coordinators: Re-examined"
 
 #### Taming Unruly Application Architecture
 
+{% highlight html %}
+{% endhighlight %}
+
 ![](https://cdn-images-1.medium.com/max/980/1*rwLW_2iTuvsJibZ3f9Wu1g.png)<a href="https://will.townsend.io/img/coordinator-diagram.svg">Source</a>
 
 #### Back To Coordinators
@@ -99,6 +102,9 @@ Beyond the broad strokes of this definition, it’s really up to developers to d
 
 ### Some Issues I’ve Come&nbsp;Across
 
+{% highlight html %}
+{% endhighlight %}
+
 #### Coordinator/Delegate Hybrids
 
 {% highlight html %}
@@ -108,6 +114,9 @@ All that being said, there were a few things that I’ve noticed when building o
 
 #### Services
 
+{% highlight html %}
+{% endhighlight %}
+
 Services tend be a broad umbrella. In fact I probably use the category too broadly in many of my applications. If you think about it in relation to the real world, services take some kind of currency and and perform some action in return. In iOS a service can be as strict as a network client, or as broad as anything that works and transforms your models/UI. Figuring out how you want to layer your application and where each piece of functionality is relegated can provide a natural structural integrity to your architecture over the course of development. One thing I’ve taken away from the last few months is it can be helpful to decide how strict or broad you want to be with what classify as a service before you get&nbsp;started.
 
 If I were rewriting the example project, I probably would not include a UI&nbsp;service.
@@ -116,6 +125,10 @@ If I were rewriting the example project, I probably would not include a UI&nbsp;
 {% endhighlight %}
 
 {% highlight swift %}
+
+{% highlight html %}
+{% endhighlight %}
+
 import UIKit
 
 protocol Service { }
@@ -180,6 +193,9 @@ func start() {
 }
 ```
 
+{% highlight html %}
+{% endhighlight %}
+
 For me this was a clue that I wasn’t being broad enough with the overall coordinator protocol as well as not being specific enough with the behaviors of specialized coordinator subtypes.
 
 What I finally settled on was&nbsp;this:
@@ -194,7 +210,13 @@ protocol Coordinator: class { }
 
 ### Coordinator Subtypes
 
+{% highlight html %}
+{% endhighlight %}
+
 #### Main Coordinator
+
+{% highlight html %}
+{% endhighlight %}
 
 One of the interesting things I came across when building PodCatch was the need to delineate different coordinators for types of logical flow. Although I eventually removed it, in my first version of PodCatch I had a sign in/sign up screen for a FireBase backend which was logically siloed off from the Podcast player. The responsibilities were so different that it seemed logical to separate the two areas. The question then arises, if these areas are separated do we need to control the flow between between them? In my case I went with an unequivocal yes.
 
@@ -206,6 +228,9 @@ One of the interesting things I came across when building PodCatch was the need 
 Here is where I could see myself reading this article and saying: “Okay this guy is getting carried away.” You might be right! All I ask is that you hear me out on this. Remember this quote from a few paragraphs up?
 
 Soroush: “_So what is a coordinator? A coordinator is an object that bosses one or more view controllers around. Taking all of the driving logic out of your view controllers, and moving that stuff one layer up is gonna make your life a lot more awesome.”_
+
+{% highlight html %}
+{% endhighlight %}
 
 Here’s the thing: I don’t see a reason this should only be true for view controllers. What’s stopping us from expanding on that idea one step further by layering our coordinations to make it that much more awesome! If we have clear sections of our applications whose internal coordination flow is separated, doesn’t it stand to reason that we can abstract coordination one step&nbsp;further?
 
@@ -250,6 +275,9 @@ class MainCoordinator: AppCoordinator {
         childCoordinators = childCoordinators.filter { $0 !== childCoordinator }
     }
 }
+{% endhighlight %}
+
+{% highlight html %}
 {% endhighlight %}
 
 After that we use protocol conformance to handle the flow between the different areas of our application:
@@ -325,6 +353,9 @@ As an added bonus, the ability to swap out, add or remove flows allows the archi
 {% endhighlight %}
 
 One of things I would do differently if I was building PodCatch over from scratch is the way I went about creating the controller coordinator subtypes. In particular I regret creating a separate tab and navigation coordinator subtypes. It added additional complexity that, looking back, kept me from creating as organized architecture as I would have&nbsp;liked.
+
+{% highlight html %}
+{% endhighlight %}
 
 **NavigationCoordinator:**
 
@@ -489,9 +520,15 @@ extension ColorControllerCoordinator: ColorControllerDelegate {
 }
 {% endhighlight %}
 
+{% highlight html %}
+{% endhighlight %}
+
 What immediately caught my eye with this implementation was the UI change happening in changeColor method. I think a better way to handle this is to inject styleService into the view and have the view handle up UI change/updates. So there’s definitely a refactor or two that can happen in here. Ultimately we’re working towards separating our concerns. For me, coordinators should not just be another place to throw code that isn’t the view controller.
 
 ### Key Takeaways
+
+{% highlight html %}
+{% endhighlight %}
 
 There were a few things that stick out in my mind about coordinators that I picked up over the conference:
 
@@ -506,10 +543,16 @@ Beyond pushing the logical flow out of the view controller, there’s no “one 
 
 #### Sources:
 
+{% highlight html %}
+{% endhighlight %}
+
 - [P of EAA: Application Controller](https://martinfowler.com/eaaCatalog/applicationController.html)
 - [Khanlou The Coordinator](http://khanlou.com/2015/01/the-coordinator/)
 
 If you’re interested, there are some really great blog posts out there with people demoing their take on the&nbsp;concept:
+
+{% highlight html %}
+{% endhighlight %}
 
 - [Navigation coordinators](http://irace.me/navigation-coordinators)
 - [Skye Freeman Swift - Coordinators](http://skyefreeman.io/programming/2016/02/23/playing_with_app_coordinators.html)
