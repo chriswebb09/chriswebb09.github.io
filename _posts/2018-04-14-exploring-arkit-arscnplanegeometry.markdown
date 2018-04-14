@@ -51,8 +51,6 @@ To begin with, we were already headed here, with or without the latest update to
 
 =====
 
-
-
 # Setup
 
 
