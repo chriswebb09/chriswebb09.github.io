@@ -49,9 +49,9 @@ Regardless, this is huge. For years people have talked about this moment when pe
 
 To begin with, we were already headed here, with or without the latest update to plane geometry. Apple’s has reportedly been looking to add back facing 3D cameras to its next iPhone models to enhance augmented reality, so this is just a preview of what we are likely to see this summer. It’s also not exactly the smoothest user experience and to get objects fully detected would be time-consuming. But, it looks like there is a lot to look forward to this summer! If I had to guess, Apple might be rolling out usable surface detection for all types of surfaces/shapes. Let’s hope that 2018 sees the end of all occlusion dilemmas in ARKit as well!
 
-# Setup
+=====
 
-{% highlight swift %}
+# Setup
 
 import UIKit
 import SceneKit
@@ -92,13 +92,7 @@ class ViewController: UIViewController {
     }
 }
 
-{% endhighlight %}
-
----
-
-## SCNNode Extension
-
-{% highlight swift %}
+## SCNNode Extension 
 
 extension SCNNode {
 
@@ -119,17 +113,12 @@ extension SCNNode {
 
 }
 
-{% endhighlight %}
-
-----
-
 ## ARSCNViewDelegate
-
-{% highlight swift %}
 
 // MARK: - ARSCNViewDelegate
 
 extension ViewController: ARSCNViewDelegate {
+
 
 func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
@@ -155,5 +144,3 @@ func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: AR
         }
     }
 }
-
-{% endhighlight %}
