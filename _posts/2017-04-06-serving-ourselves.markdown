@@ -2,7 +2,7 @@
 title: "Serving Ourselves! - With Node.js"
 layout: post
 date: 2017-04-06 01:48
-image: "assets/image/node.png"
+image: "public/node.png"
 headerImage: true
 tag:
 - Javascript
@@ -12,7 +12,6 @@ category: blog
 author: chriswebb
 description: "Basic server with NodeJS"
 ---
-
 
 # Brief Overview
 

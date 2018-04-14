@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-14T00:58:46-04:00</updated><id>http://localhost:4000/</id><title type="html">Christopher Webb</title><subtitle>The journey of one thousand apps starts with a single key press...</subtitle><entry><title type="html">Application Data Flow: Part One</title><link href="http://localhost:4000/app-data-flow-pt-one/" rel="alternate" type="text/html" title="Application Data Flow: Part One" /><published>2018-03-28T22:48:00-04:00</published><updated>2018-03-28T22:48:00-04:00</updated><id>http://localhost:4000/app-data-flow-pt-one</id><content type="html" xml:base="http://localhost:4000/app-data-flow-pt-one/">&lt;p&gt;Before we get stated, if you saw store in the title and thought this was something to do with a commerce app, unfortunately it does not. In this instance, Store is in regards to a particular way of organizing storage and retrieval of data for the application.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-14T01:44:56-04:00</updated><id>http://localhost:4000/</id><title type="html">Christopher Webb</title><subtitle>The journey of one thousand apps starts with a single key press...</subtitle><entry><title type="html">Application Data Flow: Part One</title><link href="http://localhost:4000/app-data-flow-pt-one/" rel="alternate" type="text/html" title="Application Data Flow: Part One" /><published>2018-03-28T22:48:00-04:00</published><updated>2018-03-28T22:48:00-04:00</updated><id>http://localhost:4000/app-data-flow-pt-one</id><content type="html" xml:base="http://localhost:4000/app-data-flow-pt-one/">&lt;p&gt;Before we get stated, if you saw store in the title and thought this was something to do with a commerce app, unfortunately it does not. In this instance, Store is in regards to a particular way of organizing storage and retrieval of data for the application.&lt;/p&gt;
 
 &lt;p&gt;Okay, now that we have that out of the way, today we are going to be talking about application data flow. While the topic may not sound super interesting, having a good handle on the river the river of information flowing through your application will in the long run save you a lot time.&lt;/p&gt;
 
@@ -287,7 +287,435 @@
   &lt;li&gt;&lt;a href=&quot;https://www.objc.io/blog/&quot;&gt;Blog · objc.io&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://blog.githawk.com/&quot;&gt;GitHawk Blog&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.cocoawithlove.com/&quot;&gt;Cocoa with Love&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="iOS" /><category term="swift" /><category term="application data" /><summary type="html">Before we get stated, if you saw store in the title and thought this was something to do with a commerce app, unfortunately it does not. In this instance, Store is in regards to a particular way of organizing storage and retrieval of data for the application.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/11w5lxGBI8zAAIgSD1vJAEw.png" /></entry><entry><title type="html">Building A Hash Data Structure In Swift</title><link href="http://localhost:4000/building-a-hash-data-structure-in-swift/" rel="alternate" type="text/html" title="Building A Hash Data Structure In Swift" /><published>2017-05-19T22:48:00-04:00</published><updated>2017-05-19T22:48:00-04:00</updated><id>http://localhost:4000/building-a-hash-data-structure-in-swift</id><content type="html" xml:base="http://localhost:4000/building-a-hash-data-structure-in-swift/">&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="iOS" /><category term="swift" /><category term="application data" /><summary type="html">Before we get stated, if you saw store in the title and thought this was something to do with a commerce app, unfortunately it does not. In this instance, Store is in regards to a particular way of organizing storage and retrieval of data for the application.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/11w5lxGBI8zAAIgSD1vJAEw.png" /></entry><entry><title type="html">ARKit and CoreLocation: Part Two</title><link href="http://localhost:4000/arkit-corelocation-part-two/" rel="alternate" type="text/html" title="ARKit and CoreLocation: Part Two" /><published>2017-08-20T01:48:00-04:00</published><updated>2017-08-20T01:48:00-04:00</updated><id>http://localhost:4000/arkit-corelocation-part-two</id><content type="html" xml:base="http://localhost:4000/arkit-corelocation-part-two/">&lt;h2 id=&quot;navigation-with-linear-algebra&quot;&gt;Navigation With Linear Algebra&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/281/1*d1q0THvPu5mTH9_9U2T6Hg.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Demo Code&lt;/p&gt;
+
+&lt;p&gt;ARKit and CoreLocation: Part One&lt;/p&gt;
+
+&lt;p&gt;ARKit and CoreLocation: Part Two&lt;/p&gt;
+
+&lt;p&gt;ARKit and CoreLocation: Part Three&lt;/p&gt;
+
+&lt;h3 id=&quot;maths-and-calculating-bearing-between-coordinates&quot;&gt;Maths and Calculating Bearing Between Coordinates&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/704/1*GgodwdTWvPkNw53Etw49mA.png&quot; alt=&quot;&quot; /&gt;&amp;lt;figcaption&amp;gt;&lt;a href=&quot;https://www.khanacademy.org/math/precalculus/trig-equations-and-identities-precalc&quot;&gt;Source&lt;/a&gt;&amp;lt;/figcaption&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you haven’t had a chance, checkout&lt;/em&gt; &lt;a href=&quot;https://dev.to/chriswebb09/arkit-and-corelocation-part-one-gij-temp-slug-4475628&quot;&gt;&lt;strong&gt;&lt;em&gt;part one&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;em&gt; first.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now we need to figure out how to get the bearing (the angle) between two coordinates. Finding the bearing set us up to create a rotation transformation to orient our node in the proper direction.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/500/1*_NesYbqz4HqX-it5ieB0Lw.png&quot; alt=&quot;&quot; /&gt;&amp;lt;figcaption&amp;gt;&lt;a href=&quot;https://betterexplained.com/wp-content/uploads/angles/degrees_vs_radians.png&quot;&gt;Source&lt;/a&gt;&amp;lt;/figcaption&amp;gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;definition&quot;&gt;Definition&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;radian:&lt;/strong&gt; The &lt;strong&gt;radian&lt;/strong&gt; is a unit of angular measure defined such that an angle of one &lt;strong&gt;radian&lt;/strong&gt; subtended from the center of a unit circle produces an arc with arc length 1. One radian is equal to 180/π degrees so to convert from radians to degrees, multiply by 180/π.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/252/1*qTGgCClcy08LejChY6X35Q.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;extension&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toRadians&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;180.0&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toDegrees&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;180.0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pi&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;haversine&quot;&gt;Haversine&lt;/h4&gt;
+
+&lt;p&gt;One of the drawbacks of the Haversine formula is that it can get less accurate over longer distances. If we were designing a navigation system for a commercial airliner that might be a problem, but it is unlikely that the distances will be long enough to make a difference for an ARKit demo.&lt;/p&gt;
+
+&lt;h4 id=&quot;definition-1&quot;&gt;Definition&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Azimuth:&lt;/strong&gt; is a angular measurement on spherical coordinate system.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/440/1*xHKkiU8ExCzAU7PaO0eMKw.png&quot; alt=&quot;&quot; /&gt;&amp;lt;figcaption&amp;gt;Spherical triangle solved by the law of haversines — &lt;a href=&quot;https://en.wikipedia.org/wiki/Haversine_formula&quot;&gt;source&lt;/a&gt;&amp;lt;/figcaption&amp;gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you have two different latitude — longitude values of two different point on earth, then with the help of &lt;strong&gt;Haversine Formula&lt;/strong&gt; , you can easily compute the great-circle distance (The shortest distance between two points on the surface of a Sphere).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;— &lt;a href=&quot;http://www.movable-type.co.uk/scripts/latlong.html&quot;&gt;Movable-Type&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/596/1*ollegMltPGgZfsDNGdC_Dg.png&quot; alt=&quot;&quot; /&gt;&amp;lt;figcaption&amp;gt;Great circle distance — &lt;a href=&quot;https://en.wikipedia.org/wiki/Great-circle_distance&quot;&gt;source&lt;/a&gt;&amp;lt;/figcaption&amp;gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sin = opposite/hypotenuse
+
+cos = adjacent/hypotenuse
+
+tan = opposite/adjacent
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;atan2:&lt;/strong&gt; An arctangent or inverse tangent function with two arguments.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tan 30 = 0.577
+
+Means: The tangent of 30 degrees is 0.577
+
+arctan 0.577 = 30
+
+Means: The angle whose tangent is 0.577 is 30 degrees.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/554/1*hPuVkyMJNrd41pFHj7r2Fw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;keys&quot;&gt;Keys&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;‘R’ is the radius of Earth
+
+‘L’ is the longitude
+
+‘θ’ is latitude
+
+‘β‘ is bearing
+
+‘∆‘ is delta / change in
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;In general, your current heading will vary as you follow a great circle path (orthodrome); the final heading will differ from the initial heading by varying degrees according to distance and latitude (if you were to go from say 35°N,45°E (≈ Baghdad) to 35°N,135°E (≈ Osaka), you would start on a heading of 60° and end up on a heading of 120°!).&amp;gt; This formula is for the initial bearing (sometimes referred to as forward azimuth) which if followed in a straight line along a great-circle arc will take you from the start point to the end point&lt;/p&gt;
+  &lt;h4 id=&quot;formula&quot;&gt;Formula&lt;/h4&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;β = atan2(X,Y)
+
+where, X and Y are two quantities and can be calculated as:
+
+X = cos θb * sin ∆L
+
+Y = cos θa * sin θb — sin θa * cos θb * cos ∆L
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;noscript&gt;&lt;pre&gt;extension CLLocationCoordinate2D {
+  func calculateBearing(to coordinate: CLLocationCoordinate2D) -&amp;gt; Double {
+    let a = sin(coordinate.longitude.toRadians() - longitude.toRadians()) * cos(coordinate.latitude.toRadians())
+    let b = cos(latitude.toRadians()) * sin(coordinate.latitude.toRadians()) - sin(latitude.toRadians()) * cos(coordinate.latitude.toRadians()) * cos(coordinate.longitude.toRadians() - longitude.toRadians())
+    return atan2(a, b)
+  }
+  
+  func direction(to coordinate: CLLocationCoordinate2D) -&amp;gt; CLLocationDirection {
+    return self.calculateBearing(to: coordinate).toDegrees()
+  }
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/https://gist.github.com/chriswebb09/cb77fdaad1fa09551e523f79de5d416d.js&quot;&gt; &lt;/script&gt;
+
+&lt;h3 id=&quot;getting-coordinates-fordistance&quot;&gt;Getting Coordinates For Distance&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/226/1*dlgcCYgkhmbFgRpHrvO8jA.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;While &lt;a href=&quot;https://developer.apple.com/documentation/mapkit/mkroute&quot;&gt;&lt;strong&gt;MKRoute&lt;/strong&gt;&lt;/a&gt; gives us a good framework for building an ARKit navigation experience, the steps along the route can be space far enough apart that it ruins the experience. To mitigate this we need to iterate through our steps and generate coordinate for distance intervals between them.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Given a start point, initial bearing, and distance, this will calculate the destina­tion point and final bearing travelling along a (shortest distance) great circle arc.
+```
+‘d‘ being the distance travelled&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;‘R’ is the radius of Earth&lt;/p&gt;
+
+&lt;p&gt;‘L’ is the longitude&lt;/p&gt;
+
+&lt;p&gt;‘φ’ is latitude&lt;/p&gt;
+
+&lt;p&gt;‘θ‘ is bearing (clockwise from north)&lt;/p&gt;
+
+&lt;p&gt;‘δ‘ is the angular distance d/R&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+#### Formula
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;φ2 = asin( sin φ1 ⋅ cos δ + cos φ1 ⋅ sin δ ⋅ cos θ )&lt;/p&gt;
+
+&lt;p&gt;L2 = L1 + atan2( sin θ ⋅ sin δ ⋅ cos φ1, cos δ − sin φ1 ⋅ sin φ2 )&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+
+&amp;lt;figure class=&quot;highlight&quot;&amp;gt;&amp;lt;pre&amp;gt;&amp;lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&amp;gt;&amp;lt;span class=&quot;k&quot;&amp;gt;let&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;metersPerRadianLat&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kt&quot;&amp;gt;Double&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;mf&quot;&amp;gt;6373000.0&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;k&quot;&amp;gt;let&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;metersPerRadianLon&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kt&quot;&amp;gt;Double&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;mf&quot;&amp;gt;5602900.0&amp;lt;/span&amp;gt;
+
+&amp;lt;span class=&quot;kd&quot;&amp;gt;extension&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kt&quot;&amp;gt;CLLocationCoordinate2D&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;{&amp;lt;/span&amp;gt;
+
+  &amp;lt;span class=&quot;c1&quot;&amp;gt;// adapted from https://github.com/ProjectDent/ARKit-CoreLocation/blob/master/ARKit%2BCoreLocation/Source/CLLocation%2BExtensions.swift&amp;lt;/span&amp;gt;
+
+    &amp;lt;span class=&quot;kd&quot;&amp;gt;func&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;coordinate&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;with&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;bearing&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kt&quot;&amp;gt;Double&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;,&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;and&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;distance&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kt&quot;&amp;gt;Double&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;-&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kt&quot;&amp;gt;CLLocationCoordinate2D&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;{&amp;lt;/span&amp;gt;
+
+        &amp;lt;span class=&quot;k&quot;&amp;gt;let&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;distRadiansLat&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;distance&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;/&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;metersPerRadianLat&amp;lt;/span&amp;gt;  &amp;lt;span class=&quot;c1&quot;&amp;gt;// earth radius in meters latitude&amp;lt;/span&amp;gt;
+        &amp;lt;span class=&quot;k&quot;&amp;gt;let&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;distRadiansLong&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;distance&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;/&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;metersPerRadianLon&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;c1&quot;&amp;gt;// earth radius in meters longitude&amp;lt;/span&amp;gt;
+
+        &amp;lt;span class=&quot;k&quot;&amp;gt;let&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;lat1&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;k&quot;&amp;gt;self&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;latitude&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nf&quot;&amp;gt;toRadians&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;()&amp;lt;/span&amp;gt;
+        &amp;lt;span class=&quot;k&quot;&amp;gt;let&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;lon1&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;k&quot;&amp;gt;self&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;longitude&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nf&quot;&amp;gt;toRadians&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;()&amp;lt;/span&amp;gt;
+
+        &amp;lt;span class=&quot;k&quot;&amp;gt;let&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;lat2&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;asin&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nf&quot;&amp;gt;sin&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;lat1&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;*&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;cos&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;distRadiansLat&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;+&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;cos&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;lat1&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;*&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;sin&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;distRadiansLat&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;*&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;cos&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;bearing&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;))&amp;lt;/span&amp;gt;
+        &amp;lt;span class=&quot;k&quot;&amp;gt;let&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;lon2&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;lon1&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;+&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;atan2&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nf&quot;&amp;gt;sin&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;bearing&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;*&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;sin&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;distRadiansLong&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;*&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;cos&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;lat1&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;),&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;cos&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;distRadiansLong&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;-&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;sin&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;lat1&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;*&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;sin&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;lat2&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;))&amp;lt;/span&amp;gt;
+
+        &amp;lt;span class=&quot;k&quot;&amp;gt;return&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kt&quot;&amp;gt;CLLocationCoordinate2D&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nv&quot;&amp;gt;latitude&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;lat2&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nf&quot;&amp;gt;toDegrees&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(),&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;longitude&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;lon2&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nf&quot;&amp;gt;toDegrees&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;())&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;p&quot;&amp;gt;}&amp;lt;/span&amp;gt;   
+&amp;lt;span class=&quot;p&quot;&amp;gt;}&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/figure&amp;gt;
+
+
+### Three Dimensional Transformations
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;matrix × matrix = combined matrix&lt;/p&gt;
+
+&lt;p&gt;matrix × coordinate = transformed coordinate&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+Intuitively, it might seem obvious that three dimensions should be represented in [3x3] matrices ([x, y, z]). However there is an extra matrix row, so three-dimensional graphic use [4x4] matrices: [x, y, z,&amp;amp;nbsp;w].
+
+#### Really…W?
+
+Yup W. This fourth dimension is called “projective space,” and the coordinates in the projective space are called “homogeneous coordinates.” When w is equal to 1, it does not affect x, y or z because the vector is a position in space. When W=0, the coordinate represents a point at infinity (a vector with infinite length) which is used to represent a direction.
+
+#### Rotation Matrix
+
+To get our objects points in the right direction we need to implement a rotation transformation.
+
+&amp;gt; A rotation transformation rotates a vector around the origin _(0,0,0)_ using a given _axis_ and&amp;amp;nbsp;_angle_
+
+![](https://cdn-images-1.medium.com/max/204/1*71mr0tiJmZNpy3VJCWczpw.png)
+
+
+&amp;lt;figure class=&quot;highlight&quot;&amp;gt;&amp;lt;pre&amp;gt;&amp;lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&amp;gt;&amp;lt;span class=&quot;kd&quot;&amp;gt;import&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kt&quot;&amp;gt;GLKit&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;kt&quot;&amp;gt;GLKMatrix4&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;kd&quot;&amp;gt;import&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kt&quot;&amp;gt;SceneKit&amp;lt;/span&amp;gt;
+
+&amp;lt;span class=&quot;kd&quot;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kt&quot;&amp;gt;MatrixHelper&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;{&amp;lt;/span&amp;gt;
+
+    &amp;lt;span class=&quot;c1&quot;&amp;gt;//    column 0  column 1  column 2  column 3&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;c1&quot;&amp;gt;//        cosθ      0       sinθ      0    &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;c1&quot;&amp;gt;//         0        1         0       0    &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;c1&quot;&amp;gt;//       −sinθ      0       cosθ      0    &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;c1&quot;&amp;gt;//         0        0         0       1    &amp;lt;/span&amp;gt;
+
+    &amp;lt;span class=&quot;kd&quot;&amp;gt;static&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kd&quot;&amp;gt;func&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;rotateAroundY&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;with&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;matrix&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;matrix_float4x4&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;,&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;k&quot;&amp;gt;for&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;degrees&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kt&quot;&amp;gt;Float&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;-&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;matrix_float4x4&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;{&amp;lt;/span&amp;gt;
+        &amp;lt;span class=&quot;k&quot;&amp;gt;var&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;matrix&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;matrix_float4x4&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;matrix&amp;lt;/span&amp;gt;
+
+        &amp;lt;span class=&quot;n&quot;&amp;gt;matrix&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;columns&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;mi&quot;&amp;gt;0&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;x&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;cos&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;degrees&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt;
+        &amp;lt;span class=&quot;n&quot;&amp;gt;matrix&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;columns&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;mi&quot;&amp;gt;0&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;z&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;-&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nf&quot;&amp;gt;sin&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;degrees&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt;
+
+        &amp;lt;span class=&quot;n&quot;&amp;gt;matrix&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;columns&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;mi&quot;&amp;gt;2&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;x&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;sin&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;degrees&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt;
+        &amp;lt;span class=&quot;n&quot;&amp;gt;matrix&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;columns&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;mi&quot;&amp;gt;2&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;z&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;cos&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;degrees&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt;
+        &amp;lt;span class=&quot;k&quot;&amp;gt;return&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;matrix&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;inverse&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;p&quot;&amp;gt;}&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;p&quot;&amp;gt;}&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/figure&amp;gt;
+
+
+Most rotations in with 3D graphics and ARKit in particular revolve around the camera transform. However, we’re not concerned about placing our object in relation to the POV, we are interested in placing it in relation to our current location and rotate based on the&amp;amp;nbsp;compass.
+
+#### Translation Matrix
+&amp;gt; Rotation and scaling transformation matrices only require three columns. But, in order to do translation, the matrices need to have at least four columns. This is why transformations are often 4x4 matrices. However, a matrix with four columns can not be multiplied with a 3D vector, due to the rules of matrix multiplication. A four-column matrix can only be multiplied with a four-element vector, which is why we often use homogeneous 4D vectors instead of 3D&amp;amp;nbsp;vectors.
+
+![](https://cdn-images-1.medium.com/max/221/1*9XT1QlNvlvjOS9VGOeydpg.png)
+
+
+&amp;lt;figure class=&quot;highlight&quot;&amp;gt;&amp;lt;pre&amp;gt;&amp;lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&amp;gt;&amp;lt;span class=&quot;kd&quot;&amp;gt;class&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kt&quot;&amp;gt;MatrixHelper&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;{&amp;lt;/span&amp;gt;
+
+    &amp;lt;span class=&quot;c1&quot;&amp;gt;//    column 0  column 1  column 2  column 3&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;c1&quot;&amp;gt;//         1        0         0       X          x        x + X*w &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;c1&quot;&amp;gt;//         0        1         0       Y      x   y    =   y + Y*w &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;c1&quot;&amp;gt;//         0        0         1       Z          z        z + Z*w &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;c1&quot;&amp;gt;//         0        0         0       1          w           w    &amp;lt;/span&amp;gt;
+
+    &amp;lt;span class=&quot;kd&quot;&amp;gt;static&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;kd&quot;&amp;gt;func&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nf&quot;&amp;gt;translationMatrix&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;(&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;nv&quot;&amp;gt;translation&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;:&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;vector_float4&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;p&quot;&amp;gt;)&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;-&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;matrix_float4x4&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;p&quot;&amp;gt;{&amp;lt;/span&amp;gt;
+        &amp;lt;span class=&quot;k&quot;&amp;gt;var&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;nv&quot;&amp;gt;matrix&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;matrix_identity_float4x4&amp;lt;/span&amp;gt;
+        &amp;lt;span class=&quot;n&quot;&amp;gt;matrix&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;n&quot;&amp;gt;columns&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;o&quot;&amp;gt;.&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;mi&quot;&amp;gt;3&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;o&quot;&amp;gt;=&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;translation&amp;lt;/span&amp;gt;
+        &amp;lt;span class=&quot;k&quot;&amp;gt;return&amp;lt;/span&amp;gt; &amp;lt;span class=&quot;n&quot;&amp;gt;matrix&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;p&quot;&amp;gt;}&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;p&quot;&amp;gt;}&amp;lt;/span&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;/figure&amp;gt;
+
+
+### Putting It All&amp;amp;nbsp;Together
+
+#### Combining Matrix Transforms
+
+The order in which you combine your transforms matters. When you combine your transforms you should do so in following order:
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Transform = Scaling * Rotation * Translation
+```&lt;/p&gt;
+
+&lt;h4 id=&quot;simd-single-instruction-multipledata&quot;&gt;SIMD (Single Instruction Multiple Data)&lt;/h4&gt;
+
+&lt;p&gt;So you may have seen simd_mul operation before in regards to matrices. So what is it? It’s pretty straight forward: simd_mul: single instruction multiple data multiplications. In iOS 8 and OS X Yosemite, Apple tacked on a library called simd for implementing SIMD (single-instruction, multiple-data) arithmetic for scalars, vectors, and matrices.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Enter &lt;em&gt;simd.h&lt;/em&gt;: This built-in library gives us a standard interface for working with 2D, 3D, and 4D vector and matrix operations across various processors on OS X and iOS. It automatically falls back to software routines if the CPU doesn’t natively support the given operation (for example splitting up a 4-lane vector into two 2-lane operations). It also has the bonus of easily transferring data between the GPU and CPU using Metal.&amp;gt; SIMD is a technology that spans the gap between GPU shaders and old-fashioned CPU instructions, allowing the CPU to issue a single instruction that crunches chunks of data in parallel&amp;gt; — &lt;a href=&quot;http://www.russbishop.net/swift-2-simd&quot;&gt;www.russbishop.net&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So when you see sims_mul being performed, that’s what it means. One thing you should note: &lt;strong&gt;simd_mul&lt;/strong&gt; performs operations in the right to left order.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;import GLKit.GLKMatrix4
+import SceneKit
+
+class MatrixHelper {
+    
+    //    column 0  column 1  column 2  column 3
+    //         1        0         0       X          x        x + X*w 
+    //         0        1         0       Y      x   y    =   y + Y*w 
+    //         0        0         1       Z          z        z + Z*w 
+    //         0        0         0       1          w           w    
+    
+    static func translationMatrix(with matrix: matrix_float4x4, for translation : vector_float4) -&amp;gt; matrix_float4x4 {
+        var matrix = matrix
+        matrix.columns.3 = translation
+        return matrix
+    }
+    
+    //    column 0  column 1  column 2  column 3
+    //        cosθ      0       sinθ      0    
+    //         0        1         0       0    
+    //       −sinθ      0       cosθ      0    
+    //         0        0         0       1    
+    
+    static func rotateAroundY(with matrix: matrix_float4x4, for degrees: Float) -&amp;gt; matrix_float4x4 {
+        var matrix : matrix_float4x4 = matrix
+        
+        matrix.columns.0.x = cos(degrees)
+        matrix.columns.0.z = -sin(degrees)
+        
+        matrix.columns.2.x = sin(degrees)
+        matrix.columns.2.z = cos(degrees)
+        return matrix.inverse
+    }
+    
+    static func transformMatrix(for matrix: simd_float4x4, originLocation: CLLocation, location: CLLocation) -&amp;gt; simd_float4x4 {
+        let distance = Float(location.distance(from: originLocation))
+        let bearing = GLKMathDegreesToRadians(Float(originLocation.coordinate.direction(to: location.coordinate)))
+        let position = vector_float4(0.0, 0.0, -distance, 0.0)
+        let translationMatrix = MatrixHelper.translationMatrix(with: matrix_identity_float4x4, for: position)
+        let rotationMatrix = MatrixHelper.rotateAroundY(with: matrix_identity_float4x4, for: bearing)
+        let transformMatrix = simd_mul(rotationMatrix, translationMatrix)
+        return simd_mul(matrix, transformMatrix)
+    }
+}
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/https://gist.github.com/chriswebb09/3405c42c17bb768ba5cb6c42ba4c7c48.js&quot;&gt; &lt;/script&gt;
+
+&lt;h3 id=&quot;creating-our-scnnodesubclass&quot;&gt;Creating Our SCNNode Subclass&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/750/1*lMco_E0NNQ7jFrqKT7Wvsg.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The next thing we should do is create our node class. We’ll subclass SCNNode and give it a &lt;strong&gt;title&lt;/strong&gt; property which is a &lt;em&gt;string&lt;/em&gt;, an &lt;strong&gt;anchor&lt;/strong&gt; property that is an &lt;strong&gt;&lt;em&gt;optional&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;ARAnchor&lt;/em&gt; that updates the position when it is set. Finally, we’ll give our BaseNode class a &lt;strong&gt;location&lt;/strong&gt; property which is a &lt;em&gt;CLLocation&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SceneKit&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ARKit&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CoreLocation&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BaseNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNNode&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
+
+     &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;anchor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ARAnchor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;didSet&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;transform&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;anchor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;positionFromTransform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CLLocation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
+
+    &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CLLocation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;billboardConstraint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNBillboardConstraint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;billboardConstraint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;freeAxes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNBillboardAxis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Y&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;constraints&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;billboardConstraint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;required&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;coder&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;aDecoder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSCoder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;fatalError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;init(coder:) has not been implemented&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We’ll need to add methods to create the sphere graphics. We’ll implement something similar to the sphere in part one, but modified for our new conditions. Since we only want text over the spheres from MKRouteStep instructions we should create to methods:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SceneKit&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ARKit&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CoreLocation&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BaseNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNNode&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Basic sphere graphic&lt;/span&gt;
+
+   &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createSphereNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CGFloat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNNode&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;geometry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNSphere&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;geometry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstMaterial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;diffuse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;sphereNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;geometry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;geometry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;trailEmitter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createTrail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;geometry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;geometry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;addParticleSystem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trailEmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sphereNode&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Add graphic as child node - basic&lt;/span&gt;
+
+   &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addSphere&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CGFloat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;sphereNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createSphereNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;addChildNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sphereNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+   &lt;span class=&quot;c1&quot;&gt;// Add graphic as child node - with text&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CGFloat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;sphereNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createSphereNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;newText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;extrusionDepth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.05&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;newText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;font&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIFont&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;AvenirNext-Medium&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;newText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstMaterial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;diffuse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;red&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;_textNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;geometry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;annotationNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;annotationNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addChildNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_textNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;annotationNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sphereNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;addChildNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sphereNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;addChildNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;annotationNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;When we update our position, we take the anchor’s matrix transform and use the x, y and z values from the last column, which are the values of the position transform.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BaseNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNNode&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;anchor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ARAnchor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;didSet&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;transform&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;anchor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;positionFromTransform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Setup&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;positionFromTransform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix_float4x4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNVector3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+           &lt;span class=&quot;c1&quot;&gt;//    column 0  column 1  column 2  column 3&lt;/span&gt;
+           &lt;span class=&quot;c1&quot;&gt;//         1        0         0       X       &lt;/span&gt;
+           &lt;span class=&quot;c1&quot;&gt;//         0        1         0       Y      &lt;/span&gt;
+           &lt;span class=&quot;c1&quot;&gt;//         0        0         1       Z       &lt;/span&gt;
+           &lt;span class=&quot;c1&quot;&gt;//         0        0         0       1    &lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SCNVector3Make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;sources&quot;&gt;Sources:&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://sites.math.washington.edu/~king/coursedir/m308a01/Projects/m308a01-pdf/yip.pdf&quot;&gt;sites.math.washington.edu/~king/coursedir/m308a01/Projects/m308a01-pdf/yip.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.khanacademy.org/math/linear-algebra/matrix-transformations/linear-transformations/a/visualizing-linear-transformations&quot;&gt;khanacademy.org/math/linear-algebra/matrix-transformations/linear-transformations/a/visualizing-linear-transformations&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.edwilliams.org/avform.htm#LL&quot;&gt;edwilliams.org/avform.htm#LL&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.tomdalling.com/blog/modern-opengl/04-cameras-vectors-and-input/&quot;&gt;tomdalling.com/blog/modern-opengl/04-cameras-vectors-and-input/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.movable-type.co.uk/scripts/latlong.html&quot;&gt;movable-type.co.uk&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/&quot;&gt;tomdalling.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@yatchoi/getting-started-with-arkit-real-life-waypoints-1707e3cb1da2&quot;&gt;Medium: Yat Choi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices/#cumulating-transformations&quot;&gt;opengl-tutorial.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://open.gl/transformations&quot;&gt;open.gl/transformations&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="UIView" /><category term="iOS" /><category term="ARKit" /><category term="Core Location" /><summary type="html">Navigation With Linear Algebra</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Building A Hash Data Structure In Swift</title><link href="http://localhost:4000/building-a-hash-data-structure-in-swift/" rel="alternate" type="text/html" title="Building A Hash Data Structure In Swift" /><published>2017-05-19T22:48:00-04:00</published><updated>2017-05-19T22:48:00-04:00</updated><id>http://localhost:4000/building-a-hash-data-structure-in-swift</id><content type="html" xml:base="http://localhost:4000/building-a-hash-data-structure-in-swift/">&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
 &lt;p&gt;This post will continue my series on data structures and will touch on the concepts behind and implementation of hash tables. Hash tables are one of the most commonly used data structures in development. In fact, even if you haven’t heard the term before, you have probably used them in one form or another.&lt;/p&gt;
 
@@ -674,7 +1102,152 @@ Hash tables are ideal for databases. Whenever you have a large or growing set of
 &lt;p&gt;When Should You Not Use A Hash Table?
 One place where you would not want to use a hash table is when you have to iterate over a large amount of data.&lt;/p&gt;
 
-&lt;p&gt;That’s all for now. Please feel free to leave feedback!&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="iOS" /><category term="swift" /><category term="data structure" /><category term="hash" /><category term="hash table" /><summary type="html">Overview</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/11w5lxGBI8zAAIgSD1vJAEw.png" /></entry><entry><title type="html">Finding The Common Superview</title><link href="http://localhost:4000/finding-the-common-superview/" rel="alternate" type="text/html" title="Finding The Common Superview" /><published>2017-05-10T01:48:00-04:00</published><updated>2017-05-10T01:48:00-04:00</updated><id>http://localhost:4000/finding-the-common-superview</id><content type="html" xml:base="http://localhost:4000/finding-the-common-superview/">&lt;hr /&gt;
+&lt;p&gt;That’s all for now. Please feel free to leave feedback!&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="iOS" /><category term="swift" /><category term="data structure" /><category term="hash" /><category term="hash table" /><summary type="html">Overview</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/11w5lxGBI8zAAIgSD1vJAEw.png" /></entry><entry><title type="html">Complexity and Big-O Notation</title><link href="http://localhost:4000/complexity-and-big-o/" rel="alternate" type="text/html" title="Complexity and Big-O Notation" /><published>2017-05-11T01:48:00-04:00</published><updated>2017-05-11T01:48:00-04:00</updated><id>http://localhost:4000/complexity-and-big-o</id><content type="html" xml:base="http://localhost:4000/complexity-and-big-o/">&lt;p&gt;&lt;img src=&quot;https://i.stack.imgur.com/Aq09a.png&quot; alt=&quot;Complexity graph&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+
+&lt;p&gt;In this post, I will touch on &lt;strong&gt;complexity&lt;/strong&gt; and &lt;strong&gt;Big O Notation&lt;/strong&gt;. The term complexity as it relates to programming doesn’t necessarily mean one thing. There are different types of computational complexity. The two most common types of complexity are time complexity - which is the number of operations in regards to input and space complexity, which is the number of places used for storage in a given operation in regards to its input. For simplicities sake, in this post, I will be referring to time complexity.&lt;/p&gt;
+
+&lt;h3 id=&quot;asymptotic-analysis&quot;&gt;Asymptotic Analysis&lt;/h3&gt;
+
+&lt;p&gt;“&lt;em&gt;Asymptotic analysis is the process of describing the efficiency of algorithms as their input size (n) grows.&lt;/em&gt;”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;-Swift Algorithms and Data Structures&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In programming, asymptotic analysis is generally described using Big O Notation.&lt;/p&gt;
+
+&lt;h3 id=&quot;worst-case-scenario&quot;&gt;Worst case scenario&lt;/h3&gt;
+
+&lt;p&gt;When referring to the worst-case scenario with complexity, we are referring to an input that causes maximum complexity. The difference between a best/worst case scenario for complexity may be significant. The difference between best case scenario and worst scenario for searching a hash table can go from constant O(1) time to linear O(n) time. If you are searching for an element in an array by iterating over each item and that element is the first item in the array, you will have a pretty good runtime. It’s another story if that item is the element in the array. Generally speaking, you don’t want to pretend like every situation is going to give you the optimal time.&lt;/p&gt;
+
+&lt;h3 id=&quot;o1---constant-time&quot;&gt;O(1) - Constant Time&lt;/h3&gt;
+
+&lt;p&gt;An O(1) operation’s complexity is constant regardless of the number of inputs. Accessing the first element in an array will always be O(1). It is the same for an array with 1000 elements as it is for an array with 10.  In fact accessing any element in your array by its index should be a constant complexity operation regardless of whether it is the first item or the 1000th.&lt;/p&gt;
+
+&lt;h5 id=&quot;examples-of-01-operations&quot;&gt;Examples of 0(1) operations:&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Looking up element in a hashtable.&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Adding a node to linked list&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Accessing an element in an array by index&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arrOne&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arrOne&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arrOne&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Inserting node into linked list:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;newNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lastNode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;newNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previous&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lastNode&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;lastNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newNode&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newNode&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;olog-n---logarithmic-time&quot;&gt;O(log n) - Logarithmic Time&lt;/h3&gt;
+
+&lt;p&gt;When dealing with an O(log n) complexity operation, each cycle should reduce the complexity in relation to input. A prime example of this is a binary search. Each iteration halves the interval within which it searches.&lt;/p&gt;
+
+&lt;h5 id=&quot;examples-of-0log-n-operations&quot;&gt;Examples of 0(log n) operations:&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Binary search&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/220px-Binary_Search_Depiction.png&quot; alt=&quot;Binary search&quot; /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arrOne&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;binarySearch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;inputArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;begin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inputArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;mid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inputArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inputArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mid&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;binarySearch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;on---linear-time&quot;&gt;O(n) - Linear Time&lt;/h3&gt;
+
+&lt;p&gt;An O(n) operation’s complexity scales linearly with the number of inputs. If you iterate through all the elements in an array, it is O(n), because the operation is dependent on the number of items in your collection. Going through 10 elements in an array requires ten cycles. If you multiply the array count by 10, the cycles increase to 100 or 10 times as much as ten elements.&lt;/p&gt;
+
+&lt;h5 id=&quot;examples-of-0n-operations&quot;&gt;Examples of 0(n) operations:&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Traversing an array or linked list&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Removing a node from a specific index of a linked list&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Remove Node At Index&lt;/em&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previous&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;head&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previous&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prev&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previous&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;Traverse Array&lt;/em&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arrOne&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arrOne&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;on2---quadratic-time&quot;&gt;O(n^2) - Quadratic Time&lt;/h3&gt;
+
+&lt;p&gt;An O(n^2) operation’s complexity scales exponentially with the number of inputs. A simple example of an O(n^2) is a process with a loop within a loop. If you took an array with six elements and for each element of the array accessed nth element in the range of 0..&amp;lt;array.count you would access your array 36 times.  Your complexity is not scaling directly with input, but for input squared. A worst case scenario for a bubble sort is O(n^2).&lt;/p&gt;
+
+&lt;h5 id=&quot;examples-of-0n2-operations&quot;&gt;Examples of 0(n^2) operations:&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Traversing a 2D array&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;twoDimensionalArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;twoDimensionalArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;twoDimensionalArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;twoDimensionalArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Sources:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1592649/examples-of-algorithms-which-has-o1-on-log-n-and-olog-n-complexities&quot;&gt;Stack Overflow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Complex_logarithm&quot;&gt;Wikipedia - Complexity Logarithm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Binary_search_algorithm&quot;&gt;Wikipedia - Binary search algorithm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://bigocheatsheet.com/&quot;&gt;Big O Cheat Sheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Complexity" /><category term="Swift" /><category term="Algorithm" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Finding The Common Superview</title><link href="http://localhost:4000/finding-the-common-superview/" rel="alternate" type="text/html" title="Finding The Common Superview" /><published>2017-05-10T01:48:00-04:00</published><updated>2017-05-10T01:48:00-04:00</updated><id>http://localhost:4000/finding-the-common-superview</id><content type="html" xml:base="http://localhost:4000/finding-the-common-superview/">&lt;hr /&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/hit-test-view-hierarchy.png&quot; alt=&quot;View Hierachy&quot; /&gt;&lt;/p&gt;
 
@@ -885,7 +1458,367 @@ One place where you would not want to use a hash table is when you have to itera
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://smnh.me/images/hit-test-view-hierarchy.png&quot;&gt;http://smnh.me/images/hit-test-view-hierarchy.png&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/WindowsandViews/WindowsandViews.html#//apple_ref/doc/uid/TP40009503-CH2-SW1&quot;&gt;Apple Docs: View and Window Architecture&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="UIView" /><category term="iOS" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Monitoring Download Progress Swift</title><link href="http://localhost:4000/monitoring-download-progress-swift/" rel="alternate" type="text/html" title="Monitoring Download Progress Swift" /><published>2017-04-18T00:00:00-04:00</published><updated>2017-04-18T00:00:00-04:00</updated><id>http://localhost:4000/monitoring-download-progress-swift</id><content type="html" xml:base="http://localhost:4000/monitoring-download-progress-swift/"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Serving Ourselves! - With Node.js</title><link href="http://localhost:4000/serving-ourselves/" rel="alternate" type="text/html" title="Serving Ourselves! - With Node.js" /><published>2017-04-06T01:48:00-04:00</published><updated>2017-04-06T01:48:00-04:00</updated><id>http://localhost:4000/serving-ourselves</id><content type="html" xml:base="http://localhost:4000/serving-ourselves/">&lt;h1 id=&quot;brief-overview&quot;&gt;Brief Overview&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="UIView" /><category term="iOS" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Testing Asynchronous Code In Swift</title><link href="http://localhost:4000/testing-asynchronous-code-in-swift/" rel="alternate" type="text/html" title="Testing Asynchronous Code In Swift" /><published>2017-04-22T01:48:00-04:00</published><updated>2017-04-22T01:48:00-04:00</updated><id>http://localhost:4000/testing-asynchronous-code-in-swift</id><content type="html" xml:base="http://localhost:4000/testing-asynchronous-code-in-swift/">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Test2.png&quot; alt=&quot;XC Test&quot; /&gt;
+&lt;a href=&quot;https://gist.github.com/chriswebb09/526c511b7faaa6c71f0bc32b8f894aa8&quot;&gt;Gist&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;brief-introduction-testing-on-ios&quot;&gt;Brief Introduction Testing on iOS&lt;/h3&gt;
+
+&lt;p&gt;Testing is fast approaching standard operating procedure for iOS development. While it is not as prominent as in Ruby, its adoption is increasingly widespread. This means it’s important to grasp the basic concepts. As iOS development continues to grow into a professionalized field, with business models revolving around it, it becomes less acceptable to have applications written without tests.&lt;/p&gt;
+
+&lt;h4 id=&quot;why&quot;&gt;Why?&lt;/h4&gt;
+
+&lt;p&gt;As your application grows over time, one of the more tasking aspects for developers is to ensure that your new code plays well with the code that is there. Writing tests can help maintain performance as the codebase grows.&lt;/p&gt;
+
+&lt;h4 id=&quot;test-coverage&quot;&gt;Test Coverage&lt;/h4&gt;
+
+&lt;p&gt;It might seem conterintuitive, but one of the hardest aspects of testing is deciding what you should test. There are blog posts devoted to this question, there are books devoted to it! While you want your code to be well tested, like everything in life, it takes time. If you’re developing on a small team or by yourself, time is of the essence.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;In computer science, code coverage is a measure used to describe the degree to which the source code of a program is executed when a particular test suite runs.&lt;/em&gt;
+&lt;strong&gt;Wikipeida&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;open-source-ios-testing-book&quot;&gt;Open Source iOS Testing Book!&lt;/h4&gt;
+
+&lt;p&gt;If you’re interested in learning more about the larger subject of what to test for in iOS, there’s a great open source book on the subject by Orta Therox called &lt;a href=&quot;https://github.com/orta/pragmatic-testing&quot;&gt;Pragmatic Testing&lt;/a&gt;. He is head of mobile at Art.sy in New York and has good deal of wisdom on the topic.&lt;/p&gt;
+
+&lt;h3 id=&quot;tools-for-testing&quot;&gt;Tools for Testing&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;There are many frameworks for testing in iOS. One of the most commonly used third party libraries for unit tests is &lt;a href=&quot;https://github.com/Quick/Quick&quot;&gt;Quick&lt;/a&gt;. LinkedIn recently released a coding framework called &lt;a href=&quot;https://github.com/linkedin/bluepill&quot;&gt;Blue Pill&lt;/a&gt; For this post, I will stick with the default XCTest that Apple provides.&lt;/p&gt;
+
+&lt;h4 id=&quot;synchronous-vs-asynchronous&quot;&gt;Synchronous vs. Asynchronous&lt;/h4&gt;
+
+&lt;p&gt;Let’s define some terminology first. Asynchronous code is any code in your application that the executes out of order. Why would your application run out of order? The reasons are numerous, but I will give an explanation that hopefully clarifies this for you. Say you want to grab some JSON for an application. For whatever reason, the network is slow, the server is overloaded, the request takes longer than you were expecting. If that network request is executed synchronous, the rest of the application needs to wait for it to finish to move on. Particularly with a platform like iOS, where user experience is central to success, that is unacceptable. To provide a responsive experience, we can send our request and let our application do other things while we wait for the response. Networking is just one reason. You could also asynchronously execute code that is computationally taxing on your CPU.&lt;/p&gt;
+
+&lt;p&gt;There are a variety of ways to run tests while taking into account asynchronous code execution in your application. Each of these methods has their benefits and downsides. One common way to do this is by Mocking. Mocking is when you simulate some code execution. A lot of use cases for mocking revolves around network requests. There are a few good reasons you might want to mock a web request.  One reason you might use mocking is so you can ensure your tests are consistent. Like any good science experiment, you want to test against a control group. This ensures that you test against the exact outcome each time your test runs. One of the upsides of the Mocking also contains the major pitfall: mocking simulates behavior, but it is necessarily an accurate reflection of how it is performing the in the real world.&lt;/p&gt;
+
+&lt;h4 id=&quot;xctest&quot;&gt;XCTest&lt;/h4&gt;
+
+&lt;p&gt;In Apple’s XCTest framework, most test functions will execute synchronously. You can run into problems when you test asynchronous code in the same way you would synchronous code. Code testing relies on the fundamental principle of running code and then checking to see whether it computes to predefined parameters.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Math.swift&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Math&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;intOne&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;intTwo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intOne&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intTwo&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;ExampleProjectTests.swift&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;XCTest&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;@testable&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ExampleProject&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ExampleProjectTests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;XCTestCase&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setUp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;tearDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;tearDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testAdd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;math&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;XCTAssert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;some-notes-on-asynchronous-testing&quot;&gt;Some Notes On Asynchronous Testing&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;The Apple-y explanation&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Tests execute synchronously because each test is invoked independently one after another.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;As Apple helpfully points out:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;But more and more code executes asynchronously.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;There’s a simple reason behind this phenomenon:&lt;/p&gt;
+
+&lt;p&gt;More and more, code relies on data from network requests to function. The inherent unpredictability of networking, the fact that there is
+no guarantee of when your data will arrive, means these request need to be handled asynchronously.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Some good things to test in your application complex blocks of logic. Consistent aspects on your code, like your model classes are not necessarily first priority. For this example I’m going to test the intermediary between the networking functionality and what is displayed on the screen.&lt;/p&gt;
+
+&lt;h4 id=&quot;living-up-to-expectations&quot;&gt;Living Up To Expectations&lt;/h4&gt;
+
+&lt;p&gt;To begin with, let’s create our expectation. An Expectation is a predefined outcome that you want your asynchronous code to perform.
+To do this, we’ll need to create an instance of the &lt;a href=&quot;https://developer.apple.com/reference/xctest/xctestexpectation&quot;&gt;XCTestExpectation class&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;appley-words&quot;&gt;Appley Words:&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;An expected outcome in an asynchronous test.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Apple can be hit or miss when it come to explaining stuff concisely and clearly, but in this case they’re dead on. Couldn’t have said it any better.&lt;/p&gt;
+
+&lt;h4 id=&quot;creating-expectations&quot;&gt;Creating Expectations&lt;/h4&gt;
+
+&lt;p&gt;When we create our expectation, we give it a string which  describes the what we are expecting. While writing out a good description may not be necessary to run your test, the test log might be meaningless without it.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;XCTest&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AVFoundation&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;@testable&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Musicly&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MusiclyTests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;XCTestCase&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Boiler plate&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testDataStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dataSource&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;iTrackDataStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;searchTerm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;new&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;expect&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;expectation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Data store calls APIClient to access server data and returns iTrack data array.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// Rest of test&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;fulfilling-expectations&quot;&gt;Fulfilling Expectations&lt;/h4&gt;
+
+&lt;p&gt;The class that is the intermediary in my application is the iTrackDataStore. It takes in search paramters from the ViewController, sends them to the APIClient, and then takes the APIClient response and constructs an array of iTrack data objects. These objects are then passed back to the ViewController. Like with most code that relies on the network, iTrackDataStore executes asynchronously.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testDataStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Setup test&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;dataStore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;searchForTracks&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tracks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;XCTAssert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tracks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;49&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fulfill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;As you can see from the code above, XCTestExpectation doesn’t only provide a description of what you are expecting, it also specifies when the expectation has been fufilled using the aptly names .fulfill() method. But what happens if something goes wrong?&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testDataStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+      &lt;span class=&quot;c1&quot;&gt;// Setup&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// Run test&lt;/span&gt;
+
+        &lt;span class=&quot;nf&quot;&gt;waitForExpectations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;kt&quot;&gt;XCTFail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;waitForExpectationsWithTimeout error: &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;wrap-up&quot;&gt;Wrap Up&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;In the code above we call waitForExpections and give it a timeframe within which the code that you are testing should return the expected answer. If this doesn’t happen, it asserts XCFail and logs and the error.&lt;/p&gt;
+
+&lt;h4 id=&quot;sources&quot;&gt;Sources&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/04-writing_tests.html&quot;&gt;Apple Docs&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.mokacoding.com/blog/testing-callbacks-in-swift-with-xctest/&quot;&gt;Mokacoding&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://roadfiresoftware.com/2016/08/testing-asynchronous-code-in-swift-with-xctest-expectations/&quot;&gt;Road Fire Software&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="Testing" /><category term="iOS" /><summary type="html">Gist</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Tracking Download Progress With Swift</title><link href="http://localhost:4000/monitoring-download-progress-swift/" rel="alternate" type="text/html" title="Tracking Download Progress With Swift" /><published>2017-04-18T01:48:00-04:00</published><updated>2017-04-18T01:48:00-04:00</updated><id>http://localhost:4000/monitoring-download-progress-swift</id><content type="html" xml:base="http://localhost:4000/monitoring-download-progress-swift/">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/chriswebb09/Musicly/master/Assets/example.gif&quot; alt=&quot;Loading...&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;brief-overview&quot;&gt;Brief Overview&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/chriswebb09/dff9d5bd0964d817ac22d75d092733ba&quot;&gt;Example Gist&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Recently I’ve been interested in building something that streams media. So last week, I started an example project, which streams ma4 music files from Apple’s iTunes Preview API. It’s been a fascinating learning experience. If you are interested, you can check it out here: &lt;a href=&quot;https://github.com/chriswebb09/Musicly&quot;&gt;Musicly&lt;/a&gt;. The gif at the top of this post is a recording of the project in use.&lt;/p&gt;
+
+&lt;p&gt;In the process, I managed to touch some features in iOS that I had I been interested in looking at, but hadn’t had the chance to use. I’ll be posting some examples of those features for the next few posts. To start off with, I want to go over monitoring the progress of a download in your application from both a data and UI perspective.&lt;/p&gt;
+
+&lt;p&gt;The example project for this post, which you can find in the gist link at the top, looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/examplerecording.gif&quot; alt=&quot;Example&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;brief-overview-of-urlsession&quot;&gt;Brief Overview Of URLSession&lt;/h3&gt;
+
+&lt;p&gt;Before we get started, let’s review some of the features that Apple provides for managing network requests. The &lt;a href=&quot;https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html&quot;&gt;URL Loading System&lt;/a&gt; is a set or ‘family’ of classes that Apple provides for dealing with URLs and accessing data on the internet.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Apple describes the URL Loading System as&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The URL loading system is a set of classes and protocols that allow your app to access content referenced by a URL. At the heart of this technology is the NSURL class, which lets your app manipulate URLs and the resources they refer to.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;One of the most common ways it is used is working with the URL class. This allows us to access resources over the network as well as ones that are stored locally in the filesystem.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http://www.google.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;One of the most useful sets of functionality is encapsulated within the URLSession class, and its associated delegates. This suite of functions gives us the ability to manipulate how our application interacts with the data it wants to access over the network.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;defaultSession&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URLSession&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;configuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This isn’t the whole story. A lot the magic that makes this work is provided by Apple and happens under the hood, it’s a higher-level abstraction of how iOS deals with networking tasks.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;To start with, let’s go over monitoring the progress of a download. This can be done visually with a progress bar or by giving a readout on a text label of the percentage complete.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;@IBOutlet&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;weak&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;progressView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIProgressView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;@IBOutlet&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;weak&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;downloadProgressLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UILabel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To access the data, we’ll need to make our API client conform to URLSessionDownloadDelegate. This adventure will take us into the land of the Objective-C runtime. What this means in practical terms is that we will have our APIClient class to be a subclass of NSObject.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;iTunesAPIClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSObject&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Network stuff&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;side-note&quot;&gt;Side Note&lt;/h3&gt;
+
+&lt;p&gt;So far I’ve briefly touched on the topic of networking. The subject is immense, and this doesn’t ever scratch the surface of what there is to learn about it. In fact, this is the opening sentence to Apple’s ‘About Networking’ in ‘Networking Overview’:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The world of networking is complex.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s a bit of an understatement but it illustrates my point. Apple has it’s rundown of the aspects of networking that it believes are relevant to developers in their ecosystem. &lt;a href=&quot;https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/NetworkingConcepts/Introduction/Introduction.html&quot;&gt;You can find that guide here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;urlsessiondelegate-and-urlsessiondownloaddelegate&quot;&gt;URLSessionDelegate and URLSessionDownloadDelegate&lt;/h3&gt;
+
+&lt;p&gt;Apple specifies two methods that are relevant to this project in URLSession and URLSessionDownloadDelegate. They are:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;urlSessionDidFinishEvents&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;didWriteData:totalBytesExpectedToWrite&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The first method allows us to run networking calls on a background session. The second method gives us the data we need to monitor the progress of our download.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;extension&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;iTunesAPIClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URLSessionDelegate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;internal&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;urlSessionDidFinishEvents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forBackgroundURLSession&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URLSession&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;c1&quot;&gt;// Calls background session completion in AppDelegate&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;internal&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;urlSession&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URLSession&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;downloadTask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URLSessionDownloadTask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;didWriteData&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;bytesWritten&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;totalBytesWritten&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;totalBytesExpectedToWrite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Gives you the URLSessionDownloadTask that is being executed&lt;/span&gt;
+         &lt;span class=&quot;c1&quot;&gt;// along with the total file length - totalBytesExpectedToWrite&lt;/span&gt;
+         &lt;span class=&quot;c1&quot;&gt;// and the current amount of data that has received up to this point - totalBytesWritten&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;side-note-on-backgroundsessions-and-appdelegates&quot;&gt;Side Note on BackgroundSessions and AppDelegates&lt;/h3&gt;
+
+&lt;p&gt;When use background sessions you need to account for situations where the task is completed when your application is no longer running. If your network request completes when your application is no long active, the OS will relaunch it. In our AppDelegate we can handle this sort of relaunch by add this method&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handleEventsForBackgroundURLSession&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;completionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;@escaping&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Background completion called here.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We can then add an optional completion property to the AppDelegate which we can then access inside our APIClient.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;@UIApplicationMain&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AppDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIResponder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIApplicationDelegate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;backgroundSessionCompletionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)?&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// AppDelegate functionality.&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To call this completion we add this functionality to our APIClient:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;extension&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;iTunesAPIClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URLSessionDelegate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;internal&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;urlSessionDidFinishEvents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forBackgroundURLSession&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URLSession&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;appDelegate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shared&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as?&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AppDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;completionHandler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appDelegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundSessionCompletionHandler&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;appDelegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundSessionCompletionHandler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;DispatchQueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nf&quot;&gt;completionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Other networking functionality&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;delegates-sessions-and-models-oh-my&quot;&gt;Delegates, Sessions and Models, Oh My!&lt;/h3&gt;
+
+&lt;p&gt;Let’s create a model class for the state of our the data in between the final data object your class app uses and the URL.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Download&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;weak&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DownloadDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;downloadTask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URLSessionDownloadTask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;didSet&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;updateProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;progress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;downloadTask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
+                &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;File is done&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Gives float for download progress - for delegate&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;updateProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;downloadTask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;downloadProgressUpdated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;As you might notice, this class has a delegate which is the intermediary between our APIClient, and it’s presentation to the user. To create it, make as class-bound protocol called DownloadDelegate and add it as a weak property to our Download model class.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;protocol&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DownloadDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Delegate method&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This delegate specifies a method:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;protocol&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DownloadDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;downloadProgressUpdate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In our Download model we can call the downloadProgressUpdate delegate method in the following manner:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Download&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;weak&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DownloadDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Other properties&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Float&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;didSet&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;updateProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Gives float for download progress - for delegate&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;updateProgress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;downloadProgressUpdated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Initialization&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now we can make our ViewController conform to the download delegate protocol. Since we’re modifying the layout every time the delegate gets called, you will need to specify that this update happens on the main thread (otherwise your application will crash.)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;extension&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ExampleViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DownloadDelegate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;downloadProgressUpdated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;DispatchQueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;progressView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;progress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;progress&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;downloadProgressLabel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;%.1f%%&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;progress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Obviously this isn’t the entire project, but it should be enough to get your started. If you want to see how everything is done, I’ve provided a link to a Gist at the top of this entry that has all the code you need to get up and running.&lt;/p&gt;
+
+&lt;h3 id=&quot;sources&quot;&gt;Sources&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/reference/foundation/urlsession&quot;&gt;Apple docs for URLSession&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/reference/foundation/urlsessiondelegate&quot;&gt;Apple docs for URLSessionDelegate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/reference/foundation/urlsessiondownloaddelegate&quot;&gt;Apple docs for URLSessionDownloadDelegate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/URLLoadingSystem/URLLoadingSystem.html&quot;&gt;Apple docs for URL Loading System&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.objc.io/issues/10-syncing-data/ip-tcp-http/&quot;&gt;Objc.io Article on TCP/IP and HTTP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Networking" /><category term="iOS" /><category term="Data" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Serving Ourselves! - With Node.js</title><link href="http://localhost:4000/serving-ourselves/" rel="alternate" type="text/html" title="Serving Ourselves! - With Node.js" /><published>2017-04-06T01:48:00-04:00</published><updated>2017-04-06T01:48:00-04:00</updated><id>http://localhost:4000/serving-ourselves</id><content type="html" xml:base="http://localhost:4000/serving-ourselves/">&lt;h1 id=&quot;brief-overview&quot;&gt;Brief Overview&lt;/h1&gt;
 
 &lt;p&gt;Networks go down. That is one of the more obvious statements that I’ve made on this blog. There are also times when you just don’t have access to a reliable internet connection for whatever reason. In short, using data from the internet brings into play factors that you don’t have one hundred percent control over. Knowing this, we can start going about mitigating the consequences ahead of time. One way to do this is to have some data (most likely JSON) stored locally that can be called upon whenever the need may arise. It doesn’t need to be entire databases worth, just enough to simulate proper functionality. In this post, I’ll show you how to construct a simple Node.js server that you can use to serve dummy data to your app.&lt;/p&gt;
 
@@ -1015,7 +1948,7 @@ your terminal by running the following in your project directory:&lt;/p&gt;
     &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'error ${ error }'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'listening on ${ port }'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Javascript" /><category term="Node" /><category term="Server" /><summary type="html">Brief Overview</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/image/node.png" /></entry><entry><title type="html">Building With Python Requests</title><link href="http://localhost:4000/building-with-python-requests/" rel="alternate" type="text/html" title="Building With Python Requests" /><published>2017-04-06T01:48:00-04:00</published><updated>2017-04-06T01:48:00-04:00</updated><id>http://localhost:4000/building-with-python-requests</id><content type="html" xml:base="http://localhost:4000/building-with-python-requests/">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kennethreitz/requests/master/docs/_static/requests-logo-small.png&quot; alt=&quot;requests-library-logo&quot; /&gt;&lt;/p&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Javascript" /><category term="Node" /><category term="Server" /><summary type="html">Brief Overview</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/public/node.png" /></entry><entry><title type="html">Building With Python Requests</title><link href="http://localhost:4000/building-with-python-requests/" rel="alternate" type="text/html" title="Building With Python Requests" /><published>2017-04-06T01:48:00-04:00</published><updated>2017-04-06T01:48:00-04:00</updated><id>http://localhost:4000/building-with-python-requests</id><content type="html" xml:base="http://localhost:4000/building-with-python-requests/">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/kennethreitz/requests/master/docs/_static/requests-logo-small.png&quot; alt=&quot;requests-library-logo&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
 
@@ -1027,8 +1960,7 @@ your terminal by running the following in your project directory:&lt;/p&gt;
 
 &lt;p&gt;If you don’t have lots of experience working HTTP or Python, Requests is a great library to get started. If the Requests library isn’t already installed on your machine go ahead a do that using pip:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;pip install requests&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pip install requests&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;python-modules&quot;&gt;Python Modules&lt;/h2&gt;
 
@@ -1044,8 +1976,7 @@ your terminal by running the following in your project directory:&lt;/p&gt;
 
 &lt;p&gt;I want to setup our Python script so that we can specify our url directly from the commandline like so:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;python linkcrawler.py www.google.com&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;python linkcrawler.py www.google.com&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The documentation in the Python standard library for &lt;a href=&quot;https://docs.python.org/2/library/sys.html&quot;&gt;sys&lt;/a&gt; calls it: System-specific parameters and functions In this case, we’re going to use it to access the URL that gets entered when our file is called on the command line using the sys.argv command. The sys.argv method returns an array with strings for everything typed in after the word python. Each additional entry in into the command line gets its own index. So inputting sys.argv[0] would have the interpreter return to us ‘linkcrawler.py’ while sys.argv[1] would give us www.google.com.&lt;/p&gt;
 
@@ -1059,28 +1990,20 @@ your terminal by running the following in your project directory:&lt;/p&gt;
 
 &lt;p&gt;To define one, prefix your class names with the word class and put a colon at the end of the declaration. What makes classes in Python interesting is that you have to pass in self as a parameter in every function block. To give our class an init method we need to add ‘&lt;strong&gt;init&lt;/strong&gt;(self)’:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startswith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startswith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
             &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+            &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Specifying self as a paramter is not optional, if you leave out the self, you will get this error:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;TypeError: __init__&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; takes no arguments &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1 given&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;TypeError: __init__&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; takes no arguments &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1 given&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;In the init method, we can instantiate our class properties. In this case, I gave the class a URL property:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This uses the sys.argv method that we talked about earlier to get the URL that is entered in when you run the file.&lt;/p&gt;
 
@@ -1088,14 +2011,10 @@ your terminal by running the following in your project directory:&lt;/p&gt;
 
 &lt;p&gt;The majority of the logic for this piece will go in a method I named request_resource.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;request_resource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;request_resource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&amp;amp;+]|[!*&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;),]|(?:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[0-9a-fA-F][0-9a-fA-F]))+'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This method takes in self as a parameter as well. We set our variable r to the results of an HTTP GET request to the URL we specified initially.Using re.findall we look through r.text for text that matches URL patterns. These are stored in our URLs variable and returned at the end of the method.&lt;/p&gt;
 
@@ -1109,33 +2028,24 @@ Usually this pattern is then used by string searching algorithms for “find” 
 
 &lt;p&gt;A regular expression could match phone number or email address or in this case, URLs. This strange looking string is a regex pattern for matching text to URLs:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;s&quot;&gt;'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&amp;amp;+]|[!*&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;),]|(?:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[0-9a-fA-F][0-9a-fA-F]))+'&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;s&quot;&gt;&quot;http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&amp;amp;+]|[!*&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;),]|(?:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[0-9a-fA-F][0-9a-fA-F]))+&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h2&gt;
 
 &lt;p&gt;Now that we have that finished with our class we need to add a main function that will get called when our file is run directly from the command line. In main we will need to create an instance of our class, call our request_resource method and for now, just print out the URLs if they exist.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;crawl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WebCrawler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;new_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;crawl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request_resource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new_data&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Once we have our main function figured out, we now need to ensure that it gets called when the file is run. We can add some
-‘if &lt;strong&gt;name&lt;/strong&gt; magic’ to get this all setup correctly.&lt;/p&gt;
+if &lt;strong&gt;name&lt;/strong&gt; magic to get this all setup correctly.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-py&quot; data-lang=&quot;py&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;What we’re specifying here is that if Python calls our file directly (the if &lt;strong&gt;name&lt;/strong&gt; == ‘&lt;strong&gt;main&lt;/strong&gt;’:) it should run our file’s main function. This is different than if it is imported into another file and called and it needs specification so we can run it from the command line.&lt;/p&gt;
 
@@ -1176,116 +2086,4 @@ Beyond that, it’s always interesting to explore new things.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-line&quot; data-lang=&quot;line&quot;&gt;root@device:~# curl -X POST -u &quot;username&quot;:&quot;password&quot; --header &quot;Content-Type: audio/wav&quot; --data-binary @mono.wav &quot;https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?timestamps=true&amp;amp;word_alternatives_threshold=0.9&amp;amp;continuous=true&quot; &amp;gt; datafile.json&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;This saves the JSON response from the Watson analysis into a JSON file on the Edison’s filesystem.&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="IBM Watson" /><category term="iOS" /><category term="Twilio" /><summary type="html">IBM, Intel and Twilio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Using Regexes In Swift</title><link href="http://localhost:4000/using-regexes-in-swift/" rel="alternate" type="text/html" title="Using Regexes In Swift" /><published>2016-07-20T01:48:00-04:00</published><updated>2016-07-20T01:48:00-04:00</updated><id>http://localhost:4000/using-regexes-in-swift</id><content type="html" xml:base="http://localhost:4000/using-regexes-in-swift/">&lt;h3 id=&quot;brief-overview&quot;&gt;Brief Overview&lt;/h3&gt;
-&lt;p&gt;In part two we are going to switch from writing our code in Objective-C to writing in Swift. Before we get started, let’s take a moment to go over what regular expressions are. Regular expressions are a way of defining broader text patterns, like phone numbers or urls, which you can then use to filter a larger block of text data and return only the relevant parts. Regexs are commonly used as a way to verify that a user input is in the correct format. In our case, we want to look at the webdata we retrieved earlier to find strings that conform to a basic http://www.whateveritfinds.com&lt;/p&gt;
-
-&lt;h3 id=&quot;implementing-our-code&quot;&gt;Implementing Our Code&lt;/h3&gt;
-&lt;p&gt;This is the regex pattern that gives us the basic pattern for the url:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;s&quot;&gt;&quot;http?://([-&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.]+)+(:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d+)?(/([&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;w/_&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.]*(&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;S+)?)?)?&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Apple provides us with a NSRegularExpression class in the Foundation Library. It simplifies the whole process for us immensely. The way I implemented the search was in a class called SearchForURL:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SearchForURL&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http?://([-&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.]+)+(:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d+)?(/([&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;w/_&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.]*(&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;S+)?)?)?&quot;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;regex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSRegularExpression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSRegularExpressionOptions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;CaseInsensitive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;matches&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;regex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;matchesInString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;utf16&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matches&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rangeAtIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;substringWithRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rangeForString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rangeAtIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;urlRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rangeForString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;substringWithRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;could not complete&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;    
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;To check whether my implementation works, in my ViewController I added the following lines of code:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;newMatch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SearchForURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http://www.someurl.com ht  www.newcode.com http://www.newcode.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;newMatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;And I got the following output in response:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/screenshot-2.png&quot; alt=&quot;placeholder&quot; title=&quot;Filtered Web Content&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now we can clearly find the relevant data in our unorganized input.&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="regular expressions" /><category term="iOS" /><summary type="html">Brief Overview In part two we are going to switch from writing our code in Objective-C to writing in Swift. Before we get started, let’s take a moment to go over what regular expressions are. Regular expressions are a way of defining broader text patterns, like phone numbers or urls, which you can then use to filter a larger block of text data and return only the relevant parts. Regexs are commonly used as a way to verify that a user input is in the correct format. In our case, we want to look at the webdata we retrieved earlier to find strings that conform to a basic http://www.whateveritfinds.com</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">New Development Blog</title><link href="http://localhost:4000/new-development-blog/" rel="alternate" type="text/html" title="New Development Blog" /><published>2016-02-24T22:48:00-05:00</published><updated>2016-02-24T22:48:00-05:00</updated><id>http://localhost:4000/new-development-blog</id><content type="html" xml:base="http://localhost:4000/new-development-blog/">&lt;p class=&quot;message&quot;&gt;
-The journey of one thousand apps starts with a single key press...
-&lt;/p&gt;
-
-&lt;p&gt;Well, it looks as if I am enrolling in the Flatiron School iOS immersive program. I’m going to use this place to document my experience as best as I can. Feel free to follow along.&lt;/p&gt;
-
-&lt;p&gt;So far, my only experience with the Flatiron program is with the prerequisite work that must be completed during the application process. You can access it for free regardless of whether you are accepted to the program. I find it pretty useful and informative.  Even if you’re not 100% percent sure you are ready to apply, but you’re looking to get started on Objective-C programming or Ruby web development, I would recommend checking out the pre-work courses. Who knows, you might even enjoy it enough to send in an application.&lt;/p&gt;
-
-&lt;p&gt;You can check out their online pre-work education here:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://learn.co&quot;&gt;Flatiron School’s Learn Co&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is an example of a pretty basic exercise. The work doesn’t get too complicated, it mainly familiarizes you with concepts enough so that you can A. do the coding exercise to discuss for the technical interview and B. have enough knowledge to hit the ground running on day one should you be accepted.  Since I’m doing the iOS immersive the code is in Objective-C:&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objc&quot; data-lang=&quot;objc&quot;&gt;&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;stringByReversingString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSUInteger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;NSUInteger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;unichar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;characterAtIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;stringByAppendingFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;%C&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Here is a similar outcome from a block of code using the Python 2.7 programming language:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;string_by_reversing_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[::&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Okay&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="objective-c" /><category term="dev-blog" /><category term="python" /><summary type="html">The journey of one thousand apps starts with a single key press...</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">ARKit Projects</title><link href="http://localhost:4000/arkit-projects/" rel="alternate" type="text/html" title="ARKit Projects" /><published>2016-01-23T22:10:00-05:00</published><updated>2016-01-23T22:10:00-05:00</updated><id>http://localhost:4000/arkit-projects</id><content type="html" xml:base="http://localhost:4000/arkit-projects/">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Example of project&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Indigo Minimalist Jekyll Template&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://sergiokopplin.github.io/indigo/&quot;&gt;Demo&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is a simple and minimalist template for Jekyll for those who likes to eat noodles.
-What has inside?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Gulp&lt;/li&gt;
-  &lt;li&gt;BrowserSync&lt;/li&gt;
-  &lt;li&gt;Stylus&lt;/li&gt;
-  &lt;li&gt;SVG&lt;/li&gt;
-  &lt;li&gt;Travis&lt;/li&gt;
-  &lt;li&gt;No JS&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F&quot;&gt;98/100&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://sergiokopplin.github.io/indigo/&quot;&gt;Check it out&lt;/a&gt; here.
-If you need some help, just &lt;a href=&quot;http://github.com/sergiokopplin/indigo/issues&quot;&gt;tell me&lt;/a&gt;.&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="project" /><category term="jekyll" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://koppl.in/indigo/assets/images/jekyll-logo-light-solid.png" /></entry></feed>
+&lt;p&gt;This saves the JSON response from the Watson analysis into a JSON file on the Edison’s filesystem.&lt;/p&gt;</content><author><name>chriswebb</name></author><category term="blog" /><category term="Swift" /><category term="IBM Watson" /><category term="iOS" /><category term="Twilio" /><summary type="html">IBM, Intel and Twilio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry></feed>
