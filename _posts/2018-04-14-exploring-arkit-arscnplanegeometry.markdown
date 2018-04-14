@@ -55,7 +55,11 @@ To begin with, we were already headed here, with or without the latest update to
 
 # Setup
 
+
+
 {% highlight swift %}
+
+
 
 import UIKit
 import SceneKit
@@ -98,7 +102,13 @@ class ViewController: UIViewController {
 
 {% endhighlight %}
 
+
+
+
 ## SCNNode Extension
+
+
+
 
 {% highlight swift %}
 
@@ -123,7 +133,11 @@ extension SCNNode {
 
 {% endhighlight %}
 
+
+
 ## ARSCNViewDelegate
+
+
 
 {% highlight swift %}
 
