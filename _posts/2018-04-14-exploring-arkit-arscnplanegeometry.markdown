@@ -13,6 +13,8 @@ author: chriswebb
 description: New blog
 ---
 
+![](/assets/images/scan.gif)
+
 If you’ve heard, Apple’ recently released a major update to ARKit, which it has dubbed ARKit 1.5. While much of the focus has been on the new vertical plane detection capabilities, which had been a glaring omission from ARKit’s initial release, much less has been said about other new plane detection features. Lost in among all the excitement were some deeply powerful new features. It’s arguable that the coolest features in Apple’s ARKit release are the the ones that have barely been mentioned.
 
 # So what were they?
