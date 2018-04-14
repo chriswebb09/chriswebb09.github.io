@@ -2,7 +2,7 @@
 title: "New Development Blog"
 layout: post
 date: 2016-04-22 22:48
-image: /assets/images/ios-logo.png
+image: /assets/images/os-logo.png
 headerImage: true
 tag:
 - objective-c
@@ -12,7 +12,6 @@ category: blog
 author: chriswebb
 description: New blog
 ---
-
 <p class="message">
 The journey of one thousand apps starts with a single key press...
 </p>
