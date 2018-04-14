@@ -2,7 +2,7 @@
 title: "ARKit and Core Location: Part One"
 layout: post
 date: 2017-08-15 22:48
-image: /11w5lxGBI8zAAIgSD1vJAEw.png
+image: /assets/images/ARKit.png
 headerImage: true
 tag:
 - iOS
