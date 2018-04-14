@@ -13,10 +13,11 @@ Thanks for reading!</p>
 <h2>Skills</h2>
 
 <ul>
-   <li>3+ Years Experience Programming in Swift and Objective-C</li>
+   <li>Swift & Objective-C</li>
 	 <li>iOS Application and Architecture Development</li>
-	 <li>Server Side With Javascript on NodeJS and Python on Flask</li>
-	 <li>Python Machine Learning and Data Analysis</li>
+	 <li>Server Side With Javascript on NodeJS</li>
+   <li>Server Side With Python on Flask</li>
+	 <li>Python Data Analysis</li>
 </ul>
 
 <h2>Projects</h2>
