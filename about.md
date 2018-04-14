@@ -1,17 +1,33 @@
 ---
+title: About
 layout: page
-title:
 ---
 
-<p class="message">
-  The journey of one thousand apps starts with a single key press...
-</p>
+![Profile Image]({{ site.url }}/{{ site.picture }})
 
----
+<p>My name is Chris. I'm a iOS developer in the New York area. I like international politics, history, dogs, hiking and more. This is a space for me to write about my adventures as a developer. Please send me a meesage if you have any questions.
 
-![photo](https://avatars0.githubusercontent.com/u/13937686?v=3&s=460 "photo")
+Have questions or suggestions? Feel free to  contact me on <a href="https://github.com/chriswebb09">Github</a>.
+Thanks for reading!</p>
 
-My name is Chris. I'm a iOS developer in the New York area. I like international politics, history, dogs, hiking and more. This is a space for me to write about my adventures as a developer. Please send me a meesage if you have any questions.
+<h2>Skills</h2>
 
-Have questions or suggestions? Feel free to  contact me on [GitHub](https://github.com/chriswebb09).
-Thanks for reading!
+<ul class="skill-list">
+   <li>Swift</li>
+	 <li>ARKit</li>
+	 <li>Objective-C</li>
+	 <li>iOS Applications</li>
+	 <li>NodeJS</li>
+	 <li>Python</li>
+	 <li>Javascript</li>
+	<li>Git</li>
+</ul>
+
+<h2>Projects</h2>
+
+<ul>
+	<li><a href="https://github.com/chriswebb09/ARKitNavigationDemo">ARKitNavigationDemo</a></li>
+	<li><a href="https://github.com/chriswebb09/ARKitDrone">ARKit Drone</a></li>
+	<li><a href="https://github.com/chriswebb09/ARKitAirport">ARKit Airport</a></li>
+	<li><a href="https://github.com/chriswebb09/podcatcher">PodCatch</a></li>
+</ul>
