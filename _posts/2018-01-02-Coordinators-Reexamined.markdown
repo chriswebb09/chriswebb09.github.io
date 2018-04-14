@@ -2,7 +2,7 @@
 title: "Coordinators: Re-examined"
 layout: post
 date: 2018-01-02 01:48
-image: /assets/images/coordinator.png
+image: /assets/images/coordinatorss.png  
 headerImage: true
 tag:
 - Swift
