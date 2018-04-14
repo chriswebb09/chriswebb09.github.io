@@ -44,7 +44,7 @@ _Exploiting the features of the Python language to produce code that is clear, c
 
 I want to setup our Python script so that we can specify our url directly from the commandline like so:
 
-{% highlight bash linenos %}
+{% highlight bash %}
 python linkcrawler.py www.google.com
 {% endhighlight %}
 
@@ -60,7 +60,7 @@ _Compared with other programming languages, Python’s class mechanism adds clas
 
 To define one, prefix your class names with the word class and put a colon at the end of the declaration. What makes classes in Python interesting is that you have to pass in self as a parameter in every function block. To give our class an init method we need to add '__init__(self)':
 
-{% highlight py linenos %}
+{% highlight py %}
 def __init__(self):
         print(sys.argv[0])
         if sys.argv[1].startswith("http://") or sys.argv[1].startswith("https://"):
@@ -71,7 +71,7 @@ def __init__(self):
 
 Specifying self as a paramter is not optional, if you leave out the self, you will get this error:
 
-{% highlight bash linenos %}
+{% highlight bash %}
 TypeError: __init__() takes no arguments (1 given)
 {% endhighlight %}
 
@@ -87,7 +87,7 @@ This uses the sys.argv method that we talked about earlier to get the URL that i
 
 The majority of the logic for this piece will go in a method I named request_resource.
 
-{% highlight py linenos %}
+{% highlight py %}
     def request_resource(self):
         r = requests.get(self.url)
         urls = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', r.text)
@@ -106,7 +106,7 @@ Usually this pattern is then used by string searching algorithms for "find" or "
 
 A regular expression could match phone number or email address or in this case, URLs. This strange looking string is a regex pattern for matching text to URLs:
 
-{% highlight py linenos %}
+{% highlight py %}
 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
 {% endhighlight %}
 
@@ -126,7 +126,7 @@ def main():
 Once we have our main function figured out, we now need to ensure that it gets called when the file is run. We can add some
 'if __name__ magic' to get this all setup correctly.  
 
-{% highlight py linenos %}
+{% highlight py %}
 if __name__ == '__main__':
     main()
 {% endhighlight %}
