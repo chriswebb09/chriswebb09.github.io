@@ -114,7 +114,7 @@ A regular expression could match phone number or email address or in this case, 
 
 Now that we have that finished with our class we need to add a main function that will get called when our file is run directly from the command line. In main we will need to create an instance of our class, call our request_resource method and for now, just print out the URLs if they exist.
 
-{% highlight py linenos %}
+{% highlight py %}
 def main():
     crawl = WebCrawler()
     new_data = crawl.request_resource()
