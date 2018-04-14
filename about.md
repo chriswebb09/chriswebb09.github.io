@@ -5,12 +5,12 @@ layout: page
 
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>My name is Chris. I'm a iOS developer in the New York area. I like international politics, history, dogs, hiking and more. This is a space for me to write about my adventures as a developer. Please send me a meesage if you have any questions.
+<p>My name is Chris. I'm a iOS developer in the New York area. I like international politics, history, dogs, hiking and more. This is a space for me to write about my adventures as a developer. Please send me a message if you have any questions.
 
 Have questions or suggestions? Feel free to  contact me on <a href="https://github.com/chriswebb09">Github</a>.
 Thanks for reading!</p>
 
-<h2 align="center">Skills</h2>
+<h2>Skills</h2>
 
 <ul class="skill-list" align="center">
    <li>Swift</li>
@@ -20,12 +20,12 @@ Thanks for reading!</p>
 	 <li>NodeJS</li>
 	 <li>Python</li>
 	 <li>Javascript</li>
-	<li>Git</li>
+	 <li>Git</li>
 </ul>
 
-<h2 align="center">Projects</h2>
+<h2>Projects</h2>
 
-<ul align="center">
+<ul>
 	<li><a href="https://github.com/chriswebb09/ARKitNavigationDemo">ARKitNavigationDemo</a></li>
 	<li><a href="https://github.com/chriswebb09/ARKitDrone">ARKit Drone</a></li>
 	<li><a href="https://github.com/chriswebb09/ARKitAirport">ARKit Airport</a></li>
