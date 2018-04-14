@@ -25,7 +25,7 @@ If you have ever wanted to build a web-crawler, Python is a great language to us
 
 If you don’t have lots of experience working HTTP or Python, Requests is a great library to get started. If the Requests library isn't already installed on your machine go ahead a do that using pip:
 
-{% highlight bash linenos %}
+{% highlight bash %}
 pip install requests
 {% endhighlight %}
 
@@ -77,7 +77,7 @@ TypeError: __init__() takes no arguments (1 given)
 
 In the init method, we can instantiate our class properties. In this case, I gave the class a URL property:
 
-{% highlight py linenos %}
+{% highlight py %}
 self.url = sys.argv[1]
 {% endhighlight %}
 
