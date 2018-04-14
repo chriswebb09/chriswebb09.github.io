@@ -107,7 +107,8 @@ Usually this pattern is then used by string searching algorithms for "find" or "
 A regular expression could match phone number or email address or in this case, URLs. This strange looking string is a regex pattern for matching text to URLs:
 
 {% highlight py %}
-'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
+"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
+
 {% endhighlight %}
 
 ## Wrapping Up
@@ -124,7 +125,7 @@ def main():
 {% endhighlight %}
 
 Once we have our main function figured out, we now need to ensure that it gets called when the file is run. We can add some
-'if __name__ magic' to get this all setup correctly.  
+if __name__ magic to get this all setup correctly.  
 
 {% highlight py %}
 if __name__ == '__main__':
