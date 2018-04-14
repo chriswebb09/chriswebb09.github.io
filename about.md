@@ -23,9 +23,9 @@ Thanks for reading!</p>
 	<li>Git</li>
 </ul>
 
-<h2>Projects</h2>
+<h2 align="center">Projects</h2>
 
-<ul>
+<ul align="center">
 	<li><a href="https://github.com/chriswebb09/ARKitNavigationDemo">ARKitNavigationDemo</a></li>
 	<li><a href="https://github.com/chriswebb09/ARKitDrone">ARKit Drone</a></li>
 	<li><a href="https://github.com/chriswebb09/ARKitAirport">ARKit Airport</a></li>
