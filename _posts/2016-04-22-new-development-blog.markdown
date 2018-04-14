@@ -2,7 +2,7 @@
 title: "New Development Blog"
 layout: post
 date: 2016-04-22 22:48
-image: /assets/images/os-logo.png
+image: /assets/images/ar.png
 headerImage: true
 tag:
 - objective-c
