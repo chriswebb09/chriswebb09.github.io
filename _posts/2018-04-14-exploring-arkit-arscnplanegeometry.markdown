@@ -51,7 +51,8 @@ To begin with, we were already headed here, with or without the latest update to
 
 # Setup
 
-```
+{% highlight swift %}
+
 import UIKit
 import SceneKit
 import ARKit
@@ -135,4 +136,4 @@ func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: AR
         }
     }
 }
-```
+{% endhighlight %}
