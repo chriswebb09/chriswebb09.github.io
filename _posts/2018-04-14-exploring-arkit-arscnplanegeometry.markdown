@@ -51,7 +51,11 @@ To begin with, we were already headed here, with or without the latest update to
 
 =====
 
+
+
 # Setup
+
+{% highlight swift %}
 
 import UIKit
 import SceneKit
@@ -92,7 +96,11 @@ class ViewController: UIViewController {
     }
 }
 
-## SCNNode Extension 
+{% endhighlight %}
+
+## SCNNode Extension
+
+{% highlight swift %}
 
 extension SCNNode {
 
@@ -113,9 +121,14 @@ extension SCNNode {
 
 }
 
+{% endhighlight %}
+
 ## ARSCNViewDelegate
 
+{% highlight swift %}
+
 // MARK: - ARSCNViewDelegate
+
 
 extension ViewController: ARSCNViewDelegate {
 
@@ -144,3 +157,4 @@ func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: AR
         }
     }
 }
+{% endhighlight %}
