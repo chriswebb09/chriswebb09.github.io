@@ -1,7 +1,7 @@
 ---
 title: "Fun with Edison, Watson and Twilio"
 layout: post
-date: 2016-07-20 01:48
+date: 2016-11-21 01:48
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
