@@ -56,6 +56,7 @@ To begin with, we were already headed here, with or without the latest update to
 import UIKit
 import SceneKit
 import ARKit
+
 class ViewController: UIViewController {
 
     @IBOutlet var sceneView: ARSCNView!
@@ -90,7 +91,13 @@ class ViewController: UIViewController {
         runSession()
     }
 }
+
+{% endhighlight %}
+
 SCNNode Extension
+
+{% highlight swift %}
+
 extension SCNNode {
 
     static func createPlaneNode(planeAnchor: ARPlaneAnchor, id: Int) -> SCNNode {
@@ -109,9 +116,17 @@ extension SCNNode {
     }
 
 }
+
+{% endhighlight %}
+
 ARSCNViewDelegate
+
+{% highlight swift %}
+
 // MARK: - ARSCNViewDelegate
+
 extension ViewController: ARSCNViewDelegate {
+
 func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
         let planeNode = SCNNode.createPlaneNode(planeAnchor: planeAnchor, id: planeId)
@@ -136,4 +151,5 @@ func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: AR
         }
     }
 }
+
 {% endhighlight %}
