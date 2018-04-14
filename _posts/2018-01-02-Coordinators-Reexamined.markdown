@@ -17,7 +17,7 @@ description: "Coordinators: Re-examined"
 
 #### Taming Unruly Application Architecture
 
-![](https://cdn-images-1.medium.com/max/980/1*rwLW_2iTuvsJibZ3f9Wu1g.png)<figcaption><a href="https://will.townsend.io/img/coordinator-diagram.svg">Source</a></figcaption>
+![](https://cdn-images-1.medium.com/max/980/1*rwLW_2iTuvsJibZ3f9Wu1g.png)<a href="https://will.townsend.io/img/coordinator-diagram.svg">Source</a>
 
 #### Back To Coordinators
 
