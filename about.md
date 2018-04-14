@@ -13,21 +13,21 @@ Thanks for reading!</p>
 <h2 align="center">Skills</h2>
 
 <ul class="skill-list" align="center">
-   <li>Swift</li>
-	 <li>ARKit</li>
-	 <li>Objective-C</li>
-	 <li>iOS Applications</li>
-	 <li>NodeJS</li>
-	 <li>Python</li>
-	 <li>Javascript</li>
-	<li>Git</li>
+   <li align="center">Swift</li>
+	 <li align="center">ARKit</li>
+	 <li align="center">Objective-C</li>
+	 <li align="center">iOS Applications</li>
+	 <li align="center">NodeJS</li>
+	 <li align="center">Python</li>
+	 <li align="center">Javascript</li>
+	<li align="center">Git</li>
 </ul>
 
 <h2 align="center">Projects</h2>
 
 <ul align="center">
-	<li><a href="https://github.com/chriswebb09/ARKitNavigationDemo">ARKitNavigationDemo</a></li>
-	<li><a href="https://github.com/chriswebb09/ARKitDrone">ARKit Drone</a></li>
-	<li><a href="https://github.com/chriswebb09/ARKitAirport">ARKit Airport</a></li>
-	<li><a href="https://github.com/chriswebb09/podcatcher">PodCatch</a></li>
+	<li align="center"><a href="https://github.com/chriswebb09/ARKitNavigationDemo">ARKitNavigationDemo</a></li>
+	<li align="center"><a href="https://github.com/chriswebb09/ARKitDrone">ARKit Drone</a></li>
+	<li align="center"><a href="https://github.com/chriswebb09/ARKitAirport">ARKit Airport</a></li>
+	<li align="center"><a href="https://github.com/chriswebb09/podcatcher">PodCatch</a></li>
 </ul>
