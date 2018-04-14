@@ -2,7 +2,7 @@
 title: "Creating Delegates in Swift"
 layout: post
 date: 2017-03-28 01:48
-image: /assets/appleswift.png
+image:    https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/Screen%20Shot%202017-03-28%20at%204.07.26%20PM.png
 headerImage: true
 tag:
 - Swift
