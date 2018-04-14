@@ -13,14 +13,10 @@ Thanks for reading!</p>
 <h2>Skills</h2>
 
 <ul>
-   <li>Swift</li>
-	 <li>ARKit</li>
-	 <li>Objective-C</li>
-	 <li>iOS Applications</li>
-	 <li>NodeJS</li>
-	 <li>Python</li>
-	 <li>Javascript</li>
-	 <li>Git</li>
+   <li>Multiple Years Of Experience Programming in Swift and Objective</li>
+	 <li>iOS Application and Architecture Development</li>
+	 <li>Server Side With Javascript on NodeJS and Python on Flask</li>
+	 <li>Python Machine Learning and Data Analysis</li>
 </ul>
 
 <h2>Projects</h2>
