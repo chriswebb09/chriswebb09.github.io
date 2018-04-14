@@ -17,7 +17,7 @@ description: Adventures in Augmented Reality
 
 ## Navigation With Linear Algebra
 
-![](https://cdn-images-1.medium.com/max/281/1*inlJCQcqA542ScuAbxgyrw.gif)
+![]("/assets/images/drone-demo3.gif")
 
 
 [Demo Code](https://github.com/chriswebb09/ARKitNavigationDemo)
