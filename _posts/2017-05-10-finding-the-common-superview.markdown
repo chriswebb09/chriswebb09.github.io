@@ -2,7 +2,7 @@
 title: "Finding The Common Superview"
 layout: post
 date: 2017-05-10 01:48
-image: /assets/images/markdown.jpg
+image: /assets/images/ios_logo_black.png
 headerImage: false
 tag:
 - Swift
