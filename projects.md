@@ -3,7 +3,7 @@ layout: page
 title: Projects
 ---
 ---
-<p class="message">
+<p class="message" align="center">
   The journey of one thousand apps starts with a single key press...
 </p>
 
