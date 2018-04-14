@@ -1,5 +1,5 @@
 ---
-title: "Serving Ourselves! (With Node.js)"
+title: "Serving Ourselves! - With Node.js"
 layout: post
 date: 2017-04-06 01:48
 image: "assets/image/node.png"
@@ -10,7 +10,7 @@ tag:
 - Server
 category: blog
 author: chriswebb
-description: Basic server with NodeJS
+description: "Basic server with NodeJS"
 ---
 
 
