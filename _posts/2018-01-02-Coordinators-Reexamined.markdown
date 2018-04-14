@@ -27,7 +27,7 @@ So it has been a few months since I wrote my previous post on coordinators. In t
 
 And I attended/volunteered at the [try! Swift Conference in New York&nbsp;City](https://medium.com/@jp_pancake/try-swift-nyc-2017-tryswiftnyc-ce3eab349914):
 
-![](https://cdn-images-1.medium.com/max/166/1*PKi25dN31KSAUjlT8SM22g.jpeg)<figcaption>Me</figcaption>
+![](https://cdn-images-1.medium.com/max/166/1*PKi25dN31KSAUjlT8SM22g.jpeg)Me
 
 Along the way I’ve had a chance to explore the concept in greater detail and expirement to find what features have worked for&nbsp;me.
 
@@ -45,7 +45,7 @@ The coordinator pattern is a enterprise software design pattern that has been ad
 
 > You can remove duplication by placing all the flow logic in an Application Controller. Input controllers then ask the Application Controller for the appropriate commands for execution against a model and the correct view to use depending on the application context.> — [Martin&nbsp;Fowler](https://martinfowler.com/eaaCatalog/applicationController.html)
 
-![](https://cdn-images-1.medium.com/max/524/1*j_JHNi6hTI_nZi2G3Or1Ow.gif)<figcaption><a href="https://martinfowler.com/eaaCatalog/applicationController.html">Source</a></figcaption>
+![](https://cdn-images-1.medium.com/max/524/1*j_JHNi6hTI_nZi2G3Or1Ow.gif)<a href="https://martinfowler.com/eaaCatalog/applicationController.html">Source</a>
 
 I like the tl;dr they posted at the top, it’s a pretty succinct definition of what coordinators are trying to accomplish:
 
