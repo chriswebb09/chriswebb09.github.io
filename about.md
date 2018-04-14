@@ -12,7 +12,7 @@ Thanks for reading!</p>
 
 <h2>Skills</h2>
 
-<ul class="skill-list" align="center">
+<ul class="skill-list">
    <li>Swift</li>
 	 <li>ARKit</li>
 	 <li>Objective-C</li>
