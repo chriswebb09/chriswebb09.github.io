@@ -2,8 +2,8 @@
 title: "Coordinators: Re-examined"
 layout: post
 date: 2018-01-02 01:48
-image: /assets/images/markdown.jpg
-headerImage: false
+image: /assets/images/coordinator.png
+headerImage: true
 tag:
 - Swift
 - UIView
