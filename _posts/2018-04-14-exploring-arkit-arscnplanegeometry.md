@@ -1,16 +1,6 @@
 ---
 title: 'Exploring ARKit: ARSCNPlaneGeometry'
 layout: post
-date: 2018-03-28 22:48
-image: /assets/images/ar.png
-headerImage: true
-tag:
-- iOS
-- swift
-- application data
-category: blog
-author: chriswebb
-description: New blog
 ---
 
 ![](/assets/scan.gif)

@@ -1,16 +1,6 @@
 ---
-title: "ARKit Projects"
+title: 'ARKit Projects'
 layout: post
-date: 2016-01-23 22:10
-tag: jekyll
-image: https://koppl.in/indigo/assets/images/jekyll-logo-light-solid.png
-headerImage: true
-projects: true
-hidden: true don't count this post in blog pagination
-description: "This is the page for showcasing ARKit projects."
-category: project
-author: chriswebb
-externalLink: false
 ---
 
 ![Screenshot](https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png)
