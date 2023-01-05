@@ -1,32 +1,116 @@
-title: "Chris Webb"
-author: "Christopher Webb"
-description: "Made with <b style=\"color: #f45;\">&lt;3</b>"
+# main text of home
+title: Chris Webb
+bio: The journey of one thousand apps starts with a single key press...
+
+# twitter summary info
+description: Tech stuff
+
+# if it's an external image, update below for true
+# better with square images
+external-image: false
+picture: assets/images/profile.png
+
+# your site color theme, true for dark theme, 
+# false to light theme, auto to switch with system.
+dark-theme: auto
+
+# If you want to include your resume, set to true
+# and specify source (external or local).
+resume: true
+resume-external: false
+resume-url: /assets/images/christopher-resume.pdf
+
+url: https://chriswebb09.github.io
+
 permalink: /:title/
-lang: "en"
-excerpt_separator: "\n\n\n"
-date_format: "%B %d, %Y"
 
-# Layout
+# To enable google analytics, supply your token below
+# analytics-google: 'UA-MYANALYTICS'
 
-show_excerpts: true        # show article excerpts on the home page
-show_frame: true           # adds a gray frame to the site
-show_sidebar: false        # show a sidebar instead of the usual header
-minimal: false             # use a dark header
+# if you don't want comments in your posts, leave categories empty
+disqus:
+  shortname:  # enter this from your disqus account
+  categories: # only show disqus for posts that have these categories
 
-# Menu
+# if you don't have any of social below, comment the line
+medium: chris.webb5249
+linkedin: christopher-webb-orenstein
+github: chriswebb09
+email: chris.webb5249@gmail.com
 
-navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html"}
-  - {file: "about.md"}
+authors:
+  chriswebb:
+    name: Chris Webb
+    bio: The journey of one thousand apps starts with a single key press...
+    external-image: false
+    picture: assets/images/profile.jpg
 
-external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:niklasbuschmann@users.noreply.github.com"}
-  - {title: Github, icon: github, url: "https://github.com/niklasbuschmann/contrast"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+# do you want a larger site? change the option below
+# options: [normal, large] | default: normal
+# normal = 560px / large = 810px
+width: large
 
-comments:
-#  disqus_shortname: ""    # see https://disqus.com/
-#  isso_domain: ""         # see https://posativ.org/isso/
+# if you do/don't need pagination, toggle 'enabled' between true/false below
+pagination:
+  enabled: false
+  sort_reverse: true # display recent posts first
+  title: ":title" # Changing this will mess up the header display logic
+  per_page: 5
+  permalink: "/:num/" # pagination link that will be appended
+
+# if you don't need projects, comment the *projects* configs below
+projects: true
+
+# if you don't need "about" or "blog", comment them out below
+about: true
+blog: true
+
+# do you want to show the "read time" of the posts?
+read-time: true
+
+# do you want to show the "tags" inside the posts?
+show-tags: true
+
+# related posts inside a post?
+related: true
+
+# Display links for next and previous posts for the specified categories
+post-advance-links: [blog]
+
+# show author block at the end of a post ?
+show-author: true
+
+# do you want some animations?
+animation: true
+
+# add default values to specific pages or layouts
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      layout: "post"
+    values:
+      # setting all post to not hidden by default,
+      # can be overridden in the front matter for a specific post
+      hidden: false
 
 plugins:
- - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-paginate-v2
+
+compress_html:
+  ignore:
+    envs:
+      - development
+      - stage
+
+exclude:
+  [
+    "README.md",
+    "Gemfile",
+    "Gemfile.lock",
+    "FAQ.md",
+    "vendor",
+  ]
