@@ -13,8 +13,10 @@ description: ARKit Scene Geometry
 ---
 
  
+ 
 
-![](/assets/scan.gif)
+
+<p align="center"><img src="/assets/scan.gif"></p>
 
 If you’ve heard, Apple’ recently released a major update to ARKit, which it has dubbed ARKit 1.5. While much of the focus has been on the new vertical plane detection capabilities, which had been a glaring omission from ARKit’s initial release, much less has been said about other new plane detection features. Lost in among all the excitement were some deeply powerful new features. It’s arguable that the coolest features in Apple’s ARKit release are the the ones that have barely been mentioned.
 
@@ -50,7 +52,6 @@ Regardless, this is huge. For years people have talked about this moment when pe
 
 To begin with, we were already headed here, with or without the latest update to plane geometry. Apple’s has reportedly been looking to add back facing 3D cameras to its next iPhone models to enhance augmented reality, so this is just a preview of what we are likely to see this summer. It’s also not exactly the smoothest user experience and to get objects fully detected would be time-consuming. But, it looks like there is a lot to look forward to this summer! If I had to guess, Apple might be rolling out usable surface detection for all types of surfaces/shapes. Let’s hope that 2018 sees the end of all occlusion dilemmas in ARKit as well!
 
-=====
 
 # Setup
 
