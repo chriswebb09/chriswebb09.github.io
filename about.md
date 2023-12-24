@@ -12,7 +12,7 @@ layout: page
 - 🔭 I’m currently working at Columbia University
 - 🌱 I’m currently learning more on React
 - 💬 Ask me about **Swift, Javascript and Python**
-- 📫 How to reach me: [LinkedIn](http://www.linkedin.com/in/christopher-webb-orenstein/) on LinkedIn
+- 📫 How to reach me: [LinkedIn](http://www.linkedin.com/in/christopher-webb-orenstein/).
 
 <h2>Skills</h2>
 
