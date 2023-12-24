@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:ital,wght@0,300;0,600;1,500&family=Roboto:wght@300;400&family=Work+Sans:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name=author content="Chris Webb">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ARKit and CoreLocation: Part Two | Chris Webb</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="ARKit and CoreLocation: Part Two" />
+<meta name="author" content="chriswebb" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="ARKit and CoreLocation: Part Two" />
+<meta property="og:description" content="ARKit and CoreLocation: Part Two" />
+<link rel="canonical" href="http://localhost:4000/arkit-corelocation-part-two/" />
+<meta property="og:url" content="http://localhost:4000/arkit-corelocation-part-two/" />
+<meta property="og:site_name" content="Chris Webb" />
+<meta property="og:image" content="http://localhost:4000/assets/images/ARKit.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-08-20T01:48:00-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/ARKit.png" />
+<meta property="twitter:title" content="ARKit and CoreLocation: Part Two" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"chriswebb"},"dateModified":"2017-08-20T01:48:00-04:00","datePublished":"2017-08-20T01:48:00-04:00","description":"ARKit and CoreLocation: Part Two","headline":"ARKit and CoreLocation: Part Two","image":"http://localhost:4000/assets/images/ARKit.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/arkit-corelocation-part-two/"},"url":"http://localhost:4000/arkit-corelocation-part-two/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+
+    <link rel="canonical" href="http://localhost:4000/arkit-corelocation-part-two/">
+    <link rel="alternate" type="application/rss+xml" title="Chris Webb" href="http://localhost:4000/feed.xml" />
+
+    <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
+
+    <style>
+    
+    
+
+    @charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document ========================================================================== */
+/** 1. Correct the line height in all browsers. 2. Prevent adjustments of font size after orientation changes in iOS. */
+html { line-height: 1.15; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+
+/* Sections ========================================================================== */
+/** Remove the margin in all browsers. */
+body { margin: 0; }
+
+/** Render the `main` element consistently in IE. */
+main { display: block; }
+
+/** Correct the font size and margin on `h1` elements within `section` and `article` contexts in Chrome, Firefox, and Safari. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/* Grouping content ========================================================================== */
+/** 1. Add the correct box sizing in Firefox. 2. Show the overflow in Edge and IE. */
+hr { box-sizing: content-box; /* 1 */ height: 0; /* 1 */ overflow: visible; /* 2 */ }
+
+/** 1. Correct the inheritance and scaling of font size in all browsers. 2. Correct the odd `em` font sizing in all browsers. */
+pre { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
+
+/* Text-level semantics ========================================================================== */
+/** Remove the gray background on active links in IE 10. */
+a { background-color: transparent; }
+
+/** 1. Remove the bottom border in Chrome 57- 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
+abbr[title] { border-bottom: none; /* 1 */ text-decoration: underline; /* 2 */ text-decoration: underline dotted; /* 2 */ }
+
+/** Add the correct font weight in Chrome, Edge, and Safari. */
+b, strong { font-weight: bolder; }
+
+/** 1. Correct the inheritance and scaling of font size in all browsers. 2. Correct the odd `em` font sizing in all browsers. */
+code, kbd, samp { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
+
+/** Add the correct font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` elements from affecting the line height in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+/* Embedded content ========================================================================== */
+/** Remove the border on images inside links in IE 10. */
+img { border-style: none; }
+
+/* Forms ========================================================================== */
+/** 1. Change the font styles in all browsers. 2. Remove the margin in Firefox and Safari. */
+button, input, optgroup, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 1 */ line-height: 1.15; /* 1 */ margin: 0; /* 2 */ }
+
+/** Show the overflow in IE. 1. Show the overflow in Edge. */
+button, input { /* 1 */ overflow: visible; }
+
+/** Remove the inheritance of text transform in Edge, Firefox, and IE. 1. Remove the inheritance of text transform in Firefox. */
+button, select { /* 1 */ text-transform: none; }
+
+/** Correct the inability to style clickable types in iOS and Safari. */
+button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; }
+
+/** Remove the inner border and padding in Firefox. */
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; }
+
+/** Restore the focus styles unset by the previous rule. */
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; }
+
+/** Correct the padding in Firefox. */
+fieldset { padding: 0.35em 0.75em 0.625em; }
+
+/** 1. Correct the text wrapping in Edge and IE. 2. Correct the color inheritance from `fieldset` elements in IE. 3. Remove the padding so developers are not caught out when they zero out `fieldset` elements in all browsers. */
+legend { box-sizing: border-box; /* 1 */ color: inherit; /* 2 */ display: table; /* 1 */ max-width: 100%; /* 1 */ padding: 0; /* 3 */ white-space: normal; /* 1 */ }
+
+/** Add the correct vertical alignment in Chrome, Firefox, and Opera. */
+progress { vertical-align: baseline; }
+
+/** Remove the default vertical scrollbar in IE 10+. */
+textarea { overflow: auto; }
+
+/** 1. Add the correct box sizing in IE 10. 2. Remove the padding in IE 10. */
+[type="checkbox"], [type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** Correct the cursor style of increment and decrement buttons in Chrome. */
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height: auto; }
+
+/** 1. Correct the odd appearance in Chrome and Safari. 2. Correct the outline style in Safari. */
+[type="search"] { -webkit-appearance: textfield; /* 1 */ outline-offset: -2px; /* 2 */ }
+
+/** Remove the inner padding in Chrome and Safari on macOS. */
+[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** 1. Correct the inability to style clickable types in iOS and Safari. 2. Change font properties to `inherit` in Safari. */
+::-webkit-file-upload-button { -webkit-appearance: button; /* 1 */ font: inherit; /* 2 */ }
+
+/* Interactive ========================================================================== */
+/* Add the correct display in Edge, IE 10+, and Firefox. */
+details { display: block; }
+
+/* Add the correct display in all browsers. */
+summary { display: list-item; }
+
+/* Misc ========================================================================== */
+/** Add the correct display in IE 10+. */
+template { display: none; }
+
+/** Add the correct display in IE 10. */
+[hidden] { display: none; }
+
+.highlight .c { color: #999988; font-style: italic; }
+.highlight .err { color: #a61717; background-color: #e3d2d2; }
+.highlight .k { font-weight: bold; }
+.highlight .o { font-weight: bold; }
+.highlight .cm { color: #999988; font-style: italic; }
+.highlight .cp { color: #999999; font-weight: bold; }
+.highlight .c1 { color: #999988; font-style: italic; }
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic; }
+.highlight .gd { color: #000000; background-color: #ffdddd; }
+.highlight .gd .x { color: #000000; background-color: #ffaaaa; }
+.highlight .ge { font-style: italic; }
+.highlight .gr { color: #aa0000; }
+.highlight .gh { color: #999999; }
+.highlight .gi { color: #000000; background-color: #ddffdd; }
+.highlight .gi .x { color: #000000; background-color: #aaffaa; }
+.highlight .go { color: #888888; }
+.highlight .gp { color: #555555; }
+.highlight .gs { font-weight: bold; }
+.highlight .gu { color: #800080; font-weight: bold; }
+.highlight .gt { color: #aa0000; }
+.highlight .kc { font-weight: bold; }
+.highlight .kd { font-weight: bold; }
+.highlight .kn { font-weight: bold; }
+.highlight .kp { font-weight: bold; }
+.highlight .kr { font-weight: bold; }
+.highlight .kt { color: #445588; font-weight: bold; }
+.highlight .m { color: #009999; }
+.highlight .s { color: #dd1144; }
+.highlight .n { color: #333333; }
+.highlight .na { color: teal; }
+.highlight .nb { color: #0086b3; }
+.highlight .nc { color: #445588; font-weight: bold; }
+.highlight .no { color: teal; }
+.highlight .ni { color: purple; }
+.highlight .ne { color: #990000; font-weight: bold; }
+.highlight .nf { color: #990000; font-weight: bold; }
+.highlight .nn { color: #555555; }
+.highlight .nt { color: navy; }
+.highlight .nv { color: teal; }
+.highlight .ow { font-weight: bold; }
+.highlight .w { color: #bbbbbb; }
+.highlight .mf { color: #009999; }
+.highlight .mh { color: #009999; }
+.highlight .mi { color: #009999; }
+.highlight .mo { color: #009999; }
+.highlight .sb { color: #dd1144; }
+.highlight .sc { color: #dd1144; }
+.highlight .sd { color: #dd1144; }
+.highlight .s2 { color: #dd1144; }
+.highlight .se { color: #dd1144; }
+.highlight .sh { color: #dd1144; }
+.highlight .si { color: #dd1144; }
+.highlight .sx { color: #dd1144; }
+.highlight .sr { color: #009926; }
+.highlight .s1 { color: #dd1144; }
+.highlight .ss { color: #990073; }
+.highlight .bp { color: #999999; }
+.highlight .vc { color: teal; }
+.highlight .vg { color: teal; }
+.highlight .vi { color: teal; }
+.highlight .il { color: #009999; }
+.highlight .gc { color: #999; background-color: #EAF2F5; }
+
+body, html { font-size: 62.5%; }
+
+body { font: 16px "Open Sans", sans-serif; color: #666; background: #fff; }
+
+h1, h2, h3, h4 { font-family: "Open Sans", sans-serif; color: #222; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+h1 { font-size: 3rem; letter-spacing: -1px; color: #222; font-weight: 700; }
+
+h2 { font-size: 2.2rem; }
+
+h3 { font-size: 2rem; }
+
+h4 { font-size: 1.6rem; }
+
+a { color: #4b0082; text-decoration: underline; font-weight: 300; }
+
+p { line-height: 1.7; color: #666; font-weight: 300; margin-bottom: 20px; letter-spacing: 0.4px; }
+@media only screen and (max-width: 400px) { p { letter-spacing: 0.2px; } }
+
+strong { font-weight: 400; color: #000; }
+
+ul li, ol li { line-height: 2.4rem; font-weight: 300; color: #666; }
+
+img, pre, iframe { max-width: 100%; }
+
+img, pre { border-radius: 4px; }
+
+figcaption { position: relative; top: -20px; left: 0; right: 0; margin: 0 auto; width: 100%; text-align: center; font-size: 1.3rem; color: #aaa; font-weight: 300; }
+@media only screen and (max-width: 400px) { figcaption { font-size: 1.2rem; } }
+
+blockquote { padding-left: 15px; border-left: 3px solid #eee; }
+
+hr { border: none; height: 1px; margin: 40px auto; background: #eee; width: 100%; }
+
+figure.highlight { width: 100%; margin: 0; }
+
+code { padding: 2px 3px; font-family: "Consolas", Liberation Mono, Menlo, Courier, monospace; font-size: 12px; vertical-align: middle; background: #eee; border-radius: 2px; }
+
+pre > code, tt { padding: 1px 0; font-family: "Consolas", Liberation Mono, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; background: #fff; border-radius: 2px; }
+
+pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10px; font-family: "Consolas", Liberation Mono, Menlo, Courier, monospace; font-size: 1.2rem; line-height: 2rem; overflow: auto; background: #fff; border: 1px solid #ededed; border-radius: 2px; }
+
+.wrapper-normal, .wrapper-large { height: 100%; width: 96%; margin: 0 auto; }
+@media only screen and (max-width: 400px) { .wrapper-normal, .wrapper-large { width: 88%; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .wrapper-normal, .wrapper-large { width: 88%; } }
+
+.wrapper-normal { max-width: 560px; }
+
+.wrapper-large { max-width: 810px; }
+
+/* general helpers */
+.text-center { text-align: center; }
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+
+.clearfix:after { clear: both; }
+
+/* animations */
+.animated { animation: fade-in-down 0.6s; animation-delay: 0.3s; animation-fill-mode: both; }
+
+@keyframes fade-in-down { 0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); } }
+.home, .blog, .projects { margin-top: 125px; }
+.home > .list, .blog > .list, .projects > .list { border-top: 1px solid #ededed; margin-top: 30px; padding-top: 40px; position: relative; }
+.home > .list:before, .blog > .list:before, .projects > .list:before { display: block; content: " "; width: 7px; height: 7px; border: #ededed 1px solid; position: absolute; top: -5px; left: 50%; margin-left: -5px; background: #fff; box-shadow: #fff 0 0 0 5px; border-radius: 3px; }
+
+.home > .list > .item, .blog > .list > .item, .projects > .list > .item { display: block; width: 95%; margin: 0 auto; }
+.home > .list > .item > .url, .blog > .list > .item > .url, .projects > .list > .item > .url { width: 100%; display: block; padding: 20px 0; text-decoration: none; }
+.home > .list > .item > .url > .title, .blog > .list > .item > .url > .title, .projects > .list > .item > .url > .title { margin: 0; width: 75%; font-weight: 500; transition: all ease-in-out 0.2s; }
+.home > .list > .item:hover > .url > .title, .blog > .list > .item:hover > .url > .title, .projects > .list > .item:hover > .url > .title { color: #4b0082; }
+.home > .list aside, .blog > .list aside, .projects > .list aside { position: relative; top: 2px; margin: 0; width: 25%; float: right; font-weight: 300; color: #aaa; text-align: right; transition: all ease-in-out 0.2s; }
+.home > .list .item:hover .url aside, .blog > .list .item:hover .url aside, .projects > .list .item:hover .url aside { color: #666; }
+
+.blog > .list > .item > .url > .title, .projects > .list > .item > .url > .title { display: inline; }
+.blog > .list > .item > .url > .emoji, .projects > .list > .item > .url > .emoji { display: inline; position: relative; top: -4px; margin-right: 10px; }
+
+.page { margin-top: 125px; }
+.page > h1 { text-align: center; margin-bottom: 6rem; }
+
+.about img { width: 50%; margin: 0 auto; display: block; }
+
+.post { margin-top: 125px; }
+.post > .title { text-align: center; margin-bottom: 3rem; }
+.post > .date, .post > .post-tags { color: #aaa; font-weight: 300; font-size: 1.4rem; text-transform: uppercase; text-align: center; display: block; margin-bottom: 6rem; letter-spacing: 1px; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.post > .date { margin-bottom: 2rem; }
+.post > .post-tags > .item { padding: 2px 8px; border-radius: 3px; font-size: 1.1rem; background: #ededed; color: #666; letter-spacing: 1px; margin: 3px 1px; text-decoration: none; display: inline-block; }
+.post > h2, .post > h3, .post > h4 { margin-top: 40px; }
+.post > h2 a, .post > h3 a, .post > h4 a { text-decoration: none; }
+.post > .title-image { max-height: 120px; display: block; margin: 0 auto; }
+.post > .blog-navigation { font-size: 1.4rem; display: block; width: auto; overflow: hidden; }
+.post > .blog-navigation a { display: block; width: 50%; float: left; margin: 1em 0; }
+.post > .blog-navigation .next { text-align: right; }
+
+.tags { margin-top: 125px; }
+.tags > .list { border-top: 1px solid #ededed; margin-top: 30px; padding-top: 40px; position: relative; }
+.tags > .list:before { display: block; content: " "; width: 7px; height: 7px; border: #ededed 1px solid; position: absolute; top: -5px; left: 50%; margin-left: -5px; background: #fff; box-shadow: #fff 0 0 0 5px; border-radius: 3px; }
+
+.tags > .list > .item { font-weight: 300; text-transform: uppercase; text-align: center; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; padding: 3px 9px; border-radius: 3px; font-size: 1.3rem; background: #ededed; color: #666; letter-spacing: 1px; margin: 0 0.5rem 1rem; text-decoration: none; display: inline-block; }
+
+.tag-list > .list { padding: 0; }
+.tag-list > .list > .item { display: block; width: 80%; margin: 0 10%; }
+.tag-list > .list > .item > .url { width: 100%; height: 100%; display: block; padding: 20px 0; text-decoration: none; }
+.tag-list > .list > .item > .url > .title { margin: 0; width: 75%; font-weight: 400; transition: all ease-in-out 0.2s; font-size: 1.6rem; }
+.tag-list > .list > .item:hover > .url > .title { color: #4b0082; }
+.tag-list > .list aside { position: relative; top: 2px; margin: 0; width: 25%; float: right; font-weight: 300; color: #aaa; text-align: right; transition: all ease-in-out 0.2s; font-size: 1.6rem; }
+.tag-list > .list .item:hover .url aside { color: #666; }
+
+.author { padding: 3rem 0; border-bottom: 1px solid #ededed; border-top: 1px solid #ededed; max-width: 100%; margin: 4rem auto 0; }
+.author > .toleft > .selfie { width: 90%; border-radius: 100%; }
+.author > .toright > .name, .author > .toright > .bio { width: 60%; display: inline-block; }
+.author > .toright > .name { font-size: 1.5rem; font-family: "Open Sans", sans-serif; font-weight: 500; margin: 6px 0 0; }
+@media only screen and (max-width: 400px) { .author > .toright > .name { width: 100%; display: block; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .author > .toright > .name { width: 100%; display: block; } }
+.author > .toright > .bio { font-family: "Open Sans", sans-serif; font-weight: 300; color: #aaa; font-size: 1.3rem; text-align: justify; line-height: 1.5; margin: 0; }
+@media only screen and (max-width: 400px) { .author > .toright > .bio { width: 100%; display: block; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .author > .toright > .bio { width: 100%; display: block; } }
+.author > .toleft { width: 10%; display: inline-block; }
+@media only screen and (max-width: 400px) { .author > .toleft { width: 20%; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .author > .toleft { width: 20%; } }
+.author > .toright { width: 89%; display: inline-block; vertical-align: top; }
+@media only screen and (max-width: 400px) { .author > .toright { width: 78%; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .author > .toright { width: 78%; } }
+
+.no-disqus { border-bottom: none; padding-bottom: 0; }
+
+.disqus { margin: 0 auto; max-width: 100%; padding: 40px 0; }
+
+.footer-main { border-top: 1px solid #ededed; padding: 40px 0; margin: 40px 0 0; font-size: 1.3rem; color: #aaa; font-weight: 300; text-align: center; position: relative; }
+.footer-main:before { display: block; content: " "; width: 7px; height: 7px; border: #ededed 1px solid; position: absolute; top: -5px; left: 50%; margin-left: -5px; background: #fff; box-shadow: #fff 0 0 0 5px; border-radius: 3px; }
+.footer-main > .copyright { padding-left: 10px; }
+.footer-main > .link { display: inline; vertical-align: middle; }
+.footer-main > .link > .icon { width: 15px !important; fill: #aaa !important; transition: ease-in-out all 0.3s; position: relative; display: inherit; top: -2px; margin: 0; left: 2px; }
+.footer-main > .link > .icon:hover { fill: #4b0082 !important; }
+.footer-main > .extra { color: #aaa; margin-top: 0; font-weight: 300; }
+.footer-main > .extra > .link { color: #222; text-decoration: none; border-bottom: 1px solid transparent; transition: ease-in-out all 0.3s; padding-bottom: 1px; font-weight: 300; }
+.footer-main > .extra > .link:hover { border-color: #aaa; }
+
+.header-home { display: block; margin: 0 auto; text-align: center; position: relative; z-index: 99; }
+.header-home > .link > .selfie { width: 125px; height: 125px; margin-bottom: 25px; border-radius: 100%; transition: all 0.2s; opacity: 1; }
+.header-home > .link > .selfie:hover { box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.18), 0 0px 12px 0 rgba(0, 0, 0, 0.15); opacity: 0.8; }
+.header-home > .title { font-size: 4rem; margin: 0 0 13px; }
+.header-home > .description { font-size: 1.85rem; font-weight: 300; font-style: normal; color: #aaa; width: 70%; margin: 0 auto 30px; }
+.header-home > .description a { font-weight: 200; }
+
+.nav > .list, .nav-home > .list { list-style: none; margin: 0; padding: 0 13px 0; }
+.nav > .list > .item, .nav-home > .list > .item { display: inline-block; }
+.nav > .list > .item > .link, .nav-home > .list > .item > .link { display: inline-block; font-weight: 300; font-size: 1.4rem; padding: 20px 10px; text-decoration: none; }
+
+.nav { position: absolute; right: 0; top: 0; }
+.nav > .list { padding: 0 13px 0; }
+.nav > .list > .item > .link { font-size: 1.4rem; padding: 20px 10px; }
+
+.nav-home { margin-top: 40px; text-align: center; }
+.nav-home > .list { padding: 0; }
+.nav-home > .list > .item > .link { font-size: 2rem; padding: 7px 15px; margin: 0; border-radius: 4%; transition: all 0.4s ease-in-out; width: 70px; }
+.nav-home > .list > .item > .link:hover { color: #666; }
+
+.evidence { background-image: linear-gradient(to bottom, #27f36a26, #27f36a26); color: #222; }
+
+.star > .url > .title { width: auto !important; display: inline; background-image: linear-gradient(#27f36a26, #27f36a26); }
+
+.twitter-tweet { margin: 10px auto; }
+
+.icon { display: inline-block; width: 17px; height: 17px; fill: #000; text-align: center; color: #aaa; margin: 7px auto; }
+
+.caption { position: relative; top: 1rem; left: 0; right: 0; margin: 0 auto; width: 100%; text-align: center; font-size: 1.3rem; font-weight: 300; }
+
+.bigger-image { min-width: 130%; margin: 5rem 0 5rem -15%; }
+@media only screen and (max-width: 400px) { .bigger-image { min-width: 114%; margin: 2rem 0 2rem -7%; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .bigger-image { min-width: 114%; margin: 2rem 0 2rem -7%; } }
+
+.breaker { height: 1px; margin: 6rem auto; width: 100%; }
+.breaker:before { content: "• • •"; width: 100%; text-align: center; display: block; color: #aaa; letter-spacing: 4px; position: relative; top: -8px; }
+
+.lost-container { text-align: center; }
+
+.pagination { width: 95%; margin: 3rem auto 0; text-align: center; }
+.pagination > .page_number { display: inline-block; font-size: 1.3rem; }
+.pagination > .previous, .pagination > .next { display: inline-block; font-size: 1.8rem; position: relative; top: 1px; padding: 1px 9px; }
+.pagination > .hidden { visibility: hidden; }
+
+.related { margin: 10rem 0 0rem; }
+.related a { font-weight: 300; }
+
+.share { float: right; width: 40%; display: inline; text-align: right; position: relative; }
+@media only screen and (max-width: 400px) { .share { width: 100%; display: block; top: 0; text-align: left; float: none; margin-top: 5px; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .share { width: 100%; display: block; top: 0; text-align: left; float: none; margin-top: 5px; } }
+.share > .twitter, .share > .facebook, .share > .linkedin { display: inline; vertical-align: middle; font-size: 13px; font-weight: 700; color: #fff; padding: 6px 10px; border-radius: 3px; margin-left: 5px; text-decoration: none; }
+@media only screen and (max-width: 400px) { .share > .twitter, .share > .facebook, .share > .linkedin { margin: 0 5px 10px 0; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .share > .twitter, .share > .facebook, .share > .linkedin { margin: 0 5px 10px 0; } }
+.share > .twitter { background: #4fafed; }
+.share > .facebook { background: #4361b3; }
+.share > .linkedin { background: #0077b5; }
+.share svg { fill: #fff; position: relative; top: 0; margin: 0; margin-right: 4px; display: inherit; }
+
+@media only screen and (min-width: 780px) { .side-by-side { width: 130%; margin: 6rem 0 6rem -15%; } }
+@media only screen and (max-width: 780px) { .side-by-side { width: 100%; margin: 4rem 0; } }
+.side-by-side > .toleft, .side-by-side > .toright { display: inline-block; width: 47.5%; }
+@media only screen and (max-width: 780px) { .side-by-side > .toleft img, .side-by-side > .toright img { text-align: center; display: block; margin: 0 auto; } }
+@media only screen and (min-width: 780px) { .side-by-side > .toleft { margin-right: 2%; } }
+@media only screen and (max-width: 780px) { .side-by-side > .toleft { width: 100%; margin: 0 0 4rem 0; } }
+@media only screen and (min-width: 780px) { .side-by-side > .toright { margin-left: 2%; vertical-align: top; } }
+@media only screen and (max-width: 780px) { .side-by-side > .toright { width: 100%; margin: 0 0 4rem 0; } }
+.side-by-side > .toleft > p, .side-by-side > .toright > p { margin: 0 0 4rem 0; }
+@media only screen and (max-width: 780px) { .side-by-side > .toleft > p, .side-by-side > .toright > p { margin: 0; } }
+
+.social-links > .link { margin: 0; text-decoration: none; position: relative; display: inline-block; height: 35px; width: 35px; color: #000; }
+.social-links > .link:hover > svg { color: #4b0082; }
+.social-links > svg { transition: all ease-in-out 0.2s; }
+
+.spoiler { position: relative; }
+.spoiler:before { content: ""; background-color: #fafae0; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 50; }
+.spoiler:hover:before { display: none; }
+
+    </style>
+
+</head>
+<body>
+    <div class="wrapper-large">
+        
+            <div class="post">
+        
+
+            
+
+
+
+<nav class="nav">
+    <ul class="list">
+        
+            <li class="item">
+                <a class="link" href="http://localhost:4000/">Home</a>
+            </li>
+        
+
+        
+            
+                <li class="item">
+                    <a class="link" href="http://localhost:4000/blog">Blog</a>
+                </li>
+            
+        
+
+        
+            
+                <li class="item">
+                    <a class="link" href="http://localhost:4000/projects">Projects</a>
+                </li>
+            
+        
+
+        
+            
+                <li class="item">
+                    <a class="link" href="http://localhost:4000/about">About</a>
+                </li>
+            
+        
+
+        
+            <li class="item">
+                <a class="link" href="http://localhost:4000//assets/images/christopher-resume.pdf">Résumé</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+
+
+
+<h1 class="title">ARKit and CoreLocation: Part Two</h1>
+
+<span class="date">
+    <time datetime="20-08-2017">Sunday. August 20, 2017</time>
+     - <span class="reading-time" title="Estimated read time">
+    
+
+    
+        14 mins
+    
+</span>
+
+</span>
+
+
+    <div class="post-tags">
+        
+            <a class="item" href="http://localhost:4000/tags/#swift">Swift</a>
+        
+            <a class="item" href="http://localhost:4000/tags/#uiview">UIView</a>
+        
+            <a class="item" href="http://localhost:4000/tags/#ios">iOS</a>
+        
+            <a class="item" href="http://localhost:4000/tags/#arkit">ARKit</a>
+        
+            <a class="item" href="http://localhost:4000/tags/#core-location">Core Location</a>
+        
+    </div>
+
+
+<h2 id="navigation-with-linear-algebra">Navigation With Linear Algebra</h2>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*d1q0THvPu5mTH9_9U2T6Hg.gif" alt="" /></p>
+
+<p>Demo Code</p>
+
+<p>ARKit and CoreLocation: Part One</p>
+
+<p>ARKit and CoreLocation: Part Two</p>
+
+<p>ARKit and CoreLocation: Part Three</p>
+
+<h3 id="maths-and-calculating-bearing-between-coordinates">Maths and Calculating Bearing Between Coordinates</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/704/1*GgodwdTWvPkNw53Etw49mA.png" alt="" />&lt;figcaption&gt;<a href="https://www.khanacademy.org/math/precalculus/trig-equations-and-identities-precalc">Source</a>&lt;/figcaption&gt;</p>
+
+<p><em>If you haven’t had a chance, checkout</em> <a href="https://dev.to/chriswebb09/arkit-and-corelocation-part-one-gij-temp-slug-4475628"><strong><em>part one</em></strong></a><em> first.</em></p>
+
+<p>Now we need to figure out how to get the bearing (the angle) between two coordinates. Finding the bearing set us up to create a rotation transformation to orient our node in the proper direction.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/500/1*_NesYbqz4HqX-it5ieB0Lw.png" alt="" />&lt;figcaption&gt;<a href="https://betterexplained.com/wp-content/uploads/angles/degrees_vs_radians.png">Source</a>&lt;/figcaption&gt;</p>
+
+<h4 id="definition">Definition</h4>
+
+<p><strong>radian:</strong> The <strong>radian</strong> is a unit of angular measure defined such that an angle of one <strong>radian</strong> subtended from the center of a unit circle produces an arc with arc length 1. One radian is equal to 180/π degrees so to convert from radians to degrees, multiply by 180/π.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/252/1*qTGgCClcy08LejChY6X35Q.gif" alt="" /></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">extension</span> <span class="kt">Double</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">toRadians</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Double</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">self</span> <span class="o">*</span> <span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">180.0</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">toDegrees</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Double</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">self</span> <span class="o">*</span> <span class="mf">180.0</span> <span class="o">/</span> <span class="o">.</span><span class="n">pi</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h4 id="haversine">Haversine</h4>
+
+<p>One of the drawbacks of the Haversine formula is that it can get less accurate over longer distances. If we were designing a navigation system for a commercial airliner that might be a problem, but it is unlikely that the distances will be long enough to make a difference for an ARKit demo.</p>
+
+<h4 id="definition-1">Definition</h4>
+
+<p><strong>Azimuth:</strong> is a angular measurement on spherical coordinate system.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/440/1*xHKkiU8ExCzAU7PaO0eMKw.png" alt="" />&lt;figcaption&gt;Spherical triangle solved by the law of haversines — <a href="https://en.wikipedia.org/wiki/Haversine_formula">source</a>&lt;/figcaption&gt;</p>
+
+<blockquote>
+  <p>If you have two different latitude — longitude values of two different point on earth, then with the help of <strong>Haversine Formula</strong> , you can easily compute the great-circle distance (The shortest distance between two points on the surface of a Sphere).</p>
+</blockquote>
+
+<p>— <a href="http://www.movable-type.co.uk/scripts/latlong.html">Movable-Type</a></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/596/1*ollegMltPGgZfsDNGdC_Dg.png" alt="" />&lt;figcaption&gt;Great circle distance — <a href="https://en.wikipedia.org/wiki/Great-circle_distance">source</a>&lt;/figcaption&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sin = opposite/hypotenuse
+
+cos = adjacent/hypotenuse
+
+tan = opposite/adjacent
+</code></pre></div></div>
+
+<p><strong>atan2:</strong> An arctangent or inverse tangent function with two arguments.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tan 30 = 0.577
+
+Means: The tangent of 30 degrees is 0.577
+
+arctan 0.577 = 30
+
+Means: The angle whose tangent is 0.577 is 30 degrees.
+</code></pre></div></div>
+
+<p><img src="https://cdn-images-1.medium.com/max/554/1*hPuVkyMJNrd41pFHj7r2Fw.png" alt="" /></p>
+
+<h4 id="keys">Keys</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>‘R’ is the radius of Earth
+
+‘L’ is the longitude
+
+‘θ’ is latitude
+
+‘β‘ is bearing
+
+‘∆‘ is delta / change in
+</code></pre></div></div>
+<blockquote>
+  <p>In general, your current heading will vary as you follow a great circle path (orthodrome); the final heading will differ from the initial heading by varying degrees according to distance and latitude (if you were to go from say 35°N,45°E (≈ Baghdad) to 35°N,135°E (≈ Osaka), you would start on a heading of 60° and end up on a heading of 120°!).&gt; This formula is for the initial bearing (sometimes referred to as forward azimuth) which if followed in a straight line along a great-circle arc will take you from the start point to the end point</p>
+  <h4 id="formula">Formula</h4>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>β = atan2(X,Y)
+
+where, X and Y are two quantities and can be calculated as:
+
+X = cos θb * sin ∆L
+
+Y = cos θa * sin θb — sin θa * cos θb * cos ∆L
+</code></pre></div></div>
+
+<script src="https://gist.github.com/https://gist.github.com/chriswebb09/cb77fdaad1fa09551e523f79de5d416d.js"> </script>
+
+<h3 id="getting-coordinates-fordistance">Getting Coordinates For Distance</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/226/1*dlgcCYgkhmbFgRpHrvO8jA.png" alt="" /></p>
+
+<p>While <a href="https://developer.apple.com/documentation/mapkit/mkroute"><strong>MKRoute</strong></a> gives us a good framework for building an ARKit navigation experience, the steps along the route can be space far enough apart that it ruins the experience. To mitigate this we need to iterate through our steps and generate coordinate for distance intervals between them.</p>
+
+<blockquote>
+  <p>Given a start point, initial bearing, and distance, this will calculate the destina­tion point and final bearing travelling along a (shortest distance) great circle arc.
+```
+‘d‘ being the distance travelled</p>
+</blockquote>
+
+<p>‘R’ is the radius of Earth</p>
+
+<p>‘L’ is the longitude</p>
+
+<p>‘φ’ is latitude</p>
+
+<p>‘θ‘ is bearing (clockwise from north)</p>
+
+<p>‘δ‘ is the angular distance d/R</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+#### Formula
+
+</code></pre></div></div>
+<p>φ2 = asin( sin φ1 ⋅ cos δ + cos φ1 ⋅ sin δ ⋅ cos θ )</p>
+
+<p>L2 = L1 + atan2( sin θ ⋅ sin δ ⋅ cos φ1, cos δ − sin φ1 ⋅ sin φ2 )</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+&lt;figure class="highlight"&gt;&lt;pre&gt;&lt;code class="language-swift" data-lang="swift"&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;metersPerRadianLat&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;Double&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;6373000.0&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;metersPerRadianLon&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;Double&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;5602900.0&lt;/span&gt;
+
+&lt;span class="kd"&gt;extension&lt;/span&gt; &lt;span class="kt"&gt;CLLocationCoordinate2D&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+  &lt;span class="c1"&gt;// adapted from https://github.com/ProjectDent/ARKit-CoreLocation/blob/master/ARKit%2BCoreLocation/Source/CLLocation%2BExtensions.swift&lt;/span&gt;
+
+    &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;coordinate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;bearing&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;Double&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;and&lt;/span&gt; &lt;span class="nv"&gt;distance&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;Double&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="kt"&gt;CLLocationCoordinate2D&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+        &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;distRadiansLat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;distance&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;metersPerRadianLat&lt;/span&gt;  &lt;span class="c1"&gt;// earth radius in meters latitude&lt;/span&gt;
+        &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;distRadiansLong&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;distance&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;metersPerRadianLon&lt;/span&gt; &lt;span class="c1"&gt;// earth radius in meters longitude&lt;/span&gt;
+
+        &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;lat1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;latitude&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;toRadians&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;lon1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;longitude&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;toRadians&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+        &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;lat2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nf"&gt;asin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lat1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nf"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;distRadiansLat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nf"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lat1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nf"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;distRadiansLat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nf"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bearing&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;lon2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;lon1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nf"&gt;atan2&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bearing&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nf"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;distRadiansLong&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nf"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lat1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="nf"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;distRadiansLong&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="nf"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lat1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nf"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lat2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kt"&gt;CLLocationCoordinate2D&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;latitude&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;lat2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;toDegrees&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="nv"&gt;longitude&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;lon2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;toDegrees&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;   
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+### Three Dimensional Transformations
+
+</code></pre></div></div>
+<p>matrix × matrix = combined matrix</p>
+
+<p>matrix × coordinate = transformed coordinate</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Intuitively, it might seem obvious that three dimensions should be represented in [3x3] matrices ([x, y, z]). However there is an extra matrix row, so three-dimensional graphic use [4x4] matrices: [x, y, z,&amp;nbsp;w].
+
+#### Really…W?
+
+Yup W. This fourth dimension is called “projective space,” and the coordinates in the projective space are called “homogeneous coordinates.” When w is equal to 1, it does not affect x, y or z because the vector is a position in space. When W=0, the coordinate represents a point at infinity (a vector with infinite length) which is used to represent a direction.
+
+#### Rotation Matrix
+
+To get our objects points in the right direction we need to implement a rotation transformation.
+
+&gt; A rotation transformation rotates a vector around the origin _(0,0,0)_ using a given _axis_ and&amp;nbsp;_angle_
+
+![](https://cdn-images-1.medium.com/max/204/1*71mr0tiJmZNpy3VJCWczpw.png)
+
+
+&lt;figure class="highlight"&gt;&lt;pre&gt;&lt;code class="language-swift" data-lang="swift"&gt;&lt;span class="kd"&gt;import&lt;/span&gt; &lt;span class="kt"&gt;GLKit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="kt"&gt;GLKMatrix4&lt;/span&gt;
+&lt;span class="kd"&gt;import&lt;/span&gt; &lt;span class="kt"&gt;SceneKit&lt;/span&gt;
+
+&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="kt"&gt;MatrixHelper&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+    &lt;span class="c1"&gt;//    column 0  column 1  column 2  column 3&lt;/span&gt;
+    &lt;span class="c1"&gt;//        cosθ      0       sinθ      0    &lt;/span&gt;
+    &lt;span class="c1"&gt;//         0        1         0       0    &lt;/span&gt;
+    &lt;span class="c1"&gt;//       −sinθ      0       cosθ      0    &lt;/span&gt;
+    &lt;span class="c1"&gt;//         0        0         0       1    &lt;/span&gt;
+
+    &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;rotateAroundY&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;matrix&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;matrix_float4x4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;degrees&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;Float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;matrix_float4x4&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;matrix&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;matrix_float4x4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;matrix&lt;/span&gt;
+
+        &lt;span class="n"&gt;matrix&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nf"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;degrees&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;matrix&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nf"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;degrees&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="n"&gt;matrix&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nf"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;degrees&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;matrix&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nf"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;degrees&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;matrix&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inverse&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+Most rotations in with 3D graphics and ARKit in particular revolve around the camera transform. However, we’re not concerned about placing our object in relation to the POV, we are interested in placing it in relation to our current location and rotate based on the&amp;nbsp;compass.
+
+#### Translation Matrix
+&gt; Rotation and scaling transformation matrices only require three columns. But, in order to do translation, the matrices need to have at least four columns. This is why transformations are often 4x4 matrices. However, a matrix with four columns can not be multiplied with a 3D vector, due to the rules of matrix multiplication. A four-column matrix can only be multiplied with a four-element vector, which is why we often use homogeneous 4D vectors instead of 3D&amp;nbsp;vectors.
+
+![](https://cdn-images-1.medium.com/max/221/1*9XT1QlNvlvjOS9VGOeydpg.png)
+
+
+&lt;figure class="highlight"&gt;&lt;pre&gt;&lt;code class="language-swift" data-lang="swift"&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="kt"&gt;MatrixHelper&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+    &lt;span class="c1"&gt;//    column 0  column 1  column 2  column 3&lt;/span&gt;
+    &lt;span class="c1"&gt;//         1        0         0       X          x        x + X*w &lt;/span&gt;
+    &lt;span class="c1"&gt;//         0        1         0       Y      x   y    =   y + Y*w &lt;/span&gt;
+    &lt;span class="c1"&gt;//         0        0         1       Z          z        z + Z*w &lt;/span&gt;
+    &lt;span class="c1"&gt;//         0        0         0       1          w           w    &lt;/span&gt;
+
+    &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;translationMatrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;translation&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;vector_float4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;matrix_float4x4&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;matrix&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;matrix_identity_float4x4&lt;/span&gt;
+        &lt;span class="n"&gt;matrix&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;translation&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;matrix&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+### Putting It All&amp;nbsp;Together
+
+#### Combining Matrix Transforms
+
+The order in which you combine your transforms matters. When you combine your transforms you should do so in following order:
+
+</code></pre></div></div>
+<p>Transform = Scaling * Rotation * Translation
+```</p>
+
+<h4 id="simd-single-instruction-multipledata">SIMD (Single Instruction Multiple Data)</h4>
+
+<p>So you may have seen simd_mul operation before in regards to matrices. So what is it? It’s pretty straight forward: simd_mul: single instruction multiple data multiplications. In iOS 8 and OS X Yosemite, Apple tacked on a library called simd for implementing SIMD (single-instruction, multiple-data) arithmetic for scalars, vectors, and matrices.</p>
+
+<blockquote>
+  <p>Enter <em>simd.h</em>: This built-in library gives us a standard interface for working with 2D, 3D, and 4D vector and matrix operations across various processors on OS X and iOS. It automatically falls back to software routines if the CPU doesn’t natively support the given operation (for example splitting up a 4-lane vector into two 2-lane operations). It also has the bonus of easily transferring data between the GPU and CPU using Metal.&gt; SIMD is a technology that spans the gap between GPU shaders and old-fashioned CPU instructions, allowing the CPU to issue a single instruction that crunches chunks of data in parallel&gt; — <a href="http://www.russbishop.net/swift-2-simd">www.russbishop.net</a></p>
+</blockquote>
+
+<p>So when you see sims_mul being performed, that’s what it means. One thing you should note: <strong>simd_mul</strong> performs operations in the right to left order.</p>
+
+<script src="https://gist.github.com/https://gist.github.com/chriswebb09/3405c42c17bb768ba5cb6c42ba4c7c48.js"> </script>
+
+<h3 id="creating-our-scnnodesubclass">Creating Our SCNNode Subclass</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/750/1*lMco_E0NNQ7jFrqKT7Wvsg.jpeg" alt="" /></p>
+
+<p>The next thing we should do is create our node class. We’ll subclass SCNNode and give it a <strong>title</strong> property which is a <em>string</em>, an <strong>anchor</strong> property that is an <strong><em>optional</em></strong> <em>ARAnchor</em> that updates the position when it is set. Finally, we’ll give our BaseNode class a <strong>location</strong> property which is a <em>CLLocation</em>.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">SceneKit</span>
+<span class="kd">import</span> <span class="kt">ARKit</span>
+<span class="kd">import</span> <span class="kt">CoreLocation</span>
+
+<span class="kd">class</span> <span class="kt">BaseNode</span><span class="p">:</span> <span class="kt">SCNNode</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span>
+
+     <span class="k">var</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">ARAnchor</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">didSet</span> <span class="p">{</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">transform</span> <span class="o">=</span> <span class="n">anchor</span><span class="p">?</span><span class="o">.</span><span class="n">transform</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+            <span class="k">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="nf">positionFromTransform</span><span class="p">(</span><span class="n">transform</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">var</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="o">!</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">()</span>
+        <span class="k">let</span> <span class="nv">billboardConstraint</span> <span class="o">=</span> <span class="kt">SCNBillboardConstraint</span><span class="p">()</span>
+        <span class="n">billboardConstraint</span><span class="o">.</span><span class="n">freeAxes</span> <span class="o">=</span> <span class="kt">SCNBillboardAxis</span><span class="o">.</span><span class="kt">Y</span>
+        <span class="n">constraints</span> <span class="o">=</span> <span class="p">[</span><span class="n">billboardConstraint</span><span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">fatalError</span><span class="p">(</span><span class="s">"init(coder:) has not been implemented"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>We’ll need to add methods to create the sphere graphics. We’ll implement something similar to the sphere in part one, but modified for our new conditions. Since we only want text over the spheres from MKRouteStep instructions we should create to methods:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">SceneKit</span>
+<span class="kd">import</span> <span class="kt">ARKit</span>
+<span class="kd">import</span> <span class="kt">CoreLocation</span>
+
+<span class="kd">class</span> <span class="kt">BaseNode</span><span class="p">:</span> <span class="kt">SCNNode</span> <span class="p">{</span>
+
+  <span class="c1">// Basic sphere graphic</span>
+
+   <span class="kd">func</span> <span class="nf">createSphereNode</span><span class="p">(</span><span class="n">with</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SCNNode</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">geometry</span> <span class="o">=</span> <span class="kt">SCNSphere</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="n">radius</span><span class="p">)</span>
+        <span class="n">geometry</span><span class="o">.</span><span class="n">firstMaterial</span><span class="p">?</span><span class="o">.</span><span class="n">diffuse</span><span class="o">.</span><span class="n">contents</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="k">let</span> <span class="nv">sphereNode</span> <span class="o">=</span> <span class="kt">SCNNode</span><span class="p">(</span><span class="nv">geometry</span><span class="p">:</span> <span class="n">geometry</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">trailEmitter</span> <span class="o">=</span> <span class="nf">createTrail</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="n">color</span><span class="p">,</span> <span class="nv">geometry</span><span class="p">:</span> <span class="n">geometry</span><span class="p">)</span>
+        <span class="nf">addParticleSystem</span><span class="p">(</span><span class="n">trailEmitter</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sphereNode</span>
+   <span class="p">}</span>
+
+  <span class="c1">// Add graphic as child node - basic</span>
+
+   <span class="kd">func</span> <span class="nf">addSphere</span><span class="p">(</span><span class="n">with</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="n">and</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">sphereNode</span> <span class="o">=</span> <span class="nf">createSphereNode</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">radius</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="n">color</span><span class="p">)</span>
+        <span class="nf">addChildNode</span><span class="p">(</span><span class="n">sphereNode</span><span class="p">)</span>
+    <span class="p">}</span>
+
+   <span class="c1">// Add graphic as child node - with text</span>
+
+    <span class="kd">func</span> <span class="nf">addNode</span><span class="p">(</span><span class="n">with</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="n">and</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span> <span class="n">and</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">sphereNode</span> <span class="o">=</span> <span class="nf">createSphereNode</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">radius</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="n">color</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">newText</span> <span class="o">=</span> <span class="kt">SCNText</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="nv">extrusionDepth</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">)</span>
+        <span class="n">newText</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="kt">UIFont</span> <span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"AvenirNext-Medium"</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">newText</span><span class="o">.</span><span class="n">firstMaterial</span><span class="p">?</span><span class="o">.</span><span class="n">diffuse</span><span class="o">.</span><span class="n">contents</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">red</span>
+        <span class="k">let</span> <span class="nv">_textNode</span> <span class="o">=</span> <span class="kt">SCNNode</span><span class="p">(</span><span class="nv">geometry</span><span class="p">:</span> <span class="n">newText</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">annotationNode</span> <span class="o">=</span> <span class="kt">SCNNode</span><span class="p">()</span>
+        <span class="n">annotationNode</span><span class="o">.</span><span class="nf">addChildNode</span><span class="p">(</span><span class="n">_textNode</span><span class="p">)</span>
+        <span class="n">annotationNode</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">sphereNode</span><span class="o">.</span><span class="n">position</span>
+        <span class="nf">addChildNode</span><span class="p">(</span><span class="n">sphereNode</span><span class="p">)</span>
+        <span class="nf">addChildNode</span><span class="p">(</span><span class="n">annotationNode</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>When we update our position, we take the anchor’s matrix transform and use the x, y and z values from the last column, which are the values of the position transform.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">BaseNode</span><span class="p">:</span> <span class="kt">SCNNode</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">ARAnchor</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">didSet</span> <span class="p">{</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">transform</span> <span class="o">=</span> <span class="n">anchor</span><span class="p">?</span><span class="o">.</span><span class="n">transform</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+            <span class="k">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="nf">positionFromTransform</span><span class="p">(</span><span class="n">transform</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Setup</span>
+
+    <span class="kd">func</span> <span class="nf">positionFromTransform</span><span class="p">(</span><span class="n">_</span> <span class="nv">transform</span><span class="p">:</span> <span class="n">matrix_float4x4</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SCNVector3</span> <span class="p">{</span>
+
+           <span class="c1">//    column 0  column 1  column 2  column 3</span>
+           <span class="c1">//         1        0         0       X       </span>
+           <span class="c1">//         0        1         0       Y      </span>
+           <span class="c1">//         0        0         1       Z       </span>
+           <span class="c1">//         0        0         0       1    </span>
+
+        <span class="k">return</span> <span class="kt">SCNVector3Make</span><span class="p">(</span><span class="n">transform</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="mi">3</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">transform</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="mi">3</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">transform</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="mi">3</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="sources">Sources:</h3>
+
+<p><a href="https://sites.math.washington.edu/~king/coursedir/m308a01/Projects/m308a01-pdf/yip.pdf">sites.math.washington.edu/~king/coursedir/m308a01/Projects/m308a01-pdf/yip.pdf</a></p>
+
+<p><a href="https://www.khanacademy.org/math/linear-algebra/matrix-transformations/linear-transformations/a/visualizing-linear-transformations">khanacademy.org/math/linear-algebra/matrix-transformations/linear-transformations/a/visualizing-linear-transformations</a></p>
+
+<p><a href="http://www.edwilliams.org/avform.htm#LL">edwilliams.org/avform.htm#LL</a></p>
+
+<p><a href="https://www.tomdalling.com/blog/modern-opengl/04-cameras-vectors-and-input/">tomdalling.com/blog/modern-opengl/04-cameras-vectors-and-input/</a></p>
+
+<p><a href="http://www.movable-type.co.uk/scripts/latlong.html">movable-type.co.uk</a></p>
+
+<p><a href="http://www.tomdalling.com/blog/modern-opengl/explaining-homogenous-coordinates-and-projective-geometry/">tomdalling.com</a></p>
+
+<p><a href="https://medium.com/@yatchoi/getting-started-with-arkit-real-life-waypoints-1707e3cb1da2">Medium: Yat Choi</a></p>
+
+<p><a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices/#cumulating-transformations">opengl-tutorial.org</a></p>
+
+<p><a href="https://open.gl/transformations">open.gl/transformations</a></p>
+
+<hr />
+
+
+
+    <div class="blog-navigation">
+        
+            <a class="prev" href="http://localhost:4000/arkit-corelocation-part-one/">&laquo; ARKit and Core Location: Part One</a>
+        
+        
+            <a class="next" href="http://localhost:4000/exploring-arkit-arscnplanegeometry/">Exploring ARKit: ARSCNPlaneGeometry &raquo;</a>
+        
+    </div>
+
+
+
+    <div class="related">
+    
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+                    
+                    <h4>Related Posts</h4>
+                    <ul>
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/arkit-corelocation-part-one/">ARKit and Core Location: Part One
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/data-structures-in-real-world-linked-list/">Linked Lists - Data Structures In Real World
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/complexity-and-big-o/">Complexity and Big-O Notation
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+    
+        </ul>
+    
+</div>
+
+
+
+
+    <section class="author">
+    <div class="toleft">
+        <img
+            class="selfie"
+            src="http://localhost:4000/assets/images/profile.jpg"
+            alt="Chris Webb"
+        />
+    </div>
+
+    <div class="toright">
+        <h4 class="name">Chris Webb</h4>
+        <p class="bio">The journey of one thousand apps starts with a single key press...</p>
+
+        <div class="share">
+            <!-- Note: Only use three share links if your site width is set to large -->
+            <!-- If site width is set to normal, you may choose any two share links -->
+            <a
+                class="twitter"
+                href="https://twitter.com/intent/tweet?text=http://localhost:4000/arkit-corelocation-part-two/ - ARKit and CoreLocation: Part Two by @"
+            >
+                <i class="fa-brands fa-twitter"></i>
+                <span class="icon-twitter">Tweet</span>
+            </a>
+
+            <a
+                class="facebook"
+                href="javascript:void(0)"
+                onclick="window.open('https://facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;"
+            >
+                <i class="fa-brands fa-facebook"></i>
+                <span class="icon-facebook-rect">Share</span>
+            </a>
+
+            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/arkit-corelocation-part-two/&amp;title=ARKit and CoreLocation: Part Two&amp;summary=ARKit and CoreLocation: Part Two&amp;source=http://localhost:4000" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                <span class="icon-linkedin">Share</span>
+            </a> -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<footer class="footer-main">
+    Chris Webb © 2023
+
+    <a class="link" href="http://localhost:4000/feed.xml" target="_blank">
+        <i class="fa-solid fa-rss"></i>
+    </a>
+
+    <p class="extra">
+        <a class="link" href="https://github.com/sergiokopplin/indigo">Indigo theme</a>
+        by
+        <a class="link" href="https://github.com/sergiokopplin/indigo">Kopplin</a>
+    </p>
+</footer>
+
+
+            </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
+

@@ -9,24 +9,24 @@
     <meta name=author content="Chris Webb">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>A New Year, A New Blog | Chris Webb</title>
+<title>Complexity and Big-O Notation | Chris Webb</title>
 <meta name="generator" content="Jekyll v3.9.2" />
-<meta property="og:title" content="A New Year, A New Blog" />
+<meta property="og:title" content="Complexity and Big-O Notation" />
 <meta name="author" content="chriswebb" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="New blog attempt" />
-<meta property="og:description" content="New blog attempt" />
-<link rel="canonical" href="http://localhost:4000/new-blog/" />
-<meta property="og:url" content="http://localhost:4000/new-blog/" />
+<meta name="description" content="Complexity and Big-O Notation" />
+<meta property="og:description" content="Complexity and Big-O Notation" />
+<link rel="canonical" href="http://localhost:4000/complexity-and-big-o/" />
+<meta property="og:url" content="http://localhost:4000/complexity-and-big-o/" />
 <meta property="og:site_name" content="Chris Webb" />
 <meta property="og:image" content="http://localhost:4000/assets/images/markdown.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-01-02T22:48:00-05:00" />
+<meta property="article:published_time" content="2017-05-11T01:48:00-04:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/images/markdown.jpg" />
-<meta property="twitter:title" content="A New Year, A New Blog" />
+<meta property="twitter:title" content="Complexity and Big-O Notation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"chriswebb"},"dateModified":"2023-01-02T22:48:00-05:00","datePublished":"2023-01-02T22:48:00-05:00","description":"New blog attempt","headline":"A New Year, A New Blog","image":"http://localhost:4000/assets/images/markdown.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/new-blog/"},"url":"http://localhost:4000/new-blog/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"chriswebb"},"dateModified":"2017-05-11T01:48:00-04:00","datePublished":"2017-05-11T01:48:00-04:00","description":"Complexity and Big-O Notation","headline":"Complexity and Big-O Notation","image":"http://localhost:4000/assets/images/markdown.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/complexity-and-big-o/"},"url":"http://localhost:4000/complexity-and-big-o/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -52,7 +52,7 @@
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 
-    <link rel="canonical" href="http://localhost:4000/new-blog/">
+    <link rel="canonical" href="http://localhost:4000/complexity-and-big-o/">
     <link rel="alternate" type="application/rss+xml" title="Chris Webb" href="http://localhost:4000/feed.xml" />
 
     <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
@@ -505,15 +505,15 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
 
 
-<h1 class="title">A New Year, A New Blog</h1>
+<h1 class="title">Complexity and Big-O Notation</h1>
 
 <span class="date">
-    <time datetime="02-01-2023">Monday. January 02, 2023</time>
+    <time datetime="11-05-2017">Thursday. May 11, 2017</time>
      - <span class="reading-time" title="Estimated read time">
     
 
     
-        1 min
+        6 mins
     
 </span>
 
@@ -522,25 +522,170 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
     <div class="post-tags">
         
-            <a class="item" href="http://localhost:4000/tags/#blog">blog</a>
+            <a class="item" href="http://localhost:4000/tags/#complexity">Complexity</a>
         
-            <a class="item" href="http://localhost:4000/tags/#new">new</a>
+            <a class="item" href="http://localhost:4000/tags/#swift">Swift</a>
+        
+            <a class="item" href="http://localhost:4000/tags/#algorithm">Algorithm</a>
         
     </div>
 
 
-<p>It’s been an incredible journey of about five years since I last connected with you through this blog. Reflecting on it, these years feel more like a lifetime, filled with experiences and growth that have reshaped my perspective.</p>
+<p><img src="https://i.stack.imgur.com/Aq09a.png" alt="Complexity graph" /></p>
 
-<p>Today, I’m excited to announce my return to blogging. This decision stems from a deep realization: writing here challenges and stimulates my intellect in unique ways, unlike my academic or professional endeavors. This platform has always been a space for exploration, creativity, and sharing insights that don’t quite fit into the structured environments of academia or the workplace.</p>
+<h3 id="introduction">Introduction</h3>
 
-<p>In the coming weeks, expect to see more posts. I’m brimming with ideas and perspectives that I’m eager to share with you. This blog will serve as a canvas for thoughts that are brewing and waiting to be expressed. Stay tuned, and let’s embark on this intellectual adventure together.</p>
+<p>In this post, I will touch on <strong>complexity</strong> and <strong>Big O Notation</strong>. The term complexity as it relates to programming doesn’t necessarily mean one thing. There are different types of computational complexity. The two most common types of complexity are time complexity - which is the number of operations in regards to input and space complexity, which is the number of places used for storage in a given operation in regards to its input. For simplicities sake, in this post, I will be referring to time complexity.</p>
+
+<h3 id="asymptotic-analysis">Asymptotic Analysis</h3>
+
+<p>“<em>Asymptotic analysis is the process of describing the efficiency of algorithms as their input size (n) grows.</em>”</p>
+
+<p><strong>-Swift Algorithms and Data Structures</strong></p>
+
+<p>In programming, asymptotic analysis is generally described using Big O Notation.</p>
+
+<h3 id="worst-case-scenario">Worst case scenario</h3>
+
+<p>When referring to the worst-case scenario with complexity, we are referring to an input that causes maximum complexity. The difference between a best/worst case scenario for complexity may be significant. The difference between best case scenario and worst scenario for searching a hash table can go from constant O(1) time to linear O(n) time. If you are searching for an element in an array by iterating over each item and that element is the first item in the array, you will have a pretty good runtime. It’s another story if that item is the element in the array. Generally speaking, you don’t want to pretend like every situation is going to give you the optimal time.</p>
+
+<h3 id="o1---constant-time">O(1) - Constant Time</h3>
+
+<p>An O(1) operation’s complexity is constant regardless of the number of inputs. Accessing the first element in an array will always be O(1). It is the same for an array with 1000 elements as it is for an array with 10.  In fact accessing any element in your array by its index should be a constant complexity operation regardless of whether it is the first item or the 1000th.</p>
+
+<h5 id="examples-of-01-operations">Examples of 0(1) operations:</h5>
+
+<ul>
+  <li><em>Looking up element in a hashtable.</em></li>
+  <li><em>Adding a node to linked list</em></li>
+  <li><em>Accessing an element in an array by index</em></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">arrOne</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">arrOne</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">arrOne</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span></code></pre></figure>
+
+<p>Inserting node into linked list:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">append</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">newNode</span> <span class="o">=</span> <span class="kt">Node</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">lastNode</span> <span class="o">=</span> <span class="n">last</span> <span class="p">{</span>
+      <span class="n">newNode</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">lastNode</span>
+      <span class="n">lastNode</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">newNode</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">head</span> <span class="o">=</span> <span class="n">newNode</span>
+    <span class="p">}</span>
+  <span class="p">}</span></code></pre></figure>
+
+<h3 id="olog-n---logarithmic-time">O(log n) - Logarithmic Time</h3>
+
+<p>When dealing with an O(log n) complexity operation, each cycle should reduce the complexity in relation to input. A prime example of this is a binary search. Each iteration halves the interval within which it searches.</p>
+
+<h5 id="examples-of-0log-n-operations">Examples of 0(log n) operations:</h5>
+
+<ul>
+  <li><em>Binary search</em></li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/chriswebb09/chriswebb09.github.io/master/public/220px-Binary_Search_Depiction.png" alt="Binary search" /></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">arrOne</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+
+<span class="kd">func</span> <span class="nf">binarySearch</span><span class="p">(</span><span class="n">_</span> <span class="nv">inputArray</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">?</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nv">begin</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">end</span> <span class="o">=</span> <span class="n">inputArray</span><span class="o">.</span><span class="n">count</span>
+
+    <span class="k">while</span> <span class="n">begin</span> <span class="o">&lt;</span> <span class="n">end</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">mid</span> <span class="o">=</span> <span class="n">begin</span> <span class="o">+</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">begin</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+        <span class="k">if</span> <span class="n">inputArray</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">==</span> <span class="n">element</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">mid</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">inputArray</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">element</span> <span class="p">{</span>
+            <span class="n">begin</span> <span class="o">=</span> <span class="n">mid</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="n">mid</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="kc">nil</span>
+<span class="p">}</span>
+
+<span class="nf">binarySearch</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="nv">element</span><span class="p">:</span> <span class="mi">2</span><span class="p">)</span></code></pre></figure>
+
+<h3 id="on---linear-time">O(n) - Linear Time</h3>
+
+<p>An O(n) operation’s complexity scales linearly with the number of inputs. If you iterate through all the elements in an array, it is O(n), because the operation is dependent on the number of items in your collection. Going through 10 elements in an array requires ten cycles. If you multiply the array count by 10, the cycles increase to 100 or 10 times as much as ten elements.</p>
+
+<h5 id="examples-of-0n-operations">Examples of 0(n) operations:</h5>
+
+<ul>
+  <li><em>Traversing an array or linked list</em></li>
+  <li><em>Removing a node from a specific index of a linked list</em></li>
+</ul>
+
+<p><em>Remove Node At Index</em>:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">node</span><span class="p">:</span> <span class="kt">Node</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">prev</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">previous</span>
+    <span class="k">let</span> <span class="nv">next</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">next</span>
+
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">prev</span> <span class="o">=</span> <span class="n">prev</span> <span class="p">{</span>
+      <span class="n">prev</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">next</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">head</span> <span class="o">=</span> <span class="n">next</span>
+    <span class="p">}</span>
+    <span class="n">next</span><span class="p">?</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">prev</span>
+
+    <span class="n">node</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="kc">nil</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">nil</span>
+    <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">value</span>
+  <span class="p">}</span></code></pre></figure>
+
+<p><em>Traverse Array</em>:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">arrOne</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">arrOne</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="on2---quadratic-time">O(n^2) - Quadratic Time</h3>
+
+<p>An O(n^2) operation’s complexity scales exponentially with the number of inputs. A simple example of an O(n^2) is a process with a loop within a loop. If you took an array with six elements and for each element of the array accessed nth element in the range of 0..&lt;array.count you would access your array 36 times.  Your complexity is not scaling directly with input, but for input squared. A worst case scenario for a bubble sort is O(n^2).</p>
+
+<h5 id="examples-of-0n2-operations">Examples of 0(n^2) operations:</h5>
+
+<ul>
+  <li><em>Traversing a 2D array</em></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="nv">twoDimensionalArray</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="o">..&lt;</span><span class="n">twoDimensionalArray</span><span class="o">.</span><span class="n">count</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="k">in</span> <span class="mi">0</span><span class="o">..&lt;</span><span class="n">twoDimensionalArray</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">count</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">twoDimensionalArray</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">n</span><span class="p">])</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Sources:</p>
+
+<ul>
+  <li><a href="http://stackoverflow.com/questions/1592649/examples-of-algorithms-which-has-o1-on-log-n-and-olog-n-complexities">Stack Overflow</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Complex_logarithm">Wikipedia - Complexity Logarithm</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Binary_search_algorithm">Wikipedia - Binary search algorithm</a></li>
+  <li><a href="http://bigocheatsheet.com/">Big O Cheat Sheet</a></li>
+</ul>
 
 
 
     <div class="blog-navigation">
         
-            <a class="prev" href="http://localhost:4000/exploring-arkit-arscnplanegeometry/">&laquo; Exploring ARKit: ARSCNPlaneGeometry</a>
+            <a class="prev"></a>
         
+        
+            <a class="next" href="http://localhost:4000/data-structures-in-real-world-linked-list/">Linked Lists - Data Structures In Real World &raquo;</a>
         
     </div>
 
@@ -556,22 +701,11 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
-        
-            
-                
-            
                 
             
         
-    
-        
-        
             
                 
-            
-                
-            
-        
             
                 
             
@@ -586,10 +720,6 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
-        
-            
-                
-            
                 
             
         
@@ -598,13 +728,58 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+                    
+                    <h4>Related Posts</h4>
+                    <ul>
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/arkit-corelocation-part-two/">ARKit and CoreLocation: Part Two
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
         
             
                 
             
                 
             
+                
+            
         
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
             
                 
             
@@ -619,19 +794,11 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
-        
-            
-                
-            
                 
             
         
             
                 
-            
-                
-            
-        
             
                 
             
@@ -643,13 +810,6 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
-        
-    
-        
-        
-            
-                
-            
                 
             
         
@@ -658,7 +818,11 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
+                
+            
         
+            
+                
             
                 
             
@@ -673,13 +837,28 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
+                
+            
         
             
                 
             
                 
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/data-structures-in-real-world-linked-list/">Linked Lists - Data Structures In Real World
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
             
         
+            
+                
             
                 
             
@@ -687,6 +866,35 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
         
     
+        
+        
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+    
+        </ul>
     
 </div>
 
@@ -711,7 +919,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             <!-- If site width is set to normal, you may choose any two share links -->
             <a
                 class="twitter"
-                href="https://twitter.com/intent/tweet?text=http://localhost:4000/new-blog/ - A New Year, A New Blog by @"
+                href="https://twitter.com/intent/tweet?text=http://localhost:4000/complexity-and-big-o/ - Complexity and Big-O Notation by @"
             >
                 <i class="fa-brands fa-twitter"></i>
                 <span class="icon-twitter">Tweet</span>
@@ -726,7 +934,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
                 <span class="icon-facebook-rect">Share</span>
             </a>
 
-            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/new-blog/&amp;title=A New Year, A New Blog&amp;summary=New blog attempt&amp;source=http://localhost:4000" target="_blank">
+            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/complexity-and-big-o/&amp;title=Complexity and Big-O Notation&amp;summary=Complexity and Big-O Notation&amp;source=http://localhost:4000" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
                 <span class="icon-linkedin">Share</span>
             </a> -->

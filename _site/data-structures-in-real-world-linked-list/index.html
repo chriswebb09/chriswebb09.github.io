@@ -9,24 +9,24 @@
     <meta name=author content="Chris Webb">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>A New Year, A New Blog | Chris Webb</title>
+<title>Linked Lists - Data Structures In Real World | Chris Webb</title>
 <meta name="generator" content="Jekyll v3.9.2" />
-<meta property="og:title" content="A New Year, A New Blog" />
+<meta property="og:title" content="Linked Lists - Data Structures In Real World" />
 <meta name="author" content="chriswebb" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="New blog attempt" />
-<meta property="og:description" content="New blog attempt" />
-<link rel="canonical" href="http://localhost:4000/new-blog/" />
-<meta property="og:url" content="http://localhost:4000/new-blog/" />
+<meta name="description" content="Linked Lists - Data Structures In Real World" />
+<meta property="og:description" content="Linked Lists - Data Structures In Real World" />
+<link rel="canonical" href="http://localhost:4000/data-structures-in-real-world-linked-list/" />
+<meta property="og:url" content="http://localhost:4000/data-structures-in-real-world-linked-list/" />
 <meta property="og:site_name" content="Chris Webb" />
 <meta property="og:image" content="http://localhost:4000/assets/images/markdown.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-01-02T22:48:00-05:00" />
+<meta property="article:published_time" content="2017-05-14T01:48:00-04:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/assets/images/markdown.jpg" />
-<meta property="twitter:title" content="A New Year, A New Blog" />
+<meta property="twitter:title" content="Linked Lists - Data Structures In Real World" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"chriswebb"},"dateModified":"2023-01-02T22:48:00-05:00","datePublished":"2023-01-02T22:48:00-05:00","description":"New blog attempt","headline":"A New Year, A New Blog","image":"http://localhost:4000/assets/images/markdown.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/new-blog/"},"url":"http://localhost:4000/new-blog/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"chriswebb"},"dateModified":"2017-05-14T01:48:00-04:00","datePublished":"2017-05-14T01:48:00-04:00","description":"Linked Lists - Data Structures In Real World","headline":"Linked Lists - Data Structures In Real World","image":"http://localhost:4000/assets/images/markdown.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/data-structures-in-real-world-linked-list/"},"url":"http://localhost:4000/data-structures-in-real-world-linked-list/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -52,7 +52,7 @@
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 
-    <link rel="canonical" href="http://localhost:4000/new-blog/">
+    <link rel="canonical" href="http://localhost:4000/data-structures-in-real-world-linked-list/">
     <link rel="alternate" type="application/rss+xml" title="Chris Webb" href="http://localhost:4000/feed.xml" />
 
     <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
@@ -505,15 +505,15 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
 
 
-<h1 class="title">A New Year, A New Blog</h1>
+<h1 class="title">Linked Lists - Data Structures In Real World</h1>
 
 <span class="date">
-    <time datetime="02-01-2023">Monday. January 02, 2023</time>
+    <time datetime="14-05-2017">Sunday. May 14, 2017</time>
      - <span class="reading-time" title="Estimated read time">
     
 
     
-        1 min
+        10 mins
     
 </span>
 
@@ -522,25 +522,263 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
     <div class="post-tags">
         
-            <a class="item" href="http://localhost:4000/tags/#blog">blog</a>
+            <a class="item" href="http://localhost:4000/tags/#data-structures">Data Structures</a>
         
-            <a class="item" href="http://localhost:4000/tags/#new">new</a>
+            <a class="item" href="http://localhost:4000/tags/#swift">Swift</a>
+        
+            <a class="item" href="http://localhost:4000/tags/#algorithm">Algorithm</a>
         
     </div>
 
 
-<p>It’s been an incredible journey of about five years since I last connected with you through this blog. Reflecting on it, these years feel more like a lifetime, filled with experiences and growth that have reshaped my perspective.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*iMYmkYDCSrXXdwpbqm-ekA.jpeg" alt="Linked List" /></p>
 
-<p>Today, I’m excited to announce my return to blogging. This decision stems from a deep realization: writing here challenges and stimulates my intellect in unique ways, unlike my academic or professional endeavors. This platform has always been a space for exploration, creativity, and sharing insights that don’t quite fit into the structured environments of academia or the workplace.</p>
+<h1 id="overview">Overview</h1>
+<p>When you first start diving into data structures, a lot of the discussions/reading tend to be abstract or even academic. While it can
+be good to learn these concepts in isolation, adding some real world context can help give a fuller picture of the purpose a data structures can serve.</p>
 
-<p>In the coming weeks, expect to see more posts. I’m brimming with ideas and perspectives that I’m eager to share with you. This blog will serve as a canvas for thoughts that are brewing and waiting to be expressed. Stay tuned, and let’s embark on this intellectual adventure together.</p>
+<h3 id="my-experience-with-applying-data-structures">My Experience with Applying Data Structures</h3>
+<p>Recently, when building a music streaming application, I had the opportunity to apply real-world context to a data structure. I was
+able to implement a modified double-linked list as the data structure for my playlist.</p>
+
+<h3 id="what-is-a-linked-list">What is a Linked List?</h3>
+<p>A linked list is a sequence data structure, which connects elements, called nodes, through links. Unlike an array data structure,
+a node in a linked list isn’t necessarily positioned close to the previous element or the next element. Nodes in a linked list are connected by pointers. Linked lists are null terminating, which means whenever the pointer to the next node is null, the list has
+reached the end.</p>
+
+<h4 id="single-linked-list">Single Linked List</h4>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*eVIWTiVDIBcOBGwdo53Mgw.png" alt="Single Linked List" />
+In single linked list, element or nodes only link to the next element in the list. A single linked list is null terminating meaning when the pointer is null, the list is finished.</p>
+
+<h4 id="double-linked-list">Double Linked List</h4>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*RRHHkjHW7aWXS3RTGl08Bw.png" alt="Double Linked List" />
+In a double linked list, each node contains a reference to the previous node and the next node (as long as they aren’t the head or tail node.) Each node has a value property.</p>
+
+<h1 id="why-a-linked-list">Why A Linked List?</h1>
+<p>The reason I chose a double linked list was that the structure suited the behavior of a music playlist.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*Mz4CcX2rZaTJpAdWBqx9sQ.png" alt="Skip" /></p>
+
+<h5 id="skip-backforward">Skip Back/Forward</h5>
+<p>Because each node in a double linked list has a pointer the previous and next node, it is easy to implement skip forward/backward functionality.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*ss6V0n9MwHFme-gzee00Wg.png" alt="Play next" /></p>
+
+<h5 id="play-next">Play Next</h5>
+<p>The pointer to the next node also makes it quite easy to start the next track when a track is over.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*Xf7Og9y2kjnObjcg05tILg.jpeg" alt="Append" /></p>
+
+<h5 id="append">Append</h5>
+<p>When you add a new track to a playlist, you tack it on to the end. In a linked list, adding a new element is constant time — O(1) operation.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*nMilfFlm4MwPgStuSzabkw.png" alt="Replay" /></p>
+
+<h5 id="beginningend">Beginning/End</h5>
+<p>Finally, because a linked list has head and tail properties, this provides for an easy way to delineate the beginning and end of a playlist.</p>
+
+<h3 id="list-node">List Node</h3>
+<p>Let’s create a basic list node for a doubly-linked list. We can do this by specifying a class called LLNode which has a Generic T. We can use T as our value:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">LLNode</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">T</span>
+    <span class="k">var</span> <span class="nv">next</span><span class="p">:</span> <span class="kt">LLNode</span><span class="p">?</span>
+    <span class="k">weak</span> <span class="k">var</span> <span class="nv">previous</span><span class="p">:</span> <span class="kt">LLNode</span><span class="p">?</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="linked-list">Linked List</h3>
+<p>Now let’s create our Linked List class. This class should also specify a generic T which can be the value for nodes.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">LinkedList</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Node</span> <span class="o">=</span> <span class="kt">LLNode</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span>
+
+    <span class="kd">private</span> <span class="k">var</span> <span class="nv">head</span><span class="p">:</span> <span class="kt">Node</span><span class="p">?</span>
+    <span class="kd">private</span> <span class="k">var</span> <span class="nv">tail</span><span class="p">:</span> <span class="kt">Node</span><span class="p">?</span>
+
+    <span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">head</span> <span class="o">==</span> <span class="kc">nil</span>
+    <span class="p">}</span>
+
+    <span class="k">var</span> <span class="nv">first</span><span class="p">:</span> <span class="kt">Node</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">head</span>
+    <span class="p">}</span>
+
+    <span class="k">var</span> <span class="nv">last</span><span class="p">:</span> <span class="kt">Node</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">tail</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">append</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">newNode</span> <span class="o">=</span> <span class="kt">Node</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">value</span><span class="p">)</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">lastNode</span> <span class="o">=</span> <span class="n">last</span> <span class="p">{</span>
+            <span class="n">newNode</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">lastNode</span>
+            <span class="n">lastNode</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">newNode</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">head</span> <span class="o">=</span> <span class="n">newNode</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Our linked list has a private head and tail property as well as a first and last property. Additionally it has a boolean property, isEmpty, and an append method. There are other properties and methods that a linked list can implement, like removeAll, reverse ect. For this example, this should give you a basic idea of the structure.</p>
+
+<h1 id="modifying-our-linked-list-to-make-a-playlist">Modifying Our Linked List To Make A Playlist</h1>
+
+<h3 id="the-playlistitem">The PlaylistItem</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*kOainj-jJVM-_4mQd2m8fg.png" alt="PlaylistItem" /></p>
+
+<p>Let’s see if you can recognize the LLNode inside the PlaylistItem.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">UIKit</span>
+
+<span class="kd">class</span> <span class="kt">PlaylistItem</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">track</span><span class="p">:</span> <span class="n">iTrack</span><span class="p">?</span>
+    <span class="k">var</span> <span class="nv">next</span><span class="p">:</span> <span class="kt">PlaylistItem</span><span class="p">?</span>
+    <span class="k">weak</span> <span class="k">var</span> <span class="nv">previous</span><span class="p">:</span> <span class="kt">PlaylistItem</span><span class="p">?</span>
+<span class="p">}</span>
+
+<span class="kd">extension</span> <span class="kt">PlaylistItem</span><span class="p">:</span> <span class="kt">Equatable</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">PlaylistItem</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">PlaylistItem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">lhs</span><span class="o">.</span><span class="n">track</span><span class="o">!.</span><span class="n">previewUrl</span><span class="o">!</span> <span class="o">==</span> <span class="n">rhs</span><span class="o">.</span><span class="n">track</span><span class="o">!.</span><span class="n">previewUrl</span><span class="o">!</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>As you can see we’ve substituted the Generic T for a optional iTrack properties and made our PlaylistItem conform to the Equatable protocol. Besides that, it is pretty much the same as the LLNode.</p>
+
+<h3 id="the-playlist">The Playlist</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*csHCtmDQ3z-z8i7FOKb-1w.jpeg" alt="Playlist" /></p>
+
+<p>Our playlist structure is very similar to a normal double linked list. There is a head, which is the first item in our playlist, and tail which is the last item.</p>
+
+<h3 id="optimizing-item-count">Optimizing Item Count</h3>
+<p>You might noticed that I’ve added an integer property called itemCount. Some implementations of a linked list will use a computed property for the itemCount. The more optimized solution is to update the item count in your code. Computing the count requires traversing your list. This adds a hefty dose of complexity. While it may be more annoying in the short term to update the item count value depending on the operation, there is a performance bonus from doing this.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">UIKit</span>
+
+<span class="kd">class</span> <span class="kt">Playlist</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="k">var</span> <span class="nv">head</span><span class="p">:</span> <span class="kt">PlaylistItem</span><span class="p">?</span>
+
+    <span class="k">var</span> <span class="nv">itemCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">head</span> <span class="o">==</span> <span class="kc">nil</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="k">var</span> <span class="nv">last</span><span class="p">:</span> <span class="kt">PlaylistItem</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="k">var</span> <span class="nv">track</span> <span class="o">=</span> <span class="n">head</span> <span class="p">{</span>
+            <span class="k">while</span> <span class="k">case</span> <span class="k">let</span> <span class="nv">next</span><span class="p">?</span> <span class="o">=</span> <span class="n">track</span><span class="o">.</span><span class="n">next</span> <span class="p">{</span>
+                <span class="n">track</span> <span class="o">=</span> <span class="n">next</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="n">track</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">nil</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">append</span><span class="p">(</span><span class="nv">newPlaylistItem</span><span class="p">:</span> <span class="kt">PlaylistItem</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="n">itemCount</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">lastItem</span> <span class="o">=</span> <span class="n">last</span> <span class="p">{</span>
+            <span class="n">newPlaylistItem</span><span class="p">?</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">lastItem</span>
+            <span class="n">lastItem</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">newPlaylistItem</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">head</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+            <span class="n">head</span> <span class="o">=</span> <span class="n">newPlaylistItem</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">printAllKeys</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">current</span><span class="p">:</span> <span class="kt">PlaylistItem</span><span class="o">!</span> <span class="o">=</span> <span class="n">head</span>
+        <span class="k">var</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">current</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">next</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">playlistItem</span><span class="p">(</span><span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PlaylistItem</span><span class="p">?</span> <span class="p">{</span>
+
+        <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="k">var</span> <span class="nv">trackItem</span> <span class="o">=</span> <span class="n">head</span>
+            <span class="k">var</span> <span class="nv">i</span> <span class="o">=</span> <span class="n">index</span>
+            <span class="k">while</span> <span class="k">let</span> <span class="nv">trackAt</span> <span class="o">=</span> <span class="n">trackItem</span><span class="p">,</span> <span class="n">trackItem</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="n">trackAt</span>
+                <span class="p">}</span>
+                <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+                <span class="n">trackItem</span> <span class="o">=</span> <span class="n">trackAt</span><span class="o">.</span><span class="n">next</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">nil</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">reverse</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">track</span> <span class="o">=</span> <span class="n">head</span>
+        <span class="k">while</span> <span class="k">let</span> <span class="nv">currentTrack</span> <span class="o">=</span> <span class="n">track</span> <span class="p">{</span>
+            <span class="n">track</span> <span class="o">=</span> <span class="n">currentTrack</span><span class="o">.</span><span class="n">next</span>
+            <span class="nf">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">currentTrack</span><span class="o">.</span><span class="n">next</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">currentTrack</span><span class="o">.</span><span class="n">previous</span><span class="p">)</span>
+            <span class="n">head</span> <span class="o">=</span> <span class="n">currentTrack</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">removeFromPlaylist</span><span class="p">(</span><span class="k">for</span> <span class="nv">playlistItem</span><span class="p">:</span> <span class="kt">PlaylistItem</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="n">iTrack</span><span class="p">?</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">previous</span> <span class="o">=</span> <span class="n">playlistItem</span><span class="p">?</span><span class="o">.</span><span class="n">previous</span>
+        <span class="k">let</span> <span class="nv">next</span> <span class="o">=</span> <span class="n">playlistItem</span><span class="p">?</span><span class="o">.</span><span class="n">next</span>
+
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">previous</span> <span class="o">=</span> <span class="n">previous</span> <span class="p">{</span>
+            <span class="n">previous</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">next</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">head</span> <span class="o">=</span> <span class="n">next</span>
+        <span class="p">}</span>
+        <span class="n">next</span><span class="p">?</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="n">previous</span>
+
+        <span class="n">playlistItem</span><span class="p">?</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="kc">nil</span>
+        <span class="n">playlistItem</span><span class="p">?</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">nil</span>
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">trackItem</span> <span class="o">=</span> <span class="n">playlistItem</span><span class="p">?</span><span class="o">.</span><span class="n">track</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
+        <span class="k">return</span> <span class="n">trackItem</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">removeAll</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">track</span> <span class="o">=</span> <span class="n">head</span>
+
+        <span class="k">while</span> <span class="k">let</span> <span class="nv">next</span> <span class="o">=</span> <span class="n">track</span><span class="p">?</span><span class="o">.</span><span class="n">next</span> <span class="p">{</span>
+            <span class="n">track</span><span class="p">?</span><span class="o">.</span><span class="n">previous</span> <span class="o">=</span> <span class="kc">nil</span>
+            <span class="n">track</span> <span class="o">=</span> <span class="kc">nil</span>
+            <span class="n">track</span> <span class="o">=</span> <span class="n">next</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">contains</span><span class="p">(</span><span class="n">playlistItem</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">PlaylistItem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">currentTrack</span> <span class="o">=</span> <span class="n">head</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">false</span> <span class="p">}</span>
+        <span class="k">while</span> <span class="n">currentTrack</span> <span class="o">!=</span> <span class="n">item</span> <span class="o">&amp;&amp;</span> <span class="n">currentTrack</span><span class="o">.</span><span class="n">next</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">currentTrack</span> <span class="o">=</span> <span class="n">currentTrack</span><span class="o">.</span><span class="n">next</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">false</span> <span class="p">}</span>
+            <span class="k">if</span> <span class="n">currentTrack</span> <span class="o">==</span> <span class="n">item</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="kc">true</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">false</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="benefits-and-drawbacks">Benefits and Drawbacks</h3>
+<p>There are benefits and drawbacks to the using a LinkedList data structure. One of the biggest drawbacks is that, given there items are not stored in adjacent memory, operations like itemAtIndex will have a O(n) complexity because you will need to traverse your input to get to the specified index.</p>
+
+<h1 id="wrap-up">Wrap-Up</h1>
+<p>Hopefully this adds some clarity to using linked lists in real world scenarios. This is just one implementation. The are other ways to apply it as well. Try to see if you can find a different reason to implement a linked list.</p>
 
 
 
     <div class="blog-navigation">
         
-            <a class="prev" href="http://localhost:4000/exploring-arkit-arscnplanegeometry/">&laquo; Exploring ARKit: ARSCNPlaneGeometry</a>
+            <a class="prev" href="http://localhost:4000/complexity-and-big-o/">&laquo; Complexity and Big-O Notation</a>
         
+        
+            <a class="next" href="http://localhost:4000/arkit-corelocation-part-one/">ARKit and Core Location: Part One &raquo;</a>
         
     </div>
 
@@ -556,22 +794,11 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
-        
-            
-                
-            
                 
             
         
-    
-        
-        
             
                 
-            
-                
-            
-        
             
                 
             
@@ -586,10 +813,6 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
-        
-            
-                
-            
                 
             
         
@@ -598,13 +821,58 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+                    
+                    <h4>Related Posts</h4>
+                    <ul>
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/arkit-corelocation-part-two/">ARKit and CoreLocation: Part Two
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
         
             
                 
             
                 
             
+                
+            
         
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
             
                 
             
@@ -619,19 +887,11 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
-        
-            
-                
-            
                 
             
         
             
                 
-            
-                
-            
-        
             
                 
             
@@ -643,13 +903,6 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
-        
-    
-        
-        
-            
-                
-            
                 
             
         
@@ -658,7 +911,11 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
+                
+            
         
+            
+                
             
                 
             
@@ -673,13 +930,19 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
                 
             
+                
+            
         
             
                 
             
                 
             
+                
+            
         
+            
+                
             
                 
             
@@ -687,6 +950,44 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             
         
     
+        
+        
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/complexity-and-big-o/">Complexity and Big-O Notation
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+        
+    
+    
+        </ul>
     
 </div>
 
@@ -711,7 +1012,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             <!-- If site width is set to normal, you may choose any two share links -->
             <a
                 class="twitter"
-                href="https://twitter.com/intent/tweet?text=http://localhost:4000/new-blog/ - A New Year, A New Blog by @"
+                href="https://twitter.com/intent/tweet?text=http://localhost:4000/data-structures-in-real-world-linked-list/ - Linked Lists - Data Structures In Real World by @"
             >
                 <i class="fa-brands fa-twitter"></i>
                 <span class="icon-twitter">Tweet</span>
@@ -726,7 +1027,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
                 <span class="icon-facebook-rect">Share</span>
             </a>
 
-            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/new-blog/&amp;title=A New Year, A New Blog&amp;summary=New blog attempt&amp;source=http://localhost:4000" target="_blank">
+            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/data-structures-in-real-world-linked-list/&amp;title=Linked Lists - Data Structures In Real World&amp;summary=Linked Lists - Data Structures In Real World&amp;source=http://localhost:4000" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
                 <span class="icon-linkedin">Share</span>
             </a> -->

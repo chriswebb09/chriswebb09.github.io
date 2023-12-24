@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:ital,wght@0,300;0,600;1,500&family=Roboto:wght@300;400&family=Work+Sans:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name=author content="Chris Webb">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ARKit and Core Location: Part One | Chris Webb</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="ARKit and Core Location: Part One" />
+<meta name="author" content="chriswebb" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Adventures in Augmented Reality" />
+<meta property="og:description" content="Adventures in Augmented Reality" />
+<link rel="canonical" href="http://localhost:4000/arkit-corelocation-part-one/" />
+<meta property="og:url" content="http://localhost:4000/arkit-corelocation-part-one/" />
+<meta property="og:site_name" content="Chris Webb" />
+<meta property="og:image" content="http://localhost:4000/assets/images/ARKit.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-08-15T22:48:00-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/ARKit.png" />
+<meta property="twitter:title" content="ARKit and Core Location: Part One" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"chriswebb"},"dateModified":"2017-08-15T22:48:00-04:00","datePublished":"2017-08-15T22:48:00-04:00","description":"Adventures in Augmented Reality","headline":"ARKit and Core Location: Part One","image":"http://localhost:4000/assets/images/ARKit.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/arkit-corelocation-part-one/"},"url":"http://localhost:4000/arkit-corelocation-part-one/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:4000/assets/images/favicon/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="http://localhost:4000/assets/images/favicon/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+
+    <link rel="canonical" href="http://localhost:4000/arkit-corelocation-part-one/">
+    <link rel="alternate" type="application/rss+xml" title="Chris Webb" href="http://localhost:4000/feed.xml" />
+
+    <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
+
+    <style>
+    
+    
+
+    @charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document ========================================================================== */
+/** 1. Correct the line height in all browsers. 2. Prevent adjustments of font size after orientation changes in iOS. */
+html { line-height: 1.15; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+
+/* Sections ========================================================================== */
+/** Remove the margin in all browsers. */
+body { margin: 0; }
+
+/** Render the `main` element consistently in IE. */
+main { display: block; }
+
+/** Correct the font size and margin on `h1` elements within `section` and `article` contexts in Chrome, Firefox, and Safari. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/* Grouping content ========================================================================== */
+/** 1. Add the correct box sizing in Firefox. 2. Show the overflow in Edge and IE. */
+hr { box-sizing: content-box; /* 1 */ height: 0; /* 1 */ overflow: visible; /* 2 */ }
+
+/** 1. Correct the inheritance and scaling of font size in all browsers. 2. Correct the odd `em` font sizing in all browsers. */
+pre { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
+
+/* Text-level semantics ========================================================================== */
+/** Remove the gray background on active links in IE 10. */
+a { background-color: transparent; }
+
+/** 1. Remove the bottom border in Chrome 57- 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
+abbr[title] { border-bottom: none; /* 1 */ text-decoration: underline; /* 2 */ text-decoration: underline dotted; /* 2 */ }
+
+/** Add the correct font weight in Chrome, Edge, and Safari. */
+b, strong { font-weight: bolder; }
+
+/** 1. Correct the inheritance and scaling of font size in all browsers. 2. Correct the odd `em` font sizing in all browsers. */
+code, kbd, samp { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
+
+/** Add the correct font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` elements from affecting the line height in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+/* Embedded content ========================================================================== */
+/** Remove the border on images inside links in IE 10. */
+img { border-style: none; }
+
+/* Forms ========================================================================== */
+/** 1. Change the font styles in all browsers. 2. Remove the margin in Firefox and Safari. */
+button, input, optgroup, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 1 */ line-height: 1.15; /* 1 */ margin: 0; /* 2 */ }
+
+/** Show the overflow in IE. 1. Show the overflow in Edge. */
+button, input { /* 1 */ overflow: visible; }
+
+/** Remove the inheritance of text transform in Edge, Firefox, and IE. 1. Remove the inheritance of text transform in Firefox. */
+button, select { /* 1 */ text-transform: none; }
+
+/** Correct the inability to style clickable types in iOS and Safari. */
+button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; }
+
+/** Remove the inner border and padding in Firefox. */
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; }
+
+/** Restore the focus styles unset by the previous rule. */
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; }
+
+/** Correct the padding in Firefox. */
+fieldset { padding: 0.35em 0.75em 0.625em; }
+
+/** 1. Correct the text wrapping in Edge and IE. 2. Correct the color inheritance from `fieldset` elements in IE. 3. Remove the padding so developers are not caught out when they zero out `fieldset` elements in all browsers. */
+legend { box-sizing: border-box; /* 1 */ color: inherit; /* 2 */ display: table; /* 1 */ max-width: 100%; /* 1 */ padding: 0; /* 3 */ white-space: normal; /* 1 */ }
+
+/** Add the correct vertical alignment in Chrome, Firefox, and Opera. */
+progress { vertical-align: baseline; }
+
+/** Remove the default vertical scrollbar in IE 10+. */
+textarea { overflow: auto; }
+
+/** 1. Add the correct box sizing in IE 10. 2. Remove the padding in IE 10. */
+[type="checkbox"], [type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** Correct the cursor style of increment and decrement buttons in Chrome. */
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height: auto; }
+
+/** 1. Correct the odd appearance in Chrome and Safari. 2. Correct the outline style in Safari. */
+[type="search"] { -webkit-appearance: textfield; /* 1 */ outline-offset: -2px; /* 2 */ }
+
+/** Remove the inner padding in Chrome and Safari on macOS. */
+[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** 1. Correct the inability to style clickable types in iOS and Safari. 2. Change font properties to `inherit` in Safari. */
+::-webkit-file-upload-button { -webkit-appearance: button; /* 1 */ font: inherit; /* 2 */ }
+
+/* Interactive ========================================================================== */
+/* Add the correct display in Edge, IE 10+, and Firefox. */
+details { display: block; }
+
+/* Add the correct display in all browsers. */
+summary { display: list-item; }
+
+/* Misc ========================================================================== */
+/** Add the correct display in IE 10+. */
+template { display: none; }
+
+/** Add the correct display in IE 10. */
+[hidden] { display: none; }
+
+.highlight .c { color: #999988; font-style: italic; }
+.highlight .err { color: #a61717; background-color: #e3d2d2; }
+.highlight .k { font-weight: bold; }
+.highlight .o { font-weight: bold; }
+.highlight .cm { color: #999988; font-style: italic; }
+.highlight .cp { color: #999999; font-weight: bold; }
+.highlight .c1 { color: #999988; font-style: italic; }
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic; }
+.highlight .gd { color: #000000; background-color: #ffdddd; }
+.highlight .gd .x { color: #000000; background-color: #ffaaaa; }
+.highlight .ge { font-style: italic; }
+.highlight .gr { color: #aa0000; }
+.highlight .gh { color: #999999; }
+.highlight .gi { color: #000000; background-color: #ddffdd; }
+.highlight .gi .x { color: #000000; background-color: #aaffaa; }
+.highlight .go { color: #888888; }
+.highlight .gp { color: #555555; }
+.highlight .gs { font-weight: bold; }
+.highlight .gu { color: #800080; font-weight: bold; }
+.highlight .gt { color: #aa0000; }
+.highlight .kc { font-weight: bold; }
+.highlight .kd { font-weight: bold; }
+.highlight .kn { font-weight: bold; }
+.highlight .kp { font-weight: bold; }
+.highlight .kr { font-weight: bold; }
+.highlight .kt { color: #445588; font-weight: bold; }
+.highlight .m { color: #009999; }
+.highlight .s { color: #dd1144; }
+.highlight .n { color: #333333; }
+.highlight .na { color: teal; }
+.highlight .nb { color: #0086b3; }
+.highlight .nc { color: #445588; font-weight: bold; }
+.highlight .no { color: teal; }
+.highlight .ni { color: purple; }
+.highlight .ne { color: #990000; font-weight: bold; }
+.highlight .nf { color: #990000; font-weight: bold; }
+.highlight .nn { color: #555555; }
+.highlight .nt { color: navy; }
+.highlight .nv { color: teal; }
+.highlight .ow { font-weight: bold; }
+.highlight .w { color: #bbbbbb; }
+.highlight .mf { color: #009999; }
+.highlight .mh { color: #009999; }
+.highlight .mi { color: #009999; }
+.highlight .mo { color: #009999; }
+.highlight .sb { color: #dd1144; }
+.highlight .sc { color: #dd1144; }
+.highlight .sd { color: #dd1144; }
+.highlight .s2 { color: #dd1144; }
+.highlight .se { color: #dd1144; }
+.highlight .sh { color: #dd1144; }
+.highlight .si { color: #dd1144; }
+.highlight .sx { color: #dd1144; }
+.highlight .sr { color: #009926; }
+.highlight .s1 { color: #dd1144; }
+.highlight .ss { color: #990073; }
+.highlight .bp { color: #999999; }
+.highlight .vc { color: teal; }
+.highlight .vg { color: teal; }
+.highlight .vi { color: teal; }
+.highlight .il { color: #009999; }
+.highlight .gc { color: #999; background-color: #EAF2F5; }
+
+body, html { font-size: 62.5%; }
+
+body { font: 16px "Open Sans", sans-serif; color: #666; background: #fff; }
+
+h1, h2, h3, h4 { font-family: "Open Sans", sans-serif; color: #222; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+h1 { font-size: 3rem; letter-spacing: -1px; color: #222; font-weight: 700; }
+
+h2 { font-size: 2.2rem; }
+
+h3 { font-size: 2rem; }
+
+h4 { font-size: 1.6rem; }
+
+a { color: #4b0082; text-decoration: underline; font-weight: 300; }
+
+p { line-height: 1.7; color: #666; font-weight: 300; margin-bottom: 20px; letter-spacing: 0.4px; }
+@media only screen and (max-width: 400px) { p { letter-spacing: 0.2px; } }
+
+strong { font-weight: 400; color: #000; }
+
+ul li, ol li { line-height: 2.4rem; font-weight: 300; color: #666; }
+
+img, pre, iframe { max-width: 100%; }
+
+img, pre { border-radius: 4px; }
+
+figcaption { position: relative; top: -20px; left: 0; right: 0; margin: 0 auto; width: 100%; text-align: center; font-size: 1.3rem; color: #aaa; font-weight: 300; }
+@media only screen and (max-width: 400px) { figcaption { font-size: 1.2rem; } }
+
+blockquote { padding-left: 15px; border-left: 3px solid #eee; }
+
+hr { border: none; height: 1px; margin: 40px auto; background: #eee; width: 100%; }
+
+figure.highlight { width: 100%; margin: 0; }
+
+code { padding: 2px 3px; font-family: "Consolas", Liberation Mono, Menlo, Courier, monospace; font-size: 12px; vertical-align: middle; background: #eee; border-radius: 2px; }
+
+pre > code, tt { padding: 1px 0; font-family: "Consolas", Liberation Mono, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; background: #fff; border-radius: 2px; }
+
+pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10px; font-family: "Consolas", Liberation Mono, Menlo, Courier, monospace; font-size: 1.2rem; line-height: 2rem; overflow: auto; background: #fff; border: 1px solid #ededed; border-radius: 2px; }
+
+.wrapper-normal, .wrapper-large { height: 100%; width: 96%; margin: 0 auto; }
+@media only screen and (max-width: 400px) { .wrapper-normal, .wrapper-large { width: 88%; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .wrapper-normal, .wrapper-large { width: 88%; } }
+
+.wrapper-normal { max-width: 560px; }
+
+.wrapper-large { max-width: 810px; }
+
+/* general helpers */
+.text-center { text-align: center; }
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+
+.clearfix:after { clear: both; }
+
+/* animations */
+.animated { animation: fade-in-down 0.6s; animation-delay: 0.3s; animation-fill-mode: both; }
+
+@keyframes fade-in-down { 0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); } }
+.home, .blog, .projects { margin-top: 125px; }
+.home > .list, .blog > .list, .projects > .list { border-top: 1px solid #ededed; margin-top: 30px; padding-top: 40px; position: relative; }
+.home > .list:before, .blog > .list:before, .projects > .list:before { display: block; content: " "; width: 7px; height: 7px; border: #ededed 1px solid; position: absolute; top: -5px; left: 50%; margin-left: -5px; background: #fff; box-shadow: #fff 0 0 0 5px; border-radius: 3px; }
+
+.home > .list > .item, .blog > .list > .item, .projects > .list > .item { display: block; width: 95%; margin: 0 auto; }
+.home > .list > .item > .url, .blog > .list > .item > .url, .projects > .list > .item > .url { width: 100%; display: block; padding: 20px 0; text-decoration: none; }
+.home > .list > .item > .url > .title, .blog > .list > .item > .url > .title, .projects > .list > .item > .url > .title { margin: 0; width: 75%; font-weight: 500; transition: all ease-in-out 0.2s; }
+.home > .list > .item:hover > .url > .title, .blog > .list > .item:hover > .url > .title, .projects > .list > .item:hover > .url > .title { color: #4b0082; }
+.home > .list aside, .blog > .list aside, .projects > .list aside { position: relative; top: 2px; margin: 0; width: 25%; float: right; font-weight: 300; color: #aaa; text-align: right; transition: all ease-in-out 0.2s; }
+.home > .list .item:hover .url aside, .blog > .list .item:hover .url aside, .projects > .list .item:hover .url aside { color: #666; }
+
+.blog > .list > .item > .url > .title, .projects > .list > .item > .url > .title { display: inline; }
+.blog > .list > .item > .url > .emoji, .projects > .list > .item > .url > .emoji { display: inline; position: relative; top: -4px; margin-right: 10px; }
+
+.page { margin-top: 125px; }
+.page > h1 { text-align: center; margin-bottom: 6rem; }
+
+.about img { width: 50%; margin: 0 auto; display: block; }
+
+.post { margin-top: 125px; }
+.post > .title { text-align: center; margin-bottom: 3rem; }
+.post > .date, .post > .post-tags { color: #aaa; font-weight: 300; font-size: 1.4rem; text-transform: uppercase; text-align: center; display: block; margin-bottom: 6rem; letter-spacing: 1px; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.post > .date { margin-bottom: 2rem; }
+.post > .post-tags > .item { padding: 2px 8px; border-radius: 3px; font-size: 1.1rem; background: #ededed; color: #666; letter-spacing: 1px; margin: 3px 1px; text-decoration: none; display: inline-block; }
+.post > h2, .post > h3, .post > h4 { margin-top: 40px; }
+.post > h2 a, .post > h3 a, .post > h4 a { text-decoration: none; }
+.post > .title-image { max-height: 120px; display: block; margin: 0 auto; }
+.post > .blog-navigation { font-size: 1.4rem; display: block; width: auto; overflow: hidden; }
+.post > .blog-navigation a { display: block; width: 50%; float: left; margin: 1em 0; }
+.post > .blog-navigation .next { text-align: right; }
+
+.tags { margin-top: 125px; }
+.tags > .list { border-top: 1px solid #ededed; margin-top: 30px; padding-top: 40px; position: relative; }
+.tags > .list:before { display: block; content: " "; width: 7px; height: 7px; border: #ededed 1px solid; position: absolute; top: -5px; left: 50%; margin-left: -5px; background: #fff; box-shadow: #fff 0 0 0 5px; border-radius: 3px; }
+
+.tags > .list > .item { font-weight: 300; text-transform: uppercase; text-align: center; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; padding: 3px 9px; border-radius: 3px; font-size: 1.3rem; background: #ededed; color: #666; letter-spacing: 1px; margin: 0 0.5rem 1rem; text-decoration: none; display: inline-block; }
+
+.tag-list > .list { padding: 0; }
+.tag-list > .list > .item { display: block; width: 80%; margin: 0 10%; }
+.tag-list > .list > .item > .url { width: 100%; height: 100%; display: block; padding: 20px 0; text-decoration: none; }
+.tag-list > .list > .item > .url > .title { margin: 0; width: 75%; font-weight: 400; transition: all ease-in-out 0.2s; font-size: 1.6rem; }
+.tag-list > .list > .item:hover > .url > .title { color: #4b0082; }
+.tag-list > .list aside { position: relative; top: 2px; margin: 0; width: 25%; float: right; font-weight: 300; color: #aaa; text-align: right; transition: all ease-in-out 0.2s; font-size: 1.6rem; }
+.tag-list > .list .item:hover .url aside { color: #666; }
+
+.author { padding: 3rem 0; border-bottom: 1px solid #ededed; border-top: 1px solid #ededed; max-width: 100%; margin: 4rem auto 0; }
+.author > .toleft > .selfie { width: 90%; border-radius: 100%; }
+.author > .toright > .name, .author > .toright > .bio { width: 60%; display: inline-block; }
+.author > .toright > .name { font-size: 1.5rem; font-family: "Open Sans", sans-serif; font-weight: 500; margin: 6px 0 0; }
+@media only screen and (max-width: 400px) { .author > .toright > .name { width: 100%; display: block; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .author > .toright > .name { width: 100%; display: block; } }
+.author > .toright > .bio { font-family: "Open Sans", sans-serif; font-weight: 300; color: #aaa; font-size: 1.3rem; text-align: justify; line-height: 1.5; margin: 0; }
+@media only screen and (max-width: 400px) { .author > .toright > .bio { width: 100%; display: block; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .author > .toright > .bio { width: 100%; display: block; } }
+.author > .toleft { width: 10%; display: inline-block; }
+@media only screen and (max-width: 400px) { .author > .toleft { width: 20%; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .author > .toleft { width: 20%; } }
+.author > .toright { width: 89%; display: inline-block; vertical-align: top; }
+@media only screen and (max-width: 400px) { .author > .toright { width: 78%; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .author > .toright { width: 78%; } }
+
+.no-disqus { border-bottom: none; padding-bottom: 0; }
+
+.disqus { margin: 0 auto; max-width: 100%; padding: 40px 0; }
+
+.footer-main { border-top: 1px solid #ededed; padding: 40px 0; margin: 40px 0 0; font-size: 1.3rem; color: #aaa; font-weight: 300; text-align: center; position: relative; }
+.footer-main:before { display: block; content: " "; width: 7px; height: 7px; border: #ededed 1px solid; position: absolute; top: -5px; left: 50%; margin-left: -5px; background: #fff; box-shadow: #fff 0 0 0 5px; border-radius: 3px; }
+.footer-main > .copyright { padding-left: 10px; }
+.footer-main > .link { display: inline; vertical-align: middle; }
+.footer-main > .link > .icon { width: 15px !important; fill: #aaa !important; transition: ease-in-out all 0.3s; position: relative; display: inherit; top: -2px; margin: 0; left: 2px; }
+.footer-main > .link > .icon:hover { fill: #4b0082 !important; }
+.footer-main > .extra { color: #aaa; margin-top: 0; font-weight: 300; }
+.footer-main > .extra > .link { color: #222; text-decoration: none; border-bottom: 1px solid transparent; transition: ease-in-out all 0.3s; padding-bottom: 1px; font-weight: 300; }
+.footer-main > .extra > .link:hover { border-color: #aaa; }
+
+.header-home { display: block; margin: 0 auto; text-align: center; position: relative; z-index: 99; }
+.header-home > .link > .selfie { width: 125px; height: 125px; margin-bottom: 25px; border-radius: 100%; transition: all 0.2s; opacity: 1; }
+.header-home > .link > .selfie:hover { box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.18), 0 0px 12px 0 rgba(0, 0, 0, 0.15); opacity: 0.8; }
+.header-home > .title { font-size: 4rem; margin: 0 0 13px; }
+.header-home > .description { font-size: 1.85rem; font-weight: 300; font-style: normal; color: #aaa; width: 70%; margin: 0 auto 30px; }
+.header-home > .description a { font-weight: 200; }
+
+.nav > .list, .nav-home > .list { list-style: none; margin: 0; padding: 0 13px 0; }
+.nav > .list > .item, .nav-home > .list > .item { display: inline-block; }
+.nav > .list > .item > .link, .nav-home > .list > .item > .link { display: inline-block; font-weight: 300; font-size: 1.4rem; padding: 20px 10px; text-decoration: none; }
+
+.nav { position: absolute; right: 0; top: 0; }
+.nav > .list { padding: 0 13px 0; }
+.nav > .list > .item > .link { font-size: 1.4rem; padding: 20px 10px; }
+
+.nav-home { margin-top: 40px; text-align: center; }
+.nav-home > .list { padding: 0; }
+.nav-home > .list > .item > .link { font-size: 2rem; padding: 7px 15px; margin: 0; border-radius: 4%; transition: all 0.4s ease-in-out; width: 70px; }
+.nav-home > .list > .item > .link:hover { color: #666; }
+
+.evidence { background-image: linear-gradient(to bottom, #27f36a26, #27f36a26); color: #222; }
+
+.star > .url > .title { width: auto !important; display: inline; background-image: linear-gradient(#27f36a26, #27f36a26); }
+
+.twitter-tweet { margin: 10px auto; }
+
+.icon { display: inline-block; width: 17px; height: 17px; fill: #000; text-align: center; color: #aaa; margin: 7px auto; }
+
+.caption { position: relative; top: 1rem; left: 0; right: 0; margin: 0 auto; width: 100%; text-align: center; font-size: 1.3rem; font-weight: 300; }
+
+.bigger-image { min-width: 130%; margin: 5rem 0 5rem -15%; }
+@media only screen and (max-width: 400px) { .bigger-image { min-width: 114%; margin: 2rem 0 2rem -7%; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .bigger-image { min-width: 114%; margin: 2rem 0 2rem -7%; } }
+
+.breaker { height: 1px; margin: 6rem auto; width: 100%; }
+.breaker:before { content: "• • •"; width: 100%; text-align: center; display: block; color: #aaa; letter-spacing: 4px; position: relative; top: -8px; }
+
+.lost-container { text-align: center; }
+
+.pagination { width: 95%; margin: 3rem auto 0; text-align: center; }
+.pagination > .page_number { display: inline-block; font-size: 1.3rem; }
+.pagination > .previous, .pagination > .next { display: inline-block; font-size: 1.8rem; position: relative; top: 1px; padding: 1px 9px; }
+.pagination > .hidden { visibility: hidden; }
+
+.related { margin: 10rem 0 0rem; }
+.related a { font-weight: 300; }
+
+.share { float: right; width: 40%; display: inline; text-align: right; position: relative; }
+@media only screen and (max-width: 400px) { .share { width: 100%; display: block; top: 0; text-align: left; float: none; margin-top: 5px; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .share { width: 100%; display: block; top: 0; text-align: left; float: none; margin-top: 5px; } }
+.share > .twitter, .share > .facebook, .share > .linkedin { display: inline; vertical-align: middle; font-size: 13px; font-weight: 700; color: #fff; padding: 6px 10px; border-radius: 3px; margin-left: 5px; text-decoration: none; }
+@media only screen and (max-width: 400px) { .share > .twitter, .share > .facebook, .share > .linkedin { margin: 0 5px 10px 0; } }
+@media only screen and (min-width: 400px) and (max-width: 1050px) { .share > .twitter, .share > .facebook, .share > .linkedin { margin: 0 5px 10px 0; } }
+.share > .twitter { background: #4fafed; }
+.share > .facebook { background: #4361b3; }
+.share > .linkedin { background: #0077b5; }
+.share svg { fill: #fff; position: relative; top: 0; margin: 0; margin-right: 4px; display: inherit; }
+
+@media only screen and (min-width: 780px) { .side-by-side { width: 130%; margin: 6rem 0 6rem -15%; } }
+@media only screen and (max-width: 780px) { .side-by-side { width: 100%; margin: 4rem 0; } }
+.side-by-side > .toleft, .side-by-side > .toright { display: inline-block; width: 47.5%; }
+@media only screen and (max-width: 780px) { .side-by-side > .toleft img, .side-by-side > .toright img { text-align: center; display: block; margin: 0 auto; } }
+@media only screen and (min-width: 780px) { .side-by-side > .toleft { margin-right: 2%; } }
+@media only screen and (max-width: 780px) { .side-by-side > .toleft { width: 100%; margin: 0 0 4rem 0; } }
+@media only screen and (min-width: 780px) { .side-by-side > .toright { margin-left: 2%; vertical-align: top; } }
+@media only screen and (max-width: 780px) { .side-by-side > .toright { width: 100%; margin: 0 0 4rem 0; } }
+.side-by-side > .toleft > p, .side-by-side > .toright > p { margin: 0 0 4rem 0; }
+@media only screen and (max-width: 780px) { .side-by-side > .toleft > p, .side-by-side > .toright > p { margin: 0; } }
+
+.social-links > .link { margin: 0; text-decoration: none; position: relative; display: inline-block; height: 35px; width: 35px; color: #000; }
+.social-links > .link:hover > svg { color: #4b0082; }
+.social-links > svg { transition: all ease-in-out 0.2s; }
+
+.spoiler { position: relative; }
+.spoiler:before { content: ""; background-color: #fafae0; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 50; }
+.spoiler:hover:before { display: none; }
+
+    </style>
+
+</head>
+<body>
+    <div class="wrapper-large">
+        
+            <div class="post">
+        
+
+            
+
+
+
+<nav class="nav">
+    <ul class="list">
+        
+            <li class="item">
+                <a class="link" href="http://localhost:4000/">Home</a>
+            </li>
+        
+
+        
+            
+                <li class="item">
+                    <a class="link" href="http://localhost:4000/blog">Blog</a>
+                </li>
+            
+        
+
+        
+            
+                <li class="item">
+                    <a class="link" href="http://localhost:4000/projects">Projects</a>
+                </li>
+            
+        
+
+        
+            
+                <li class="item">
+                    <a class="link" href="http://localhost:4000/about">About</a>
+                </li>
+            
+        
+
+        
+            <li class="item">
+                <a class="link" href="http://localhost:4000//assets/images/christopher-resume.pdf">Résumé</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+
+
+    <img class="title-image" src="/assets/images/ARKit.png" alt="ARKit and Core Location: Part One">
+
+
+<h1 class="title">ARKit and Core Location: Part One</h1>
+
+<span class="date">
+    <time datetime="15-08-2017">Tuesday. August 15, 2017</time>
+     - <span class="reading-time" title="Estimated read time">
+    
+
+    
+        19 mins
+    
+</span>
+
+</span>
+
+
+    <div class="post-tags">
+        
+            <a class="item" href="http://localhost:4000/tags/#ios">iOS</a>
+        
+            <a class="item" href="http://localhost:4000/tags/#swift">swift</a>
+        
+            <a class="item" href="http://localhost:4000/tags/#augmented-reality">Augmented Reality</a>
+        
+            <a class="item" href="http://localhost:4000/tags/#navigation">navigation</a>
+        
+            <a class="item" href="http://localhost:4000/tags/#core-location">core location</a>
+        
+    </div>
+
+
+<h2 id="navigation-with-linear-algebra">Navigation With Linear Algebra</h2>
+
+<p><img src="&quot;/assets/images/drone-demo3.gif&quot;" alt="" /></p>
+
+<p><a href="https://github.com/chriswebb09/ARKitNavigationDemo">Demo Code</a></p>
+
+<p><a href="http://chriswebb09.github.io/2017/08/15/arkit-corelocation-part-one/">ARKit and CoreLocation: Part One</a></p>
+
+<p><a href="https://medium.com/journey-of-one-thousand-apps/arkit-and-corelocation-part-two-7b045fb1d7a1">ARKit and CoreLocation: Part Two</a></p>
+
+<p><a href="https://medium.com/journey-of-one-thousand-apps/arkit-and-corelocation-part-three-98b1d51e2eac">ARKit and CoreLocation: Part Three</a></p>
+
+<h4 id="background"><strong>Background</strong></h4>
+
+<p>It has been awhile since I’ve written a new blog post so hopefully, this makes up the difference. This post and the next will be a two part series on my experiments with <a href="https://developer.apple.com/documentation/arkit">ARKit</a> and <a href="https://developer.apple.com/documentation/corelocation">CoreLocation</a>! The first part will deal with the basics of ARKit, getting the directions from MapKit as well as touch on the basics of matrix transformations. The <a href="https://medium.com/@chris.webb5249/arkit-and-corelocation-part-two-7b045fb1d7a1"><strong>second part</strong></a> will deal with calculating the bearing between two locations and how to take the location data and translate that into a position in the ARKit Scene.</p>
+
+<h3 id="introduction">Introduction</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/292/1*pTwz78YrgP5-I17T8AvNYA.jpeg" alt="" /></p>
+
+<p>Mention “augmented reality” and the first thing that jumps into most people’s head is <a href="http://www.pokemongo.com">PokemonGO</a>. If you’re like most people, you’ve probably played it once or twice (or obsessively.) PokemonGO proved that when it comes to setting, nothing beats our world. As awesome as PokemonGO was, it was a slight glimpse into the depth and potential of the augmented reality experience.</p>
+
+<p><a href="https://developer.apple.com/documentation/arkit"><strong>Apple Documentation</strong></a> <strong>:</strong></p>
+
+<blockquote>
+  <p><em>Augmented reality</em> (AR) describes user experiences that add 2D or 3D elements to the live view from a device’s camera in a way that makes those elements appear to inhabit the real world. ARKit combines device motion tracking, camera scene capture, advanced scene processing, and display conveniences to simplify the task of building an AR experience.</p>
+</blockquote>
+
+<p>With <a href="https://www.apple.com/ios/ios-11-preview/">iOS 11</a>, Apple has unleashed the power of ARKit onto the iOS development community. We’re still several weeks out of iOS 11 going live, but what we’re already seeing looks likely to redefine what is possible for the mobile user experience.</p>
+
+<h3 id="first-some-fundamentals"><strong>First, Some Fundamentals</strong></h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*z2dEldME3fyddalmq8fu2g.gif" alt="" /></p>
+
+<p>Personal Project — August 20th</p>
+
+<p>So, it’s magic right? I hate to be the one to say this but no, it’s just math. So if it isn’t magic how do they pull it off? Visual Inertial Odometry! (Say it ten times fast.)</p>
+
+<h4 id="definitions">Definitions</h4>
+
+<p><a href="https://developer.apple.com/documentation/arkit/understanding_augmented_reality"><strong>Visual Inertial Odometry (VIO)</strong></a>: ARKit analyzes the phone camera and motion data in order to keep track of the world around it. The computer vision logs noticeable features in the environment and is able to maintain awareness of their location in the real world regardless of the iPhone’s movement.</p>
+
+<p>Apple is a huge fan of organizing code around sessions. <strong>Sessions</strong> are a way of encapsulating the logic and data contained within a defined period of the applications activity. With URLSession this is the logic and data when your application sends network requests and receives data in back in return.</p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arsession"><strong>ARSession</strong></a> <strong>:</strong> In ARKit the <strong>ARSession</strong> coordinates the logic and data necessary to create the augmented reality experience. This includes camera and motion data and calculations required to keep track of the world as it moves around.</p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arframe"><strong>ARFrame</strong></a>: An <strong>ARFrame</strong> contains a video frame data and position tracking data which gets passed along to the ARSession in the currentFrame property. ARKit marries that image data with the motion tracking data to calculate the iPhone’s position.</p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/aranchor"><strong>ARAnchor</strong></a> <strong>:</strong> An <strong>ARAnchor</strong> is a position in the real world that maintained regardless of motion or position of the camera (theoretically). It’s anchored to a specific position, and for the most part will remain there.</p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arconfiguration"><strong>ARConfiguration</strong></a></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/500/1*BBInz1XxPnD4nviPGetDKQ.png" alt="" /></p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arworldtrackingconfiguration"><strong>ARWorldTrackingConfiguration</strong></a> <strong>:</strong> is a configuration for tracking the devices orientation, position and for detecting feature points like surfaces that are recorded by the camera. ARConfigurations connect the physical world which you and the phone exist in with the virtual coordinate space generated by your phone based on the camera and motion data.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>worldAlignment: The worldAlignment property on ARSession defines how the ARSession interprets the ARFrame’s motion data on a 3D coordinate mapping system that is uses to keep track of the world and build the Augmented Reality experience.
+</code></pre></div></div>
+
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*j12eVe8hKvXq-CrbBzHMXA.png" alt="" /><a href="https://docs-assets.developer.apple.com/published/b99f86dcfb/f76d63a3-7620-40d1-9e52-0d9ad6329678.png">Source</a></p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arconfiguration/2923550-worldalignment"><strong>worldAlignment — Apple Docs</strong></a></p>
+
+<blockquote>
+  <p>Creating an AR experience depends on being able to construct a coordinate system for placing objects in a virtual 3D world that maps to the real-world position and motion of the device. When you run a session configuration, ARKit creates a scene coordinate system based on the position and orientation of the device; any ARAnchor objects you create or that the AR session detects are positioned relative to that coordinate system_._</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gravity: By setting the alignment to gravity ARKit aligns the y-axis parallel to gravity and the z and x axes are oriented along the original heading of the device.
+</code></pre></div>  </div>
+</blockquote>
+
+<p><img src="https://cdn-images-1.medium.com/max/500/1*IRvOJvHSBOpLxbdGCzck-g.png" alt="" /><a href="https://docs-assets.developer.apple.com/published/ffb3831f78/d937c9e9-05fd-46e3-b72d-eb353b79bfbd.png">Source</a></p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arconfiguration.worldalignment/2873778-gravity"><strong>worldAlignment.gravity — Apple Docs</strong></a></p>
+
+<blockquote>
+  <p>The position and orientation of the device as of when the session configuration is first run determine the rest of the coordinate system: For the z-axis, ARKit chooses a basis vector (0,0,-1) pointing in the direction the device camera faces and perpendicular to the gravity axis. ARKit chooses a x-axis based on the z- and y-axes using the right hand rule—that is, the basis vector (1,0,0) is orthogonal to the other two axes, and (for a viewer looking in the negative-z direction) points toward the right.</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gravityAndHeading: By setting the alignment to gravityAndHeading ARKit aligns the y-axis parallel to gravity and the z and x axes orient towards compass heading. The origin is placed at the initial location of the device. While this is accurate most of the time, it’s precision is not incredibly high so creating an immersive augmented reality experience while solely relying on this data can be tricky.
+</code></pre></div>  </div>
+</blockquote>
+
+<p><img src="https://cdn-images-1.medium.com/max/815/1*Q-2ce-YwHsHTDCaAFWcL9g.png" alt="" /></p>
+
+<p><a href="https://docs-assets.developer.apple.com/published/ffb3831f78/0a0ac708-2357-4418-ad41-88711d290f8e.png">Source</a></p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arconfiguration.worldalignment/2873776-gravityandheading"><strong>worldAlignment.gravityAndHeading — Apple Docs</strong></a></p>
+
+<blockquote>
+  <p>Although this option fixes the <em>directions</em> of the three coordinate axes to real-world directions, the <em>location</em> of the coordinate system’s origin is still relative to the device, matching the device’s position as of when the session configuration is first run.</p>
+</blockquote>
+
+<h3 id="scenekit">SceneKit</h3>
+
+<p>One of the coolest things about ARKit is that it integrates well with Apple’s existing graphics rendering engines: SpriteKit, Metal and SceneKit. The one I’ve used the most has been SceneKit which is used for rendering 3D objects.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*gPCWMK3EAYHTNGTVNc2bOQ.gif" alt="" /></p>
+
+<p>Personal project — August 11th</p>
+
+<h4 id="definition">Definition</h4>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arscnview"><strong>ARSCNView</strong></a> <strong>:</strong> ARSCNView is a subclass of SCNView which is the standard SceneKit view for rendering 3D content. Because it is specialized for ARKit, it has some really cool features already baked in. For one, it provides seamless access to the phone’s camera. Even cooler, the world coordinate system for the view’s SceneKit scene directly responds to the AR world coordinate system established by the session configuration. It also automatically moves the SceneKit camera to match the real movement of the iPhone.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*aPX9VBgkpO0en1reGyS0Mw.gif" alt="" /></p>
+
+<p>Personal project — August 12th</p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arscnview"><strong>ARSCNView Docs</strong></a> <strong>:</strong></p>
+
+<blockquote>
+  <p>Because ARKit automatically matches SceneKit space to the real world, placing a virtual object such that it appears to maintain a real-world position requires only setting that object’s SceneKit position appropriately.&gt; You don’t necessarily need to use the ARAnchor class to track positions of objects you add to the scene, but by implementing ARSCNViewDelegate methods, you can add SceneKit content to any anchors that are automatically detected by ARKit.</p>
+  <h3 id="adding-node-toscene">Adding Node To Scene</h3>
+</blockquote>
+
+<p><img src="https://cdn-images-1.medium.com/max/633/1*WLaPipp1LqIdcwbWqCCtZg.png" alt="" /></p>
+
+<p><a href="https://developer.apple.com/documentation/scenekit/scnsphere">Source</a></p>
+
+<p>Before we go any further let’s get something basic out of the way. Let’s build our first augmented reality experience! To do this, we’re going to place a blue orb 1 meter in front of the camera.</p>
+
+<h4 id="definitions-1">Definitions</h4>
+
+<p><a href="https://developer.apple.com/documentation/scenekit/scnsphere"><strong>SCNSphere</strong></a> <strong>:</strong> A sphere defines a surface whose every point is equidistant from its center, which is placed at the origin of its local coordinate space. You define the size of the sphere in all three dimensions using its <a href="https://developer.apple.com/documentation/scenekit/scnsphere/1523787-radius">radius</a> property.</p>
+
+<p><a href="https://developer.apple.com/documentation/scenekit/scngeometry"><strong>SCNGeometry</strong></a> <strong>:</strong></p>
+
+<p>A three-dimensional shape (also called a model or mesh) that can be displayed in a scene, with attached materials that define its appearance.</p>
+
+<h4 id="spherenode-spherecode">SphereNode Sphere Code</h4>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">UIKit</span>
+<span class="kd">import</span> <span class="kt">SceneKit</span>
+<span class="kd">import</span> <span class="kt">ARKit</span>
+
+<span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ARSCNViewDelegate</span> <span class="p">{</span>
+
+   <span class="kd">@IBOutlet</span> <span class="k">var</span> <span class="nv">sceneView</span><span class="p">:</span> <span class="kt">ARSCNView</span><span class="o">!</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+        <span class="c1">// setup</span>
+    <span class="p">}</span>
+
+    <span class="c1">// viewWillAppear &amp; viewWillDisappear</span>
+
+    <span class="kd">func</span> <span class="nf">createSphereNode</span><span class="p">(</span><span class="n">with</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SCNNode</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">geometry</span> <span class="o">=</span> <span class="kt">SCNSphere</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="n">radius</span><span class="p">)</span>
+        <span class="n">geometry</span><span class="o">.</span><span class="n">firstMaterial</span><span class="p">?</span><span class="o">.</span><span class="n">diffuse</span><span class="o">.</span><span class="n">contents</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="k">let</span> <span class="nv">sphereNode</span> <span class="o">=</span> <span class="kt">SCNNode</span><span class="p">(</span><span class="nv">geometry</span><span class="p">:</span> <span class="n">geometry</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sphereNode</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sceneView.scene = SCNScene()        
+// Add Scene
+
+let circleNode = createSphereNode(with: 0.2, color: .blue)  
+// Add Sphere
+
+circleNode.position = SCNVector3(0, 0, -1) // 1 meter in front
+// Give sphere position    
+
+sceneView.scene.rootNode.addChildNode(circleNode)
+// Add to scene as childNode of rootNode
+</code></pre></div></div>
+
+<p><strong>Putting It Together</strong></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">UIKit</span>
+<span class="kd">import</span> <span class="kt">SceneKit</span>
+<span class="kd">import</span> <span class="kt">ARKit</span>
+
+<span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ARSCNViewDelegate</span> <span class="p">{</span>
+
+    <span class="kd">@IBOutlet</span> <span class="k">var</span> <span class="nv">sceneView</span><span class="p">:</span> <span class="kt">ARSCNView</span><span class="o">!</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">showsStatistics</span> <span class="o">=</span> <span class="kc">true</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span> <span class="o">=</span> <span class="kt">SCNScene</span><span class="p">()</span>
+        <span class="k">let</span> <span class="nv">circleNode</span> <span class="o">=</span> <span class="nf">createSphereNode</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">blue</span><span class="p">)</span>
+        <span class="n">circleNode</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="kt">SCNVector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// 1 meter in front of camera</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="nf">addChildNode</span><span class="p">(</span><span class="n">circleNode</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">ARWorldTrackingConfiguration</span><span class="p">()</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="nf">run</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="nf">pause</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">createSphereNode</span><span class="p">(</span><span class="n">with</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SCNNode</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">geometry</span> <span class="o">=</span> <span class="kt">SCNSphere</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="n">radius</span><span class="p">)</span>
+        <span class="n">geometry</span><span class="o">.</span><span class="n">firstMaterial</span><span class="p">?</span><span class="o">.</span><span class="n">diffuse</span><span class="o">.</span><span class="n">contents</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="k">let</span> <span class="nv">sphereNode</span> <span class="o">=</span> <span class="kt">SCNNode</span><span class="p">(</span><span class="nv">geometry</span><span class="p">:</span> <span class="n">geometry</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sphereNode</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>SceneKit and ARKit coordinates are quantified in meters. When we set the the last property on the SCNVector3 to -1 we set the z axis to to one meter in front of the camera. If everything goes according to plan (it should) the screen will display something like this:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*tcUiqA6_xsMcVMSu9-7sRQ.jpeg" alt="" /></p>
+
+<p>For now this approach works fine. Our sphere will automatically appear to track a real-world position because ARKit matches SceneKit space to real-world space. If we want to use coordinates, we’re probably going to need to find something durable to anchor * hint * our node to in the future.</p>
+
+<h3 id="vectors-and-matrice-and-linear-algebra-ohno">Vectors and Matrice and Linear Algebra, Oh No!</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/200/1*MinQCMoywXYBW4FsDWt80A.png" alt="" /></p>
+
+<p>A two by four matrix.</p>
+
+<p>If you remember back to math class, a vector has a magnitude and a direction.</p>
+
+<blockquote>
+  <p>In mathematics, physics, and engineering, a Euclidean vector (sometimes called a geometric or spatial vector, or — as here — simply a vector) is a geometric object that has magnitude (or length) and direction.&gt; — <a href="https://en.wikipedia.org/wiki/Euclidean_vector#Vectors_as_directional_derivatives">Wikipedia</a>&gt; When it comes to programming, a vector is just an array of numbers. Each number is a “dimension” of the vector.</p>
+</blockquote>
+
+<p>To start off simply, well use a 2 by 1 matrix for our vector. Let’s give it a value of x = 1. The vector (1, 0) graphed looks like:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/400/1*m0mZ1CshuJ2VpcvCEIjtIQ.png" alt="" /></p>
+
+<p>We can express that same vector (1, 0) in a very simple matrix:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/196/1*BbhJ9I91WMTrsbON2L4AZg.png" alt="" /></p>
+
+<p>X over Y</p>
+
+<p>As stated above:</p>
+
+<blockquote>
+  <p>a vector is just an array of numbers</p>
+</blockquote>
+
+<p>As you can see, a matrix looks similar to an array of numbers. While they can seem intimidating, under the hood, matrices are quite a simple concept and simple to work with after you’ve practiced a bit.</p>
+
+<p><strong>Definition from OpenGL</strong> :</p>
+
+<blockquote>
+  <p>Simply put, a matrix is an array of numbers with a predefined number of rows and columns</p>
+</blockquote>
+
+<p>Matrices are used to transform 3D coordinates. These include:</p>
+
+<ul>
+  <li>Rotation (changing orientation)</li>
+  <li>Scaling (size changes)</li>
+  <li>Translation (moving position)</li>
+</ul>
+
+<h3 id="transformations">Transformations</h3>
+
+<p>In most cases a transformed point can be expressed in this equation:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Transformed Point = Transformation Matrix × Original Point
+</code></pre></div></div>
+
+<p>If you’ve worked with CoreGraphics before you’ve probably seen something called CGAffineTransform. It makes for some pretty cool animations. In fact, CGAffineTransform is just a different type of matrix transformation.</p>
+
+<p><a href="https://www.mathworks.com/discovery/affine-transformation.html"><strong>Affine transformation</strong></a> is a linear mapping method that preserves points, straight lines, and planes.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/430/1*tpTWHF7Uu1qCdDl2sKudEg.gif" alt="" /></p>
+
+<p><a href="http://smashinghub.com/wp-content/uploads/2014/09/menu-animation-effects-3.gif">source</a></p>
+
+<h3 id="rotating-a-spaceship">Rotating A Space Ship</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*YaX3B6nINy0LypdU4D9LHQ.jpeg" alt="" /></p>
+
+<p>Let’s give transformations a try! While this isn’t the same way that they are used for the location nodes, they are close enough that you can start thinking about the principles in action. To do this create a new ARKit project with SceneKit. When you run it, there should be a spaceship floating in front of your screen like in the screenshot above.</p>
+
+<h4 id="loop-t-loops">Loop-T-Loops</h4>
+
+<p>Add the following lines below your viewDidLoad:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ARSCNViewDelegate</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">touchesBegan</span><span class="p">(</span><span class="n">_</span> <span class="nv">touches</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">UITouch</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="kt">SCNMatrix4Mult</span><span class="p">(</span><span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> <span class="kt">SCNMatrix4MakeRotation</span><span class="p">(</span><span class="kt">Float</span><span class="p">(</span><span class="kt">Double</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="kt">SCNMatrix4Mult</span><span class="p">(</span><span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> <span class="kt">SCNMatrix4MakeTranslation</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Now when you re-run it, the spaceship should still appear on your screen, however, when you tap it, it should loop around. Keep tapping it until it is back in the position it started (roughly).</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*FJc-Q9IYhnVDX1mDH9RsVQ.jpeg" alt="" /></p>
+
+<p>Here is the full ViewController code:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ARSCNViewDelegate</span> <span class="p">{</span>
+
+    <span class="kd">@IBOutlet</span> <span class="k">var</span> <span class="nv">sceneView</span><span class="p">:</span> <span class="kt">ARSCNView</span><span class="o">!</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+        <span class="c1">// Set the view's delegate</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+
+        <span class="c1">// Show statistics such as fps and timing information</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">showsStatistics</span> <span class="o">=</span> <span class="kc">true</span>
+
+        <span class="c1">// Create a new scene</span>
+        <span class="k">let</span> <span class="nv">scene</span> <span class="o">=</span> <span class="kt">SCNScene</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"art.scnassets/ship.scn"</span><span class="p">)</span><span class="o">!</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span> <span class="o">=</span> <span class="n">scene</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+
+        <span class="c1">// Create a session configuration</span>
+        <span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">ARWorldTrackingConfiguration</span><span class="p">()</span>
+
+        <span class="c1">// Run the view's session</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="nf">run</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">touchesBegan</span><span class="p">(</span><span class="n">_</span> <span class="nv">touches</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">UITouch</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="kt">SCNMatrix4Mult</span><span class="p">(</span><span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> <span class="kt">SCNMatrix4MakeRotation</span><span class="p">(</span><span class="kt">Float</span><span class="p">(</span><span class="kt">Double</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="kt">SCNMatrix4Mult</span><span class="p">(</span><span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> <span class="kt">SCNMatrix4MakeTranslation</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>If everything goes according to plan, after a few touchs, your spaceship will look like it is making glorious touch-down:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*YjgmjKDUQOZ9I4ftVVddNQ.jpeg" alt="" /></p>
+
+<h3 id="navigation">Navigation</h3>
+
+<p>Now that we have a bit of a handle on the basics of ARKit let’s move on to navigation and location services. If we want to get be guided to our destination, we’ll need a bit of help from a navigation service.</p>
+
+<p>MapKit comes with a handy turn-by-turn directions API. Using CoreLocation a destination and MKDirectionsRequest we can get an array of navigational steps to follow that will lead us to a specific location.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">MapKit</span>
+<span class="kd">import</span> <span class="kt">CoreLocation</span>
+
+<span class="kd">struct</span> <span class="kt">NavigationService</span> <span class="p">{</span>
+
+   <span class="kd">func</span> <span class="nf">getDirections</span><span class="p">(</span><span class="nv">destinationLocation</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">MKDirectionsRequest</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">MKRouteStep</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">steps</span><span class="p">:</span> <span class="p">[</span><span class="kt">MKRouteStep</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">let</span> <span class="nv">placeMark</span> <span class="o">=</span> <span class="kt">MKPlacemark</span><span class="p">(</span><span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="n">destinationLocation</span><span class="o">.</span><span class="n">coordinate</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="n">destinationLocation</span><span class="o">.</span><span class="n">coordinate</span><span class="o">.</span><span class="n">longitude</span><span class="p">))</span>
+
+        <span class="n">request</span><span class="o">.</span><span class="n">destination</span> <span class="o">=</span> <span class="kt">MKMapItem</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">placemark</span><span class="p">:</span> <span class="n">placeMark</span><span class="p">)</span>
+        <span class="n">request</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="kt">MKMapItem</span><span class="o">.</span><span class="nf">forCurrentLocation</span><span class="p">()</span>
+        <span class="n">request</span><span class="o">.</span><span class="n">requestsAlternateRoutes</span> <span class="o">=</span> <span class="kc">false</span>
+        <span class="n">request</span><span class="o">.</span><span class="n">transportType</span> <span class="o">=</span> <span class="o">.</span><span class="n">walking</span>
+
+        <span class="k">let</span> <span class="nv">directions</span> <span class="o">=</span> <span class="kt">MKDirections</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span>
+
+        <span class="n">directions</span><span class="o">.</span><span class="n">calculate</span> <span class="p">{</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="nf">print</span><span class="p">(</span><span class="s">"Error getting directions"</span><span class="p">)</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">guard</span> <span class="k">let</span> <span class="nv">response</span> <span class="o">=</span> <span class="n">response</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+                <span class="k">for</span> <span class="n">route</span> <span class="k">in</span> <span class="n">response</span><span class="o">.</span><span class="n">routes</span> <span class="p">{</span>
+                    <span class="n">steps</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="nv">contentsOf</span><span class="p">:</span> <span class="n">route</span><span class="o">.</span><span class="n">steps</span><span class="p">)</span>
+                <span class="p">}</span>
+                <span class="nf">completion</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h4 id="definitions-2">Definitions</h4>
+
+<p><a href="https://developer.apple.com/documentation/mapkit/mkplacemark"><strong>MKPlacemark</strong></a> <strong>s:</strong> contain information like city, state, county or street address that associated with a specific coordinate.</p>
+
+<p><a href="https://developer.apple.com/documentation/mapkit/mkroute"><strong>MKRoute</strong></a> <strong>:</strong></p>
+
+<p>A single route between a requested start and end point.An MKRoute object defines the geometry for the route—that is, it contains line segments associated with specific map coordinates. A route object may also include other information, such as the name of the route, its distance, and the expected travel time.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(route.name)
+
+// Broadway
+
+print(route.advisoryNotices)
+
+// []
+
+print(route.expectedTravelTime)
+
+// 2500.0
+</code></pre></div></div>
+
+<p><a href="https://developer.apple.com/documentation/mapkit/mkroutestep"><strong>MKRouteStep</strong></a> <strong>:</strong></p>
+
+<p>is one segment of a route. Each step contains a single instruction that should be completed by a user navigating between two points in order for them to successfully complete their route.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(step.distance)
+
+// 1.0
+
+print(step.instructions)
+
+// Proceed to 7th Ave
+</code></pre></div></div>
+
+<p><a href="https://developer.apple.com/documentation/mapkit/mkmapitem"><strong>MKMapItem</strong></a> <strong>:</strong> A point of interest on the map. A map item includes a geographic location and any interesting data that might apply to that location, such as the address at that location and the name of a business at that address.</p>
+
+<p><a href="https://developer.apple.com/documentation/mapkit/mkdirections"><strong>MKDirections</strong></a> <strong>:</strong> A utility object that computes directions and travel-time information based on the route information you provide.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">SceneKit</span>
+<span class="kd">import</span> <span class="kt">ARKit</span>
+<span class="kd">import</span> <span class="kt">CoreLocation</span>
+<span class="kd">import</span> <span class="kt">MapKit</span>
+
+<span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ARSCNViewDelegate</span><span class="p">,</span> <span class="kt">ARSessionDelegate</span><span class="p">,</span> <span class="kt">LocationServiceDelegate</span> <span class="p">{</span>
+
+    <span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">sceneView</span><span class="p">:</span> <span class="kt">ARSCNView</span><span class="o">!</span>
+
+    <span class="k">var</span> <span class="nv">steps</span><span class="p">:</span> <span class="p">[</span><span class="kt">MKRouteStep</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">var</span> <span class="nv">destinationLocation</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="o">!</span>
+    <span class="k">var</span> <span class="nv">locationService</span> <span class="o">=</span> <span class="kt">LocationService</span><span class="p">()</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+        <span class="n">locationService</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+        <span class="k">var</span> <span class="nv">navService</span> <span class="o">=</span> <span class="kt">NavigationService</span><span class="p">()</span>
+
+        <span class="k">self</span><span class="o">.</span><span class="n">destinationLocation</span> <span class="o">=</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="mf">40.737512</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="o">-</span><span class="mf">73.980767</span><span class="p">)</span>
+        <span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">MKDirectionsRequest</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">destinationLocation</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+            <span class="n">navService</span><span class="o">.</span><span class="nf">getDirections</span><span class="p">(</span><span class="nv">destinationLocation</span><span class="p">:</span> <span class="n">destinationLocation</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">steps</span> <span class="k">in</span>
+                <span class="k">for</span> <span class="n">step</span> <span class="k">in</span> <span class="n">steps</span> <span class="p">{</span>
+                    <span class="k">self</span><span class="o">.</span><span class="n">steps</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">step</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*4bNiloIDw6WN2Uc5gvv7jg.gif" alt="" /></p>
+
+<p>Personal project — August 13th</p>
+
+<h4 id="sources">Sources:</h4>
+
+<p><a href="https://medium.com/@yatchoi/getting-started-with-arkit-real-life-waypoints-1707e3cb1da2">medium.com — Yat Choi</a></p>
+
+<p><a href="https://aviation.stackexchange.com/questions/8000/what-are-the-differences-between-bearing-vs-course-vs-direction-vs-heading-vs-tr">aviation.stackexchange.com</a></p>
+
+<p><a href="https://github.com/ProjectDent/ARKit-CoreLocation">github.com/ProjectDent/ARKit-CoreLocation</a></p>
+
+<p><a href="http://www.movable-type.co.uk/scripts/latlong.html">movable-type.co.uk/scripts/latlong.html</a></p>
+
+<p><a href="https://gis.stackexchange.com/questions/4906/why-is-law-of-cosines-more-preferable-than-haversine-when-calculating-distance-b">gis.stackexchange.com</a></p>
+
+<p><a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices">opengl-tutorial.org</a></p>
+
+<p><a href="https://math.stackexchange.com/questions/128514/solving-the-arctan-of-an-angle-radians-by-hand">math.stackexchange.com</a></p>
+
+
+
+    <div class="blog-navigation">
+        
+            <a class="prev" href="http://localhost:4000/data-structures-in-real-world-linked-list/">&laquo; Linked Lists - Data Structures In Real World</a>
+        
+        
+            <a class="next" href="http://localhost:4000/arkit-corelocation-part-two/">ARKit and CoreLocation: Part Two &raquo;</a>
+        
+    </div>
+
+
+
+    <div class="related">
+    
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+                    
+                    <h4>Related Posts</h4>
+                    <ul>
+                    
+                    <li class="relatedPost">
+                        <a href="http://localhost:4000/arkit-corelocation-part-two/">ARKit and CoreLocation: Part Two
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+    
+        </ul>
+    
+</div>
+
+
+
+
+    <section class="author">
+    <div class="toleft">
+        <img
+            class="selfie"
+            src="http://localhost:4000/assets/images/profile.jpg"
+            alt="Chris Webb"
+        />
+    </div>
+
+    <div class="toright">
+        <h4 class="name">Chris Webb</h4>
+        <p class="bio">The journey of one thousand apps starts with a single key press...</p>
+
+        <div class="share">
+            <!-- Note: Only use three share links if your site width is set to large -->
+            <!-- If site width is set to normal, you may choose any two share links -->
+            <a
+                class="twitter"
+                href="https://twitter.com/intent/tweet?text=http://localhost:4000/arkit-corelocation-part-one/ - ARKit and Core Location: Part One by @"
+            >
+                <i class="fa-brands fa-twitter"></i>
+                <span class="icon-twitter">Tweet</span>
+            </a>
+
+            <a
+                class="facebook"
+                href="javascript:void(0)"
+                onclick="window.open('https://facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;"
+            >
+                <i class="fa-brands fa-facebook"></i>
+                <span class="icon-facebook-rect">Share</span>
+            </a>
+
+            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/arkit-corelocation-part-one/&amp;title=ARKit and Core Location: Part One&amp;summary=Adventures in Augmented Reality&amp;source=http://localhost:4000" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                <span class="icon-linkedin">Share</span>
+            </a> -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<footer class="footer-main">
+    Chris Webb © 2023
+
+    <a class="link" href="http://localhost:4000/feed.xml" target="_blank">
+        <i class="fa-solid fa-rss"></i>
+    </a>
+
+    <p class="extra">
+        <a class="link" href="https://github.com/sergiokopplin/indigo">Indigo theme</a>
+        by
+        <a class="link" href="https://github.com/sergiokopplin/indigo">Kopplin</a>
+    </p>
+</footer>
+
+
+            </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
+
