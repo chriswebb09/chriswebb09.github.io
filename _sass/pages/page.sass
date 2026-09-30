@@ -60,7 +60,7 @@
         animation: fade-in-down 0.5s 0.12s both
 
     > .lede
-        margin: 0
+        margin: 0 0 16px
         max-width: 46ch
         font-size: 1.8rem
         line-height: 1.6
@@ -222,27 +222,6 @@
         text-transform: uppercase
         letter-spacing: 0.12em
         color: $gama
-
-// two-column editorial prose below the hero
-.about-prose
-    display: grid
-    grid-template-columns: 1fr 1fr
-    gap: 48px
-    margin-top: 48px
-    padding-top: 40px
-    border-top: 1px solid $epsilon
-
-    @media #{$below}
-        grid-template-columns: 1fr
-        gap: 0
-
-    > p
-        margin: 0
-        font-size: 1.5rem
-        line-height: 1.7
-
-        @media #{$below}
-            margin-bottom: 16px
 
 .about-section
     margin-top: 72px

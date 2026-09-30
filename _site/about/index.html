@@ -354,7 +354,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 @media only screen and (max-width: 400px) { .about-hero-copy > .page-title { font-size: 3.4rem; } }
 .about-hero-copy > .page-title .dot { color: #818cf8; }
 .about-hero-copy > .page-sub { margin: 0 0 20px; font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.2rem; line-height: 1.8; letter-spacing: 0.02em; color: #74747f; animation: fade-in-down 0.5s 0.12s both; }
-.about-hero-copy > .lede { margin: 0; max-width: 46ch; font-size: 1.8rem; line-height: 1.6; font-weight: 500; color: #a5a5b3; animation: fade-in-down 0.5s 0.18s both; }
+.about-hero-copy > .lede { margin: 0 0 16px; max-width: 46ch; font-size: 1.8rem; line-height: 1.6; font-weight: 500; color: #a5a5b3; animation: fade-in-down 0.5s 0.18s both; }
 @media only screen and (max-width: 400px) { .about-hero-copy > .lede { font-size: 1.6rem; } }
 
 .about-side { position: relative; display: flex; justify-content: center; animation: fade-in-down 0.6s 0.2s both; }
@@ -387,11 +387,6 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 .id-foot { display: flex; align-items: center; justify-content: space-between; }
 .id-foot > .id-barcode { width: 116px; height: 26px; opacity: 0.55; background: repeating-linear-gradient(90deg, #f4f4f6 0, #f4f4f6 2px, transparent 2px, transparent 5px, #f4f4f6 5px, #f4f4f6 6px, transparent 6px, transparent 10px); }
 .id-foot > .id-est { font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.12em; color: #74747f; }
-
-.about-prose { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; padding-top: 40px; border-top: 1px solid #222230; }
-@media only screen and (max-width: 780px) { .about-prose { grid-template-columns: 1fr; gap: 0; } }
-.about-prose > p { margin: 0; font-size: 1.5rem; line-height: 1.7; }
-@media only screen and (max-width: 780px) { .about-prose > p { margin-bottom: 16px; } }
 
 .about-section { margin-top: 72px; }
 
@@ -795,6 +790,8 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
         <h1 class="page-title">Hi, I'm Chris<span class="dot">.</span></h1>
         <p class="page-sub">iOS engineer, Columbia CS grad, and serial side-project starter.</p>
         <p class="lede">I'm a senior iOS engineer with 6+ years building high-performance apps used by millions — now working on geospatial developer tools at Esri.</p>
+        <p class="hero-p">I've led technical decisions for Fortune 500 commerce platforms, contributed to two successful startup acquisitions, and shipped consumer apps with hundreds of thousands of daily users. Most of my work is in Swift, and I'm just as comfortable in Python, JavaScript, C++, and Java.</p>
+        <p class="hero-p">These days my work lives where software meets the physical world — augmented reality, spatial computing, and the ArcGIS Maps SDK for Swift, whose open-source samples I help maintain at Esri.</p>
     </div>
     <div class="about-side">
         <aside class="id-card">
@@ -818,11 +815,6 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
         </aside>
     </div>
 </header>
-
-<div class="about-prose">
-    <p>I've led technical decisions for Fortune 500 commerce platforms, contributed to two successful startup acquisitions, and shipped consumer apps with hundreds of thousands of daily users. Most of my work is in Swift, and I'm just as comfortable in Python, JavaScript, C++, and Java.</p>
-    <p>These days my work lives where software meets the physical world — augmented reality, spatial computing, and the ArcGIS Maps SDK for Swift, whose open-source samples I help maintain at Esri.</p>
-</div>
 
 <section class="about-section reveal">
     <div class="section-heading">
