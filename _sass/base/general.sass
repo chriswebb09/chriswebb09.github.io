@@ -36,7 +36,7 @@ body:after
 	height: 100vh
 	z-index: -1
 	pointer-events: none
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E"), radial-gradient(52% 42% at 16% -8%, rgba(99, 102, 241, 0.22), transparent 62%), radial-gradient(44% 36% at 84% -4%, rgba(168, 85, 247, 0.15), transparent 60%), radial-gradient(60% 44% at 50% -16%, rgba(34, 211, 238, 0.1), transparent 65%)
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.03 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E"), radial-gradient(52% 42% at 16% -8%, rgba(99, 102, 241, 0.22), transparent 62%), radial-gradient(44% 36% at 84% -4%, rgba(168, 85, 247, 0.15), transparent 60%), radial-gradient(60% 44% at 50% -16%, rgba(34, 211, 238, 0.1), transparent 65%)
 	background-repeat: repeat, no-repeat, no-repeat, no-repeat
 
 @media (prefers-reduced-motion: no-preference)
@@ -204,8 +204,8 @@ code
 	font-family: $fontMonospace
 	font-size: 1.3rem
 	vertical-align: baseline
-	color: #a5b4fc
-	background: rgba($delta, 0.09)
+	color: $delta
+	background: rgba($delta, 0.07)
 	border: 1px solid rgba($delta, 0.16)
 	border-radius: 5px
 
