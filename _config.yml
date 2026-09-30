@@ -23,7 +23,7 @@ resume-url: assets/images/Chris_Webb_Resume.pdf
 
 url: https://chriswebb09.github.io
 
-permalink: /:title/
+permalink: /:title
 
 # To enable google analytics, supply your token below
 # analytics-google: 'UA-MYANALYTICS'

@@ -9,20 +9,24 @@
     <meta name=author content="Chris Webb">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>About | Chris Webb</title>
+<title>ARKit and Core Location: Part One | Chris Webb</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="About" />
+<meta property="og:title" content="ARKit and Core Location: Part One" />
+<meta name="author" content="chriswebb" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Tech stuff" />
-<meta property="og:description" content="Tech stuff" />
-<link rel="canonical" href="https://chriswebb09.github.io/about/" />
-<meta property="og:url" content="https://chriswebb09.github.io/about/" />
+<meta name="description" content="Adventures in Augmented Reality" />
+<meta property="og:description" content="Adventures in Augmented Reality" />
+<link rel="canonical" href="https://chriswebb09.github.io/arkit-corelocation-part-one" />
+<meta property="og:url" content="https://chriswebb09.github.io/arkit-corelocation-part-one" />
 <meta property="og:site_name" content="Chris Webb" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="About" />
+<meta property="og:image" content="https://chriswebb09.github.io/assets/images/ARKit.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-08-15T22:48:00-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://chriswebb09.github.io/assets/images/ARKit.png" />
+<meta property="twitter:title" content="ARKit and Core Location: Part One" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Tech stuff","headline":"About","name":"Chris Webb","url":"https://chriswebb09.github.io/about/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"chriswebb"},"dateModified":"2017-08-15T22:48:00-07:00","datePublished":"2017-08-15T22:48:00-07:00","description":"Adventures in Augmented Reality","headline":"ARKit and Core Location: Part One","image":"https://chriswebb09.github.io/assets/images/ARKit.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://chriswebb09.github.io/arkit-corelocation-part-one"},"url":"https://chriswebb09.github.io/arkit-corelocation-part-one"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -48,7 +52,7 @@
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 
-    <link rel="canonical" href="https://chriswebb09.github.io/about/">
+    <link rel="canonical" href="https://chriswebb09.github.io/arkit-corelocation-part-one">
     <link rel="alternate" type="application/rss+xml" title="Chris Webb" href="https://chriswebb09.github.io/feed.xml" />
 
     <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
@@ -788,9 +792,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
     <div class="spotlight" aria-hidden="true"></div>
     <div class="wrapper-large">
         
-            
-                <div class="page about">
-            
+            <div class="post">
         
 
             
@@ -801,13 +803,13 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 
         <ul class="topbar-links">
             
-                <li><a href="/blog/"><span class="n">01.</span>Blog</a></li>
+                <li><a href="/blog"><span class="n">01.</span>Blog</a></li>
             
             
-                <li><a href="/projects/"><span class="n">02.</span>Projects</a></li>
+                <li><a href="/projects"><span class="n">02.</span>Projects</a></li>
             
             
-                <li><a class="active" href="/about/"><span class="n">03.</span>About</a></li>
+                <li><a href="/about"><span class="n">03.</span>About</a></li>
             
             
                 <li><a class="resume" href="/assets/images/Chris_Webb_Resume.pdf">Résumé<span class="dl">&darr;</span></a></li>
@@ -820,156 +822,834 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 
 
 
-<header class="about-hero">
-    <div class="about-hero-copy">
-        <span class="kicker">Hello</span>
-        <h1 class="page-title">Hi, I'm Chris<span class="dot">.</span></h1>
-        <p class="page-sub">Product engineer, Columbia CS grad, and serial side-project starter.</p>
-        <p class="lede">I'm a product engineer with 6+ years building high-performance apps used by millions — now working on geospatial developer tools at Esri.</p>
-        <p class="hero-p">I've led technical decisions for Fortune 500 commerce platforms, contributed to two successful startup acquisitions, and shipped consumer apps with hundreds of thousands of daily users. Most of my work is in Swift, and I'm just as comfortable in Python, JavaScript, C++, and Java.</p>
-        <p class="hero-p">These days my work lives where software meets the physical world — augmented reality, spatial computing, and the ArcGIS Maps SDK for Swift, whose open-source samples I help maintain at Esri.</p>
-    </div>
-    <div class="about-side">
-        <aside class="id-card">
-            <div class="id-top">
-                <span class="id-brand">cw<span class="dot">.</span></span>
-                <span class="id-num">ID-2017-NYC</span>
-            </div>
-            <img class="id-avatar" src="/assets/images/profile.png" alt="Chris Webb" />
-            <h3 class="id-name">Chris Webb</h3>
-            <p class="id-role">Product Engineer</p>
-            <ul class="id-rows">
-                <li><span class="k">employer</span><span class="v">Esri</span></li>
-                <li><span class="k">education</span><span class="v">Columbia CS '25</span></li>
-                <li><span class="k">focus</span><span class="v">Swift · AR · GIS</span></li>
-                <li><span class="k">status</span><span class="v is-live"><i></i>building</span></li>
-            </ul>
-            <div class="id-foot">
-                <span class="id-barcode" aria-hidden="true"></span>
-                <span class="id-est">est. 2017</span>
-            </div>
-        </aside>
-    </div>
+<header class="post-hero">
+    <a class="post-back" href="/blog">&larr; Writing</a>
+
+    <p class="post-meta">
+        <time datetime="2017-08-15">August 15, 2017</time>
+        
+            <span class="sep">·</span>
+            <span class="reading-time" title="Estimated read time">
+    
+
+    
+        19 mins
+    
+</span>
+ read
+        
+    </p>
+
+    <h1 class="title">ARKit and Core Location: Part One</h1>
+
+    
+        <div class="post-tags">
+            
+                <a class="item" href="/tags#ios">iOS</a>
+            
+                <a class="item" href="/tags#swift">swift</a>
+            
+                <a class="item" href="/tags#augmented-reality">Augmented Reality</a>
+            
+                <a class="item" href="/tags#navigation">navigation</a>
+            
+                <a class="item" href="/tags#core-location">core location</a>
+            
+        </div>
+    
+
+    
+        <img class="title-image" src="/assets/images/ARKit.png" alt="ARKit and Core Location: Part One">
+    
 </header>
 
-<section class="about-section reveal">
-    <div class="section-heading">
-        <div>
-            <span class="kicker">01 — Currently</span>
-            <h2>State of the union</h2>
-        </div>
-        <span class="rule"></span>
-    </div>
+<div class="post-content">
+<h2 id="navigation-with-linear-algebra">Navigation With Linear Algebra</h2>
 
-    <ul class="about-facts">
-        <li>
-            <span class="k">role</span>
-            <span class="v">Product Engineer at Esri — ArcGIS Maps SDK for Swift</span>
-        </li>
-        <li>
-            <span class="k">education</span>
-            <span class="v">B.A. Computer Science, Columbia University (2025)</span>
-        </li>
-        <li>
-            <span class="k">ask me about</span>
-            <span class="v">Swift, ARKit &amp; spatial computing</span>
-        </li>
-        <li>
-            <span class="k">contact</span>
-            <span class="v"><a href="https://www.linkedin.com/in/christopher-webb-orenstein" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="mailto:chris.webb5249@gmail.com">chris.webb5249@gmail.com</a></span>
-        </li>
-    </ul>
+<p><img src="&quot;/assets/images/drone-demo3.gif&quot;" alt="" /></p>
+
+<p><a href="https://github.com/chriswebb09/ARKitNavigationDemo">Demo Code</a></p>
+
+<p><a href="http://chriswebb09.github.io/2017/08/15/arkit-corelocation-part-one/">ARKit and CoreLocation: Part One</a></p>
+
+<p><a href="https://medium.com/journey-of-one-thousand-apps/arkit-and-corelocation-part-two-7b045fb1d7a1">ARKit and CoreLocation: Part Two</a></p>
+
+<p><a href="https://medium.com/journey-of-one-thousand-apps/arkit-and-corelocation-part-three-98b1d51e2eac">ARKit and CoreLocation: Part Three</a></p>
+
+<h4 id="background"><strong>Background</strong></h4>
+
+<p>It has been awhile since I’ve written a new blog post so hopefully, this makes up the difference. This post and the next will be a two part series on my experiments with <a href="https://developer.apple.com/documentation/arkit">ARKit</a> and <a href="https://developer.apple.com/documentation/corelocation">CoreLocation</a>! The first part will deal with the basics of ARKit, getting the directions from MapKit as well as touch on the basics of matrix transformations. The <a href="https://medium.com/@chris.webb5249/arkit-and-corelocation-part-two-7b045fb1d7a1"><strong>second part</strong></a> will deal with calculating the bearing between two locations and how to take the location data and translate that into a position in the ARKit Scene.</p>
+
+<h3 id="introduction">Introduction</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/292/1*pTwz78YrgP5-I17T8AvNYA.jpeg" alt="" /></p>
+
+<p>Mention “augmented reality” and the first thing that jumps into most people’s head is <a href="http://www.pokemongo.com">PokemonGO</a>. If you’re like most people, you’ve probably played it once or twice (or obsessively.) PokemonGO proved that when it comes to setting, nothing beats our world. As awesome as PokemonGO was, it was a slight glimpse into the depth and potential of the augmented reality experience.</p>
+
+<p><a href="https://developer.apple.com/documentation/arkit"><strong>Apple Documentation</strong></a> <strong>:</strong></p>
+
+<blockquote>
+  <p><em>Augmented reality</em> (AR) describes user experiences that add 2D or 3D elements to the live view from a device’s camera in a way that makes those elements appear to inhabit the real world. ARKit combines device motion tracking, camera scene capture, advanced scene processing, and display conveniences to simplify the task of building an AR experience.</p>
+</blockquote>
+
+<p>With <a href="https://www.apple.com/ios/ios-11-preview/">iOS 11</a>, Apple has unleashed the power of ARKit onto the iOS development community. We’re still several weeks out of iOS 11 going live, but what we’re already seeing looks likely to redefine what is possible for the mobile user experience.</p>
+
+<h3 id="first-some-fundamentals"><strong>First, Some Fundamentals</strong></h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*z2dEldME3fyddalmq8fu2g.gif" alt="" /></p>
+
+<p>Personal Project — August 20th</p>
+
+<p>So, it’s magic right? I hate to be the one to say this but no, it’s just math. So if it isn’t magic how do they pull it off? Visual Inertial Odometry! (Say it ten times fast.)</p>
+
+<h4 id="definitions">Definitions</h4>
+
+<p><a href="https://developer.apple.com/documentation/arkit/understanding_augmented_reality"><strong>Visual Inertial Odometry (VIO)</strong></a>: ARKit analyzes the phone camera and motion data in order to keep track of the world around it. The computer vision logs noticeable features in the environment and is able to maintain awareness of their location in the real world regardless of the iPhone’s movement.</p>
+
+<p>Apple is a huge fan of organizing code around sessions. <strong>Sessions</strong> are a way of encapsulating the logic and data contained within a defined period of the applications activity. With URLSession this is the logic and data when your application sends network requests and receives data in back in return.</p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arsession"><strong>ARSession</strong></a> <strong>:</strong> In ARKit the <strong>ARSession</strong> coordinates the logic and data necessary to create the augmented reality experience. This includes camera and motion data and calculations required to keep track of the world as it moves around.</p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arframe"><strong>ARFrame</strong></a>: An <strong>ARFrame</strong> contains a video frame data and position tracking data which gets passed along to the ARSession in the currentFrame property. ARKit marries that image data with the motion tracking data to calculate the iPhone’s position.</p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/aranchor"><strong>ARAnchor</strong></a> <strong>:</strong> An <strong>ARAnchor</strong> is a position in the real world that maintained regardless of motion or position of the camera (theoretically). It’s anchored to a specific position, and for the most part will remain there.</p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arconfiguration"><strong>ARConfiguration</strong></a></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/500/1*BBInz1XxPnD4nviPGetDKQ.png" alt="" /></p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arworldtrackingconfiguration"><strong>ARWorldTrackingConfiguration</strong></a> <strong>:</strong> is a configuration for tracking the devices orientation, position and for detecting feature points like surfaces that are recorded by the camera. ARConfigurations connect the physical world which you and the phone exist in with the virtual coordinate space generated by your phone based on the camera and motion data.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>worldAlignment: The worldAlignment property on ARSession defines how the ARSession interprets the ARFrame’s motion data on a 3D coordinate mapping system that is uses to keep track of the world and build the Augmented Reality experience.
+</code></pre></div></div>
+
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*j12eVe8hKvXq-CrbBzHMXA.png" alt="" /><a href="https://docs-assets.developer.apple.com/published/b99f86dcfb/f76d63a3-7620-40d1-9e52-0d9ad6329678.png">Source</a></p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arconfiguration/2923550-worldalignment"><strong>worldAlignment — Apple Docs</strong></a></p>
+
+<blockquote>
+  <p>Creating an AR experience depends on being able to construct a coordinate system for placing objects in a virtual 3D world that maps to the real-world position and motion of the device. When you run a session configuration, ARKit creates a scene coordinate system based on the position and orientation of the device; any ARAnchor objects you create or that the AR session detects are positioned relative to that coordinate system_._</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gravity: By setting the alignment to gravity ARKit aligns the y-axis parallel to gravity and the z and x axes are oriented along the original heading of the device.
+</code></pre></div>  </div>
+</blockquote>
+
+<p><img src="https://cdn-images-1.medium.com/max/500/1*IRvOJvHSBOpLxbdGCzck-g.png" alt="" /><a href="https://docs-assets.developer.apple.com/published/ffb3831f78/d937c9e9-05fd-46e3-b72d-eb353b79bfbd.png">Source</a></p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arconfiguration.worldalignment/2873778-gravity"><strong>worldAlignment.gravity — Apple Docs</strong></a></p>
+
+<blockquote>
+  <p>The position and orientation of the device as of when the session configuration is first run determine the rest of the coordinate system: For the z-axis, ARKit chooses a basis vector (0,0,-1) pointing in the direction the device camera faces and perpendicular to the gravity axis. ARKit chooses a x-axis based on the z- and y-axes using the right hand rule—that is, the basis vector (1,0,0) is orthogonal to the other two axes, and (for a viewer looking in the negative-z direction) points toward the right.</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gravityAndHeading: By setting the alignment to gravityAndHeading ARKit aligns the y-axis parallel to gravity and the z and x axes orient towards compass heading. The origin is placed at the initial location of the device. While this is accurate most of the time, it’s precision is not incredibly high so creating an immersive augmented reality experience while solely relying on this data can be tricky.
+</code></pre></div>  </div>
+</blockquote>
+
+<p><img src="https://cdn-images-1.medium.com/max/815/1*Q-2ce-YwHsHTDCaAFWcL9g.png" alt="" /></p>
+
+<p><a href="https://docs-assets.developer.apple.com/published/ffb3831f78/0a0ac708-2357-4418-ad41-88711d290f8e.png">Source</a></p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arconfiguration.worldalignment/2873776-gravityandheading"><strong>worldAlignment.gravityAndHeading — Apple Docs</strong></a></p>
+
+<blockquote>
+  <p>Although this option fixes the <em>directions</em> of the three coordinate axes to real-world directions, the <em>location</em> of the coordinate system’s origin is still relative to the device, matching the device’s position as of when the session configuration is first run.</p>
+</blockquote>
+
+<h3 id="scenekit">SceneKit</h3>
+
+<p>One of the coolest things about ARKit is that it integrates well with Apple’s existing graphics rendering engines: SpriteKit, Metal and SceneKit. The one I’ve used the most has been SceneKit which is used for rendering 3D objects.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*gPCWMK3EAYHTNGTVNc2bOQ.gif" alt="" /></p>
+
+<p>Personal project — August 11th</p>
+
+<h4 id="definition">Definition</h4>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arscnview"><strong>ARSCNView</strong></a> <strong>:</strong> ARSCNView is a subclass of SCNView which is the standard SceneKit view for rendering 3D content. Because it is specialized for ARKit, it has some really cool features already baked in. For one, it provides seamless access to the phone’s camera. Even cooler, the world coordinate system for the view’s SceneKit scene directly responds to the AR world coordinate system established by the session configuration. It also automatically moves the SceneKit camera to match the real movement of the iPhone.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*aPX9VBgkpO0en1reGyS0Mw.gif" alt="" /></p>
+
+<p>Personal project — August 12th</p>
+
+<p><a href="https://developer.apple.com/documentation/arkit/arscnview"><strong>ARSCNView Docs</strong></a> <strong>:</strong></p>
+
+<blockquote>
+  <p>Because ARKit automatically matches SceneKit space to the real world, placing a virtual object such that it appears to maintain a real-world position requires only setting that object’s SceneKit position appropriately.&gt; You don’t necessarily need to use the ARAnchor class to track positions of objects you add to the scene, but by implementing ARSCNViewDelegate methods, you can add SceneKit content to any anchors that are automatically detected by ARKit.</p>
+  <h3 id="adding-node-toscene">Adding Node To Scene</h3>
+</blockquote>
+
+<p><img src="https://cdn-images-1.medium.com/max/633/1*WLaPipp1LqIdcwbWqCCtZg.png" alt="" /></p>
+
+<p><a href="https://developer.apple.com/documentation/scenekit/scnsphere">Source</a></p>
+
+<p>Before we go any further let’s get something basic out of the way. Let’s build our first augmented reality experience! To do this, we’re going to place a blue orb 1 meter in front of the camera.</p>
+
+<h4 id="definitions-1">Definitions</h4>
+
+<p><a href="https://developer.apple.com/documentation/scenekit/scnsphere"><strong>SCNSphere</strong></a> <strong>:</strong> A sphere defines a surface whose every point is equidistant from its center, which is placed at the origin of its local coordinate space. You define the size of the sphere in all three dimensions using its <a href="https://developer.apple.com/documentation/scenekit/scnsphere/1523787-radius">radius</a> property.</p>
+
+<p><a href="https://developer.apple.com/documentation/scenekit/scngeometry"><strong>SCNGeometry</strong></a> <strong>:</strong></p>
+
+<p>A three-dimensional shape (also called a model or mesh) that can be displayed in a scene, with attached materials that define its appearance.</p>
+
+<h4 id="spherenode-spherecode">SphereNode Sphere Code</h4>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">UIKit</span>
+<span class="kd">import</span> <span class="kt">SceneKit</span>
+<span class="kd">import</span> <span class="kt">ARKit</span>
+
+<span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ARSCNViewDelegate</span> <span class="p">{</span>
+
+   <span class="kd">@IBOutlet</span> <span class="k">var</span> <span class="nv">sceneView</span><span class="p">:</span> <span class="kt">ARSCNView</span><span class="o">!</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+        <span class="c1">// setup</span>
+    <span class="p">}</span>
+
+    <span class="c1">// viewWillAppear &amp; viewWillDisappear</span>
+
+    <span class="kd">func</span> <span class="nf">createSphereNode</span><span class="p">(</span><span class="n">with</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SCNNode</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">geometry</span> <span class="o">=</span> <span class="kt">SCNSphere</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="n">radius</span><span class="p">)</span>
+        <span class="n">geometry</span><span class="o">.</span><span class="n">firstMaterial</span><span class="p">?</span><span class="o">.</span><span class="n">diffuse</span><span class="o">.</span><span class="n">contents</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="k">let</span> <span class="nv">sphereNode</span> <span class="o">=</span> <span class="kt">SCNNode</span><span class="p">(</span><span class="nv">geometry</span><span class="p">:</span> <span class="n">geometry</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sphereNode</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sceneView.scene = SCNScene()        
+// Add Scene
+
+let circleNode = createSphereNode(with: 0.2, color: .blue)  
+// Add Sphere
+
+circleNode.position = SCNVector3(0, 0, -1) // 1 meter in front
+// Give sphere position    
+
+sceneView.scene.rootNode.addChildNode(circleNode)
+// Add to scene as childNode of rootNode
+</code></pre></div></div>
+
+<p><strong>Putting It Together</strong></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">UIKit</span>
+<span class="kd">import</span> <span class="kt">SceneKit</span>
+<span class="kd">import</span> <span class="kt">ARKit</span>
+
+<span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ARSCNViewDelegate</span> <span class="p">{</span>
+
+    <span class="kd">@IBOutlet</span> <span class="k">var</span> <span class="nv">sceneView</span><span class="p">:</span> <span class="kt">ARSCNView</span><span class="o">!</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">showsStatistics</span> <span class="o">=</span> <span class="kc">true</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span> <span class="o">=</span> <span class="kt">SCNScene</span><span class="p">()</span>
+        <span class="k">let</span> <span class="nv">circleNode</span> <span class="o">=</span> <span class="nf">createSphereNode</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">blue</span><span class="p">)</span>
+        <span class="n">circleNode</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="kt">SCNVector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// 1 meter in front of camera</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="nf">addChildNode</span><span class="p">(</span><span class="n">circleNode</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">ARWorldTrackingConfiguration</span><span class="p">()</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="nf">run</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="nf">pause</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">createSphereNode</span><span class="p">(</span><span class="n">with</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SCNNode</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">geometry</span> <span class="o">=</span> <span class="kt">SCNSphere</span><span class="p">(</span><span class="nv">radius</span><span class="p">:</span> <span class="n">radius</span><span class="p">)</span>
+        <span class="n">geometry</span><span class="o">.</span><span class="n">firstMaterial</span><span class="p">?</span><span class="o">.</span><span class="n">diffuse</span><span class="o">.</span><span class="n">contents</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="k">let</span> <span class="nv">sphereNode</span> <span class="o">=</span> <span class="kt">SCNNode</span><span class="p">(</span><span class="nv">geometry</span><span class="p">:</span> <span class="n">geometry</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">sphereNode</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>SceneKit and ARKit coordinates are quantified in meters. When we set the the last property on the SCNVector3 to -1 we set the z axis to to one meter in front of the camera. If everything goes according to plan (it should) the screen will display something like this:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*tcUiqA6_xsMcVMSu9-7sRQ.jpeg" alt="" /></p>
+
+<p>For now this approach works fine. Our sphere will automatically appear to track a real-world position because ARKit matches SceneKit space to real-world space. If we want to use coordinates, we’re probably going to need to find something durable to anchor * hint * our node to in the future.</p>
+
+<h3 id="vectors-and-matrice-and-linear-algebra-ohno">Vectors and Matrice and Linear Algebra, Oh No!</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/200/1*MinQCMoywXYBW4FsDWt80A.png" alt="" /></p>
+
+<p>A two by four matrix.</p>
+
+<p>If you remember back to math class, a vector has a magnitude and a direction.</p>
+
+<blockquote>
+  <p>In mathematics, physics, and engineering, a Euclidean vector (sometimes called a geometric or spatial vector, or — as here — simply a vector) is a geometric object that has magnitude (or length) and direction.&gt; — <a href="https://en.wikipedia.org/wiki/Euclidean_vector#Vectors_as_directional_derivatives">Wikipedia</a>&gt; When it comes to programming, a vector is just an array of numbers. Each number is a “dimension” of the vector.</p>
+</blockquote>
+
+<p>To start off simply, well use a 2 by 1 matrix for our vector. Let’s give it a value of x = 1. The vector (1, 0) graphed looks like:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/400/1*m0mZ1CshuJ2VpcvCEIjtIQ.png" alt="" /></p>
+
+<p>We can express that same vector (1, 0) in a very simple matrix:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/196/1*BbhJ9I91WMTrsbON2L4AZg.png" alt="" /></p>
+
+<p>X over Y</p>
+
+<p>As stated above:</p>
+
+<blockquote>
+  <p>a vector is just an array of numbers</p>
+</blockquote>
+
+<p>As you can see, a matrix looks similar to an array of numbers. While they can seem intimidating, under the hood, matrices are quite a simple concept and simple to work with after you’ve practiced a bit.</p>
+
+<p><strong>Definition from OpenGL</strong> :</p>
+
+<blockquote>
+  <p>Simply put, a matrix is an array of numbers with a predefined number of rows and columns</p>
+</blockquote>
+
+<p>Matrices are used to transform 3D coordinates. These include:</p>
+
+<ul>
+  <li>Rotation (changing orientation)</li>
+  <li>Scaling (size changes)</li>
+  <li>Translation (moving position)</li>
+</ul>
+
+<h3 id="transformations">Transformations</h3>
+
+<p>In most cases a transformed point can be expressed in this equation:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Transformed Point = Transformation Matrix × Original Point
+</code></pre></div></div>
+
+<p>If you’ve worked with CoreGraphics before you’ve probably seen something called CGAffineTransform. It makes for some pretty cool animations. In fact, CGAffineTransform is just a different type of matrix transformation.</p>
+
+<p><a href="https://www.mathworks.com/discovery/affine-transformation.html"><strong>Affine transformation</strong></a> is a linear mapping method that preserves points, straight lines, and planes.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/430/1*tpTWHF7Uu1qCdDl2sKudEg.gif" alt="" /></p>
+
+<p><a href="http://smashinghub.com/wp-content/uploads/2014/09/menu-animation-effects-3.gif">source</a></p>
+
+<h3 id="rotating-a-spaceship">Rotating A Space Ship</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*YaX3B6nINy0LypdU4D9LHQ.jpeg" alt="" /></p>
+
+<p>Let’s give transformations a try! While this isn’t the same way that they are used for the location nodes, they are close enough that you can start thinking about the principles in action. To do this create a new ARKit project with SceneKit. When you run it, there should be a spaceship floating in front of your screen like in the screenshot above.</p>
+
+<h4 id="loop-t-loops">Loop-T-Loops</h4>
+
+<p>Add the following lines below your viewDidLoad:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ARSCNViewDelegate</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">touchesBegan</span><span class="p">(</span><span class="n">_</span> <span class="nv">touches</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">UITouch</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="kt">SCNMatrix4Mult</span><span class="p">(</span><span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> <span class="kt">SCNMatrix4MakeRotation</span><span class="p">(</span><span class="kt">Float</span><span class="p">(</span><span class="kt">Double</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="kt">SCNMatrix4Mult</span><span class="p">(</span><span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> <span class="kt">SCNMatrix4MakeTranslation</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Now when you re-run it, the spaceship should still appear on your screen, however, when you tap it, it should loop around. Keep tapping it until it is back in the position it started (roughly).</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*FJc-Q9IYhnVDX1mDH9RsVQ.jpeg" alt="" /></p>
+
+<p>Here is the full ViewController code:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ARSCNViewDelegate</span> <span class="p">{</span>
+
+    <span class="kd">@IBOutlet</span> <span class="k">var</span> <span class="nv">sceneView</span><span class="p">:</span> <span class="kt">ARSCNView</span><span class="o">!</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+        <span class="c1">// Set the view's delegate</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+
+        <span class="c1">// Show statistics such as fps and timing information</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">showsStatistics</span> <span class="o">=</span> <span class="kc">true</span>
+
+        <span class="c1">// Create a new scene</span>
+        <span class="k">let</span> <span class="nv">scene</span> <span class="o">=</span> <span class="kt">SCNScene</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"art.scnassets/ship.scn"</span><span class="p">)</span><span class="o">!</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span> <span class="o">=</span> <span class="n">scene</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+
+        <span class="c1">// Create a session configuration</span>
+        <span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">ARWorldTrackingConfiguration</span><span class="p">()</span>
+
+        <span class="c1">// Run the view's session</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="nf">run</span><span class="p">(</span><span class="n">configuration</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">touchesBegan</span><span class="p">(</span><span class="n">_</span> <span class="nv">touches</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">UITouch</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="kt">SCNMatrix4Mult</span><span class="p">(</span><span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> <span class="kt">SCNMatrix4MakeRotation</span><span class="p">(</span><span class="kt">Float</span><span class="p">(</span><span class="kt">Double</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="kt">SCNMatrix4Mult</span><span class="p">(</span><span class="n">sceneView</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">rootNode</span><span class="o">.</span><span class="n">childNodes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> <span class="kt">SCNMatrix4MakeTranslation</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>If everything goes according to plan, after a few touchs, your spaceship will look like it is making glorious touch-down:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*YjgmjKDUQOZ9I4ftVVddNQ.jpeg" alt="" /></p>
+
+<h3 id="navigation">Navigation</h3>
+
+<p>Now that we have a bit of a handle on the basics of ARKit let’s move on to navigation and location services. If we want to get be guided to our destination, we’ll need a bit of help from a navigation service.</p>
+
+<p>MapKit comes with a handy turn-by-turn directions API. Using CoreLocation a destination and MKDirectionsRequest we can get an array of navigational steps to follow that will lead us to a specific location.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">MapKit</span>
+<span class="kd">import</span> <span class="kt">CoreLocation</span>
+
+<span class="kd">struct</span> <span class="kt">NavigationService</span> <span class="p">{</span>
+
+   <span class="kd">func</span> <span class="nf">getDirections</span><span class="p">(</span><span class="nv">destinationLocation</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">MKDirectionsRequest</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">MKRouteStep</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">steps</span><span class="p">:</span> <span class="p">[</span><span class="kt">MKRouteStep</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">let</span> <span class="nv">placeMark</span> <span class="o">=</span> <span class="kt">MKPlacemark</span><span class="p">(</span><span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="n">destinationLocation</span><span class="o">.</span><span class="n">coordinate</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="n">destinationLocation</span><span class="o">.</span><span class="n">coordinate</span><span class="o">.</span><span class="n">longitude</span><span class="p">))</span>
+
+        <span class="n">request</span><span class="o">.</span><span class="n">destination</span> <span class="o">=</span> <span class="kt">MKMapItem</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">placemark</span><span class="p">:</span> <span class="n">placeMark</span><span class="p">)</span>
+        <span class="n">request</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="kt">MKMapItem</span><span class="o">.</span><span class="nf">forCurrentLocation</span><span class="p">()</span>
+        <span class="n">request</span><span class="o">.</span><span class="n">requestsAlternateRoutes</span> <span class="o">=</span> <span class="kc">false</span>
+        <span class="n">request</span><span class="o">.</span><span class="n">transportType</span> <span class="o">=</span> <span class="o">.</span><span class="n">walking</span>
+
+        <span class="k">let</span> <span class="nv">directions</span> <span class="o">=</span> <span class="kt">MKDirections</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span>
+
+        <span class="n">directions</span><span class="o">.</span><span class="n">calculate</span> <span class="p">{</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="nf">print</span><span class="p">(</span><span class="s">"Error getting directions"</span><span class="p">)</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">guard</span> <span class="k">let</span> <span class="nv">response</span> <span class="o">=</span> <span class="n">response</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+                <span class="k">for</span> <span class="n">route</span> <span class="k">in</span> <span class="n">response</span><span class="o">.</span><span class="n">routes</span> <span class="p">{</span>
+                    <span class="n">steps</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="nv">contentsOf</span><span class="p">:</span> <span class="n">route</span><span class="o">.</span><span class="n">steps</span><span class="p">)</span>
+                <span class="p">}</span>
+                <span class="nf">completion</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h4 id="definitions-2">Definitions</h4>
+
+<p><a href="https://developer.apple.com/documentation/mapkit/mkplacemark"><strong>MKPlacemark</strong></a> <strong>s:</strong> contain information like city, state, county or street address that associated with a specific coordinate.</p>
+
+<p><a href="https://developer.apple.com/documentation/mapkit/mkroute"><strong>MKRoute</strong></a> <strong>:</strong></p>
+
+<p>A single route between a requested start and end point.An MKRoute object defines the geometry for the route—that is, it contains line segments associated with specific map coordinates. A route object may also include other information, such as the name of the route, its distance, and the expected travel time.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(route.name)
+
+// Broadway
+
+print(route.advisoryNotices)
+
+// []
+
+print(route.expectedTravelTime)
+
+// 2500.0
+</code></pre></div></div>
+
+<p><a href="https://developer.apple.com/documentation/mapkit/mkroutestep"><strong>MKRouteStep</strong></a> <strong>:</strong></p>
+
+<p>is one segment of a route. Each step contains a single instruction that should be completed by a user navigating between two points in order for them to successfully complete their route.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(step.distance)
+
+// 1.0
+
+print(step.instructions)
+
+// Proceed to 7th Ave
+</code></pre></div></div>
+
+<p><a href="https://developer.apple.com/documentation/mapkit/mkmapitem"><strong>MKMapItem</strong></a> <strong>:</strong> A point of interest on the map. A map item includes a geographic location and any interesting data that might apply to that location, such as the address at that location and the name of a business at that address.</p>
+
+<p><a href="https://developer.apple.com/documentation/mapkit/mkdirections"><strong>MKDirections</strong></a> <strong>:</strong> A utility object that computes directions and travel-time information based on the route information you provide.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">SceneKit</span>
+<span class="kd">import</span> <span class="kt">ARKit</span>
+<span class="kd">import</span> <span class="kt">CoreLocation</span>
+<span class="kd">import</span> <span class="kt">MapKit</span>
+
+<span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ARSCNViewDelegate</span><span class="p">,</span> <span class="kt">ARSessionDelegate</span><span class="p">,</span> <span class="kt">LocationServiceDelegate</span> <span class="p">{</span>
+
+    <span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">sceneView</span><span class="p">:</span> <span class="kt">ARSCNView</span><span class="o">!</span>
+
+    <span class="k">var</span> <span class="nv">steps</span><span class="p">:</span> <span class="p">[</span><span class="kt">MKRouteStep</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">var</span> <span class="nv">destinationLocation</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="o">!</span>
+    <span class="k">var</span> <span class="nv">locationService</span> <span class="o">=</span> <span class="kt">LocationService</span><span class="p">()</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+        <span class="n">locationService</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+        <span class="k">var</span> <span class="nv">navService</span> <span class="o">=</span> <span class="kt">NavigationService</span><span class="p">()</span>
+
+        <span class="k">self</span><span class="o">.</span><span class="n">destinationLocation</span> <span class="o">=</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="mf">40.737512</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="o">-</span><span class="mf">73.980767</span><span class="p">)</span>
+        <span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">MKDirectionsRequest</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">destinationLocation</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+            <span class="n">navService</span><span class="o">.</span><span class="nf">getDirections</span><span class="p">(</span><span class="nv">destinationLocation</span><span class="p">:</span> <span class="n">destinationLocation</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">steps</span> <span class="k">in</span>
+                <span class="k">for</span> <span class="n">step</span> <span class="k">in</span> <span class="n">steps</span> <span class="p">{</span>
+                    <span class="k">self</span><span class="o">.</span><span class="n">steps</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">step</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><img src="https://cdn-images-1.medium.com/max/281/1*4bNiloIDw6WN2Uc5gvv7jg.gif" alt="" /></p>
+
+<p>Personal project — August 13th</p>
+
+<h4 id="sources">Sources:</h4>
+
+<p><a href="https://medium.com/@yatchoi/getting-started-with-arkit-real-life-waypoints-1707e3cb1da2">medium.com — Yat Choi</a></p>
+
+<p><a href="https://aviation.stackexchange.com/questions/8000/what-are-the-differences-between-bearing-vs-course-vs-direction-vs-heading-vs-tr">aviation.stackexchange.com</a></p>
+
+<p><a href="https://github.com/ProjectDent/ARKit-CoreLocation">github.com/ProjectDent/ARKit-CoreLocation</a></p>
+
+<p><a href="http://www.movable-type.co.uk/scripts/latlong.html">movable-type.co.uk/scripts/latlong.html</a></p>
+
+<p><a href="https://gis.stackexchange.com/questions/4906/why-is-law-of-cosines-more-preferable-than-haversine-when-calculating-distance-b">gis.stackexchange.com</a></p>
+
+<p><a href="http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices">opengl-tutorial.org</a></p>
+
+<p><a href="https://math.stackexchange.com/questions/128514/solving-the-arctan-of-an-angle-radians-by-hand">math.stackexchange.com</a></p>
+
+</div>
+
+
+    <section class="author-card">
+    <img
+        class="author-avatar"
+        src="/assets/images/profile.jpg"
+        alt="Chris Webb"
+    />
+
+    <div class="author-info">
+        <span class="author-label">Written by</span>
+        <h4 class="author-name">Chris Webb</h4>
+        <p class="author-bio">The journey of one thousand apps starts with a single key press...</p>
+
+        <div class="author-links">
+            
+                <a href="https://github.com/chriswebb09" target="_blank" rel="noopener">GitHub</a>
+            
+            
+                <a href="https://www.linkedin.com/in/christopher-webb-orenstein" target="_blank" rel="noopener">LinkedIn</a>
+            
+            
+                <a href="mailto:chris.webb5249@gmail.com">Email</a>
+            
+        </div>
+    </div>
 </section>
 
-<section class="about-section reveal">
-    <div class="section-heading">
-        <div>
-            <span class="kicker">02 — Path</span>
-            <h2>How I got here</h2>
-        </div>
-        <span class="rule"></span>
-    </div>
 
-    <ol class="timeline">
-        <li class="is-now">
-            <span class="tl-label">Now</span>
-            <div class="tl-body">
-                <h3>Esri — Product Engineer</h3>
-                <p>Joined as an intern in 2024, full-time since 2025. I maintain the open-source ArcGIS Maps SDK for Swift samples that enterprise and indie developers build on.</p>
-            </div>
-        </li>
-        <li>
-            <span class="tl-label">2021</span>
-            <div class="tl-body">
-                <h3>Columbia University</h3>
-                <p>Went back to school mid-career for a B.A. in computer science (2021–2025), freelancing iOS work for startups and small businesses in New York along the way.</p>
-            </div>
-        </li>
-        <li>
-            <span class="tl-label">2019</span>
-            <div class="tl-body">
-                <h3>PredictSpring — Senior Software Engineer</h3>
-                <p>Engineered a mobile commerce platform serving 500K+ daily active users for Fortune 500 retailers, and integrated in-store POS hardware. PredictSpring was later acquired by Salesforce.</p>
-            </div>
-        </li>
-        <li>
-            <span class="tl-label">2018</span>
-            <div class="tl-body">
-                <h3>DYNAMIT — iOS Engineer</h3>
-                <p>Built modular, testable iOS apps and CI/CD pipelines; shipped consumer apps with 100K+ downloads. DYNAMIT was acquired by TELUS / WillowTree.</p>
-            </div>
-        </li>
-        <li>
-            <span class="tl-label">2017</span>
-            <div class="tl-body">
-                <h3>Down the AR rabbit hole</h3>
-                <p>Started experimenting with ARKit and CoreLocation, writing the blog series and demos that became this site's projects.</p>
-            </div>
-        </li>
-    </ol>
-</section>
 
-<section class="about-section reveal">
-    <div class="section-heading">
-        <div>
-            <span class="kicker">03 — Toolbox</span>
-            <h2>What I work with</h2>
-        </div>
-        <span class="rule"></span>
-    </div>
 
-    <div class="stack-groups">
-        <div class="stack-row">
-            <span class="k">languages</span>
-            <ul class="skill-chips">
-                <li>Swift</li>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>C++</li>
-                <li>Java</li>
-            </ul>
-        </div>
-        <div class="stack-row">
-            <span class="k">platforms</span>
-            <ul class="skill-chips">
-                <li>UIKit</li>
-                <li>ARKit &amp; SceneKit</li>
-                <li>ArcGIS Maps SDK</li>
-                <li>Flask</li>
-                <li>React</li>
-            </ul>
-        </div>
-        <div class="stack-row">
-            <span class="k">interests</span>
-            <ul class="skill-chips">
-                <li>Spatial Computing</li>
-                <li>SDK Development</li>
-                <li>Machine Learning</li>
-                <li>LLM Tooling</li>
-            </ul>
-        </div>
-    </div>
-</section>
+    <nav class="blog-navigation">
+        
+            <a class="nav-card prev" href="/data-structures-in-real-world-linked-list">
+                <span class="nav-label">&larr; Previous</span>
+                <span class="nav-title">Linked Lists - Data Structures In Real World</span>
+            </a>
+        
+        
+            <a class="nav-card next" href="/arkit-corelocation-part-two">
+                <span class="nav-label">Next &rarr;</span>
+                <span class="nav-title">ARKit and CoreLocation: Part Two</span>
+            </a>
+        
+    </nav>
+
+
+
+    <div class="related">
+    
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+                    
+                    <h4>Related Posts</h4>
+                    <ul>
+                    
+                    <li class="relatedPost">
+                        <a href="/arkit-corelocation-part-two">ARKit and CoreLocation: Part Two
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+    
+        </ul>
+    
+</div>
+
+
+
+
 
 
 <footer class="footer-main">
