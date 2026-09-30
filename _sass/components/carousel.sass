@@ -267,11 +267,110 @@
         padding-top: 64px
         border-top: 1px solid $epsilon
 
-.projects-outro
-    margin: 32px 0 0
-    text-align: center
-    font-size: 1.4rem
-    color: $gama
+// --- projects page sections ---
+
+.proj-first
+    margin-top: 36px !important
+
+.repo-card
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    gap: 24px
+    padding: 24px 28px
+    background: $omega
+    border: 1px solid $epsilon
+    border-radius: 14px
+    text-decoration: none
+    transition: all 0.2s ease
+
+    &:hover
+        border-color: rgba($delta, 0.5)
+        transform: translateY(-2px)
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35), 0 0 44px rgba($delta, 0.08)
+        text-decoration: none
+
+        .card-arrow
+            color: $delta
+            transform: translate(2px, -2px)
+
+    > .repo-info
+        > h3
+            margin: 0 0 8px
+            font-family: $fontMonospace
+            font-size: 1.6rem
+            font-weight: 500
+            color: $beta
+
+        > p
+            margin: 0
+            max-width: 72ch
+            font-size: 1.4rem
+            line-height: 1.65
+            color: $alpha
+
+        > .repo-tags
+            margin-top: 12px
+            font-family: $fontMonospace
+            font-size: 1.1rem
+            text-transform: uppercase
+            letter-spacing: 0.09em
+            color: $gama
+
+    > .card-arrow
+        flex-shrink: 0
+        font-size: 1.6rem
+        color: $gama
+        transition: all 0.2s ease
+
+.ship-grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 24px
+
+    @media #{$below}
+        grid-template-columns: 1fr
+
+.ship-card
+    padding: 22px 24px
+    background: $omega
+    border: 1px solid $epsilon
+    border-radius: 14px
+    transition: border-color 0.2s ease
+
+    &:hover
+        border-color: rgba($delta, 0.35)
+
+    > .ship-org
+        display: block
+        margin-bottom: 10px
+        font-family: $fontMonospace
+        font-size: 1.1rem
+        text-transform: uppercase
+        letter-spacing: 0.12em
+        color: $delta
+
+    > h3
+        margin: 0 0 8px
+        font-family: $fontDisplay
+        font-size: 2rem
+        font-weight: 600
+        letter-spacing: -0.015em
+        color: $beta
+
+    > p
+        margin: 0
+        font-size: 1.4rem
+        line-height: 1.6
+        color: $alpha
+
+    > .ship-meta
+        margin-top: 14px
+        font-family: $fontMonospace
+        font-size: 1.1rem
+        text-transform: uppercase
+        letter-spacing: 0.09em
+        color: $gama
 
 .recent-posts
     list-style: none

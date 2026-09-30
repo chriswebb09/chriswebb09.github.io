@@ -537,7 +537,25 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 .home-section { margin-top: 96px; }
 .home-section:first-of-type { margin-top: 48px; padding-top: 64px; border-top: 1px solid #222230; }
 
-.projects-outro { margin: 32px 0 0; text-align: center; font-size: 1.4rem; color: #74747f; }
+.proj-first { margin-top: 36px !important; }
+
+.repo-card { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: 24px 28px; background: #0f0f16; border: 1px solid #222230; border-radius: 14px; text-decoration: none; transition: all 0.2s ease; }
+.repo-card:hover { border-color: rgba(129, 140, 248, 0.5); transform: translateY(-2px); box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35), 0 0 44px rgba(129, 140, 248, 0.08); text-decoration: none; }
+.repo-card:hover .card-arrow { color: #818cf8; transform: translate(2px, -2px); }
+.repo-card > .repo-info > h3 { margin: 0 0 8px; font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.6rem; font-weight: 500; color: #f4f4f6; }
+.repo-card > .repo-info > p { margin: 0; max-width: 72ch; font-size: 1.4rem; line-height: 1.65; color: #a5a5b3; }
+.repo-card > .repo-info > .repo-tags { margin-top: 12px; font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.09em; color: #74747f; }
+.repo-card > .card-arrow { flex-shrink: 0; font-size: 1.6rem; color: #74747f; transition: all 0.2s ease; }
+
+.ship-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+@media only screen and (max-width: 780px) { .ship-grid { grid-template-columns: 1fr; } }
+
+.ship-card { padding: 22px 24px; background: #0f0f16; border: 1px solid #222230; border-radius: 14px; transition: border-color 0.2s ease; }
+.ship-card:hover { border-color: rgba(129, 140, 248, 0.35); }
+.ship-card > .ship-org { display: block; margin-bottom: 10px; font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.12em; color: #818cf8; }
+.ship-card > h3 { margin: 0 0 8px; font-family: "Space Grotesk", "Inter", -apple-system, sans-serif; font-size: 2rem; font-weight: 600; letter-spacing: -0.015em; color: #f4f4f6; }
+.ship-card > p { margin: 0; font-size: 1.4rem; line-height: 1.6; color: #a5a5b3; }
+.ship-card > .ship-meta { margin-top: 14px; font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.09em; color: #74747f; }
 
 .recent-posts { list-style: none; margin: 0; padding: 0; }
 .recent-posts > li > a { display: flex; align-items: baseline; gap: 16px; padding: 18px 2px; text-decoration: none; border-bottom: 1px solid #222230; transition: all 0.2s ease; }
