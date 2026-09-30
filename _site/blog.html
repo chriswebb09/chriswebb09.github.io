@@ -354,8 +354,8 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 .page { margin-top: 68px; }
 .page > h1 { text-align: center; margin-bottom: 6rem; }
 
-.about-hero { display: grid; grid-template-columns: 1.618fr 1fr; gap: 64px; align-items: start; padding: 48px 0 0; }
-.about-hero > .about-hero-copy { padding-top: 0; }
+.about-hero { display: grid; grid-template-columns: 1.618fr 1fr; gap: 64px; align-items: stretch; padding: 48px 0 0; }
+.about-hero > .about-hero-copy { display: flex; flex-direction: column; justify-content: space-between; }
 @media only screen and (max-width: 780px) { .about-hero { grid-template-columns: 1fr; gap: 40px; padding-top: 32px; } }
 
 .about-hero-copy > .kicker { display: block; margin-bottom: 16px; font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.2rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.18em; color: #4f46e5; animation: fade-in-down 0.5s both; }

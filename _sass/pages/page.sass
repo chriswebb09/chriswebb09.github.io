@@ -14,11 +14,15 @@
     display: grid
     grid-template-columns: 1.618fr 1fr
     gap: 64px
-    align-items: start
+    align-items: stretch
     padding: 48px 0 0
 
+    // fill the card's height: margins act as minimums and the slack
+    // distributes evenly so copy and card end flush
     > .about-hero-copy
-        padding-top: 0
+        display: flex
+        flex-direction: column
+        justify-content: space-between
 
     @media #{$below}
         grid-template-columns: 1fr
