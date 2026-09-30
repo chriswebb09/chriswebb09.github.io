@@ -54,8 +54,8 @@ body:after
 	color: #fff
 
 // prose links: gradient underline that thickens on hover
-.post p a,
-.post li a,
+.post-content p a,
+.post-content li a,
 .about-body a,
 .about-facts a
 	color: $beta
@@ -180,8 +180,13 @@ figcaption
 		font-size: 1.2rem
 
 blockquote
-	padding-left: 15px
-	border-left: 3px solid $epsilon
+	margin: 24px 0
+	padding: 4px 0 4px 20px
+	border-left: 3px solid $delta
+
+	p
+		color: $alpha
+		font-size: 1.6rem
 
 hr
 	border: none
@@ -195,34 +200,38 @@ figure.highlight
 	margin: 0
 
 code
-	padding: 2px 5px
+	padding: 2px 7px
 	font-family: $fontMonospace
-	font-size: 12px
-	vertical-align: middle
-	background: $epsilon
-	border-radius: 2px
+	font-size: 1.3rem
+	vertical-align: baseline
+	color: #a5b4fc
+	background: rgba($delta, 0.09)
+	border: 1px solid rgba($delta, 0.16)
+	border-radius: 5px
 
 pre > code,
 tt
-	padding: 1px 0
+	padding: 0
 	font-family: $fontMonospace
-	font-size: 12px
-	line-height: 20px
-	background: $omega
-	border-radius: 2px
+	font-size: 1.3rem
+	line-height: 2.2rem
+	color: inherit
+	background: transparent
+	border: none
+	border-radius: 0
 
 pre
 	box-sizing: border-box
 	margin: 0 0 1.75em 0
 	width: 100%
-	padding: 5px 10px
+	padding: 20px 24px
 	font-family: $fontMonospace
-	font-size: 1.2rem
-	line-height: 2rem
+	font-size: 1.3rem
+	line-height: 2.2rem
 	overflow: auto
 	background: $omega
 	border: 1px solid $epsilon
-	border-radius: 2px
+	border-radius: 12px
 
 .wrapper-normal,
 .wrapper-large

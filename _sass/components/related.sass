@@ -1,5 +1,38 @@
 .related
-    margin: 10rem 0 0rem
+    margin: 64px 0 0
 
-    a
-        font-weight: $thin-font
+    h4
+        margin: 0 0 12px
+        font-family: $fontMonospace
+        font-size: 1.2rem
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 0.18em
+        color: $delta
+
+    ul
+        list-style: none
+        margin: 0
+        padding: 0
+
+        > .relatedPost
+            margin: 0
+            border-bottom: 1px solid $epsilon
+
+            &:last-child
+                border-bottom: none
+
+            > a
+                display: block
+                padding: 14px 2px
+                font-family: $fontDisplay
+                font-size: 1.6rem
+                font-weight: 500
+                color: $beta
+                text-decoration: none
+                transition: all .2s ease
+
+                &:hover
+                    color: $delta
+                    padding-left: 8px
+                    text-decoration: none

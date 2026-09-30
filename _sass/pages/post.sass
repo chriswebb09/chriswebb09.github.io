@@ -1,63 +1,183 @@
 .post
     margin-top: 96px
-    max-width: 760px
+    max-width: 720px
     margin-left: auto
     margin-right: auto
 
-    > .title
-        text-align: center
-        margin-bottom: 3rem
+// --- post hero ---
 
-    > .date,
-    > .post-tags
-        color: $gama
-        font-weight: $thin-font
-        font-size: 1.4rem
-        text-transform: uppercase
-        text-align: center
-        display: block
-        margin-bottom: 6rem
-        letter-spacing: 1px
-        -webkit-font-smoothing: antialiased
-        text-rendering: optimizeLegibility
+.post-hero
+    margin-bottom: 48px
 
-    > .date
-        margin-bottom: 2rem
-
-    > .post-tags > .item
-        padding: 2px 8px
-        border-radius: 3px
-        font-size: 1.1rem
-        background: $epsilon
-        color: $alpha
-        letter-spacing: 1px
-        margin: 3px 1px
-        text-decoration: none
+    > .post-back
         display: inline-block
+        margin-bottom: 32px
+        font-family: $fontMonospace
+        font-size: 1.2rem
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 0.1em
+        color: $gama
+        text-decoration: none
+        transition: color .15s ease
 
-    // general style
-    > h2,
-    > h3,
-    > h4
-        margin-top: 40px
+        &:hover
+            color: $delta
+            text-decoration: none
+
+    > .post-meta
+        display: flex
+        align-items: baseline
+        gap: 10px
+        margin: 0 0 16px
+        font-family: $fontMonospace
+        font-size: 1.2rem
+        letter-spacing: 0.05em
+        color: $gama
+
+        > .sep
+            color: $epsilon
+
+        .reading-time
+            color: $gama
+
+    > .title
+        margin: 0 0 20px
+        font-family: $fontDisplay
+        font-size: 4.2rem
+        font-weight: 600
+        line-height: 1.12
+        letter-spacing: -0.025em
+        color: $beta
+        text-align: left
+
+        @media #{$mobile}
+            font-size: 3rem
+
+    > .post-tags
+        display: flex
+        flex-wrap: wrap
+        gap: 8px
+
+        > .item
+            font-family: $fontMonospace
+            font-size: 1.1rem
+            font-weight: 500
+            line-height: 1
+            letter-spacing: 0.05em
+            text-transform: uppercase
+            color: $delta
+            background: rgba($delta, 0.08)
+            border: 1px solid rgba($delta, 0.22)
+            border-radius: 999px
+            padding: 6px 12px
+            text-decoration: none
+            transition: all .2s ease
+
+            &:hover
+                background: rgba($delta, 0.16)
+                text-decoration: none
+
+    > .title-image
+        display: block
+        margin: 32px auto 0
+        max-height: 160px
+        border-radius: 12px
+
+// --- reading column ---
+
+.post-content
+    p
+        font-size: 1.6rem
+        line-height: 1.75
+
+    ul,
+    ol
+        margin-bottom: 20px
+
+        li
+            font-size: 1.6rem
+            line-height: 1.75
+            margin-bottom: 6px
+
+    h2
+        margin: 48px 0 16px
+        font-family: $fontDisplay
+        font-size: 2.6rem
+        font-weight: 600
+        letter-spacing: -0.015em
 
         a
             text-decoration: none
 
-    > .title-image
-        max-height: 120px
-        display: block
-        margin: 0 auto
+    h3
+        margin: 40px 0 12px
+        font-family: $fontDisplay
+        font-size: 2rem
+        font-weight: 600
 
-    > .blog-navigation
-        font-size: 1.4rem
+    h4
+        margin: 32px 0 10px
+
+    img
+        border-radius: 12px
+        margin: 8px auto
         display: block
-        width: auto
-        overflow: hidden
-        a
+
+    hr
+        margin: 48px auto
+
+    figure.highlight,
+    .highlight
+        margin: 24px 0
+
+// --- prev / next ---
+
+.blog-navigation
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 16px
+    margin-top: 48px
+
+    @media #{$mobile}
+        grid-template-columns: 1fr
+
+    > .nav-card
+        display: block
+        padding: 18px 20px
+        background: $omega
+        border: 1px solid $epsilon
+        border-radius: 12px
+        text-decoration: none
+        transition: all .2s ease
+
+        &.is-empty
+            visibility: hidden
+
+            @media #{$mobile}
+                display: none
+
+        &:hover
+            border-color: rgba($delta, 0.5)
+            transform: translateY(-2px)
+            text-decoration: none
+
+        > .nav-label
             display: block
-            width: 50%
-            float: left
-            margin: 1em 0
-        .next
-            text-align: right
+            margin-bottom: 6px
+            font-family: $fontMonospace
+            font-size: 1.1rem
+            text-transform: uppercase
+            letter-spacing: 0.1em
+            color: $gama
+
+        > .nav-title
+            display: block
+            font-family: $fontDisplay
+            font-size: 1.6rem
+            font-weight: 600
+            color: $beta
+            line-height: 1.35
+
+    > .next
+        text-align: right
