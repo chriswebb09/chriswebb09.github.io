@@ -85,8 +85,8 @@
         > .n
             font-family: $fontMonospace
             font-size: 1.1rem
+            font-weight: 500
             color: $delta
-            opacity: 0.85
 
             @media #{$mobile}
                 display: none
@@ -96,9 +96,10 @@
             background: rgba($delta, 0.06)
             text-decoration: none
 
-        // active page: darker label + a dot marker that springs in
+        // active page: darker label + weight + a dot marker that springs in
         &.active
             color: $beta
+            font-weight: 600
 
             &:after
                 content: ""
@@ -127,11 +128,24 @@
                 margin-left: 6px
                 padding: 8px 14px
 
+            > .dl
+                margin-left: 7px
+                font-family: $fontMonospace
+                font-size: 1.2rem
+                font-weight: 400
+                color: $gama
+                transition: color .2s ease, transform .2s ease
+                display: inline-block
+
             &:hover
                 color: $delta
                 border-color: rgba($delta, 0.55)
                 background: rgba($delta, 0.07)
                 box-shadow: 0 6px 22px rgba($delta, 0.18)
+
+                > .dl
+                    color: $delta
+                    transform: translateY(2px)
 @keyframes nav-dot-in
     from
         transform: scale(0)
