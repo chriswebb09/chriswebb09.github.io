@@ -7,15 +7,15 @@ layout: page
         <span class="kicker">Hello</span>
         <h1 class="page-title">Hi, I'm Chris<span class="dot">.</span></h1>
         <p class="page-sub">Product engineer, Columbia CS grad, and serial side-project starter.</p>
-        <p class="lede">I'm a product engineer with 6+ years building high-performance apps used by millions — now working on geospatial developer tools at Esri.</p>
+        <p class="lede">I'm a product engineer with 8 years shipping iOS apps and SDKs — now building AR and VPS capabilities at Esri.</p>
         <p class="hero-p">I've led technical decisions for Fortune 500 commerce platforms, contributed to two successful startup acquisitions, and shipped consumer apps with hundreds of thousands of daily users. Most of my work is in Swift, and I'm just as comfortable in Python, JavaScript, C++, and Java.</p>
-        <p class="hero-p">These days my work lives where software meets the physical world — augmented reality, spatial computing, and the ArcGIS Maps SDK for Swift, whose open-source samples I help maintain at Esri.</p>
+        <p class="hero-p">These days my work lives where software meets the physical world — at Esri I prototype new features, build Visual Positioning System capabilities for AR, and manage releases of the ArcGIS Maps SDK for Swift.</p>
     </div>
     <div class="about-side">
         <aside class="id-card">
             <div class="id-top">
                 <span class="id-brand">cw<span class="dot">.</span></span>
-                <span class="id-num">ID-2017-NYC</span>
+                <span class="id-num">ID-2024-ESRI</span>
             </div>
             <img class="id-avatar" src="/{{ site.picture }}" alt="{{ site.title }}">
             <h3 class="id-name">Chris Webb</h3>
@@ -44,6 +44,10 @@ layout: page
     </div>
 
     <ul class="about-facts">
+        <li>
+            <span class="k">based in</span>
+            <span class="v">Redlands, California</span>
+        </li>
         <li>
             <span class="k">role</span>
             <span class="v">Product Engineer at Esri — ArcGIS Maps SDK for Swift</span>
@@ -77,7 +81,7 @@ layout: page
             <span class="tl-label">Now</span>
             <div class="tl-body">
                 <h3>Esri — Product Engineer</h3>
-                <p>Joined as an intern in 2024, full-time since 2025. I maintain the open-source ArcGIS Maps SDK for Swift samples that enterprise and indie developers build on.</p>
+                <p>Joined as an intern in 2024, full-time since 2025 — prototyping SDK features, building Visual Positioning System capabilities for AR, and managing releases of the ArcGIS Maps SDK for Swift.</p>
             </div>
         </li>
         <li>
