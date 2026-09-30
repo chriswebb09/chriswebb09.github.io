@@ -451,6 +451,8 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 .post-content img { border-radius: 12px; margin: 8px auto; display: block; }
 .post-content hr { margin: 48px auto; }
 .post-content figure.highlight, .post-content .highlight { margin: 24px 0; }
+.post-content pre { font-size: 1.25rem; line-height: 2.1rem; }
+@media (min-width: 1040px) { .post-content pre { width: 880px; max-width: none; margin-left: calc((100% - 880px) / 2); margin-right: calc((100% - 880px) / 2); } }
 
 .blog-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 48px; }
 @media only screen and (max-width: 480px) { .blog-navigation { grid-template-columns: 1fr; } }

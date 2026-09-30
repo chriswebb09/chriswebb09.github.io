@@ -131,6 +131,18 @@
     .highlight
         margin: 24px 0
 
+    // code breaks out wider than the prose column so typical
+    // signatures fit on one line
+    pre
+        font-size: 1.25rem
+        line-height: 2.1rem
+
+        @media (min-width: 1040px)
+            width: 880px
+            max-width: none
+            margin-left: calc((100% - 880px) / 2)
+            margin-right: calc((100% - 880px) / 2)
+
 // --- prev / next ---
 
 .blog-navigation
