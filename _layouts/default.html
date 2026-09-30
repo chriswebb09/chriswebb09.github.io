@@ -42,6 +42,14 @@ layout: compress
 
 </head>
 <body>
+    <script>
+    (function () {
+        var p = location.pathname;
+        if (p.length > 1 && p.charAt(p.length - 1) === '/') {
+            history.replaceState(null, '', p.slice(0, -1) + location.search + location.hash);
+        }
+    })();
+    </script>
     <div class="scroll-progress" aria-hidden="true"></div>
     <div class="spotlight" aria-hidden="true"></div>
     <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
