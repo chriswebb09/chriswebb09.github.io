@@ -90,6 +90,13 @@
     align-items: center
     gap: 16px
 
+    // let the chips flow in the same wrapping row as the status pill
+    > .social-links
+        display: contents
+
+        > .chip
+            animation: fade-in-down 0.6s 0.24s both
+
 .status-pill
     display: inline-flex
     align-items: center
