@@ -11,8 +11,8 @@
   portrait: true
 
 - title: ARKit Drone
-  description: Fly a virtual drone through your living room — SceneKit models, physics, and multiplayer AR combined into an interactive flight demo.
-  image: assets/images/drone-demo3.gif
+  description: Fly a virtual drone through the world around you — SceneKit models, physics, and multiplayer AR combined into an interactive flight demo.
+  image: assets/images/arkit-drone.gif
   github: https://github.com/chriswebb09/ARKitDrone
   tags: [Swift, ARKit, Multiplayer]
   accent: "#38bdf8"
