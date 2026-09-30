@@ -6,8 +6,8 @@ layout: page
     <div class="about-hero-copy">
         <span class="kicker">Hello</span>
         <h1 class="page-title">Hi, I'm Chris<span class="dot">.</span></h1>
-        <p class="page-sub">Engineer, student, and serial side-project starter in New York City.</p>
-        <p class="lede">I'm a senior software engineer — and currently a computer-science student at Columbia University — with years of experience designing and building software for the iOS platform.</p>
+        <p class="page-sub">iOS engineer, Columbia CS grad, and serial side-project starter.</p>
+        <p class="lede">I'm a senior iOS engineer with 6+ years building high-performance apps used by millions — now working on geospatial developer tools at Esri.</p>
     </div>
     <div class="about-side">
         <aside class="id-card">
@@ -17,11 +17,11 @@ layout: page
             </div>
             <img class="id-avatar" src="{{ site.url }}/{{ site.picture }}" alt="{{ site.title }}">
             <h3 class="id-name">Chris Webb</h3>
-            <p class="id-role">iOS Engineer</p>
+            <p class="id-role">Product Engineer</p>
             <ul class="id-rows">
-                <li><span class="k">location</span><span class="v">New York City</span></li>
-                <li><span class="k">focus</span><span class="v">ARKit · Swift · AR</span></li>
-                <li><span class="k">school</span><span class="v">Columbia University</span></li>
+                <li><span class="k">employer</span><span class="v">Esri</span></li>
+                <li><span class="k">education</span><span class="v">Columbia CS '25</span></li>
+                <li><span class="k">focus</span><span class="v">Swift · AR · GIS</span></li>
                 <li><span class="k">status</span><span class="v is-live"><i></i>building</span></li>
             </ul>
             <div class="id-foot">
@@ -33,8 +33,8 @@ layout: page
 </header>
 
 <div class="about-prose">
-    <p>I have a passion for building well-crafted products that solve real problems while staying highly usable and maintainable. Most of my professional work has been in Swift, and I'm just as comfortable in Java, Python, C++, and JavaScript.</p>
-    <p>Lately I've been most excited about augmented reality — ARKit, SceneKit, and what happens when software escapes the screen and has to make sense of the real world.</p>
+    <p>I've led technical decisions for Fortune 500 commerce platforms, contributed to two successful startup acquisitions, and shipped consumer apps with hundreds of thousands of daily users. Most of my work is in Swift, and I'm just as comfortable in Python, JavaScript, C++, and Java.</p>
+    <p>These days my work lives where software meets the physical world — augmented reality, spatial computing, and the ArcGIS Maps SDK for Swift, whose open-source samples I help maintain at Esri.</p>
 </div>
 
 <section class="about-section reveal">
@@ -48,16 +48,16 @@ layout: page
 
     <ul class="about-facts">
         <li>
-            <span class="k">based in</span>
-            <span class="v">New York City</span>
+            <span class="k">role</span>
+            <span class="v">Product Engineer at Esri — ArcGIS Maps SDK for Swift</span>
         </li>
         <li>
-            <span class="k">learning</span>
-            <span class="v">Going deeper on React &amp; the theory behind the practice</span>
+            <span class="k">education</span>
+            <span class="v">B.A. Computer Science, Columbia University (2025)</span>
         </li>
         <li>
             <span class="k">ask me about</span>
-            <span class="v">Swift, JavaScript &amp; Python</span>
+            <span class="v">Swift, ARKit &amp; spatial computing</span>
         </li>
         <li>
             <span class="k">contact</span>
@@ -79,15 +79,29 @@ layout: page
         <li class="is-now">
             <span class="tl-label">Now</span>
             <div class="tl-body">
-                <h3>Columbia University</h3>
-                <p>Working at Columbia while studying computer science — putting formal foundations under years of shipping software.</p>
+                <h3>Esri — Product Engineer</h3>
+                <p>Joined as an intern in 2024, full-time since 2025. I maintain the open-source ArcGIS Maps SDK for Swift samples that enterprise and indie developers build on.</p>
             </div>
         </li>
         <li>
-            <span class="tl-label">Before</span>
+            <span class="tl-label">2021</span>
             <div class="tl-body">
-                <h3>Senior software engineer, iOS</h3>
-                <p>Designing and building iOS products in Swift — architecture, UIKit, and the long tail of details that make apps feel right.</p>
+                <h3>Columbia University</h3>
+                <p>Went back to school mid-career for a B.A. in computer science (2021–2025), freelancing iOS work for startups and small businesses in New York along the way.</p>
+            </div>
+        </li>
+        <li>
+            <span class="tl-label">2019</span>
+            <div class="tl-body">
+                <h3>PredictSpring — Senior Software Engineer</h3>
+                <p>Engineered a mobile commerce platform serving 500K+ daily active users for Fortune 500 retailers, and integrated in-store POS hardware. PredictSpring was later acquired by Salesforce.</p>
+            </div>
+        </li>
+        <li>
+            <span class="tl-label">2018</span>
+            <div class="tl-body">
+                <h3>DYNAMIT — iOS Engineer</h3>
+                <p>Built modular, testable iOS apps and CI/CD pipelines; shipped consumer apps with 100K+ downloads. DYNAMIT was acquired by TELUS / WillowTree.</p>
             </div>
         </li>
         <li>
@@ -125,7 +139,7 @@ layout: page
             <ul class="skill-chips">
                 <li>UIKit</li>
                 <li>ARKit &amp; SceneKit</li>
-                <li>Node.js</li>
+                <li>ArcGIS Maps SDK</li>
                 <li>Flask</li>
                 <li>React</li>
             </ul>
@@ -133,9 +147,10 @@ layout: page
         <div class="stack-row">
             <span class="k">interests</span>
             <ul class="skill-chips">
-                <li>Augmented Reality</li>
+                <li>Spatial Computing</li>
+                <li>SDK Development</li>
                 <li>Machine Learning</li>
-                <li>Data Analysis</li>
+                <li>LLM Tooling</li>
             </ul>
         </div>
     </div>

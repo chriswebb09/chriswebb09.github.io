@@ -11,17 +11,17 @@
   portrait: true
 
 - title: ARKit Drone
-  description: Fly a virtual drone through your living room. SceneKit models, physics, and ARKit plane detection combined into an interactive AR flight demo.
+  description: Fly a virtual drone through your living room — SceneKit models, physics, and multiplayer AR combined into an interactive flight demo.
   image: assets/images/drone-demo3.gif
   github: https://github.com/chriswebb09/ARKitDrone
-  tags: [Swift, ARKit, SceneKit]
+  tags: [Swift, ARKit, Multiplayer]
   accent: "#38bdf8"
   portrait: true
 
 - title: DirectReport
-  description: A developer status-reporting tool for keeping teams in sync — build reports from the command line and share them where your team already works.
+  description: A full-stack reporting dashboard — Flask and React with LLM-powered summaries via OpenAI and HuggingFace.
   image: assets/images/directreport.png
   github: https://github.com/chriswebb09/DirectReport
-  tags: [Python, CLI, Productivity]
+  tags: [Flask, React, OpenAI]
   accent: "#a78bfa"
   portrait: false
