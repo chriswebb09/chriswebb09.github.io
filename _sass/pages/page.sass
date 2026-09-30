@@ -19,10 +19,11 @@
 
     // fill the card's height: margins act as minimums and the slack
     // distributes evenly so copy and card end flush
+    // fixed golden gaps up top (13/21/13); slack pools equally into
+    // the two paragraph gaps (margin-top: auto) so copy ends flush
     > .about-hero-copy
         display: flex
         flex-direction: column
-        justify-content: space-between
 
     @media #{$below}
         grid-template-columns: 1fr
@@ -32,7 +33,7 @@
 .about-hero-copy
     > .kicker
         display: block
-        margin-bottom: 16px
+        margin-bottom: 14px
         font-family: $fontMonospace
         font-size: 1.2rem
         font-weight: 500
@@ -42,7 +43,7 @@
         animation: fade-in-down 0.5s both
 
     > .page-title
-        margin: 0 0 16px
+        margin: 0 0 22px
         font-family: $fontDisplay
         font-size: 4.6rem
         font-weight: 600
@@ -57,7 +58,7 @@
             color: $delta
 
     > .page-sub
-        margin: 0 0 20px
+        margin: 0 0 15px
         font-family: $fontMonospace
         font-size: 1.2rem
         line-height: 1.8
@@ -66,7 +67,7 @@
         animation: fade-in-down 0.5s 0.12s both
 
     > .lede
-        margin: 0 0 16px
+        margin: 0
         max-width: 46ch
         font-size: 1.8rem
         line-height: 1.6
@@ -76,6 +77,15 @@
 
         @media #{$mobile}
             font-size: 1.6rem
+
+    > .hero-p
+        margin: 0
+        margin-top: auto
+        max-width: 56ch
+        font-size: 1.5rem
+        line-height: 1.7
+        color: $alpha
+        animation: fade-in-down 0.5s 0.22s both
 
 // --- developer ID badge (the About page's signature artifact) ---
 
