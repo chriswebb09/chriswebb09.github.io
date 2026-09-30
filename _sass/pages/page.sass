@@ -1,12 +1,91 @@
 .page
-    margin-top: 125px
+    margin-top: 96px
 
     > h1
         text-align: center
         margin-bottom: 6rem
 
-.about
-    img
-        width: 50%
-        margin: 0 auto
-        display: block
+// --- about page ---
+
+.about-grid
+    display: grid
+    grid-template-columns: 200px 1fr
+    gap: 40px
+    align-items: start
+    margin-top: 40px
+
+    @media #{$below}
+        grid-template-columns: 1fr
+
+.about-photo
+    margin: 0
+
+    > img
+        width: 100%
+        max-width: 200px
+        border-radius: 16px
+        border: 1px solid $epsilon
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3)
+
+.about-body
+    max-width: 68ch
+
+    > .lede
+        margin: 0 0 16px
+        font-size: 1.8rem
+        line-height: 1.6
+        font-weight: 500
+        color: $beta
+
+    > p:not(.lede)
+        font-size: 1.5rem
+
+.about-facts
+    list-style: none
+    margin: 48px 0 0
+    padding: 0
+    border-top: 1px solid $epsilon
+
+    > li
+        display: flex
+        align-items: baseline
+        gap: 24px
+        padding: 16px 2px
+        border-bottom: 1px solid $epsilon
+
+        > .k
+            flex-shrink: 0
+            width: 128px
+            font-family: $fontMonospace
+            font-size: 1.1rem
+            text-transform: uppercase
+            letter-spacing: 0.12em
+            color: $delta
+
+        > .v
+            font-size: 1.5rem
+            color: $alpha
+            line-height: 1.5
+
+.about-heading
+    margin-top: 64px
+
+.skill-chips
+    display: flex
+    flex-wrap: wrap
+    gap: 10px
+    list-style: none
+    margin: 0
+    padding: 0
+
+    > li
+        font-family: $fontMonospace
+        font-size: 1.1rem
+        text-transform: uppercase
+        letter-spacing: 0.07em
+        line-height: 1
+        color: $alpha
+        background: rgba($omega, 0.6)
+        border: 1px solid $epsilon
+        border-radius: 999px
+        padding: 10px 16px

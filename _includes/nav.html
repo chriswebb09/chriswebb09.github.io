@@ -1,39 +1,20 @@
-<nav class="{% if page.title == "Home" %}nav-home{% else %}nav{% endif %}">
-    <ul class="list">
-        {% if page.title != "Home" %}
-            <li class="item">
-                <a class="link" href="{{ site.url }}/">Home</a>
-            </li>
-        {% endif %}
+<nav class="topbar">
+    <div class="topbar-inner">
+        <a class="brand" href="{{ site.url }}/"><span class="brand-full">{{ site.title }}</span><span class="brand-short">cw</span><span class="brand-dot">.</span></a>
 
-        {% if site.blog == true %}
-            {% if page.title != "Blog" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/blog">Blog</a>
-                </li>
+        <ul class="topbar-links">
+            {% if site.blog == true %}
+                <li><a {% if page.title == "Blog" %}class="active" {% endif %}href="{{ site.url }}/blog"><span class="n">01.</span>Blog</a></li>
             {% endif %}
-        {% endif %}
-
-        {% if site.projects == true %}
-            {% if page.title != "Projects" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/projects">Projects</a>
-                </li>
+            {% if site.projects == true %}
+                <li><a {% if page.title == "Projects" %}class="active" {% endif %}href="{{ site.url }}/projects"><span class="n">02.</span>Projects</a></li>
             {% endif %}
-        {% endif %}
-
-        {% if site.about == true %}
-            {% if page.title != "About" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/about">About</a>
-                </li>
+            {% if site.about == true %}
+                <li><a {% if page.title == "About" %}class="active" {% endif %}href="{{ site.url }}/about"><span class="n">03.</span>About</a></li>
             {% endif %}
-        {% endif %}
-
-        {% if site.resume == true %}
-            <li class="item">
-                <a class="link" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.url }}/{{ site.resume-url }}{% endif %}">Résumé</a>
-            </li>
-        {% endif %}
-    </ul>
+            {% if site.resume == true %}
+                <li><a class="resume" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.url }}/{{ site.resume-url }}{% endif %}">Résumé</a></li>
+            {% endif %}
+        </ul>
+    </div>
 </nav>

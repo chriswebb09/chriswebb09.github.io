@@ -1,16 +1,31 @@
 .social-links
-    > .link
-        margin: 0
+    display: flex
+    flex-wrap: wrap
+    gap: 12px
+    animation: fade-in-down 0.6s 0.24s both
+
+    > .chip
+        display: inline-flex
+        align-items: center
+        gap: 8px
+        padding: 10px 18px
+        font-size: 1.4rem
+        font-weight: 500
+        color: $alpha
         text-decoration: none
-        position: relative
-        display: inline-block
-        height: 35px
-        width: 35px
-        color: $zeta
+        background: rgba($omega, 0.6)
+        border: 1px solid $epsilon
+        border-radius: 999px
+        transition: all .2s ease
+
+        > svg
+            flex-shrink: 0
+            opacity: 0.85
 
         &:hover
-            > svg
-                color: $delta
-
-    > svg
-        transition: all ease-in-out .2s
+            color: $beta
+            border-color: rgba($delta, 0.55)
+            background: rgba($delta, 0.07)
+            transform: translateY(-1px)
+            text-decoration: none
+            box-shadow: 0 6px 24px rgba($delta, 0.12)

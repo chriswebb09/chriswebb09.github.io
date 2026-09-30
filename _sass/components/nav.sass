@@ -1,46 +1,117 @@
-.nav,
-.nav-home
-    > .list
-        list-style: none
-        margin: 0
-        padding: 0 13px 0
+.topbar
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 100
+    background: transparent
+    border-bottom: 1px solid transparent
+    transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease
 
-        > .item
-            display: inline-block
+    // gains its glass once the page scrolls (JS toggles .is-scrolled)
+    &.is-scrolled
+        background: rgba($ground, 0.72)
+        backdrop-filter: blur(16px) saturate(1.4)
+        -webkit-backdrop-filter: blur(16px) saturate(1.4)
+        border-bottom-color: $epsilon
 
-        > .item > .link
-            display: inline-block
-            font-weight: $thin-font
-            font-size: 1.4rem
-            padding: 20px 10px
+.topbar-inner
+    width: 96%
+    max-width: 1024px
+    margin: 0 auto
+    height: 68px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    @media #{$mobile}
+        height: 58px
+
+.topbar .brand
+    display: inline-flex
+    align-items: baseline
+    font-family: $fontDisplay
+    font-size: 1.8rem
+    font-weight: 700
+    letter-spacing: -0.02em
+    color: $beta
+    text-decoration: none
+
+    &:hover
+        text-decoration: none
+
+    .brand-short
+        display: none
+
+    @media #{$mobile}
+        .brand-full
+            display: none
+
+        .brand-short
+            display: inline
+
+    .brand-dot
+        color: $delta
+
+.topbar-links
+    display: flex
+    align-items: center
+    gap: 6px
+    list-style: none
+    margin: 0
+    padding: 0
+
+    li
+        line-height: 1
+
+    a
+        display: inline-flex
+        align-items: baseline
+        gap: 6px
+        padding: 9px 12px
+        font-size: 1.4rem
+        font-weight: 500
+        color: $alpha
+        text-decoration: none
+        border-radius: 8px
+        transition: color .15s ease
+
+        @media #{$mobile}
+            padding: 8px 7px
+            font-size: 1.3rem
+
+        > .n
+            font-family: $fontMonospace
+            font-size: 1.1rem
+            color: $delta
+            opacity: 0.85
+
+            @media #{$mobile}
+                display: none
+
+        &:hover
+            color: $beta
             text-decoration: none
 
-.nav
-    position: absolute
-    right: 0
-    top: 0
+        &.active
+            color: $beta
 
-    > .list
-        padding: 0 13px 0
+        &.resume
+            margin-left: 12px
+            padding: 9px 19px
+            font-weight: 600
+            color: $beta
+            border: 1px solid $epsilon
+            border-radius: 999px
+            background: rgba($omega, 0.5)
+            transition: all .2s ease
 
-        > .item > .link
-            font-size: 1.4rem
-            padding: 20px 10px
-
-.nav-home
-    margin-top: 40px
-    text-align: center
-
-    > .list
-        padding: 0
-
-        > .item > .link
-            font-size: 2rem
-            padding: 7px 15px
-            margin: 0
-            border-radius: 4%
-            transition: all .4s ease-in-out
-            width: 70px
+            @media #{$mobile}
+                margin-left: 6px
+                padding: 8px 14px
 
             &:hover
-                color: $alpha
+                color: $delta
+                border-color: rgba($delta, 0.55)
+                background: rgba($delta, 0.07)
+                box-shadow: 0 6px 22px rgba($delta, 0.18)

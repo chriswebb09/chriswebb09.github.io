@@ -1,39 +1,29 @@
-<!-- To add more icons, duplicate a section and find yout icon here -> https://fontawesome.com/v6.0/icons -->
-
 <div class="social-links">
-    {% if site.facebook %}
-        <a class="link" data-title="facebook.com/{{ site.facebook }}" href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener">
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-    {% endif %}
-
-    {% if site.twitter %}
-        <a class="link" data-title="twitter.com/{{ site.twitter }}" href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener">
-            <i class="fa-brands fa-twitter"></i>
-        </a>
-    {% endif %}
-
-    {% if site.instagram %}
-        <a class="link" data-title="instagram.com/{{ site.instagram }}" href="https://instagram.com/{{ site.instagram }}" target="_blank"  rel="noopener">
-            <i class="fa-brands fa-instagram"></i>
+    {% if site.github %}
+        <a class="chip" href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            GitHub
         </a>
     {% endif %}
 
     {% if site.linkedin %}
-        <a class="link" data-title="linkedin.com/in/{{ site.linkedin }}" href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank"  rel="noopener">
-            <i class="fa-brands fa-linkedin"></i>
+        <a class="chip" href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true"><rect x="1" y="5.5" width="3" height="9.5" rx="0.4"/><circle cx="2.5" cy="2.6" r="1.7"/><path d="M6 5.5h2.85v1.32c.55-.83 1.5-1.55 3.05-1.55C14.3 5.27 16 6.85 16 9.8V15h-3v-4.65c0-1.32-.5-2.22-1.66-2.22-.95 0-1.5.63-1.75 1.24-.09.22-.11.52-.11.82V15H6.5c0 0 .04-8.02 0-9.5H6z"/></svg>
+            LinkedIn
         </a>
     {% endif %}
 
-    {% if site.github %}
-        <a class="link" data-title="github.com/{{ site.github }}" href="https://github.com/{{ site.github }}" target="_blank"  rel="noopener">
-            <i class="fa-brands fa-github"></i>
+    {% if site.medium %}
+        <a class="chip" href="https://medium.com/@{{ site.medium }}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true"><ellipse cx="4.4" cy="8" rx="4.4" ry="4.6"/><ellipse cx="11.8" cy="8" rx="2.1" ry="4.3"/><ellipse cx="15.2" cy="8" rx="0.8" ry="4"/></svg>
+            Medium
         </a>
     {% endif %}
 
     {% if site.email %}
-        <a class="link" data-title="{{ site.email }}" href="mailto:{{ site.email }}"  rel="noopener">
-            <i class="fa-regular fa-envelope"></i>
+        <a class="chip" href="mailto:{{ site.email }}">
+            <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="1" y="3" width="14" height="10" rx="1.6"/><path d="M1.8 4.2 8 9l6.2-4.8"/></svg>
+            Email
         </a>
     {% endif %}
 </div>

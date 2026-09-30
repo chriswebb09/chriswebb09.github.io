@@ -2,23 +2,11 @@
 layout: page
 title: Projects
 ---
+<section class="home-section reveal" style="margin-top: 28px">
+    {% include project-carousel.html %}
 
----
-<div class="toleft">
-<h1 align="center">ARKit Navigation</h1>
-<p align="center"><a href="https://github.com/chriswebb09/ARKitNavigationDemo">Github</a></p>
-<p align="center"><img src="/assets/images/arnav.gif" alt="ARKitNavigationDemo"></p>
-</div>
----
-<div class="toright">
-<h1 align="center">ARKit Drone</h1>
-<p align="center"><a href="https://github.com/chriswebb09/ARKitDrone">Github</a></p>
-<p align="center"><img src="/assets/images/drone-demo3.gif" alt="ARKitDrone"></p>
-</div>
----
-<div class="toleft">
-<h1 align="center">DirectReport</h1>
-<p align="center"><a href="https://github.com/chriswebb09/DirectReport">Github</a></p>
-<p align="center"><img src="/assets/images/directreport.png" alt="DirectReport"></p>
-</div>
----
+    <p class="projects-outro">
+        These are the highlights — there's plenty more experimentation on
+        <a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">GitHub &rarr;</a>
+    </p>
+</section>

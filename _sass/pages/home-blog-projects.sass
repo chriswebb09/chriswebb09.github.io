@@ -1,27 +1,78 @@
 .home,
 .blog,
 .projects
-    margin-top: 125px
+    margin-top: 0
+
+// --- blog index rows ---
+
+.post-list
+    margin-top: 40px
+    border-top: 1px solid $epsilon
+
+.post-row
+    display: flex
+    align-items: baseline
+    gap: 24px
+    padding: 24px 2px
+    border-bottom: 1px solid $epsilon
+    text-decoration: none
+    transition: all 0.2s ease
+
+    &:hover
+        padding-left: 10px
+        text-decoration: none
+
+        .post-row-title,
+        > .idx
+            color: $delta
+
+    > .idx
+        flex-shrink: 0
+        width: 28px
+        font-family: $fontMonospace
+        font-size: 1.2rem
+        color: $gama
+        transition: color 0.2s ease
+
+    > .post-row-body
+        flex: 1
+        display: block
+
+        .post-row-title
+            display: block
+            margin: 0 0 6px
+            font-family: $fontDisplay
+            font-size: 2rem
+            font-weight: 600
+            letter-spacing: -0.015em
+            color: $beta
+            transition: color 0.2s ease
+
+        .post-row-desc
+            display: block
+            margin: 0
+            font-size: 1.4rem
+            line-height: 1.5
+            color: $gama
+
+    > .post-row-date
+        flex-shrink: 0
+        font-family: $fontMonospace
+        font-size: 1.2rem
+        letter-spacing: 0.03em
+        color: $gama
+
+    @media #{$mobile}
+        gap: 12px
+
+        > .post-row-date
+            display: none
 
     > .list
         border-top: 1px solid $epsilon
         margin-top: 30px
-        padding-top: 40px
+        padding-top: 24px
         position: relative
-
-        &:before
-            display: block
-            content: " "
-            width: 7px
-            height: 7px
-            border: $epsilon 1px solid
-            position: absolute
-            top: -5px
-            left: 50%
-            margin-left: -5px
-            background: $omega
-            box-shadow: $omega 0 0 0 5px
-            border-radius: 3px
 
 .home > .list,
 .blog > .list,

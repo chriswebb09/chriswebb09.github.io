@@ -1,31 +1,24 @@
 ---
-# blog page must be named index.html and in its own folder to support pagination
-# https://jekyllrb.com/docs/pagination/
 layout: page
 title: Blog
-pagination:
-  enabled: true
 ---
-<section class="list">
-	{% if site.posts.size == 0 %}
-		<p class="text-center">Nothing published yet!</p>
-	{% elsif site.pagination.enabled %}
-		{% for post in paginator.posts %}
-			{% if post.category == 'blog' %}
-				{% if post.hidden != true %}
-					{% include blog-post.html %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-
-		{% include pagination.html%}
-	{% else %}
-		{% for post in site.posts %}
-			{% if post.category == 'blog' %}
-				{% if post.hidden != true %}
-					{% include blog-post.html %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-	{% endif %}
+<section class="post-list">
+    {% assign blog_posts = site.posts | where: "category", "blog" %}
+    {% if blog_posts.size == 0 %}
+        <p class="text-center">Nothing published yet!</p>
+    {% endif %}
+    {% for post in blog_posts %}
+        {% if post.hidden != true %}
+            <a class="post-row" href="{{ site.url }}{{ post.url }}">
+                <span class="idx">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+                <span class="post-row-body">
+                    <span class="post-row-title">{{ post.title }}</span>
+                    {% if post.description %}
+                        <span class="post-row-desc">{{ post.description }}</span>
+                    {% endif %}
+                </span>
+                <time class="post-row-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %d, %Y" }}</time>
+            </a>
+        {% endif %}
+    {% endfor %}
 </section>

@@ -1,13 +1,23 @@
 <footer class="footer-main">
-    {{ site.title }} © {{ site.time | date: '%Y' }}
+    <div class="footer-cta">
+        <span class="kicker">What's next</span>
+        <h2 class="footer-title">Have an idea worth building?</h2>
+        {% if site.email %}
+            <a class="footer-mail" href="mailto:{{ site.email }}">{{ site.email }}<span class="arrow">&#8599;</span></a>
+        {% endif %}
+    </div>
 
-    <a class="link" href="{{ site.url }}/feed.xml" target="_blank">
-        <i class="fa-solid fa-rss"></i>
-    </a>
+    <div class="footer-bottom">
+        <span class="copy">© {{ site.time | date: '%Y' }} {{ site.title }}</span>
 
-    <p class="extra">
-        <a class="link" href="https://github.com/sergiokopplin/indigo">Indigo theme</a>
-        by
-        <a class="link" href="https://github.com/sergiokopplin/indigo">Kopplin</a>
-    </p>
+        <span class="footer-links">
+            <a href="{{ site.url }}/feed.xml" target="_blank">RSS</a>
+            {% if site.github %}
+                <a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">GitHub</a>
+            {% endif %}
+            {% if site.linkedin %}
+                <a href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+            {% endif %}
+        </span>
+    </div>
 </footer>

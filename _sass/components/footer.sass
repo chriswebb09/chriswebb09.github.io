@@ -1,59 +1,93 @@
 .footer-main
+    margin: 88px 0 0
     border-top: 1px solid $epsilon
-    padding: 40px 0
-    margin: 40px 0 0
-    font-size: 1.3rem
-    color: $gama
-    font-weight: $thin-font
+
+    @media #{$below}
+        margin-top: 64px
+
+.footer-cta
+    padding: 80px 0 72px
     text-align: center
-    position: relative
 
-    &:before
+    @media #{$below}
+        padding: 56px 0 48px
+
+    > .kicker
         display: block
-        content: " "
-        width: 7px
-        height: 7px
-        border: $epsilon 1px solid
-        position: absolute
-        top: -5px
-        left: 50%
-        margin-left: -5px
-        background: $omega
-        box-shadow: $omega 0 0 0 5px
-        border-radius: 3px
+        margin-bottom: 16px
+        font-family: $fontMonospace
+        font-size: 1.2rem
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 0.18em
+        color: $delta
 
-    > .copyright
-        padding-left: 10px
+    > .footer-title
+        margin: 0 0 24px
+        font-family: $fontDisplay
+        font-size: 4.2rem
+        font-weight: 600
+        letter-spacing: -0.03em
+        background: linear-gradient(180deg, $beta 40%, rgba($beta, 0.55))
+        -webkit-background-clip: text
+        background-clip: text
+        -webkit-text-fill-color: transparent
 
-    > .link
-        display: inline
-        vertical-align: middle
+        @media #{$below}
+            font-size: 3rem
 
-        > .icon
-            width: 15px !important
-            fill: $gama !important
-            transition: ease-in-out all .3s
-            position: relative
-            display: inherit
-            top: -2px
-            margin: 0
-            left: 2px
+    > .footer-mail
+        display: inline-flex
+        align-items: center
+        gap: 10px
+        font-family: $fontMonospace
+        font-size: 1.4rem
+        letter-spacing: 0.02em
+        color: $beta
+        text-decoration: none
+        padding: 14px 24px
+        border: 1px solid $epsilon
+        border-radius: 999px
+        background: rgba($omega, 0.6)
+        transition: all 0.25s ease
 
-            &:hover
-                fill: $delta !important
+        > .arrow
+            color: $gama
+            transition: all 0.25s ease
 
-    > .extra
-        color: $gama
-        margin-top: 0
-        font-weight: $thin-font
-
-        > .link
-            color: $beta
+        &:hover
+            border-color: rgba($delta, 0.55)
+            box-shadow: 0 10px 40px rgba($delta, 0.18)
+            transform: translateY(-2px)
             text-decoration: none
-            border-bottom: 1px solid transparent
-            transition: ease-in-out all .3s
-            padding-bottom: 1px
-            font-weight: 300
+
+            > .arrow
+                color: $delta
+                transform: translate(2px, -2px)
+
+.footer-bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    gap: 10px
+    border-top: 1px solid $epsilon
+    padding: 24px 0 48px
+    font-family: $fontMonospace
+    font-size: 1.2rem
+    letter-spacing: 0.04em
+    color: $gama
+
+    > .footer-links
+        display: flex
+        gap: 18px
+
+        a
+            color: $alpha
+            font-weight: 400
+            text-decoration: none
+            transition: color .15s ease
 
             &:hover
-                border-color: $gama
+                color: $delta
+                text-decoration: none

@@ -2,3 +2,60 @@
 layout: page
 title: Home
 ---
+<div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+        <span>Swift</span><i>·</i><span>SwiftUI</span><i>·</i><span>UIKit</span><i>·</i><span>ARKit</span><i>·</i><span>SceneKit</span><i>·</i><span>CoreLocation</span><i>·</i><span>Python</span><i>·</i><span>JavaScript</span><i>·</i><span>Node.js</span><i>·</i><span>React</span><i>·</i><span>C++</span><i>·</i><span>Machine Learning</span><i>·</i>
+        <span>Swift</span><i>·</i><span>SwiftUI</span><i>·</i><span>UIKit</span><i>·</i><span>ARKit</span><i>·</i><span>SceneKit</span><i>·</i><span>CoreLocation</span><i>·</i><span>Python</span><i>·</i><span>JavaScript</span><i>·</i><span>Node.js</span><i>·</i><span>React</span><i>·</i><span>C++</span><i>·</i><span>Machine Learning</span><i>·</i>
+    </div>
+</div>
+
+<section class="home-section reveal">
+    <div class="section-heading">
+        <div>
+            <span class="kicker">01 — Work</span>
+            <h2>Featured Projects</h2>
+        </div>
+        <span class="rule"></span>
+        <a class="more" href="{{ site.url }}/projects">All projects &rarr;</a>
+    </div>
+    <div class="featured-grid">
+        {% for project in site.data.projects %}
+            <a class="project-card" href="{{ project.github }}" target="_blank" rel="noopener">
+                <div class="thumb"{% if project.accent %} style="background: linear-gradient(160deg, {{ project.accent }}26, {{ project.accent }}08)"{% endif %}>
+                    <img src="{{ site.url }}/{{ project.image }}" alt="{{ project.title }}" loading="lazy">
+                </div>
+                <div class="info">
+                    {% if forloop.first %}<p class="card-kicker">Featured Project</p>{% endif %}
+                    <h3 class="name">{{ project.title }}<span class="card-arrow">&#8599;</span></h3>
+                    <p class="blurb">{{ project.description }}</p>
+                    <p class="card-tags">{{ project.tags | join: " · " }}</p>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="home-section reveal">
+    <div class="section-heading">
+        <div>
+            <span class="kicker">02 — Writing</span>
+            <h2>Recent Posts</h2>
+        </div>
+        <span class="rule"></span>
+        <a class="more" href="{{ site.url }}/blog">All posts &rarr;</a>
+    </div>
+    <ul class="recent-posts">
+        {% assign blog_posts = site.posts | where: "category", "blog" %}
+        {% for post in blog_posts limit: 4 %}
+            {% if post.hidden != true %}
+                <li>
+                    <a href="{{ site.url }}{{ post.url }}">
+                        <span class="idx">0{{ forloop.index }}</span>
+                        <span class="post-name">{{ post.title }}</span>
+                        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %d, %Y" }}</time>
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>

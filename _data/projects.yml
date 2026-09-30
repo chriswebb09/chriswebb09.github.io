@@ -1,0 +1,27 @@
+# Projects shown in the carousel and featured cards.
+# To add a project, copy a block and drop an image into assets/images/.
+# portrait: true  -> phone-shaped media (gifs of device screens)
+
+- title: ARKit Navigation
+  description: Turn-by-turn walking directions rendered in augmented reality — ARKit and CoreLocation working together to anchor navigation nodes in the real world.
+  image: assets/images/arnav.gif
+  github: https://github.com/chriswebb09/ARKitNavigationDemo
+  tags: [Swift, ARKit, CoreLocation]
+  accent: "#6366f1"
+  portrait: true
+
+- title: ARKit Drone
+  description: Fly a virtual drone through your living room. SceneKit models, physics, and ARKit plane detection combined into an interactive AR flight demo.
+  image: assets/images/drone-demo3.gif
+  github: https://github.com/chriswebb09/ARKitDrone
+  tags: [Swift, ARKit, SceneKit]
+  accent: "#38bdf8"
+  portrait: true
+
+- title: DirectReport
+  description: A developer status-reporting tool for keeping teams in sync — build reports from the command line and share them where your team already works.
+  image: assets/images/directreport.png
+  github: https://github.com/chriswebb09/DirectReport
+  tags: [Python, CLI, Productivity]
+  accent: "#a78bfa"
+  portrait: false

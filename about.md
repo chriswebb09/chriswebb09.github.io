@@ -2,31 +2,51 @@
 title: About
 layout: page
 ---
+<div class="about-grid">
+    <figure class="about-photo">
+        <img src="{{ site.url }}/{{ site.picture }}" alt="{{ site.title }}">
+    </figure>
+    <div class="about-body">
+        <p class="lede">I'm a senior software engineer — and currently a computer-science student at Columbia University — with years of experience designing and building software for the iOS platform.</p>
+        <p>I have a passion for building well-crafted products that solve real problems while staying highly usable and maintainable. Most of my professional work has been in Swift, and I'm just as comfortable in Java, Python, C++, and JavaScript. Lately I've been most excited about augmented reality — ARKit, SceneKit, and what happens when software escapes the screen.</p>
+    </div>
+</div>
 
-![Profile Image]({{ site.url }}/{{ site.picture }})
-<br />
-<h2 align="center"> Hi there,  I'm Chris 👋</h2>
-
-<p>I am Senior Software Engineer and now a student studying computer science at Columbia University with experience designing and developing software for the iOS platform. I have a passion for building well-crafted products that solve problems while being highly usable and maintainable. Professionally, I've programmed in Swift; however, I am comfortable programming in Java, Python, C++, and JavaScript.</p>
-
-- 🔭 I’m currently working at Columbia University
-- 🌱 I’m currently learning more on React
-- 💬 Ask me about **Swift, Javascript and Python**
-- 📫 How to reach me: [LinkedIn](http://www.linkedin.com/in/christopher-webb-orenstein/).
-
-<h2>Skills</h2>
-
-<ul>
-     <li>iOS Application and Architecture Development</li>
-     <li>Server Side With Javascript on NodeJS and Python on Flask</li>
-     <li>Python Machine Learning and Data Analysis</li>
+<ul class="about-facts">
+    <li>
+        <span class="k">now</span>
+        <span class="v">Working at Columbia University while studying CS</span>
+    </li>
+    <li>
+        <span class="k">learning</span>
+        <span class="v">Going deeper on React</span>
+    </li>
+    <li>
+        <span class="k">ask me about</span>
+        <span class="v">Swift, JavaScript &amp; Python</span>
+    </li>
+    <li>
+        <span class="k">contact</span>
+        <span class="v"><a href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="mailto:{{ site.email }}">{{ site.email }}</a></span>
+    </li>
 </ul>
 
-<h2>Projects</h2>
+<div class="section-heading about-heading">
+    <div>
+        <span class="kicker">Toolbox</span>
+        <h2>What I work with</h2>
+    </div>
+    <span class="rule"></span>
+</div>
 
-<ul>
-    <li><a href="https://github.com/chriswebb09/ARKitNavigationDemo">ARKit Navigation Demo</a></li>
-    <li><a href="https://github.com/chriswebb09/ARKitDrone">ARKit Drone</a></li>
-    <li><a href="https://github.com/chriswebb09/DirectReport">DirectReport</a></li>
-
+<ul class="skill-chips">
+    <li>Swift &amp; UIKit</li>
+    <li>iOS Architecture</li>
+    <li>ARKit &amp; SceneKit</li>
+    <li>Node.js</li>
+    <li>Python &amp; Flask</li>
+    <li>Machine Learning</li>
+    <li>Data Analysis</li>
+    <li>React</li>
+    <li>C++</li>
 </ul>

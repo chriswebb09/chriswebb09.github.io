@@ -1,0 +1,509 @@
+.carousel
+    margin: 0 auto
+    width: 100%
+
+.carousel-viewport
+    position: relative
+
+.carousel-track
+    display: flex
+    column-gap: 24px
+    overflow-x: auto
+    scroll-snap-type: x mandatory
+    scroll-behavior: smooth
+    -webkit-overflow-scrolling: touch
+    scrollbar-width: none
+    outline: none
+
+    &::-webkit-scrollbar
+        display: none
+
+.carousel-slide
+    position: relative
+    flex: 0 0 100%
+    scroll-snap-align: center
+    background: $omega
+    border: 1px solid $epsilon
+    border-radius: 18px
+    overflow: hidden
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 24px 70px rgba(0, 0, 0, 0.3)
+
+    &:after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        pointer-events: none
+        opacity: 0
+        transition: opacity 0.35s ease
+        background: radial-gradient(560px circle at var(--mx, 50%) var(--my, 50%), rgba($delta, 0.09), transparent 65%)
+
+    &:hover:after
+        opacity: 1
+
+.carousel-media
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 440px
+    padding: 24px
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0.06))
+    border-bottom: 1px solid $epsilon
+
+    @media #{$below}
+        height: 360px
+
+    @media #{$mobile}
+        height: 300px
+        padding: 16px
+
+    img
+        max-width: 100%
+        max-height: 100%
+        object-fit: contain
+        border-radius: 8px
+        margin: 0
+
+    &.is-portrait img
+        border-radius: 18px
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18)
+
+.carousel-count
+    position: absolute
+    top: 14px
+    right: 16px
+    font-family: $fontMonospace
+    font-size: 1.1rem
+    letter-spacing: 0.08em
+    color: $gama
+    background: rgba($omega, 0.8)
+    border: 1px solid $epsilon
+    border-radius: 999px
+    padding: 4px 11px
+    backdrop-filter: blur(6px)
+    -webkit-backdrop-filter: blur(6px)
+
+.carousel-body
+    padding: 32px
+
+    @media #{$mobile}
+        padding: 20px
+
+.carousel-title
+    margin: 0 0 10px
+    font-family: $fontDisplay
+    font-size: 2.6rem
+    font-weight: 600
+    letter-spacing: -0.02em
+    color: $beta
+
+.carousel-desc
+    margin: 0 0 20px
+    max-width: 72ch
+    font-size: 1.5rem
+    line-height: 1.65
+    color: $alpha
+
+.carousel-meta
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    gap: 16px
+
+.carousel-tags
+    display: flex
+    flex-wrap: wrap
+    gap: 8px
+    list-style: none
+    margin: 0
+    padding: 0
+
+    > li
+        font-family: $fontMonospace
+        font-size: 1.1rem
+        font-weight: 500
+        line-height: 1
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: $delta
+        background: rgba($delta, 0.08)
+        border: 1px solid rgba($delta, 0.22)
+        border-radius: 999px
+        padding: 6px 12px
+
+.carousel-cta
+    display: inline-flex
+    align-items: center
+    gap: 8px
+    font-size: 1.4rem
+    font-weight: 600
+    color: $ground
+    background: $beta
+    text-decoration: none
+    border-radius: 999px
+    padding: 10px 20px
+    transition: all 0.2s ease
+
+    &:hover
+        background: $delta
+        color: #fff
+        transform: translateY(-1px)
+        box-shadow: 0 8px 30px rgba($delta, 0.35)
+        text-decoration: none
+
+.carousel-btn
+    position: absolute
+    top: 220px
+
+    @media #{$below}
+        top: 180px
+    transform: translateY(-50%)
+    width: 42px
+    height: 42px
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 1px solid $epsilon
+    border-radius: 50%
+    background: rgba($omega, 0.75)
+    backdrop-filter: blur(8px)
+    -webkit-backdrop-filter: blur(8px)
+    color: $beta
+    cursor: pointer
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3)
+    transition: all 0.2s ease
+    z-index: 2
+
+    @media #{$mobile}
+        top: 150px
+        width: 36px
+        height: 36px
+
+    &:hover:not(:disabled)
+        color: $delta
+        border-color: $delta
+
+    &:disabled
+        opacity: 0.35
+        cursor: default
+
+    &.is-prev
+        left: 14px
+
+    &.is-next
+        right: 14px
+
+.carousel-dots
+    display: flex
+    justify-content: center
+    gap: 8px
+    margin-top: 24px
+
+    > button
+        width: 8px
+        height: 8px
+        padding: 0
+        border: none
+        border-radius: 999px
+        background: $epsilon
+        cursor: pointer
+        transition: all 0.25s ease
+
+        &:hover
+            background: $gama
+
+        &.is-active
+            width: 24px
+            background: $delta
+
+// --- Home page sections ---
+
+// --- Skills marquee ---
+
+.marquee
+    margin: 48px 0 0
+    width: 100vw
+    margin-left: calc(50% - 50vw)
+    overflow: hidden
+    -webkit-mask-image: linear-gradient(to right, transparent, black 18%, black 82%, transparent)
+    mask-image: linear-gradient(to right, transparent, black 18%, black 82%, transparent)
+
+.marquee-track
+    display: inline-flex
+    align-items: center
+    gap: 32px
+    width: max-content
+    white-space: nowrap
+    animation: marquee-scroll 38s linear infinite
+
+    > span
+        font-family: $fontMonospace
+        font-size: 1.2rem
+        text-transform: uppercase
+        letter-spacing: 0.14em
+        color: $gama
+
+    > i
+        font-style: normal
+        color: $epsilon
+
+@keyframes marquee-scroll
+    to
+        transform: translateX(-50%)
+
+@media (prefers-reduced-motion: reduce)
+    .marquee-track
+        animation: none
+
+.home-section
+    margin-top: 96px
+
+    &:first-of-type
+        margin-top: 48px
+        padding-top: 64px
+        border-top: 1px solid $epsilon
+
+.projects-outro
+    margin: 32px 0 0
+    text-align: center
+    font-size: 1.4rem
+    color: $gama
+
+.recent-posts
+    list-style: none
+    margin: 0
+    padding: 0
+
+    > li > a
+        display: flex
+        align-items: baseline
+        gap: 16px
+        padding: 18px 2px
+        text-decoration: none
+        border-bottom: 1px solid $epsilon
+        transition: all 0.2s ease
+
+        &:hover
+            text-decoration: none
+            padding-left: 8px
+
+            > .post-name
+                color: $delta
+
+            > .idx
+                color: $delta
+
+        > .idx
+            flex-shrink: 0
+            width: 28px
+            font-family: $fontMonospace
+            font-size: 1.2rem
+            color: $gama
+            transition: color 0.2s ease
+
+        > .post-name
+            flex: 1
+            font-family: $fontDisplay
+            font-size: 1.6rem
+            font-weight: 500
+            color: $beta
+            transition: color 0.2s ease
+
+        > time
+            flex-shrink: 0
+            font-family: $fontMonospace
+            font-size: 1.2rem
+            letter-spacing: 0.03em
+            color: $gama
+
+    > li:last-child > a
+        border-bottom: none
+
+.section-heading
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    margin-bottom: 32px
+
+    .kicker
+        display: block
+        margin-bottom: 8px
+        font-family: $fontMonospace
+        font-size: 1.1rem
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 0.18em
+        color: $delta
+
+    h2
+        margin: 0
+        font-family: $fontDisplay
+        font-size: 2.6rem
+        font-weight: 600
+        letter-spacing: -0.015em
+
+    > .rule
+        flex: 1
+        height: 1px
+        margin: 0 24px 10px
+        align-self: flex-end
+        background: $epsilon
+
+        @media #{$mobile}
+            margin: 0 12px 9px
+
+    > .more
+        font-family: $fontMonospace
+        font-size: 1.1rem
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 0.1em
+        text-decoration: none
+        color: $gama
+        transition: color 0.2s ease
+
+        &:hover
+            color: $delta
+
+.featured-grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 24px
+
+    @media #{$below}
+        grid-template-columns: 1fr
+
+    // bento: lead project gets a full-width horizontal card, split at phi
+    > .project-card:first-child
+        grid-column: 1 / -1
+        display: grid
+        grid-template-columns: 1.618fr 1fr
+
+        > .thumb
+            height: 360px
+            border-bottom: none
+            border-right: 1px solid $epsilon
+
+        > .info
+            align-self: center
+            padding: 32px
+
+            > .blurb
+                -webkit-line-clamp: 3
+
+        @media #{$below}
+            display: block
+
+            > .thumb
+                height: 220px
+                border-right: none
+                border-bottom: 1px solid $epsilon
+
+            > .info
+                padding: 16px 18px 18px
+
+.project-card
+    position: relative
+    display: block
+    text-decoration: none
+    background: $omega
+    border: 1px solid $epsilon
+    border-radius: 14px
+    overflow: hidden
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease
+
+    // mouse-tracked glow (coordinates set by JS)
+    &:after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        pointer-events: none
+        opacity: 0
+        transition: opacity 0.35s ease
+        background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba($delta, 0.12), transparent 65%)
+
+    &:hover:after
+        opacity: 1
+
+    &:hover
+        transform: translateY(-3px)
+        border-color: rgba($delta, 0.45)
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35), 0 0 44px rgba($delta, 0.08)
+
+    > .thumb
+        height: 224px
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 14px
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.05))
+        border-bottom: 1px solid $epsilon
+
+        img
+            max-height: 100%
+            max-width: 100%
+            object-fit: contain
+            border-radius: 6px
+            margin: 0
+            transition: transform 0.3s ease
+
+    &:hover > .thumb img
+        transform: scale(1.04)
+
+    > .info
+        padding: 22px 24px 24px
+
+        > .card-kicker
+            margin: 0 0 12px
+            font-family: $fontMonospace
+            font-size: 1.1rem
+            font-weight: 500
+            text-transform: uppercase
+            letter-spacing: 0.16em
+            color: $delta
+
+        > .name
+            display: flex
+            align-items: baseline
+            justify-content: space-between
+            gap: 12px
+            margin: 0 0 8px
+            font-family: $fontDisplay
+            font-size: 2rem
+            font-weight: 600
+            letter-spacing: -0.015em
+            color: $beta
+
+            > .card-arrow
+                font-size: 1.4rem
+                color: $gama
+                transition: all .2s ease
+
+        > .blurb
+            margin: 0
+            font-size: 1.4rem
+            line-height: 1.6
+            color: $alpha
+            display: -webkit-box
+            -webkit-line-clamp: 2
+            -webkit-box-orient: vertical
+            overflow: hidden
+
+        > .card-tags
+            margin: 12px 0 0
+            font-family: $fontMonospace
+            font-size: 1.1rem
+            text-transform: uppercase
+            letter-spacing: 0.09em
+            color: $gama
+
+    &:hover .card-arrow
+        color: $delta
+        transform: translate(2px, -2px)

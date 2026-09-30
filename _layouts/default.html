@@ -8,7 +8,7 @@ layout: compress
     {% if site.analytics-google %}
         {% include analytics-google.html %}
     {% endif %}
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:ital,wght@0,300;0,600;1,500&family=Roboto:wght@300;400&family=Work+Sans:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name=author content="{{ site.title }}">
@@ -42,6 +42,8 @@ layout: compress
 
 </head>
 <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="spotlight" aria-hidden="true"></div>
     <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
         {% if page.layout == "post" %}
             <div class="post">
@@ -58,5 +60,70 @@ layout: compress
                 </div>
             </div>
     </div>
+    <script>
+    (function () {
+        if (!('IntersectionObserver' in window)) { return; }
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
+        var els = document.querySelectorAll('.reveal');
+        if (!els.length) { return; }
+        document.documentElement.classList.add('rvl');
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        els.forEach(function (el) { io.observe(el); });
+    })();
+    (function () {
+        if (!window.matchMedia('(pointer: fine)').matches) { return; }
+        var spot = document.querySelector('.spotlight');
+        if (spot) {
+            var pending = false;
+            window.addEventListener('pointermove', function (event) {
+                if (pending) { return; }
+                pending = true;
+                window.requestAnimationFrame(function () {
+                    pending = false;
+                    spot.style.setProperty('--spot-x', event.clientX + 'px');
+                    spot.style.setProperty('--spot-y', event.clientY + 'px');
+                });
+            }, { passive: true });
+        }
+        document.querySelectorAll('.project-card, .carousel-slide').forEach(function (card) {
+            card.addEventListener('pointermove', function (event) {
+                var rect = card.getBoundingClientRect();
+                card.style.setProperty('--mx', (event.clientX - rect.left) + 'px');
+                card.style.setProperty('--my', (event.clientY - rect.top) + 'px');
+            }, { passive: true });
+        });
+    })();
+    (function () {
+        var bar = document.querySelector('.scroll-progress');
+        var topbar = document.querySelector('.topbar');
+        var pending = false;
+        function update() {
+            if (bar) {
+                var max = document.documentElement.scrollHeight - window.innerHeight;
+                var ratio = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+                bar.style.transform = 'scaleX(' + ratio + ')';
+            }
+            if (topbar) {
+                topbar.classList.toggle('is-scrolled', window.scrollY > 12);
+            }
+        }
+        window.addEventListener('scroll', function () {
+            if (pending) { return; }
+            pending = true;
+            window.requestAnimationFrame(function () {
+                pending = false;
+                update();
+            });
+        }, { passive: true });
+        update();
+    })();
+    </script>
 </body>
 </html>

@@ -1,34 +1,256 @@
-.header-home
-    display: block
-    margin: 0 auto
-    text-align: center
+// --- Home hero ---
+
+.hero
+    padding: 40px 0 0
+    text-align: left
+
+    @media #{$below}
+        padding-top: 24px
+
+// golden-ratio split: copy column is phi times the terminal column
+.hero-grid
+    display: grid
+    grid-template-columns: 1.618fr 1fr
+    gap: 64px
+    align-items: center
+
+    @media #{$below}
+        grid-template-columns: 1fr
+        gap: 40px
+
+.hero-kicker
+    margin: 0 0 20px
+    font-family: $fontMonospace
+    font-size: 1.2rem
+    font-weight: 500
+    text-transform: uppercase
+    letter-spacing: 0.18em
+    color: $delta
+    animation: fade-in-down 0.5s both
+
+.caret
+    display: inline-block
+    width: 8px
+    height: 14px
+    margin-left: 8px
+    vertical-align: middle
+    background: $delta
+    animation: caret-blink 1.15s steps(2, start) infinite
+
+@keyframes caret-blink
+    to
+        visibility: hidden
+
+@media (prefers-reduced-motion: reduce)
+    .caret
+        animation: none
+
+.hero-title
+    margin: 0 0 24px
+    font-family: $fontDisplay
+    font-size: 6.8rem
+    font-weight: 700
+    line-height: 1.02
+    letter-spacing: -0.035em
+    color: $beta
+    animation: fade-in-down 0.5s 0.06s both
+
+    > .dot
+        color: $delta
+
+    @media #{$tablet}
+        font-size: 4.8rem
+
+    @media #{$mobile}
+        font-size: 3.9rem
+
+.hero-sub
+    margin: 0 0 20px
+    max-width: 46ch
+    font-size: 1.8rem
+    line-height: 1.65
+    color: $alpha
+    animation: fade-in-down 0.5s 0.12s both
+
+    @media #{$mobile}
+        font-size: 1.6rem
+
+.hero-quote
+    margin: 0 0 32px
+    font-family: $fontMonospace
+    font-size: 1.2rem
+    line-height: 1.8
+    letter-spacing: 0.02em
+    color: $gama
+    animation: fade-in-down 0.5s 0.18s both
+
+.hero-row
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    gap: 12px
+
+.status-pill
+    display: inline-flex
+    align-items: center
+    gap: 9px
+    padding: 9px 17px
+    font-size: 1.25rem
+    font-weight: 500
+    color: #4ade80
+    background: rgba(74, 222, 128, 0.07)
+    border: 1px solid rgba(74, 222, 128, 0.25)
+    border-radius: 999px
+    animation: fade-in-down 0.5s 0.22s both
+
+    > .status-dot
+        width: 7px
+        height: 7px
+        border-radius: 999px
+        background: #4ade80
+        animation: status-pulse 2.2s ease-out infinite
+
+@keyframes status-pulse
+    0%
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5)
+    70%
+        box-shadow: 0 0 0 7px rgba(74, 222, 128, 0)
+    100%
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0)
+
+@media (prefers-reduced-motion: reduce)
+    .status-pill > .status-dot
+        animation: none
+
+// --- Hero terminal window ---
+
+// Solarized Dark terminal
+.hero-side
     position: relative
-    z-index: 99
+    animation: fade-in-down 0.6s 0.2s both
 
-    > .link > .selfie
-        width: 125px
-        height: 125px
-        margin-bottom: 25px
-        border-radius: 100%
-        transition: all .2s
-        opacity: 1
+    &:before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 130%
+        height: 130%
+        transform: translate(-50%, -50%)
+        background: radial-gradient(ellipse 60% 55% at 50% 50%, rgba(38, 139, 210, 0.16), transparent 70%)
+        pointer-events: none
 
-        &:hover
-            box-shadow: 0 0px 4px 0 rgba(0,0,0,0.18), 0 0px 12px 0 rgba(0,0,0,0.15)
-            opacity: .8
+    @media #{$below}
+        max-width: 480px
 
-    > .title
-        font-size: 4rem
-        margin: 0 0 13px
+.terminal
+    position: relative
+    border: 1px solid rgba(38, 139, 210, 0.22)
+    border-radius: 14px
+    background: #002b36
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 40px rgba(38, 139, 210, 0.07)
+    overflow: hidden
 
-    > .description
-        font-size: 1.85rem
-        font-weight: $thin-font
-        font-style: normal
-        color: $gama
-        width: 70%
-        margin: 0 auto 30px
+@media (prefers-reduced-motion: no-preference)
+    .terminal
+        animation: terminal-float 7s ease-in-out infinite alternate
 
-        // if you put some links in your bio. ;)
-        a
-            font-weight: 200
+@keyframes terminal-float
+    from
+        transform: translateY(0)
+    to
+        transform: translateY(-9px)
+
+.terminal-bar
+    display: flex
+    align-items: center
+    gap: 7px
+    padding: 12px 16px
+    border-bottom: 1px solid rgba(131, 148, 150, 0.14)
+    background: #073642
+
+    > .tl
+        width: 11px
+        height: 11px
+        border-radius: 999px
+
+        &.tl-r
+            background: #ff5f57
+
+        &.tl-y
+            background: #febc2e
+
+        &.tl-g
+            background: #28c840
+
+    > .terminal-title
+        flex: 1
+        text-align: center
+        font-family: $fontMonospace
+        font-size: 1.1rem
+        letter-spacing: 0.04em
+        color: #839496
+        margin-right: 40px
+
+.terminal-body
+    padding: 24px
+    font-family: $fontMonospace
+    font-size: 1.2rem
+    line-height: 2.05
+    color: #93a1a1
+
+    @media #{$mobile}
+        font-size: 1.1rem
+        padding: 16px 16px 18px
+
+    .t-line
+        white-space: nowrap
+        overflow: hidden
+
+    .t-out
+        color: #eee8d5
+
+    .t-in
+        padding-left: 1.8em
+
+    .t-gap
+        height: 0.9em
+
+    .c-p
+        color: #268bd2
+        margin-right: 2px
+
+    .c-k
+        color: #268bd2
+
+    .c-s
+        color: #2aa198
+
+    .caret
+        background: #93a1a1
+
+// --- Interior page hero (Blog / Projects / Tags) ---
+
+.page-hero
+    padding: 96px 0 8px
+
+    @media #{$below}
+        padding-top: 80px
+
+    > .kicker
+        display: block
+        margin-bottom: 8px
+        font-family: $fontMonospace
+        font-size: 1.2rem
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 0.18em
+        color: $delta
+
+    > .page-title
+        margin: 0
+        font-family: $fontDisplay
+        font-size: 4.2rem
+        font-weight: 600
+        letter-spacing: -0.025em
+        color: $beta
