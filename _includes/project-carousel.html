@@ -5,7 +5,7 @@
                 <article class="carousel-slide" aria-label="{{ forloop.index }} of {{ forloop.length }}">
                     <div class="carousel-media{% if project.portrait %} is-portrait{% endif %}"{% if project.accent %} style="background: linear-gradient(160deg, {{ project.accent }}2b 0%, {{ project.accent }}0a 55%, {{ project.accent }}22 100%)"{% endif %}>
                         <span class="carousel-count">0{{ forloop.index }} / 0{{ forloop.length }}</span>
-                        <img src="{{ site.url }}/{{ project.image }}" alt="{{ project.title }} demo" loading="lazy">
+                        <img src="/{{ project.image }}" alt="{{ project.title }} demo" loading="lazy">
                     </div>
                     <div class="carousel-body">
                         <div class="carousel-text">

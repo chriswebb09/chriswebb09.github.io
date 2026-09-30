@@ -9,7 +9,7 @@ title: Blog
     {% endif %}
     {% for post in blog_posts %}
         {% if post.hidden != true %}
-            <a class="post-row" href="{{ site.url }}{{ post.url }}">
+            <a class="post-row" href="{{ post.url }}">
                 <span class="idx">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
                 <span class="post-row-body">
                     <span class="post-row-title">{{ post.title }}</span>

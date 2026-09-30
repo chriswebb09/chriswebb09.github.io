@@ -17,7 +17,7 @@ layout: page
                 <span class="id-brand">cw<span class="dot">.</span></span>
                 <span class="id-num">ID-2017-NYC</span>
             </div>
-            <img class="id-avatar" src="{{ site.url }}/{{ site.picture }}" alt="{{ site.title }}">
+            <img class="id-avatar" src="/{{ site.picture }}" alt="{{ site.title }}">
             <h3 class="id-name">Chris Webb</h3>
             <p class="id-role">Product Engineer</p>
             <ul class="id-rows">
