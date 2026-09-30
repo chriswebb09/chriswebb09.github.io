@@ -19,7 +19,7 @@ dark-theme: true
 # and specify source (external or local).
 resume: true
 resume-external: false
-resume-url: /assets/images/christopher-resume.pdf
+resume-url: assets/images/Chris_Webb_Resume.pdf
 
 url: https://chriswebb09.github.io
 
