@@ -345,24 +345,33 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 .page { margin-top: 96px; }
 .page > h1 { text-align: center; margin-bottom: 6rem; }
 
-.about-grid { display: grid; grid-template-columns: 1fr 1.618fr; gap: 48px; align-items: start; margin-top: 40px; }
-@media only screen and (max-width: 780px) { .about-grid { grid-template-columns: 1fr; } }
+.about-hero { display: grid; grid-template-columns: 1.618fr 1fr; gap: 64px; align-items: center; padding: 48px 0 0; }
+@media only screen and (max-width: 780px) { .about-hero { grid-template-columns: 1fr; gap: 40px; padding-top: 32px; } }
 
-.about-photo { margin: 0; text-align: center; }
+.about-hero-copy > .kicker { display: block; margin-bottom: 16px; font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.2rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.18em; color: #818cf8; animation: fade-in-down 0.5s both; }
+.about-hero-copy > .page-title { margin: 0 0 16px; font-family: "Space Grotesk", "Inter", -apple-system, sans-serif; font-size: 4.6rem; font-weight: 600; letter-spacing: -0.03em; color: #f4f4f6; animation: fade-in-down 0.5s 0.06s both; }
+@media only screen and (max-width: 400px) { .about-hero-copy > .page-title { font-size: 3.4rem; } }
+.about-hero-copy > .page-title .dot { color: #818cf8; }
+.about-hero-copy > .page-sub { margin: 0 0 20px; font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.2rem; line-height: 1.8; letter-spacing: 0.02em; color: #74747f; animation: fade-in-down 0.5s 0.12s both; }
+.about-hero-copy > .lede { margin: 0; max-width: 46ch; font-size: 1.8rem; line-height: 1.6; font-weight: 500; color: #a5a5b3; animation: fade-in-down 0.5s 0.18s both; }
+@media only screen and (max-width: 400px) { .about-hero-copy > .lede { font-size: 1.6rem; } }
+
+.about-photo { margin: 0; text-align: center; animation: fade-in-down 0.6s 0.2s both; }
 .about-photo > img { width: 100%; max-width: 340px; border-radius: 20px; border: 1px solid #222230; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4); transform: rotate(-1.5deg); transition: transform 0.35s ease; }
 .about-photo > img:hover { transform: rotate(0deg) scale(1.01); }
 .about-photo > figcaption { margin-top: 20px; font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.14em; color: #74747f; }
 
-.about-body { max-width: 62ch; }
-.about-body > .lede { margin: 0 0 16px; font-size: 2rem; line-height: 1.55; font-weight: 500; color: #f4f4f6; }
-.about-body > p:not(.lede) { font-size: 1.5rem; }
+.about-prose { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; padding-top: 40px; border-top: 1px solid #222230; }
+@media only screen and (max-width: 780px) { .about-prose { grid-template-columns: 1fr; gap: 0; } }
+.about-prose > p { margin: 0; font-size: 1.5rem; line-height: 1.7; }
+@media only screen and (max-width: 780px) { .about-prose > p { margin-bottom: 16px; } }
 
-.about-facts { list-style: none; margin: 48px 0 0; padding: 0; border-top: 1px solid #222230; }
+.about-section { margin-top: 72px; }
+
+.about-facts { list-style: none; margin: 0; padding: 0; border-top: 1px solid #222230; }
 .about-facts > li { display: flex; align-items: baseline; gap: 24px; padding: 16px 2px; border-bottom: 1px solid #222230; }
 .about-facts > li > .k { flex-shrink: 0; width: 128px; font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.12em; color: #818cf8; }
 .about-facts > li > .v { font-size: 1.5rem; color: #a5a5b3; line-height: 1.5; }
-
-.about-heading { margin-top: 64px; }
 
 .timeline { list-style: none; margin: 0; padding: 0; }
 .timeline > li { display: grid; grid-template-columns: 128px 1fr; gap: 24px; align-items: start; }
@@ -384,9 +393,10 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 .stack-row > .k { font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.1rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: #818cf8; }
 
 .skill-chips { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0; }
-.skill-chips > li { font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.07em; line-height: 1; color: #a5a5b3; background: rgba(15, 15, 22, 0.6); border: 1px solid #222230; border-radius: 999px; padding: 10px 16px; }
+.skill-chips > li { font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.07em; line-height: 1; color: #a5a5b3; background: rgba(15, 15, 22, 0.6); border: 1px solid #222230; border-radius: 999px; padding: 10px 16px; transition: all 0.2s ease; }
+.skill-chips > li:hover { color: #f4f4f6; border-color: rgba(129, 140, 248, 0.5); transform: translateY(-1px); }
 
-.post { margin-top: 96px; max-width: 720px; margin-left: auto; margin-right: auto; }
+.post { margin-top: 72px; max-width: 720px; margin-left: auto; margin-right: auto; }
 
 .post-hero { margin-bottom: 48px; }
 .post-hero > .post-back { display: inline-block; margin-bottom: 32px; font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.2rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: #74747f; text-decoration: none; transition: color 0.15s ease; }
@@ -628,8 +638,8 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 .terminal-body .c-s { color: #2aa198; }
 .terminal-body .caret { background: #93a1a1; }
 
-.page-hero { padding: 96px 0 8px; }
-@media only screen and (max-width: 780px) { .page-hero { padding-top: 80px; } }
+.page-hero { padding: 56px 0 8px; }
+@media only screen and (max-width: 780px) { .page-hero { padding-top: 40px; } }
 .page-hero > .kicker { display: block; margin-bottom: 8px; font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.2rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.18em; color: #818cf8; }
 .page-hero > .page-title { margin: 0; font-family: "Space Grotesk", "Inter", -apple-system, sans-serif; font-size: 4.2rem; font-weight: 600; letter-spacing: -0.025em; color: #f4f4f6; }
 .page-hero > .page-title .dot { color: #818cf8; }

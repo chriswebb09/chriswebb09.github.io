@@ -45,7 +45,7 @@
             </div>
         </div>
     </header>
-{% elsif showHeader == true %}
+{% elsif showHeader == true and page.title != "About" %}
     <header class="page-hero">
         <span class="kicker">
             {%- if page.title == "Blog" -%}Writing

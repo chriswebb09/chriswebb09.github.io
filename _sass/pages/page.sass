@@ -7,20 +7,71 @@
 
 // --- about page ---
 
-// intro splits at phi: photo minor, prose major
-.about-grid
+// hero splits at phi: copy major, photo minor (mirrors the home hero)
+.about-hero
     display: grid
-    grid-template-columns: 1fr 1.618fr
-    gap: 48px
-    align-items: start
-    margin-top: 40px
+    grid-template-columns: 1.618fr 1fr
+    gap: 64px
+    align-items: center
+    padding: 48px 0 0
 
     @media #{$below}
         grid-template-columns: 1fr
+        gap: 40px
+        padding-top: 32px
+
+.about-hero-copy
+    > .kicker
+        display: block
+        margin-bottom: 16px
+        font-family: $fontMonospace
+        font-size: 1.2rem
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 0.18em
+        color: $delta
+        animation: fade-in-down 0.5s both
+
+    > .page-title
+        margin: 0 0 16px
+        font-family: $fontDisplay
+        font-size: 4.6rem
+        font-weight: 600
+        letter-spacing: -0.03em
+        color: $beta
+        animation: fade-in-down 0.5s 0.06s both
+
+        @media #{$mobile}
+            font-size: 3.4rem
+
+        .dot
+            color: $delta
+
+    > .page-sub
+        margin: 0 0 20px
+        font-family: $fontMonospace
+        font-size: 1.2rem
+        line-height: 1.8
+        letter-spacing: 0.02em
+        color: $gama
+        animation: fade-in-down 0.5s 0.12s both
+
+    > .lede
+        margin: 0
+        max-width: 46ch
+        font-size: 1.8rem
+        line-height: 1.6
+        font-weight: 500
+        color: $alpha
+        animation: fade-in-down 0.5s 0.18s both
+
+        @media #{$mobile}
+            font-size: 1.6rem
 
 .about-photo
     margin: 0
     text-align: center
+    animation: fade-in-down 0.6s 0.2s both
 
     > img
         width: 100%
@@ -42,22 +93,33 @@
         letter-spacing: 0.14em
         color: $gama
 
-.about-body
-    max-width: 62ch
+// two-column editorial prose below the hero
+.about-prose
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 48px
+    margin-top: 48px
+    padding-top: 40px
+    border-top: 1px solid $epsilon
 
-    > .lede
-        margin: 0 0 16px
-        font-size: 2rem
-        line-height: 1.55
-        font-weight: 500
-        color: $beta
+    @media #{$below}
+        grid-template-columns: 1fr
+        gap: 0
 
-    > p:not(.lede)
+    > p
+        margin: 0
         font-size: 1.5rem
+        line-height: 1.7
+
+        @media #{$below}
+            margin-bottom: 16px
+
+.about-section
+    margin-top: 72px
 
 .about-facts
     list-style: none
-    margin: 48px 0 0
+    margin: 0
     padding: 0
     border-top: 1px solid $epsilon
 
@@ -81,9 +143,6 @@
             font-size: 1.5rem
             color: $alpha
             line-height: 1.5
-
-.about-heading
-    margin-top: 64px
 
 // --- timeline ---
 
@@ -200,3 +259,9 @@
         border: 1px solid $epsilon
         border-radius: 999px
         padding: 10px 16px
+        transition: all 0.2s ease
+
+        &:hover
+            color: $beta
+            border-color: rgba($delta, 0.5)
+            transform: translateY(-1px)
