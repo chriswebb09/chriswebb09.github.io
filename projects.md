@@ -1,4 +1,5 @@
 ---
+redirect_from: /projects/
 layout: page
 title: Projects
 subtitle: AR experiments, open-source SDK work, and retail apps shipped to millions of users.

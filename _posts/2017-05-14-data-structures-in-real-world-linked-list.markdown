@@ -1,4 +1,5 @@
 ---
+redirect_from: /data-structures-in-real-world-linked-list/
 title: "Linked Lists - Data Structures In Real World"
 layout: post
 date: 2017-05-14 01:48

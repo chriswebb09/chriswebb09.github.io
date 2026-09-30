@@ -95,6 +95,7 @@ defaults:
       hidden: false
 
 plugins:
+  - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed

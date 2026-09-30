@@ -1,4 +1,5 @@
 ---
+redirect_from: /complexity-and-big-o/
 title: "Complexity and Big-O Notation"
 layout: post
 date: 2017-05-11 01:48

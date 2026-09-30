@@ -1,4 +1,5 @@
 ---
+redirect_from: /arkit-corelocation-part-two/
 title: "ARKit and CoreLocation: Part Two"
 layout: post
 date: 2017-08-20 01:48

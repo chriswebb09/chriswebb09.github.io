@@ -1,4 +1,5 @@
 ---
+redirect_from: /posts/
 layout: page
 title: Archive
 ---

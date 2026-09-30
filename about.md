@@ -1,4 +1,5 @@
 ---
+redirect_from: /about/
 title: About
 layout: page
 ---
