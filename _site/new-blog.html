@@ -496,7 +496,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 
 .no-disqus { border-bottom: none; padding-bottom: 0; }
 
-.carousel { margin: 0 auto; width: 100%; }
+.carousel { position: relative; margin: 0 auto; width: 100%; }
 
 .carousel-viewport { position: relative; }
 
@@ -538,9 +538,11 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 .carousel-btn.is-prev { left: 14px; }
 .carousel-btn.is-next { right: 14px; }
 
-.carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
-.carousel-dots > button { width: 8px; height: 8px; padding: 0; border: none; border-radius: 999px; background: #e2e8f0; cursor: pointer; transition: all 0.25s ease; }
-.carousel-dots > button:hover { background: #64748b; }
+.carousel-dots { position: absolute; top: 412px; left: 0; right: 0; z-index: 2; display: flex; justify-content: center; gap: 8px; pointer-events: none; }
+@media only screen and (max-width: 780px) { .carousel-dots { top: 392px; } }
+@media only screen and (max-width: 480px) { .carousel-dots { top: 318px; } }
+.carousel-dots > button { width: 8px; height: 8px; padding: 0; border: none; border-radius: 999px; background: rgba(15, 23, 42, 0.18); cursor: pointer; pointer-events: auto; transition: all 0.25s ease; }
+.carousel-dots > button:hover { background: rgba(15, 23, 42, 0.35); }
 .carousel-dots > button.is-active { width: 24px; background: #4f46e5; }
 
 .marquee { margin: 48px 0 0; width: 100vw; margin-left: calc(50% - 50vw); overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, black 18%, black 82%, transparent); mask-image: linear-gradient(to right, transparent, black 18%, black 82%, transparent); }

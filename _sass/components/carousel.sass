@@ -1,4 +1,5 @@
 .carousel
+    position: relative
     margin: 0 auto
     width: 100%
 
@@ -197,11 +198,23 @@
     &.is-next
         right: 14px
 
+// dots overlay the media pane so the card edge ends the section
 .carousel-dots
+    position: absolute
+    top: 412px
+    left: 0
+    right: 0
+    z-index: 2
     display: flex
     justify-content: center
     gap: 8px
-    margin-top: 24px
+    pointer-events: none
+
+    @media #{$below}
+        top: 392px
+
+    @media #{$mobile}
+        top: 318px
 
     > button
         width: 8px
@@ -209,12 +222,13 @@
         padding: 0
         border: none
         border-radius: 999px
-        background: $epsilon
+        background: rgba(15, 23, 42, 0.18)
         cursor: pointer
+        pointer-events: auto
         transition: all 0.25s ease
 
         &:hover
-            background: $gama
+            background: rgba(15, 23, 42, 0.35)
 
         &.is-active
             width: 24px
