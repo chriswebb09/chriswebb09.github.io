@@ -9,10 +9,27 @@ layout: page
         <p class="page-sub">Engineer, student, and serial side-project starter in New York City.</p>
         <p class="lede">I'm a senior software engineer — and currently a computer-science student at Columbia University — with years of experience designing and building software for the iOS platform.</p>
     </div>
-    <figure class="about-photo">
-        <img src="{{ site.url }}/{{ site.picture }}" alt="{{ site.title }}">
-        <figcaption>chris.webb — nyc</figcaption>
-    </figure>
+    <div class="about-side">
+        <aside class="id-card">
+            <div class="id-top">
+                <span class="id-brand">cw<span class="dot">.</span></span>
+                <span class="id-num">ID-2017-NYC</span>
+            </div>
+            <img class="id-avatar" src="{{ site.url }}/{{ site.picture }}" alt="{{ site.title }}">
+            <h3 class="id-name">Chris Webb</h3>
+            <p class="id-role">iOS Engineer</p>
+            <ul class="id-rows">
+                <li><span class="k">location</span><span class="v">New York City</span></li>
+                <li><span class="k">focus</span><span class="v">ARKit · Swift · AR</span></li>
+                <li><span class="k">school</span><span class="v">Columbia University</span></li>
+                <li><span class="k">status</span><span class="v is-live"><i></i>building</span></li>
+            </ul>
+            <div class="id-foot">
+                <span class="id-barcode" aria-hidden="true"></span>
+                <span class="id-est">est. 2017</span>
+            </div>
+        </aside>
+    </div>
 </header>
 
 <div class="about-prose">
