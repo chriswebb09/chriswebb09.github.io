@@ -75,6 +75,15 @@ html:before
 	background: $delta
 	color: #fff
 
+// visible keyboard focus, invisible for mouse users
+\:focus
+	outline: none
+
+\:focus-visible
+	outline: 2px solid rgba($delta, 0.7)
+	outline-offset: 3px
+	border-radius: 6px
+
 // prose links: gradient underline that thickens on hover
 .post-content p a,
 .post-content li a,

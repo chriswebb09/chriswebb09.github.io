@@ -250,6 +250,10 @@ html:before { content: ""; position: absolute; top: 0; left: 0; right: 0; height
   to { filter: hue-rotate(-12deg) saturate(1.1); } }
 ::selection { background: #4f46e5; color: #fff; }
 
+:focus { outline: none; }
+
+:focus-visible { outline: 2px solid rgba(79, 70, 229, 0.7); outline-offset: 3px; border-radius: 6px; }
+
 .post-content p a, .post-content li a, .about-body a, .about-facts a { color: #0f172a; font-weight: 500; text-decoration: none; background-image: linear-gradient(90deg, #4f46e5, #7c3aed); background-size: 100% 1px; background-position: 0 100%; background-repeat: no-repeat; padding-bottom: 2px; transition: color 0.2s ease, background-size 0.2s ease; }
 .post-content p a:hover, .post-content li a:hover, .about-body a:hover, .about-facts a:hover { color: #4f46e5; background-size: 100% 2px; text-decoration: none; }
 
@@ -693,7 +697,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 .page-hero > .page-sub { margin: 12px 0 0; max-width: 88ch; font-size: 1.8rem; line-height: 1.6; color: #475569; }
 
 .topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: transparent; border-bottom: 1px solid transparent; transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease; }
-.topbar.is-scrolled { background: rgba(248, 250, 252, 0.72); backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); border-bottom-color: #e2e8f0; }
+.topbar.is-scrolled { background: rgba(248, 250, 252, 0.72); backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); border-bottom-color: #e2e8f0; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03), 0 8px 24px rgba(15, 23, 42, 0.05); }
 
 .topbar-inner { width: 96%; max-width: 1024px; margin: 0 auto; height: 68px; display: flex; align-items: center; justify-content: space-between; }
 @media only screen and (max-width: 480px) { .topbar-inner { height: 58px; } }
@@ -707,16 +711,19 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
 
 .topbar-links { display: flex; align-items: center; gap: 6px; list-style: none; margin: 0; padding: 0; }
 .topbar-links li { line-height: 1; }
-.topbar-links a { display: inline-flex; align-items: baseline; gap: 6px; padding: 9px 12px; font-size: 1.4rem; font-weight: 500; color: #475569; text-decoration: none; border-radius: 8px; transition: color 0.15s ease; }
+.topbar-links a { position: relative; display: inline-flex; align-items: baseline; gap: 6px; padding: 9px 12px; font-size: 1.4rem; font-weight: 500; color: #475569; text-decoration: none; border-radius: 8px; transition: color 0.15s ease, background 0.15s ease; }
 @media only screen and (max-width: 480px) { .topbar-links a { padding: 8px 7px; font-size: 1.3rem; } }
 .topbar-links a > .n { font-family: "JetBrains Mono", "SF Mono", "Consolas", Menlo, monospace; font-size: 1.1rem; color: #4f46e5; opacity: 0.85; }
 @media only screen and (max-width: 480px) { .topbar-links a > .n { display: none; } }
-.topbar-links a:hover { color: #0f172a; text-decoration: none; }
+.topbar-links a:hover { color: #0f172a; background: rgba(79, 70, 229, 0.06); text-decoration: none; }
 .topbar-links a.active { color: #0f172a; }
+.topbar-links a.active:after { content: ""; position: absolute; left: 50%; bottom: 1px; width: 4px; height: 4px; margin-left: -2px; border-radius: 999px; background: #4f46e5; animation: nav-dot-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
 .topbar-links a.resume { margin-left: 12px; padding: 9px 19px; font-weight: 600; color: #0f172a; border: 1px solid #e2e8f0; border-radius: 999px; background: rgba(255, 255, 255, 0.5); transition: all 0.2s ease; }
 @media only screen and (max-width: 480px) { .topbar-links a.resume { margin-left: 6px; padding: 8px 14px; } }
 .topbar-links a.resume:hover { color: #4f46e5; border-color: rgba(79, 70, 229, 0.55); background: rgba(79, 70, 229, 0.07); box-shadow: 0 6px 22px rgba(79, 70, 229, 0.18); }
 
+@keyframes nav-dot-in { from { transform: scale(0); }
+  to { transform: scale(1); } }
 .evidence { background-image: linear-gradient(to bottom, #27f36a26, #27f36a26); color: #0f172a; }
 
 .star > .url > .title { width: auto !important; display: inline; background-image: linear-gradient(#27f36a26, #27f36a26); }
@@ -799,7 +806,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 20px 2
                 <li><a class="active" href="/about/"><span class="n">03.</span>About</a></li>
             
             
-                <li><a class="resume" href="/assets/images/Chris_Webb_Resume.pdf">Résumé</a></li>
+                <li><a class="resume" href="/assets/images/Chris_Webb_Resume.pdf">Résumé<span class="dl">&darr;</span></a></li>
             
         </ul>
     </div>

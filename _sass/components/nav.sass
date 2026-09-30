@@ -14,6 +14,7 @@
         backdrop-filter: blur(16px) saturate(1.4)
         -webkit-backdrop-filter: blur(16px) saturate(1.4)
         border-bottom-color: $epsilon
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03), 0 8px 24px rgba(15, 23, 42, 0.05)
 
 .topbar-inner
     width: 96%
@@ -65,6 +66,7 @@
         line-height: 1
 
     a
+        position: relative
         display: inline-flex
         align-items: baseline
         gap: 6px
@@ -74,7 +76,7 @@
         color: $alpha
         text-decoration: none
         border-radius: 8px
-        transition: color .15s ease
+        transition: color .15s ease, background .15s ease
 
         @media #{$mobile}
             padding: 8px 7px
@@ -91,10 +93,25 @@
 
         &:hover
             color: $beta
+            background: rgba($delta, 0.06)
             text-decoration: none
 
+        // active page: darker label + a dot marker that springs in
         &.active
             color: $beta
+
+            &:after
+                content: ""
+                position: absolute
+                left: 50%
+                bottom: 1px
+                width: 4px
+                height: 4px
+                margin-left: -2px
+                border-radius: 999px
+                background: $delta
+                animation: nav-dot-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both
+
 
         &.resume
             margin-left: 12px
@@ -115,3 +132,8 @@
                 border-color: rgba($delta, 0.55)
                 background: rgba($delta, 0.07)
                 box-shadow: 0 6px 22px rgba($delta, 0.18)
+@keyframes nav-dot-in
+    from
+        transform: scale(0)
+    to
+        transform: scale(1)

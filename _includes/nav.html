@@ -13,7 +13,7 @@
                 <li><a {% if page.title == "About" %}class="active" {% endif %}href="/about/"><span class="n">03.</span>About</a></li>
             {% endif %}
             {% if site.resume == true %}
-                <li><a class="resume" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}/{{ site.resume-url }}{% endif %}">Résumé</a></li>
+                <li><a class="resume" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}/{{ site.resume-url }}{% endif %}">Résumé<span class="dl">&darr;</span></a></li>
             {% endif %}
         </ul>
     </div>
