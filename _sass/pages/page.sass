@@ -7,10 +7,11 @@
 
 // --- about page ---
 
+// intro splits at phi: photo minor, prose major
 .about-grid
     display: grid
-    grid-template-columns: 200px 1fr
-    gap: 40px
+    grid-template-columns: 1fr 1.618fr
+    gap: 48px
     align-items: start
     margin-top: 40px
 
@@ -19,21 +20,35 @@
 
 .about-photo
     margin: 0
+    text-align: center
 
     > img
         width: 100%
-        max-width: 200px
-        border-radius: 16px
+        max-width: 340px
+        border-radius: 20px
         border: 1px solid $epsilon
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3)
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4)
+        transform: rotate(-1.5deg)
+        transition: transform 0.35s ease
+
+        &:hover
+            transform: rotate(0deg) scale(1.01)
+
+    > figcaption
+        margin-top: 20px
+        font-family: $fontMonospace
+        font-size: 1.1rem
+        text-transform: uppercase
+        letter-spacing: 0.14em
+        color: $gama
 
 .about-body
-    max-width: 68ch
+    max-width: 62ch
 
     > .lede
         margin: 0 0 16px
-        font-size: 1.8rem
-        line-height: 1.6
+        font-size: 2rem
+        line-height: 1.55
         font-weight: 500
         color: $beta
 
@@ -69,6 +84,102 @@
 
 .about-heading
     margin-top: 64px
+
+// --- timeline ---
+
+.timeline
+    list-style: none
+    margin: 0
+    padding: 0
+
+    > li
+        display: grid
+        grid-template-columns: 128px 1fr
+        gap: 24px
+        align-items: start
+
+        @media #{$mobile}
+            grid-template-columns: 80px 1fr
+            gap: 16px
+
+        > .tl-label
+            padding-top: 2px
+            font-family: $fontMonospace
+            font-size: 1.1rem
+            font-weight: 500
+            text-transform: uppercase
+            letter-spacing: 0.12em
+            color: $delta
+
+        > .tl-body
+            position: relative
+            padding: 0 0 32px 28px
+            border-left: 1px solid $epsilon
+
+            &:before
+                content: ""
+                position: absolute
+                left: -5px
+                top: 6px
+                width: 9px
+                height: 9px
+                border-radius: 999px
+                background: $delta
+                box-shadow: 0 0 0 4px rgba($delta, 0.15)
+
+            > h3
+                margin: 0 0 6px
+                font-family: $fontDisplay
+                font-size: 1.8rem
+                font-weight: 600
+                color: $beta
+
+            > p
+                margin: 0
+                max-width: 58ch
+                font-size: 1.4rem
+                line-height: 1.65
+                color: $alpha
+
+        &.is-now > .tl-body:before
+            background: #4ade80
+            box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.15)
+
+        &:last-child > .tl-body
+            border-left-color: transparent
+            padding-bottom: 8px
+
+// --- grouped toolbox ---
+
+.stack-groups
+    display: flex
+    flex-direction: column
+
+.stack-row
+    display: grid
+    grid-template-columns: 128px 1fr
+    gap: 24px
+    align-items: baseline
+    padding: 14px 0
+    border-bottom: 1px solid $epsilon
+
+    &:first-child
+        padding-top: 0
+
+    &:last-child
+        border-bottom: none
+
+    @media #{$mobile}
+        grid-template-columns: 1fr
+        gap: 10px
+
+    > .k
+        font-family: $fontMonospace
+        font-size: 1.1rem
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 0.12em
+        color: $delta
 
 .skill-chips
     display: flex
