@@ -1,5 +1,7 @@
+// wrapper carries .page on every titled page; this clears the fixed 68px topbar
+// exactly - each page hero's own top padding is then the true visible gap
 .page
-    margin-top: 96px
+    margin-top: 68px
 
     > h1
         text-align: center
@@ -16,7 +18,7 @@
     padding: 48px 0 0
 
     > .about-hero-copy
-        padding-top: 24px
+        padding-top: 0
 
     @media #{$below}
         grid-template-columns: 1fr
