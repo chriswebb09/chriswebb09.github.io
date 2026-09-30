@@ -3,7 +3,7 @@ layout: page
 title: Projects
 subtitle: AR experiments, open-source SDK work, and retail apps shipped to millions of users.
 ---
-<section class="about-section reveal proj-first">
+<section class="about-section reveal">
     <div class="section-heading">
         <div>
             <span class="kicker">01 — Showcase</span>
