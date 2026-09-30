@@ -1,5 +1,4 @@
 ---
-redirect_from: /exploring-arkit-arscnplanegeometry/
 title: 'Exploring ARKit: ARSCNPlaneGeometry'
 layout: post
 date: 2018-04-14 22:10
