@@ -2,3 +2,7 @@ vendor/
 .bundle/
 .jekyll-cache/
 .sass-cache/
+CLAUDE.md
+_site/CLAUDE.html
+_site/CLAUDE.md
+.DS_Store
