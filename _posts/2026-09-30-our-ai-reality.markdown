@@ -12,6 +12,8 @@ author: chriswebb
 description: The dread and the promise are both real.
 ---
 
+![No fate](/assets/images/no-fate-but-what-we-make.jpeg)
+
 > "I know what it's like to lose. To feel so desperately that you're right, yet to fail nonetheless. It's frightening. Turns the legs to jelly. I ask you, to what end? Dread it. Run from it. Destiny arrives all the same. And now it's here. Or should I say... I am."
 >
 > — Thanos
