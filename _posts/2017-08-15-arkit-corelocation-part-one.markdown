@@ -6,10 +6,10 @@ image: /assets/images/ARKit.png
 headerImage: true
 tag:
 - iOS
-- swift
+- Swift
 - Augmented Reality
-- navigation
-- core location
+- Navigation
+- Core Location
 category: blog
 author: chriswebb
 description: Adventures in Augmented Reality

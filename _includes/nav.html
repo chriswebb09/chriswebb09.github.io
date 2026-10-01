@@ -4,7 +4,7 @@
 
         <ul class="topbar-links">
             {% if site.blog == true %}
-                <li><a {% if page.title == "Blog" %}class="active" {% endif %}href="/blog"><span class="n">01.</span>Blog</a></li>
+                <li><a {% if page.title == "Blog" or page.layout == "post" %}class="active" {% endif %}href="/blog"><span class="n">01.</span>Blog</a></li>
             {% endif %}
             {% if site.projects == true %}
                 <li><a {% if page.title == "Projects" %}class="active" {% endif %}href="/projects"><span class="n">02.</span>Projects</a></li>
@@ -13,7 +13,7 @@
                 <li><a {% if page.title == "About" %}class="active" {% endif %}href="/about"><span class="n">03.</span>About</a></li>
             {% endif %}
             {% if site.resume == true %}
-                <li><a class="resume" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}/{{ site.resume-url }}{% endif %}">Résumé<span class="dl">&darr;</span></a></li>
+                <li><a class="resume" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}/{{ site.resume-url }}{% endif %}" target="_blank" rel="noopener">Résumé<span class="dl">&darr;</span></a></li>
             {% endif %}
         </ul>
     </div>

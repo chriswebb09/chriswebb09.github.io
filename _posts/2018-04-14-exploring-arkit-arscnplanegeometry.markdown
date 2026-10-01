@@ -5,8 +5,8 @@ date: 2018-04-14 22:10
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
-- arkit
-- geometry
+- ARKit
+- Geometry
 category: blog
 author: chriswebb
 description: ARKit Scene Geometry

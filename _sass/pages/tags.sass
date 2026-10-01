@@ -1,67 +1,45 @@
-.tags
-    margin-top: 0
+// --- tag cloud: chips with post counts, linking to the groups below ---
 
-    > .list
-        border-top: 1px solid $epsilon
-        margin-top: 30px
-        padding-top: 30px
-        position: relative
+.tag-cloud
+    display: flex
+    flex-wrap: wrap
+    gap: 10px
+    margin: 10px 0 8px
 
-.tags > .list
-    > .item
-        font-weight: 300
-        text-transform: uppercase
-        text-align: center
-        -webkit-font-smoothing: antialiased
-        text-rendering: optimizeLegibility
-        padding: 3px 9px
-        border-radius: 3px
-        font-size: 1.3rem
-        background: $epsilon
-        color: $alpha
-        letter-spacing: 1px
-        margin: 0 0.5rem 1rem
-        text-decoration: none
-        display: inline-block
+.tag-chip
+    display: inline-flex
+    align-items: baseline
+    gap: 8px
+    padding: 8px 14px
+    font-family: $fontMonospace
+    font-size: 1.2rem
+    font-weight: 500
+    line-height: 1
+    letter-spacing: 0.07em
+    text-transform: uppercase
+    color: $alpha
+    background: rgba($omega, 0.6)
+    border: 1px solid $epsilon
+    border-radius: 999px
+    text-decoration: none
+    transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease
 
-.tag-list > .list
-    padding: 0
-
-    > .item
-        display: block
-        width: 80%
-        margin: 0 10%
-
-    > .item > .url
-        width: 100%
-        height: 100%
-        display: block
-        padding: 20px 0
-        text-decoration: none
-
-    > .item > .url > .title
-        margin: 0
-        width: 75%
-        font-weight: 400
-        transition: all ease-in-out .2s
-        font-size: 1.6rem
-
-    > .item:hover > .url > .title
+    > span
+        font-size: 1.05rem
         color: $delta
 
-    // maybe we can't nest html5 elements
-    // can you help me?
-    aside
-        position: relative
-        top: 2px
-        margin: 0
-        width: 25%
-        float: right
-        font-weight: 300
-        color: $gama
-        text-align: right
-        transition: all ease-in-out .2s
-        font-size: 1.6rem
+    &:hover
+        color: $beta
+        border-color: rgba($delta, 0.5)
+        background: rgba($delta, 0.07)
+        text-decoration: none
 
-    .item:hover .url aside
-        color: $alpha
+// --- one section per tag, matching the site's heading + post-row language ---
+
+.tag-group
+    margin-top: 56px
+    // anchored jumps land clear of the fixed topbar
+    scroll-margin-top: 90px
+
+    > .post-list
+        margin-top: 0

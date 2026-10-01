@@ -15,7 +15,7 @@
   image: assets/images/arkit-drone.gif
   github: https://github.com/chriswebb09/ARKitDrone
   tags: [Swift, ARKit, Multiplayer]
-  accent: "#38bdf8"
+  accent: "#22d3ee"
   portrait: true
 
 - title: DirectReport
@@ -23,5 +23,5 @@
   image: assets/images/directreport.png
   github: https://github.com/chriswebb09/DirectReport
   tags: [Flask, React, OpenAI]
-  accent: "#a78bfa"
+  accent: "#ec4899"
   portrait: false

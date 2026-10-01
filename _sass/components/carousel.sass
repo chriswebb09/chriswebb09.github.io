@@ -23,6 +23,9 @@
     position: relative
     flex: 0 0 100%
     scroll-snap-align: center
+    // media left, info right; stacks again below $below
+    display: grid
+    grid-template-columns: minmax(300px, 420px) 1fr
     background: $omega
     border: 1px solid $epsilon
     border-radius: 18px
@@ -44,21 +47,26 @@
     &:hover:after
         opacity: 1
 
+.carousel-slide
+    @media #{$below}
+        display: block
+
 .carousel-media
     position: relative
     display: flex
     align-items: center
     justify-content: center
-    height: 380px
+    height: clamp(380px, 34vw, 500px)
     padding: 24px
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0.06))
-    border-bottom: 1px solid $epsilon
+    border-right: 1px solid $epsilon
 
     @media #{$below}
-        height: 360px
+        height: clamp(300px, 60vw, 420px)
+        border-right: none
+        border-bottom: 1px solid $epsilon
 
     @media #{$mobile}
-        height: 300px
         padding: 16px
 
     img
@@ -88,7 +96,13 @@
     -webkit-backdrop-filter: blur(6px)
 
 .carousel-body
-    padding: 28px 32px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 32px 40px
+
+    @media #{$below}
+        padding: 24px 28px
 
     @media #{$mobile}
         padding: 20px
@@ -282,6 +296,9 @@
 // --- projects page sections ---
 
 .repo-card
+    .repo-info p
+        max-width: 72ch
+
     display: flex
     align-items: flex-start
     justify-content: space-between
@@ -467,6 +484,13 @@
         @media #{$mobile}
             display: none
 
+    // side-column variant: no rule; the heading sits in a section's left
+    // title column (see .about-section), so it drops the row styling
+    &.is-centered
+        margin-bottom: 0
+        justify-content: flex-start
+        text-align: left
+
     > .more
         white-space: nowrap
         font-family: $fontMonospace
@@ -483,11 +507,12 @@
 
 .featured-grid
     display: grid
-    grid-template-columns: repeat(2, 1fr)
     gap: 24px
-
-    @media #{$below}
-        grid-template-columns: 1fr
+    // columns derive from available space (no breakpoint); Min() caps the
+    // track floor at 100% so narrow viewports get one full-width column.
+    // 400px floor = at most 2 columns inside the 1200px wrapper, so the two
+    // cards under the full-width bento row always fill the row
+    grid-template-columns: repeat(auto-fit, minmax(Min(400px, 100%), 1fr))
 
     // bento: lead project gets a full-width horizontal card, split at phi
     > .project-card:first-child
@@ -496,7 +521,8 @@
         grid-template-columns: 1.618fr 1fr
 
         > .thumb
-            height: 360px
+            aspect-ratio: 16 / 9
+            height: auto
             border-bottom: none
             border-right: 1px solid $epsilon
 
@@ -511,7 +537,6 @@
             display: block
 
             > .thumb
-                height: 220px
                 border-right: none
                 border-bottom: 1px solid $epsilon
 
@@ -550,7 +575,7 @@
         box-shadow: 0 16px 44px rgba(17, 24, 39, 0.10), 0 0 44px rgba($delta, 0.10)
 
     > .thumb
-        height: 224px
+        aspect-ratio: 2 / 1
         display: flex
         align-items: center
         justify-content: center

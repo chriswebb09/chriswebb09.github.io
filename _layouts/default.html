@@ -8,7 +8,7 @@ layout: compress
     {% if site.analytics-google %}
         {% include analytics-google.html %}
     {% endif %}
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name=author content="{{ site.title }}">
@@ -42,6 +42,7 @@ layout: compress
 
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <script>
     (function () {
         var p = location.pathname;
@@ -52,7 +53,7 @@ layout: compress
     </script>
     <div class="scroll-progress" aria-hidden="true"></div>
     <div class="spotlight" aria-hidden="true"></div>
-    <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
+    <div id="main" class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
         {% if page.layout == "post" %}
             <div class="post">
         {% else %}
@@ -131,6 +132,35 @@ layout: compress
             });
         }, { passive: true });
         update();
+    })();
+    </script>
+    <script>
+    (function () {
+        var win = document.querySelector('.vp-window');
+        if (!win) { return; }
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
+        if (window.matchMedia('(hover: none)').matches) { return; }
+        var orbit = win.querySelector('.vp-orbit');
+        if (!orbit) { return; }
+        var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+        function tick() {
+            cx += (tx - cx) * 0.08;
+            cy += (ty - cy) * 0.08;
+            orbit.style.transform = 'rotateX(' + (-10 + cy).toFixed(2) + 'deg) rotateY(' + cx.toFixed(2) + 'deg)';
+            if (Math.abs(tx - cx) > 0.05 || Math.abs(ty - cy) > 0.05) {
+                raf = requestAnimationFrame(tick);
+            } else {
+                raf = null;
+            }
+        }
+        function kick() { if (!raf) { raf = requestAnimationFrame(tick); } }
+        win.addEventListener('pointermove', function (e) {
+            var r = win.getBoundingClientRect();
+            tx = ((e.clientX - r.left) / r.width - 0.5) * 30;
+            ty = ((e.clientY - r.top) / r.height - 0.5) * -12;
+            kick();
+        });
+        win.addEventListener('pointerleave', function () { tx = 0; ty = 0; kick(); });
     })();
     </script>
 </body>

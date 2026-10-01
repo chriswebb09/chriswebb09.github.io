@@ -35,12 +35,11 @@ layout: page
 </header>
 
 <section class="about-section reveal">
-    <div class="section-heading">
+    <div class="section-heading is-centered">
         <div>
             <span class="kicker">01 — Currently</span>
             <h2>State of the union</h2>
         </div>
-        <span class="rule"></span>
     </div>
 
     <ul class="about-facts">
@@ -68,12 +67,11 @@ layout: page
 </section>
 
 <section class="about-section reveal">
-    <div class="section-heading">
+    <div class="section-heading is-centered">
         <div>
             <span class="kicker">02 — Path</span>
             <h2>How I got here</h2>
         </div>
-        <span class="rule"></span>
     </div>
 
     <ol class="timeline">
@@ -116,12 +114,11 @@ layout: page
 </section>
 
 <section class="about-section reveal">
-    <div class="section-heading">
+    <div class="section-heading is-centered">
         <div>
             <span class="kicker">03 — Toolbox</span>
             <h2>What I work with</h2>
         </div>
-        <span class="rule"></span>
     </div>
 
     <div class="stack-groups">

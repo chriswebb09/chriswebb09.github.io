@@ -7,16 +7,21 @@
     @media #{$below}
         padding-top: 24px
 
-// golden-ratio split: copy column is phi times the terminal column
+// golden-ratio split: copy column is phi times the terminal column;
+// wraps when the copy can't hold its measure, driven by space, not a breakpoint
 .hero-grid
-    display: grid
-    grid-template-columns: 1.618fr 1fr
-    gap: 64px
+    display: flex
+    flex-wrap: wrap
     align-items: center
+    gap: 40px 64px
 
-    @media #{$below}
-        grid-template-columns: 1fr
-        gap: 40px
+    > .hero-copy
+        flex: 1.618 1 0
+        min-inline-size: Min(52ch, 100%)
+
+    > .hero-side
+        flex: 1 1 0
+        min-inline-size: Min(300px, 100%)
 
 .hero-kicker
     margin: 0 0 14px
@@ -145,7 +150,7 @@
         width: 130%
         height: 130%
         transform: translate(-50%, -50%)
-        background: radial-gradient(ellipse 60% 55% at 50% 50%, rgba(38, 139, 210, 0.16), transparent 70%)
+        background: radial-gradient(ellipse 45% 50% at 35% 45%, rgba(34, 211, 238, 0.14), transparent 70%), radial-gradient(ellipse 45% 50% at 68% 55%, rgba(236, 72, 153, 0.12), transparent 70%)
         pointer-events: none
 
     @media #{$below}
@@ -153,10 +158,10 @@
 
 .terminal
     position: relative
-    border: 1px solid rgba(38, 139, 210, 0.22)
+    border: 1px solid rgba(70, 149, 247, 0.22)
     border-radius: 14px
-    background: #002b36
-    box-shadow: 0 30px 80px rgba(2, 43, 54, 0.25), 0 0 40px rgba(38, 139, 210, 0.1)
+    background: #103c48
+    box-shadow: 0 30px 80px rgba(16, 60, 72, 0.25), 0 0 40px rgba(70, 149, 247, 0.1)
     overflow: hidden
 
 @media (prefers-reduced-motion: no-preference)
@@ -174,8 +179,8 @@
     align-items: center
     gap: 7px
     padding: 12px 16px
-    border-bottom: 1px solid rgba(131, 148, 150, 0.14)
-    background: #073642
+    border-bottom: 1px solid rgba(114, 137, 143, 0.18)
+    background: #184956
 
     > .tl
         width: 11px
@@ -197,7 +202,7 @@
         font-family: $fontMonospace
         font-size: 1.1rem
         letter-spacing: 0.04em
-        color: #839496
+        color: #72898f
         margin-right: 40px
 
 .terminal-body
@@ -205,7 +210,7 @@
     font-family: $fontMonospace
     font-size: 1.2rem
     line-height: 2.05
-    color: #93a1a1
+    color: #adbcbc
 
     @media #{$mobile}
         font-size: 1.1rem
@@ -216,7 +221,7 @@
         overflow: hidden
 
     .t-out
-        color: #eee8d5
+        color: #cad8d9
 
     .t-in
         padding-left: 1.8em
@@ -225,17 +230,17 @@
         height: 0.9em
 
     .c-p
-        color: #268bd2
+        color: #4695f7
         margin-right: 2px
 
     .c-k
-        color: #268bd2
+        color: #4695f7
 
     .c-s
-        color: #2aa198
+        color: #41c7b9
 
     .caret
-        background: #93a1a1
+        background: #adbcbc
 
 // --- Interior page hero (Blog / Projects / Tags) ---
 

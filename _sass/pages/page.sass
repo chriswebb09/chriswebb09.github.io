@@ -13,14 +13,13 @@
 .about-hero
     display: grid
     grid-template-columns: 1.618fr 1fr
-    gap: 64px
-    align-items: stretch
+    gap: 56px
+    // copy centers vertically against the taller id-card
+    align-items: center
     padding: 48px 0 0
+    // hero spans the full wrapper: copy on the left rail shared with the
+    // sections below, card flush with the wrapper's right edge (resume button)
 
-    // fill the card's height: margins act as minimums and the slack
-    // distributes evenly so copy and card end flush
-    // fixed golden gaps up top (13/21/13); slack pools equally into
-    // the two paragraph gaps (margin-top: auto) so copy ends flush
     > .about-hero-copy
         display: flex
         flex-direction: column
@@ -68,7 +67,6 @@
 
     > .lede
         margin: 0
-        max-width: 46ch
         font-size: 1.8rem
         line-height: 1.6
         font-weight: 500
@@ -80,8 +78,7 @@
 
     > .hero-p
         margin: 0
-        margin-top: auto
-        max-width: 56ch
+        margin-top: 20px
         font-size: 1.5rem
         line-height: 1.7
         color: $alpha
@@ -92,7 +89,7 @@
 .about-side
     position: relative
     display: flex
-    justify-content: center
+    justify-content: flex-end
     animation: fade-in-down 0.6s 0.2s both
 
     &:before
@@ -103,7 +100,7 @@
         width: 140%
         height: 120%
         transform: translate(-50%, -50%)
-        background: radial-gradient(ellipse 55% 50% at 50% 50%, rgba($delta, 0.14), transparent 70%)
+        background: radial-gradient(ellipse 50% 45% at 40% 45%, rgba($delta, 0.12), transparent 70%), radial-gradient(ellipse 45% 45% at 65% 58%, rgba(236, 72, 153, 0.10), transparent 70%)
         pointer-events: none
 
 // golden rectangle: height tuned to width x phi
@@ -239,28 +236,706 @@
         letter-spacing: 0.12em
         color: #d97706
 
+// --- projects page hero: copy left, Package.swift editor right ---
+
+.projects-hero
+    display: grid
+    grid-template-columns: 1.618fr 1fr
+    gap: 56px
+    align-items: center
+    padding-top: 48px
+
+    > .page-hero
+        padding: 0
+
+    > .projects-side
+        animation: fade-in-down 0.6s 0.2s both
+
+    .hero-stats
+        margin: 26px 0 0
+        font-family: $fontMonospace
+        font-size: 1.2rem
+        letter-spacing: 0.14em
+        text-transform: uppercase
+        color: $gama
+
+        > span
+            color: $delta
+
+        > i
+            font-style: normal
+            margin: 0 6px
+            color: $epsilon
+
+    @media #{$below}
+        display: block
+
+        > .projects-side
+            margin-top: 36px
+            max-width: 480px
+
+// --- RealityKit-style 3D viewport (projects hero artifact) ---
+// pointer orbit is driven by JS in default.html (.vp-orbit transform)
+
+.vp-body
+    position: relative
+    aspect-ratio: 10 / 8.4
+    overflow: hidden
+    background: radial-gradient(420px at 70% 25%, rgba(99, 102, 241, 0.26), transparent 65%), radial-gradient(360px at 25% 80%, rgba(236, 72, 153, 0.14), transparent 65%), radial-gradient(500px at 45% 10%, rgba(34, 211, 238, 0.12), transparent 60%), #0b1322
+    font-family: $fontMonospace
+
+.vp-tools
+    position: absolute
+    top: 50%
+    left: 10px
+    transform: translateY(-50%)
+    display: flex
+    flex-direction: column
+    gap: 6px
+    z-index: 3
+
+    > span
+        width: 26px
+        height: 26px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 8px
+        font-size: 1.2rem
+        color: rgba(173, 200, 220, 0.6)
+        border: 1px solid transparent
+
+        &.active
+            color: #22d3ee
+            border-color: rgba(34, 211, 238, 0.4)
+            background: rgba(34, 211, 238, 0.08)
+
+.vp-scene
+    position: absolute
+    inset: 0
+    perspective: 950px
+    perspective-origin: 50% 30%
+
+.vp-orbit
+    position: absolute
+    inset: 0
+    transform-style: preserve-3d
+    transform: rotateX(-10deg)
+    will-change: transform
+
+.vp-floor
+    position: absolute
+    left: 50%
+    top: 60%
+    width: 1100px
+    height: 1100px
+    margin: -550px 0 0 -550px
+    background-image: linear-gradient(to bottom, rgba(148, 180, 255, 0.16) 1px, transparent 1px), linear-gradient(to right, rgba(148, 180, 255, 0.16) 1px, transparent 1px)
+    background-size: 44px 44px
+    background-position: center
+    transform: rotateX(76deg)
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, black 0%, transparent 62%)
+    mask-image: radial-gradient(circle at 50% 50%, black 0%, transparent 62%)
+
+    // painted onto the floor plane: contact glow, flight path, waypoint
+    > .vp-shadow
+        position: absolute
+        left: 550px
+        top: 550px
+        width: 150px
+        height: 150px
+        margin: -75px
+        background: radial-gradient(closest-side, rgba(34, 211, 238, 0.30), transparent 72%)
+        filter: blur(4px)
+
+    > .vp-path
+        position: absolute
+        left: 550px
+        top: 550px
+        width: 250px
+        border-top: 2px dashed rgba(236, 72, 153, 0.6)
+        transform: rotate(-30deg)
+        transform-origin: 0 0
+
+    > .vp-waypoint
+        position: absolute
+        left: 766px
+        top: 425px
+        width: 36px
+        height: 36px
+        margin: -18px
+        border: 2px dashed rgba(236, 72, 153, 0.85)
+        border-radius: 999px
+
+    // ARKit-style focus square: open amber corner brackets on the plane
+    > .vp-focus
+        position: absolute
+        left: 550px
+        top: 550px
+        width: 68px
+        height: 68px
+        margin: -34px
+
+        > span
+            position: absolute
+            width: 17px
+            height: 17px
+            border: 0 solid rgba(251, 191, 36, 0.95)
+
+            &:nth-child(1)
+                top: 0
+                left: 0
+                border-top-width: 2.5px
+                border-left-width: 2.5px
+
+            &:nth-child(2)
+                top: 0
+                right: 0
+                border-top-width: 2.5px
+                border-right-width: 2.5px
+
+            &:nth-child(3)
+                bottom: 0
+                left: 0
+                border-bottom-width: 2.5px
+                border-left-width: 2.5px
+
+            &:nth-child(4)
+                bottom: 0
+                right: 0
+                border-bottom-width: 2.5px
+                border-right-width: 2.5px
+
+.vp-drone
+    position: absolute
+    left: 50%
+    top: 38%
+    z-index: 1
+    transform-style: preserve-3d
+
+.vp-dcore
+    position: absolute
+    transform-style: preserve-3d
+
+.vp-dbody
+    position: absolute
+    width: 36px
+    height: 22px
+    margin: -11px 0 0 -18px
+    transform-style: preserve-3d
+
+    > i
+        position: absolute
+        inset: 0
+        background: rgba(34, 211, 238, 0.09)
+        border: 1px solid rgba(34, 211, 238, 0.85)
+        box-shadow: inset 0 0 16px rgba(34, 211, 238, 0.10)
+
+        &.f-front
+            transform: translateZ(18px)
+
+        &.f-back
+            transform: rotateY(180deg) translateZ(18px)
+
+        &.f-right
+            transform: rotateY(90deg) translateZ(18px)
+
+        &.f-left
+            transform: rotateY(-90deg) translateZ(18px)
+
+        &.f-top
+            height: 36px
+            top: 50%
+            margin-top: -18px
+            transform: rotateX(90deg) translateZ(11px)
+
+.vp-arm
+    position: absolute
+    width: 124px
+    height: 7px
+    margin: -3.5px 0 0 -62px
+    background: rgba(34, 211, 238, 0.10)
+    border: 1px solid rgba(34, 211, 238, 0.6)
+
+    &.va1
+        transform: rotateX(90deg) rotateZ(45deg)
+
+    &.va2
+        transform: rotateX(90deg) rotateZ(-45deg)
+
+.vp-rotor
+    position: absolute
+    width: 34px
+    height: 34px
+    margin: -17px
+    transform-style: preserve-3d
+
+    > u
+        position: absolute
+        inset: 0
+        border: 2px dashed rgba(34, 211, 238, 0.9)
+        border-radius: 999px
+
+    &.vr1
+        transform: translate3d(44px, -4px, 44px) rotateX(90deg)
+
+    &.vr2
+        transform: translate3d(-44px, -4px, 44px) rotateX(90deg)
+
+    &.vr3
+        transform: translate3d(44px, -4px, -44px) rotateX(90deg)
+
+    &.vr4
+        transform: translate3d(-44px, -4px, -44px) rotateX(90deg)
+
+// dashed selection bounds around the entity
+.vp-bounds
+    position: absolute
+    width: 168px
+    height: 96px
+    margin: -48px 0 0 -84px
+    transform-style: preserve-3d
+
+    > i
+        position: absolute
+        inset: 0
+        border: 1px dashed rgba(236, 72, 153, 0.45)
+
+        &.b-front
+            transform: translateZ(84px)
+
+        &.b-back
+            transform: rotateY(180deg) translateZ(84px)
+
+        &.b-right
+            transform: rotateY(90deg) translateZ(84px)
+
+        &.b-left
+            transform: rotateY(-90deg) translateZ(84px)
+
+// low-poly person entity (violet hologram), standing on the floor
+.vp-person
+    position: absolute
+    left: 84%
+    top: 73%
+    z-index: 1
+    transform-style: preserve-3d
+    // near the camera: low in frame, larger
+    transform: scale(1.18)
+
+.vp-pcore
+    position: absolute
+    transform-style: preserve-3d
+    transform: rotateY(14deg)
+
+.vp-pp
+    position: absolute
+    transform-style: preserve-3d
+
+    > i
+        position: absolute
+        inset: 0
+        background: rgba(167, 139, 250, 0.09)
+        border: 1px solid rgba(167, 139, 250, 0.8)
+        box-shadow: inset 0 0 10px rgba(167, 139, 250, 0.10)
+
+    &.pp-head
+        width: 12px
+        height: 12px
+        left: -6px
+        top: -64px
+
+        > i.pf
+            transform: translateZ(6px)
+
+        > i.pb
+            transform: rotateY(180deg) translateZ(6px)
+
+        > i.pl
+            transform: rotateY(-90deg) translateZ(6px)
+
+        > i.pr
+            transform: rotateY(90deg) translateZ(6px)
+
+    &.pp-torso
+        width: 20px
+        height: 24px
+        left: -10px
+        top: -52px
+
+        > i.pf
+            transform: translateZ(5px)
+
+        > i.pb
+            transform: rotateY(180deg) translateZ(5px)
+
+        > i.pl
+            transform: rotateY(-90deg) translateZ(10px)
+
+        > i.pr
+            transform: rotateY(90deg) translateZ(10px)
+
+    &.pp-arml,
+    &.pp-armr
+        width: 5px
+        height: 20px
+        top: -50px
+
+        > i.pf
+            transform: translateZ(2.5px)
+
+        > i.pb
+            transform: rotateY(180deg) translateZ(2.5px)
+
+        > i.pl
+            transform: rotateY(-90deg) translateZ(2.5px)
+
+        > i.pr
+            transform: rotateY(90deg) translateZ(2.5px)
+
+    &.pp-arml
+        left: -16px
+
+    &.pp-armr
+        left: 11px
+
+    &.pp-legl,
+    &.pp-legr
+        width: 7px
+        height: 26px
+        top: -28px
+
+        > i.pf
+            transform: translateZ(3.5px)
+
+        > i.pb
+            transform: rotateY(180deg) translateZ(3.5px)
+
+        > i.pl
+            transform: rotateY(-90deg) translateZ(3.5px)
+
+        > i.pr
+            transform: rotateY(90deg) translateZ(3.5px)
+
+    &.pp-legl
+        left: -9px
+
+    &.pp-legr
+        left: 2px
+
+.vp-dust
+    position: absolute
+    width: 3px
+    height: 3px
+    border-radius: 999px
+    background: rgba(173, 216, 255, 0.8)
+    opacity: 0.2
+    z-index: 1
+
+    &.d1
+        left: 20%
+        top: 28%
+
+    &.d2
+        left: 34%
+        top: 62%
+        width: 2px
+        height: 2px
+
+    &.d3
+        left: 58%
+        top: 20%
+
+    &.d4
+        left: 74%
+        top: 58%
+        width: 2px
+        height: 2px
+
+    &.d5
+        left: 46%
+        top: 76%
+
+    &.d6
+        left: 86%
+        top: 34%
+
+.vp-entity
+    top: 14%
+    left: 9%
+
+.vp-way
+    top: 73%
+    left: 9%
+
+.vp-user
+    top: 76%
+    right: 16%
+
+.hud-anchor .pin.is-pink
+    background: #ec4899
+
+.hud-anchor .pin.is-violet
+    background: #a78bfa
+
+.vp-gizmo
+    position: absolute
+    top: 18px
+    right: 20px
+    width: 58px
+    height: 58px
+    z-index: 2
+
+    > .arm
+        position: absolute
+        left: 50%
+        top: 50%
+        width: 21px
+        height: 2px
+        transform-origin: 0 50%
+
+        &.ax
+            background: #fa5750
+            transform: rotate(0deg)
+
+        &.ay
+            background: #75b938
+            transform: rotate(-90deg)
+
+        &.az
+            background: #4695f7
+            transform: rotate(135deg)
+
+    > b
+        position: absolute
+        font-weight: 500
+        font-size: 1rem
+
+        &.lx
+            right: 2px
+            top: 50%
+            transform: translateY(-50%)
+            color: #fa5750
+
+        &.ly
+            top: -2px
+            left: 50%
+            transform: translateX(-50%)
+            color: #75b938
+
+        &.lz
+            bottom: 2px
+            left: 4px
+            color: #4695f7
+
+.hud-row
+    position: absolute
+    left: 24px
+    right: 24px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 1rem
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    color: rgba(173, 200, 220, 0.85)
+    z-index: 2
+
+    &.hud-bottom
+        bottom: 16px
+
+.hud-anchor
+    position: absolute
+    display: flex
+    align-items: baseline
+    gap: 7px
+    padding: 7px 12px
+    border-radius: 999px
+    border: 1px solid rgba(34, 211, 238, 0.35)
+    background: rgba(8, 15, 30, 0.72)
+    -webkit-backdrop-filter: blur(6px)
+    backdrop-filter: blur(6px)
+    font-size: 1.05rem
+    letter-spacing: 0.06em
+    color: #e3edf5
+    z-index: 2
+
+    > .pin
+        width: 6px
+        height: 6px
+        border-radius: 999px
+        background: #22d3ee
+        align-self: center
+
+    > em
+        font-style: normal
+        font-size: 0.95rem
+        color: rgba(173, 200, 220, 0.7)
+
+// small screens: fewer floating labels, tighter readouts
+@media #{$mobile}
+    .vp-way,
+    .vp-user
+        display: none
+
+    .hud-row
+        font-size: 0.9rem
+        letter-spacing: 0.06em
+
+    .hud-anchor
+        font-size: 0.95rem
+
+@media (prefers-reduced-motion: no-preference)
+    .vp-dcore
+        animation: drone-fly 18s linear infinite
+
+    .vp-rotor > u
+        animation: rotor-spin 0.55s linear infinite
+
+    .vp-floor > .vp-waypoint
+        animation: waypoint-pulse 2.2s ease-out infinite
+
+    .vp-floor > .vp-shadow
+        animation: shadow-breathe 4.5s ease-in-out infinite alternate
+
+    .vp-dust
+        animation: dust-drift 7s ease-in-out infinite
+
+        &.d2
+            animation-delay: 1.3s
+
+        &.d3
+            animation-delay: 2.4s
+
+        &.d4
+            animation-delay: 3.1s
+
+        &.d5
+            animation-delay: 4.2s
+
+        &.d6
+            animation-delay: 5.4s
+
+    .vp-floor > .vp-focus
+        animation: focus-breathe 1.8s ease-in-out infinite alternate
+
+    .vp-pcore
+        animation: person-sway 7s ease-in-out infinite alternate
+
+    .hud-anchor
+        animation: hud-float 6s ease-in-out infinite alternate
+
+        &.vp-way
+            animation-delay: 1.6s
+
+        &.vp-user
+            animation-delay: 3s
+
+@keyframes drone-fly
+    0%
+        transform: translateY(0) rotateY(0deg)
+    25%
+        transform: translateY(-9px) rotateY(90deg)
+    50%
+        transform: translateY(0) rotateY(180deg)
+    75%
+        transform: translateY(-9px) rotateY(270deg)
+    100%
+        transform: translateY(0) rotateY(360deg)
+
+@keyframes rotor-spin
+    from
+        transform: rotateZ(0deg)
+    to
+        transform: rotateZ(360deg)
+
+@keyframes waypoint-pulse
+    0%
+        box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.45)
+    100%
+        box-shadow: 0 0 0 26px rgba(236, 72, 153, 0)
+
+@keyframes shadow-breathe
+    from
+        opacity: 0.7
+        transform: scale(0.92)
+    to
+        opacity: 1
+        transform: scale(1.06)
+
+@keyframes focus-breathe
+    from
+        transform: scale(1)
+    to
+        transform: scale(1.1)
+
+@keyframes person-sway
+    from
+        transform: rotateY(22deg)
+    to
+        transform: rotateY(-4deg)
+
+@keyframes dust-drift
+    0%, 100%
+        opacity: 0.15
+        transform: translateY(0)
+    50%
+        opacity: 0.7
+        transform: translateY(-14px)
+
+@keyframes hud-float
+    from
+        transform: translateY(0)
+    to
+        transform: translateY(-7px)
+
 .about-section
     margin-top: 72px
 
     &:first-of-type
         margin-top: 56px
 
+// About page only: side-column grid — title column left, content right,
+// a datum hairline opens the section and the kicker and the content's
+// first mono label start on the same line below it
+.about .about-section
+    border-top: 1px solid $epsilon
+    padding-top: 20px
+    display: grid
+    grid-template-columns: 300px 1fr
+    gap: 32px 56px
+    align-items: start
+
+    > .section-heading
+        position: sticky
+        top: 92px
+
+    @media #{$below}
+        display: block
+
+        > .section-heading
+            position: static
+            margin-bottom: 24px
+
 .about-facts
     list-style: none
     margin: 0
     padding: 0
-    border-top: 1px solid $epsilon
 
+    // ledger rows, echoing the id-card: label left, value right, no dead space
     > li
         display: flex
         align-items: baseline
+        justify-content: space-between
         gap: 24px
         padding: 16px 2px
         border-bottom: 1px solid $epsilon
 
+        &:first-child
+            padding-top: 2px
+
         > .k
             flex-shrink: 0
-            width: 128px
             font-family: $fontMonospace
             font-size: 1.1rem
             text-transform: uppercase
@@ -271,6 +946,15 @@
             font-size: 1.5rem
             color: $alpha
             line-height: 1.5
+            text-align: right
+            max-inline-size: 60ch
+
+        @media #{$mobile}
+            flex-direction: column
+            gap: 6px
+
+            > .v
+                text-align: left
 
 // --- timeline ---
 
@@ -281,12 +965,13 @@
 
     > li
         display: grid
-        grid-template-columns: 128px 1fr
+        // fixed label track (sized to a 4-char year) keeps the line straight;
+        // just wide enough that the dots sit close to the years
+        grid-template-columns: 48px 1fr
         gap: 24px
         align-items: start
 
         @media #{$mobile}
-            grid-template-columns: 80px 1fr
             gap: 16px
 
         > .tl-label
@@ -323,7 +1008,6 @@
 
             > p
                 margin: 0
-                max-width: 58ch
                 font-size: 1.4rem
                 line-height: 1.65
                 color: $alpha
@@ -341,6 +1025,9 @@
 .stack-groups
     display: flex
     flex-direction: column
+    // centered, measure-capped column to match the other about sections
+    max-inline-size: Min(880px, 100%)
+    margin-inline: 0 auto
 
 .stack-row
     display: grid
