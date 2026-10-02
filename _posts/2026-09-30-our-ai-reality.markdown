@@ -24,7 +24,7 @@ I've been turning that quote over in my mind a bit recently. I think it describe
 
 ## The Phantom Menace
 
-Resentment is an ugly emotion, and burnt-out resentment doesn't sound much better. So I think the fair thing to do is lay out the biggest issues I have with AI before going into how my thinking has evolved over time. This way, as a reader, you can decide whether the rest is worth reading. For what it's worth, my objections are more socioeconomic than technological.
+Resentment is an ugly emotion, and burnt-out resentment doesn't sound much better. So I think the fair thing to do is lay out the biggest issues I have with AI before going into how my thinking has evolved over time. This way, as a reader, you can decide whether the rest deserves your consideration. For what it's worth, my objections are more socioeconomic than technological.
 
 It's been interesting to watch a wave of antipathy toward AI build over the last several months, just as I've been trying to make my peace with it. The politicians who were so eager to court the data center frenzy last year have turned on a dime, now claiming they had their doubts all along. So it goes. As much as venture capitalists, CEOs, and the current administration would like to pin the backlash on a Chinese psyop, it is a rational reaction from large segments of the country to something that carries more peril than it does promise.
 
