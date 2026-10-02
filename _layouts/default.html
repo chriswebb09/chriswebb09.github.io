@@ -11,6 +11,8 @@ layout: compress
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="{% if site.dark-theme == true %}dark{% elsif site.dark-theme == 'auto' %}light dark{% else %}light{% endif %}">
+    <meta name="theme-color" content="{% if site.dark-theme == true %}#0a0a10{% else %}#f8fafc{% endif %}">
     <meta name=author content="{{ site.title }}">
 
     {% seo %}
