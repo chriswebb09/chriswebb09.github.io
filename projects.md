@@ -9,15 +9,20 @@ title: Projects
         <p class="page-sub">AR experiments, open-source SDK work, and retail apps shipped to millions of users.</p>
         <p class="hero-stats"><span>3</span> AR demos <i>·</i> <span>1</span> SDK <i>·</i> <span>4</span> shipped apps</p>
     </div>
-    <div class="projects-side" aria-hidden="true">
-        <div class="terminal vp-window">
-            <div class="terminal-bar">
-                <span class="tl tl-r"></span><span class="tl tl-y"></span><span class="tl tl-g"></span>
+    <div class="projects-side">
+        <div class="terminal vp-window" data-mode="select">
+            <div class="terminal-bar" aria-hidden="true">
+                <span class="tl-group"><span class="tl tl-r"></span><span class="tl tl-y"></span><span class="tl tl-g"></span></span>
                 <span class="terminal-title">drone.usdz — Reality Composer</span>
             </div>
             <div class="vp-body">
-                <div class="vp-tools"><span class="active">&#x2B1A;</span><span>&#x2725;</span><span>&#x27F2;</span><span>&#x2922;</span></div>
-                <div class="vp-scene">
+                <div class="vp-tools" role="toolbar" aria-label="Viewport tools">
+                    <button type="button" class="active" data-tool="select" aria-pressed="true" aria-label="Select" title="Select">&#x2B1A;</button>
+                    <button type="button" data-tool="move" aria-pressed="false" aria-label="Move" title="Move">&#x2725;</button>
+                    <button type="button" data-tool="rotate" aria-pressed="false" aria-label="Rotate" title="Rotate">&#x27F2;</button>
+                    <button type="button" data-tool="scale" aria-pressed="false" aria-label="Scale" title="Scale">&#x2922;</button>
+                </div>
+                <div class="vp-scene" aria-hidden="true">
                     <div class="vp-orbit">
                         <div class="vp-floor">
                             <div class="vp-shadow"></div>
@@ -42,6 +47,8 @@ title: Projects
                                     <i class="b-left"></i><i class="b-right"></i>
                                 </div>
                             </div>
+                            <div class="vp-gz vp-gz-move"><i class="gx"></i><i class="gy"></i><i class="gz"></i></div>
+                            <div class="vp-gz vp-gz-rot"><i class="rx"></i><i class="ry"></i><i class="rz"></i></div>
                         </div>
                         <div class="vp-person">
                             <div class="vp-pcore">
@@ -55,22 +62,83 @@ title: Projects
                         </div>
                     </div>
                 </div>
-                <span class="vp-dust d1"></span><span class="vp-dust d2"></span>
-                <span class="vp-dust d3"></span><span class="vp-dust d4"></span>
-                <span class="vp-dust d5"></span><span class="vp-dust d6"></span>
-                <div class="hud-anchor vp-entity"><span class="pin"></span>drone_entity<em>selected</em></div>
-                <div class="hud-anchor vp-way"><span class="pin is-pink"></span>waypoint_01<em>12 m</em></div>
-                <div class="hud-anchor vp-user"><span class="pin is-violet"></span>user_01<em>tracking</em></div>
-                <div class="vp-gizmo">
+                <span class="vp-dust d1" aria-hidden="true"></span><span class="vp-dust d2" aria-hidden="true"></span>
+                <span class="vp-dust d3" aria-hidden="true"></span><span class="vp-dust d4" aria-hidden="true"></span>
+                <span class="vp-dust d5" aria-hidden="true"></span><span class="vp-dust d6" aria-hidden="true"></span>
+                <div class="hud-anchor vp-entity" aria-hidden="true"><span class="pin"></span>drone_entity<em data-readout>selected</em></div>
+                <div class="hud-anchor vp-way" aria-hidden="true"><span class="pin is-pink"></span>waypoint_01<em>12 m</em></div>
+                <div class="hud-anchor vp-user" aria-hidden="true"><span class="pin is-violet"></span>user_01<em>tracking</em></div>
+                <div class="vp-gizmo" aria-hidden="true">
                     <span class="arm ax"></span><span class="arm ay"></span><span class="arm az"></span>
                     <b class="lx">X</b><b class="ly">Y</b><b class="lz">Z</b>
                 </div>
-                <div class="hud-row hud-bottom">
-                    <span>12,480 VERTS · 8 MATERIALS</span>
+                <div class="hud-row hud-bottom" aria-hidden="true">
+                    <span data-status>12,480 VERTS · 8 MATERIALS</span>
                     <span>REALITYKIT · 60 FPS</span>
                 </div>
             </div>
         </div>
+        <script>
+        /* Viewport tools: each button switches the editor mode (CSS keys off
+           data-mode on the window) and a light rAF loop prints a live readout
+           of the transform being edited. Block comments only: the compress
+           layout joins lines. */
+        (function () {
+            var win = document.querySelector('.vp-window');
+            if (!win) { return; }
+            var buttons = Array.prototype.slice.call(win.querySelectorAll('[data-tool]'));
+            var readout = win.querySelector('[data-readout]');
+            var status = win.querySelector('[data-status]');
+            var drone = win.querySelector('.vp-drone');
+            var core = win.querySelector('.vp-dcore');
+            var STATUS = {
+                select: '12,480 VERTS \u00b7 8 MATERIALS',
+                move: 'TRANSLATE \u00b7 SNAP 0.1 M',
+                rotate: 'ROTATE \u00b7 SNAP 15\u00b0',
+                scale: 'SCALE \u00b7 UNIFORM'
+            };
+            var mode = 'select', raf = null;
+
+            function matrix(el) {
+                var t = window.getComputedStyle(el).transform;
+                var M = window.DOMMatrix || window.WebKitCSSMatrix;
+                return new M(t && t !== 'none' ? t : undefined);
+            }
+            function num(v, d) { var s = v.toFixed(d); return (v < 0 ? '\u2212' + s.slice(1) : s); }
+
+            function tick() {
+                if (mode === 'move') {
+                    var m = matrix(drone);
+                    readout.textContent = 'x ' + num(m.m41 / 100, 2) + '  z ' + num(m.m43 / 100, 2) + ' m';
+                } else if (mode === 'rotate') {
+                    var r = matrix(core);
+                    var yaw = Math.atan2(-r.m13, r.m11) * 180 / Math.PI;
+                    readout.textContent = 'yaw ' + Math.round((yaw + 360) % 360) + '\u00b0';
+                } else if (mode === 'scale') {
+                    var c = matrix(core);
+                    readout.textContent = num(Math.sqrt(c.m11 * c.m11 + c.m12 * c.m12 + c.m13 * c.m13), 2) + '\u00d7';
+                }
+                raf = mode === 'select' ? null : window.requestAnimationFrame(tick);
+            }
+
+            function setMode(next) {
+                mode = next;
+                win.setAttribute('data-mode', next);
+                buttons.forEach(function (b) {
+                    var on = b.getAttribute('data-tool') === next;
+                    b.classList.toggle('active', on);
+                    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+                });
+                status.textContent = STATUS[next];
+                if (next === 'select') { readout.textContent = 'selected'; }
+                if (next !== 'select' && !raf) { raf = window.requestAnimationFrame(tick); }
+            }
+
+            buttons.forEach(function (b) {
+                b.addEventListener('click', function () { setMode(b.getAttribute('data-tool')); });
+            });
+        })();
+        </script>
     </div>
 </header>
 <section class="about-section reveal">
