@@ -153,6 +153,11 @@
         background: radial-gradient(ellipse 45% 50% at 35% 45%, rgba(34, 211, 238, 0.14), transparent 70%), radial-gradient(ellipse 45% 50% at 68% 55%, rgba(236, 72, 153, 0.12), transparent 70%)
         pointer-events: none
 
+        // full-width column on small screens: keep the glow inside the page
+        // (130% overhung the screen edge and widened the page on phones)
+        @media #{$below}
+            width: 100%
+
     @media #{$below}
         max-width: 480px
 

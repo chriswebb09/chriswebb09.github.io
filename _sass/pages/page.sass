@@ -103,6 +103,11 @@
         background: radial-gradient(ellipse 50% 45% at 40% 45%, rgba($delta, 0.12), transparent 70%), radial-gradient(ellipse 45% 45% at 65% 58%, rgba(236, 72, 153, 0.10), transparent 70%)
         pointer-events: none
 
+        // full-width column on small screens: keep the glow inside the page
+        // (140% overhung the screen edge and widened the page on phones)
+        @media #{$below}
+            width: 100%
+
 // golden rectangle: height tuned to width x phi
 .id-card
     position: relative
