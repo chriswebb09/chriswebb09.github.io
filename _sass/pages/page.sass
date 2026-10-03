@@ -136,6 +136,9 @@
     -webkit-tap-highlight-color: transparent
     // sideways drags play with the foil; vertical swipes still scroll
     touch-action: pan-y
+    // repeated clicks spin the card; don't select its text
+    user-select: none
+    -webkit-user-select: none
 
     > .id-holo,
     > .id-glare

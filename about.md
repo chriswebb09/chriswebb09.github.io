@@ -113,6 +113,24 @@ layout: page
             card.addEventListener('pointerup', function (e) { if (e.pointerType !== 'mouse') { end(500); } });
             card.addEventListener('pointercancel', function () { end(0); });
             card.addEventListener('pointerleave', function () { end(100); });
+
+            /* Click/tap: a quick spin on the vertical axis. composite: 'add'
+               layers the rotateY on top of the float animation's transform
+               (and the tilt uses the separate rotate property), so all three
+               combine. A click mid-spin is ignored rather than restarting.
+               The curve is near-symmetric: the last 5 degrees take ~80ms, so
+               the spin lands without a slow crawl at the end. */
+            var spinning = null;
+            card.addEventListener('click', function () {
+                if (spinning || !card.animate) { return; }
+                try {
+                    spinning = card.animate(
+                        [{ transform: 'rotateY(0deg)' }, { transform: 'rotateY(360deg)' }],
+                        { duration: 600, easing: 'cubic-bezier(0.5, 0, 0.3, 1)', composite: 'add' }
+                    );
+                    spinning.onfinish = spinning.oncancel = function () { spinning = null; };
+                } catch (err) { spinning = null; }
+            });
         })();
         </script>
     </div>
