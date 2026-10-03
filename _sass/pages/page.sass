@@ -120,36 +120,38 @@
     &:hover
         transform: rotate(0deg)
 
-    // glossy shimmer on tap: a slanted light band with a faint holographic
-    // tint slides across (JS in about.md toggles .is-shining). It moves with
-    // transform only and is always present, parked off the left edge and
-    // clipped by the card, so nothing switches on or off when it ends.
-    overflow: hidden
+    // glossy shimmer on tap: a light band with a faint holographic tint
+    // sweeps across the card (JS in about.md toggles .is-shining)
     cursor: pointer
     -webkit-tap-highlight-color: transparent
 
     &:after
         content: ""
         position: absolute
-        top: -20%
-        bottom: -20%
-        left: 0
-        width: 55%
+        inset: 0
+        border-radius: inherit
         pointer-events: none
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 22%, rgba(255, 255, 255, 0.22) 44%, rgba(186, 230, 253, 0.18) 52%, rgba(244, 114, 182, 0.12) 60%, rgba(255, 255, 255, 0.04) 78%, rgba(255, 255, 255, 0) 100%)
-        transform: translateX(-150%) skewX(-18deg)
-        will-change: transform
+        opacity: 0
+        mix-blend-mode: screen
+        background: linear-gradient(115deg, rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0.10) 42%, rgba(255, 255, 255, 0.34) 47%, rgba(186, 230, 253, 0.26) 50%, rgba(244, 114, 182, 0.18) 53%, rgba(255, 255, 255, 0.08) 58%, rgba(255, 255, 255, 0) 66%)
+        background-size: 250% 100%
+        background-repeat: no-repeat
+        background-position: 100% 0
 
     &.is-shining:after
-        animation: id-shine 0.8s linear
+        animation: id-shine 1.1s cubic-bezier(0.45, 0.05, 0.3, 1)
 
-// -150% / 250% of the band's own width start and end it fully off the card
-// (the skew adds overhang, hence the margin past -100% / 182%)
 @keyframes id-shine
-    from
-        transform: translateX(-150%) skewX(-18deg)
-    to
-        transform: translateX(250%) skewX(-18deg)
+    0%
+        opacity: 1
+        background-position: 100% 0
+    80%
+        opacity: 1
+    100%
+        opacity: 0
+        // -20% (not 0%) carries the band fully off the right edge while it's
+        // still moving; at 0% it stopped on the card and faded in place
+        background-position: -20% 0
 
 @media (prefers-reduced-motion: no-preference)
     .id-card
