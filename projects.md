@@ -81,7 +81,7 @@ title: Projects
         <script>
         /* Viewport tools: each button switches the editor mode (CSS keys off
            data-mode on the window) and a light rAF loop prints a live readout
-           of the transform being edited. Block comments only: the compress
+           of the transform being edited in the status line. Block comments only: the compress
            layout joins lines. */
         (function () {
             var win = document.querySelector('.vp-window');
@@ -91,12 +91,7 @@ title: Projects
             var status = win.querySelector('[data-status]');
             var drone = win.querySelector('.vp-drone');
             var core = win.querySelector('.vp-dcore');
-            var STATUS = {
-                select: '12,480 VERTS \u00b7 8 MATERIALS',
-                move: 'TRANSLATE \u00b7 SNAP 0.1 M',
-                rotate: 'ROTATE \u00b7 SNAP 15\u00b0',
-                scale: 'SCALE \u00b7 UNIFORM'
-            };
+            var LABEL = { select: 'selected', move: 'moving', rotate: 'rotating', scale: 'scaling' };
             var mode = 'select', raf = null;
 
             function matrix(el) {
@@ -109,14 +104,14 @@ title: Projects
             function tick() {
                 if (mode === 'move') {
                     var m = matrix(drone);
-                    readout.textContent = 'x ' + num(m.m41 / 100, 2) + '  z ' + num(m.m43 / 100, 2) + ' m';
+                    status.textContent = 'TRANSLATE \u00b7 X ' + num(m.m41 / 100, 2) + '  Z ' + num(m.m43 / 100, 2) + ' M';
                 } else if (mode === 'rotate') {
                     var r = matrix(core);
                     var yaw = Math.atan2(-r.m13, r.m11) * 180 / Math.PI;
-                    readout.textContent = 'yaw ' + Math.round((yaw + 360) % 360) + '\u00b0';
+                    status.textContent = 'ROTATE \u00b7 YAW ' + Math.round((yaw + 360) % 360) + '\u00b0';
                 } else if (mode === 'scale') {
                     var c = matrix(core);
-                    readout.textContent = num(Math.sqrt(c.m11 * c.m11 + c.m12 * c.m12 + c.m13 * c.m13), 2) + '\u00d7';
+                    status.textContent = 'SCALE \u00b7 ' + num(Math.sqrt(c.m11 * c.m11 + c.m12 * c.m12 + c.m13 * c.m13), 2) + '\u00d7 UNIFORM';
                 }
                 raf = mode === 'select' ? null : window.requestAnimationFrame(tick);
             }
@@ -129,8 +124,8 @@ title: Projects
                     b.classList.toggle('active', on);
                     b.setAttribute('aria-pressed', on ? 'true' : 'false');
                 });
-                status.textContent = STATUS[next];
-                if (next === 'select') { readout.textContent = 'selected'; }
+                readout.textContent = LABEL[next];
+                if (next === 'select') { status.textContent = '12,480 VERTS \u00b7 8 MATERIALS'; }
                 if (next !== 'select' && !raf) { raf = window.requestAnimationFrame(tick); }
             }
 

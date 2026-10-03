@@ -530,25 +530,30 @@
 // --- editor modes (Select / Move / Rotate / Scale), set by the tool
 // buttons via data-mode on .vp-window. Gizmos sit on .vp-drone, outside the
 // spinning core, so their axes stay world-aligned.
-.vp-bounds
-    transition: opacity 0.25s ease
-
-    > i
-        transition: border-color 0.25s ease
+// Show/hide is done on the leaf faces, never on the preserve-3d groups:
+// Safari doesn't apply opacity to a 3D group, so hiding the group left its
+// faces (bounds, rings) visible in the wrong mode.
+.vp-bounds > i
+    transition: opacity 0.25s ease, border-color 0.25s ease
 
 .vp-gz
     position: absolute
     transform-style: preserve-3d
-    opacity: 0
-    transition: opacity 0.25s ease
     pointer-events: none
 
-// translate arrows: X red, Y green, Z blue (toward the viewer)
+    > i
+        opacity: 0
+        transition: opacity 0.25s ease
+
+// translate arrows, drawn flat in screen space like an editor handle so all
+// three read at the same length: X right, Y up, Z down-left (matching the
+// corner axis gizmo). A true 3D Z arrow points at the camera and shrinks to
+// a dot.
 .vp-gz-move > i
     position: absolute
     left: 0
     top: -1px
-    width: 82px
+    width: 64px
     height: 2px
     transform-origin: 0 50%
 
@@ -573,7 +578,7 @@
     &.gz
         color: #4695f7
         background: #4695f7
-        transform: rotateY(-90deg)
+        transform: rotateZ(135deg)
 
 // rotation rings around each axis
 .vp-gz-rot > i
@@ -597,11 +602,11 @@
 
 .vp-window[data-mode="move"],
 .vp-window[data-mode="rotate"]
-    .vp-bounds
+    .vp-bounds > i
         opacity: 0
 
-.vp-window[data-mode="move"] .vp-gz-move,
-.vp-window[data-mode="rotate"] .vp-gz-rot
+.vp-window[data-mode="move"] .vp-gz-move > i,
+.vp-window[data-mode="rotate"] .vp-gz-rot > i
     opacity: 1
 
 // scale: bounds turn solid cyan with corner handles
