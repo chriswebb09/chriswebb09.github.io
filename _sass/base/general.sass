@@ -312,3 +312,11 @@ button:focus-visible
 
 	&:focus
 		transform: translateY(0)
+
+// decorative glows (behind the home terminal and the about ID card)
+// overhang their boxes by design; clip them at the page edge so phones
+// don't widen the page to fit them. clip (not hidden) creates no scroll
+// container, so the fixed nav and page scrolling are unaffected.
+html,
+body
+	overflow-x: clip
