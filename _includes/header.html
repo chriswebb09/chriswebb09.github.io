@@ -24,14 +24,19 @@
             <div class="hero-side" aria-hidden="true">
                 <div class="terminal">
                     <div class="terminal-bar">
-                        <span class="tl tl-r"></span><span class="tl tl-y"></span><span class="tl tl-g"></span>
-                        <span class="terminal-title">chris@redlands — zsh</span>
+                        <span class="tl-group">
+                            <span class="tl tl-r"></span><span class="tl tl-y"></span><span class="tl tl-g"></span>
+                        </span>
+                        <span class="terminal-title">
+                            <svg class="terminal-icon" viewBox="0 0 16 13" aria-hidden="true"><path d="M1 2.2C1 1.5 1.5 1 2.2 1h3.6l1.4 1.5h6.6c.7 0 1.2.5 1.2 1.2v7.1c0 .7-.5 1.2-1.2 1.2H2.2c-.7 0-1.2-.5-1.2-1.2V2.2Z"/></svg>
+                            chris &mdash; -zsh &mdash; 80&times;24
+                        </span>
                     </div>
-                    <div class="terminal-body">
-                        <div class="t-line"><span class="c-p">$</span> whoami</div>
+                    <div class="terminal-body" data-typing>
+                        <div class="t-line"><span class="c-p">$</span> <span class="t-cmd">whoami</span></div>
                         <div class="t-line t-out">chris.webb</div>
                         <div class="t-gap"></div>
-                        <div class="t-line"><span class="c-p">$</span> cat profile.json</div>
+                        <div class="t-line"><span class="c-p">$</span> <span class="t-cmd">cat profile.json</span></div>
                         <div class="t-line t-out">{</div>
                         <div class="t-line t-out t-in"><span class="c-k">"role"</span>: <span class="c-s">"Product Engineer @ Esri"</span>,</div>
                         <div class="t-line t-out t-in"><span class="c-k">"stack"</span>: [<span class="c-s">"Swift"</span>, <span class="c-s">"ARKit"</span>, <span class="c-s">"ArcGIS"</span>],</div>
@@ -39,9 +44,67 @@
                         <div class="t-line t-out t-in"><span class="c-k">"open_to"</span>: <span class="c-s">"interesting problems"</span></div>
                         <div class="t-line t-out">}</div>
                         <div class="t-gap"></div>
-                        <div class="t-line"><span class="c-p">$</span> open projects/<span class="caret"></span></div>
+                        <div class="t-line"><span class="c-p">$</span> <span class="t-cmd">open projects/</span><span class="caret"></span></div>
                     </div>
                 </div>
+                <script>
+                /* Replays the session above as if typed live: each command is
+                   typed out, then its output appears. Lines keep their space
+                   while hidden (visibility, not display) so nothing shifts.
+                   Block comments only: the compress layout joins lines. */
+                (function () {
+                    var body = document.querySelector('[data-typing]');
+                    if (!body || !window.matchMedia || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
+
+                    var rows = Array.prototype.slice.call(body.children);
+                    var caret = body.querySelector('.caret');
+                    var cmds = rows.map(function (row) {
+                        var cmd = row.querySelector('.t-cmd');
+                        if (!cmd) { return null; }
+                        var text = cmd.textContent;
+                        cmd.textContent = '';
+                        return { el: cmd, text: text };
+                    });
+
+                    rows.forEach(function (row) { row.classList.add('t-hidden'); });
+                    caret.classList.add('is-typing');
+
+                    function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+
+                    function type(cmd) {
+                        cmd.el.parentNode.insertBefore(caret, cmd.el.nextSibling);
+                        caret.classList.remove('is-typing');
+                        return wait(650).then(function () {
+                            caret.classList.add('is-typing');
+                            var i = 0;
+                            return new Promise(function (done) {
+                                (function next() {
+                                    if (i >= cmd.text.length) { return done(); }
+                                    cmd.el.textContent += cmd.text.charAt(i++);
+                                    var ch = cmd.text.charAt(i - 1);
+                                    setTimeout(next, (ch === ' ' || ch === '.' || ch === '/') ? 140 : 55 + Math.random() * 75);
+                                })();
+                            });
+                        }).then(function () { return wait(320); });
+                    }
+
+                    function run(i) {
+                        if (i >= rows.length) { caret.classList.remove('is-typing'); return; }
+                        var row = rows[i];
+                        row.classList.remove('t-hidden');
+                        if (cmds[i]) {
+                            return type(cmds[i]).then(function () {
+                                if (i === rows.length - 1) { caret.classList.remove('is-typing'); return; }
+                                caret.parentNode && caret.parentNode.removeChild(caret);
+                                return wait(140).then(function () { run(i + 1); });
+                            });
+                        }
+                        return wait(row.classList.contains('t-out') ? 45 : 0).then(function () { run(i + 1); });
+                    }
+
+                    wait(700).then(function () { run(0); });
+                })();
+                </script>
             </div>
         </div>
     </header>
