@@ -47,7 +47,7 @@ title: Projects
                                     <i class="b-left"></i><i class="b-right"></i>
                                 </div>
                             </div>
-                            <div class="vp-gz vp-gz-move"><i class="gx"></i><i class="gy"></i><i class="gz"></i></div>
+                            <div class="vp-gz vp-gz-move"><i class="gx"><u></u><u></u></i><i class="gy"><u></u><u></u></i><i class="gz"><u></u><u></u></i></div>
                             <div class="vp-gz vp-gz-rot"><i class="rx"></i><i class="ry"></i><i class="rz"></i></div>
                         </div>
                         <div class="vp-person">
@@ -104,7 +104,7 @@ title: Projects
             function tick() {
                 if (mode === 'move') {
                     var m = matrix(drone);
-                    status.textContent = 'TRANSLATE \u00b7 X ' + num(m.m41 / 100, 2) + '  Z ' + num(m.m43 / 100, 2) + ' M';
+                    status.textContent = 'TRANSLATE \u00b7 X ' + num(m.m41 / 0.7071 / 100, 2) + ' M';
                 } else if (mode === 'rotate') {
                     var r = matrix(core);
                     var yaw = Math.atan2(-r.m13, r.m11) * 180 / Math.PI;

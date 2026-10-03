@@ -545,40 +545,66 @@
         opacity: 0
         transition: opacity 0.25s ease
 
-// translate arrows, drawn flat in screen space like an editor handle so all
-// three read at the same length: X right, Y up, Z down-left (matching the
-// corner axis gizmo). A true 3D Z arrow points at the camera and shrinks to
-// a dot.
+// translate arrows as real 3D objects: each shaft is two crossed planes and
+// each head two crossed triangles, so they read from any angle and turn with
+// the scene. The gizmo is shown from the isometric angle (rotateY -45deg,
+// pitch 35.264deg total; the scene's base rotateX(-10deg) supplies 10 of
+// it, hence -25.264 here) like an editor's 3/4 view: from straight on, the Z axis
+// points at the camera and collapses to a dot, while isometric projects all
+// three axes at exactly the same length (X down-right, Z down-left, Y up).
+$gz-iso: rotateX(-25.264deg) rotateY(-45deg)
+
+.vp-gz-move
+    transform: $gz-iso
+
 .vp-gz-move > i
     position: absolute
     left: 0
-    top: -1px
-    width: 64px
-    height: 2px
-    transform-origin: 0 50%
+    top: 0
+    width: 0
+    height: 0
+    transform-style: preserve-3d
+    transform-origin: 0 0
 
+    // shaft: two 2px planes crossed along the axis
+    &:before,
     &:after
         content: ""
         position: absolute
-        right: -9px
-        top: -4px
-        border-left: 10px solid currentColor
+        left: 0
+        top: -1px
+        width: 66px
+        height: 2px
+        background: currentColor
+
+    &:after
+        transform: rotateX(90deg)
+
+    // head: two triangles crossed along the axis
+    > u
+        position: absolute
+        left: 64px
+        top: -5px
+        width: 0
+        height: 0
+        border-left: 14px solid currentColor
         border-top: 5px solid transparent
         border-bottom: 5px solid transparent
+        transform-origin: 0 50%
+
+        & + u
+            transform: rotateX(90deg)
 
     &.gx
         color: #fa5750
-        background: #fa5750
 
     &.gy
         color: #75b938
-        background: #75b938
         transform: rotateZ(-90deg)
 
     &.gz
         color: #4695f7
-        background: #4695f7
-        transform: rotateZ(135deg)
+        transform: rotateY(-90deg)
 
 // rotation rings around each axis
 .vp-gz-rot > i
@@ -645,11 +671,13 @@
     .vp-window[data-mode="scale"] .vp-dcore
         animation: drone-scale 2.6s ease-in-out infinite alternate
 
+// slides along the gizmo's red X arrow: R . translateX(t) . R^-1 is a pure
+// translation in the arrow's on-screen direction (no net rotation)
 @keyframes drone-slide
     from
-        transform: translate3d(-58px, 0, -34px)
+        transform: rotateX(-25.264deg) rotateY(-45deg) translateX(-60px) rotateY(45deg) rotateX(25.264deg)
     to
-        transform: translate3d(58px, 0, 34px)
+        transform: rotateX(-25.264deg) rotateY(-45deg) translateX(60px) rotateY(45deg) rotateX(25.264deg)
 
 @keyframes drone-hover
     from
@@ -863,7 +891,7 @@
 
         &.ax
             background: #fa5750
-            transform: rotate(0deg)
+            transform: rotate(30deg)
 
         &.ay
             background: #75b938
@@ -871,7 +899,7 @@
 
         &.az
             background: #4695f7
-            transform: rotate(135deg)
+            transform: rotate(150deg)
 
     > b
         position: absolute
@@ -879,8 +907,8 @@
         font-size: 1rem
 
         &.lx
-            right: 2px
-            top: 50%
+            right: 0
+            top: 72%
             transform: translateY(-50%)
             color: #fa5750
 
@@ -891,8 +919,9 @@
             color: #75b938
 
         &.lz
-            bottom: 2px
-            left: 4px
+            top: 72%
+            left: 0
+            transform: translateY(-50%)
             color: #4695f7
 
 .hud-row
