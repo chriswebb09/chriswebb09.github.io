@@ -658,12 +658,14 @@ $gz-iso: rotateX(-25.264deg) rotateY(-45deg)
         right: -4px
 
 @media (prefers-reduced-motion: no-preference)
+    // the drone moves only with the slide (no bob on the core), so the
+    // gizmo origin on .vp-drone stays locked to the drone's center
     .vp-window[data-mode="move"]
         .vp-drone
             animation: drone-slide 5s ease-in-out infinite alternate
 
         .vp-dcore
-            animation: drone-hover 2.4s ease-in-out infinite alternate
+            animation: none
 
     .vp-window[data-mode="rotate"] .vp-dcore
         animation: drone-yaw 8s infinite
@@ -678,12 +680,6 @@ $gz-iso: rotateX(-25.264deg) rotateY(-45deg)
         transform: rotateX(-25.264deg) rotateY(-45deg) translateX(-60px) rotateY(45deg) rotateX(25.264deg)
     to
         transform: rotateX(-25.264deg) rotateY(-45deg) translateX(60px) rotateY(45deg) rotateX(25.264deg)
-
-@keyframes drone-hover
-    from
-        transform: translateY(0)
-    to
-        transform: translateY(-9px)
 
 // quarter turns with a pause between, like dragging the yaw ring
 @keyframes drone-yaw
