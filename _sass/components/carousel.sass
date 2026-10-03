@@ -526,6 +526,9 @@
             border-bottom: none
             border-right: 1px solid $epsilon
 
+            img
+                max-height: 56.25cqw
+
         > .info
             align-self: center
             padding: 32px
@@ -576,6 +579,12 @@
 
     > .thumb
         aspect-ratio: 2 / 1
+        // Safari won't resolve the img's max-height: 100% against an
+        // aspect-ratio height, so tall GIFs stretched the box (and the
+        // row). Cap the image in container units instead; with
+        // content-box sizing, 50cqw is exactly the box's 2:1 content height.
+        container-type: inline-size
+        min-height: 0
         display: flex
         align-items: center
         justify-content: center
@@ -585,6 +594,7 @@
 
         img
             max-height: 100%
+            max-height: 50cqw
             max-width: 100%
             object-fit: contain
             border-radius: 6px
