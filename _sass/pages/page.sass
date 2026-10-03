@@ -149,9 +149,10 @@
         opacity: 1
     100%
         opacity: 0
-        // -20% (not 0%) carries the band fully off the right edge while it's
-        // still moving; at 0% it stopped on the card and faded in place
-        background-position: -20% 0
+        // -30% (not 0%) carries the band fully off the right edge (~670ms)
+        // while it's still moving; at 0% it crept to a stop on the card from
+        // ~800ms and faded in place, which read as a hang
+        background-position: -30% 0
 
 @media (prefers-reduced-motion: no-preference)
     .id-card
