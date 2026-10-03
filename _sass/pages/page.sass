@@ -120,6 +120,37 @@
     &:hover
         transform: rotate(0deg)
 
+    // glossy shimmer on tap: a light band with a faint holographic tint
+    // sweeps across the card (JS in about.md toggles .is-shining)
+    cursor: pointer
+    -webkit-tap-highlight-color: transparent
+
+    &:after
+        content: ""
+        position: absolute
+        inset: 0
+        border-radius: inherit
+        pointer-events: none
+        opacity: 0
+        mix-blend-mode: screen
+        background: linear-gradient(115deg, rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0.10) 42%, rgba(255, 255, 255, 0.34) 47%, rgba(186, 230, 253, 0.26) 50%, rgba(244, 114, 182, 0.18) 53%, rgba(255, 255, 255, 0.08) 58%, rgba(255, 255, 255, 0) 66%)
+        background-size: 250% 100%
+        background-repeat: no-repeat
+        background-position: 100% 0
+
+    &.is-shining:after
+        animation: id-shine 1.1s cubic-bezier(0.45, 0.05, 0.3, 1)
+
+@keyframes id-shine
+    0%
+        opacity: 1
+        background-position: 100% 0
+    80%
+        opacity: 1
+    100%
+        opacity: 0
+        background-position: 0% 0
+
 @media (prefers-reduced-motion: no-preference)
     .id-card
         animation: card-float 7s ease-in-out infinite alternate

@@ -31,6 +31,24 @@ layout: page
                 <span class="id-est">est. 2017</span>
             </div>
         </aside>
+        <script>
+        /* Tap the ID card for a glossy shimmer. Restarting the animation
+           needs the class removed and a reflow before re-adding it.
+           Block comments only: the compress layout joins lines. */
+        (function () {
+            var card = document.querySelector('.id-card');
+            if (!card) { return; }
+            if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
+            card.addEventListener('pointerdown', function () {
+                card.classList.remove('is-shining');
+                void card.offsetWidth;
+                card.classList.add('is-shining');
+            });
+            card.addEventListener('animationend', function (e) {
+                if (e.animationName === 'id-shine') { card.classList.remove('is-shining'); }
+            });
+        })();
+        </script>
     </div>
 </header>
 
