@@ -24,7 +24,7 @@ I've been turning that quote over in my mind a bit recently. I think it describe
 
 ## The Phantom Menace
 
-Making peace implies there was a fight, and there was: for a while, what I felt was closer to resentment. So I think the fair thing to do is lay out the biggest issues I have with AI before going into how my thinking has evolved over time. This way, as a reader, you can decide whether the rest deserves your consideration. For what it's worth, my objections are more socioeconomic than technological. 
+Making peace implies there was a fight, and perhaps there was: for a while, what I felt was closer to resentment. So I think the fair thing to do is lay out the biggest issues I have with AI before going into how my thinking has evolved over time. This way, as a reader, you can decide whether the rest deserves your consideration. For what it's worth, my objections are more socioeconomic than technological. 
 
 It's been interesting to watch a wave of antipathy toward AI build over the last several months, just as I've been trying to make my peace with it. The politicians who were so eager to court the data center frenzy last year have turned on a dime, now claiming they had their doubts all along. So it goes. As much as venture capitalists, CEOs, and administration officials would like to pin the backlash on a Chinese psyop, it is a rational reaction from large segments of the country to something that carries more peril than it does promise.
 
