@@ -30,23 +30,89 @@ layout: page
                 <span class="id-barcode" aria-hidden="true"></span>
                 <span class="id-est">est. 2017</span>
             </div>
+            <span class="id-holo" aria-hidden="true"></span>
+            <span class="id-glare" aria-hidden="true"></span>
         </aside>
         <script>
-        /* Tap the ID card for a glossy shimmer. Restarting the animation
-           needs the class removed and a reflow before re-adding it.
-           Block comments only: the compress layout joins lines. */
+        /* Holo foil, glare and tilt for the ID card, modeled on
+           simeydotme/pokemon-cards-css. Touch or hover sets spring targets
+           from the pointer position; springs (same constants as the original)
+           follow it, and half a second after release they ease back with a
+           soft, slightly wobbly settle. Block comments only: the compress
+           layout joins lines. */
         (function () {
             var card = document.querySelector('.id-card');
             if (!card) { return; }
             if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
-            card.addEventListener('pointerdown', function () {
-                card.classList.remove('is-shining');
-                void card.offsetWidth;
-                card.classList.add('is-shining');
-            });
-            card.addEventListener('animationend', function (e) {
-                if (e.animationName === 'id-shine') { card.classList.remove('is-shining'); }
-            });
+
+            var FOLLOW = { k: 0.066, c: 0.25 };
+            var SETTLE = { k: 0.01, c: 0.06 };
+            function spring(v) { return { x: v, v: 0, t: v }; }
+            var s = { mx: spring(50), my: spring(50), bx: spring(50), by: spring(50), rx: spring(0), ry: spring(0), o: spring(0) };
+            var mode = FOLLOW, raf = null, last = 0, endTimer = null;
+
+            function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+            function adjust(v, a, b, c, d) { return c + (d - c) * (v - a) / (b - a); }
+
+            function render() {
+                var st = card.style;
+                st.setProperty('--mx', s.mx.x.toFixed(2) + '%');
+                st.setProperty('--my', s.my.x.toFixed(2) + '%');
+                st.setProperty('--bx', s.bx.x.toFixed(2) + '%');
+                st.setProperty('--by', s.by.x.toFixed(2) + '%');
+                st.setProperty('--o', clamp(s.o.x, 0, 1).toFixed(3));
+                var ax = s.ry.x, ay = s.rx.x, mag = Math.sqrt(ax * ax + ay * ay);
+                st.setProperty('--tilt', mag < 0.01 ? '0 0 1 0deg' : (ax / mag).toFixed(4) + ' ' + (ay / mag).toFixed(4) + ' 0 ' + mag.toFixed(2) + 'deg');
+            }
+
+            function step(now) {
+                var dt = last ? Math.min((now - last) / (1000 / 60), 3) : 1;
+                last = now;
+                var moving = false;
+                Object.keys(s).forEach(function (key) {
+                    var p = s[key];
+                    var a = mode.k * (p.t - p.x) - mode.c * p.v;
+                    p.v += a * dt;
+                    p.x += p.v * dt;
+                    /* opacity must not bounce back above 0 once faded: a
+                       flicker. Tilt and glare keep their soft wobble. */
+                    if (key === 'o' && p.t === 0 && p.x <= 0) { p.x = 0; p.v = 0; }
+                    if (Math.abs(p.t - p.x) > 0.01 || Math.abs(p.v) > 0.01) { moving = true; } else { p.x = p.t; p.v = 0; }
+                });
+                render();
+                raf = moving ? requestAnimationFrame(step) : null;
+                if (!raf) { last = 0; }
+            }
+            function kick() { if (!raf) { raf = requestAnimationFrame(step); } }
+
+            function interact(e) {
+                clearTimeout(endTimer);
+                mode = FOLLOW;
+                var r = card.getBoundingClientRect();
+                var px = clamp((e.clientX - r.left) / r.width * 100, 0, 100);
+                var py = clamp((e.clientY - r.top) / r.height * 100, 0, 100);
+                s.mx.t = px; s.my.t = py; s.o.t = 1;
+                s.bx.t = adjust(px, 0, 100, 37, 63);
+                s.by.t = adjust(py, 0, 100, 33, 67);
+                s.rx.t = -(px - 50) / 3.5;
+                s.ry.t = (py - 50) / 3.5;
+                kick();
+            }
+            function end(delay) {
+                clearTimeout(endTimer);
+                endTimer = setTimeout(function () {
+                    mode = SETTLE;
+                    s.mx.t = 50; s.my.t = 50; s.bx.t = 50; s.by.t = 50;
+                    s.rx.t = 0; s.ry.t = 0; s.o.t = 0;
+                    kick();
+                }, delay);
+            }
+
+            card.addEventListener('pointerdown', interact);
+            card.addEventListener('pointermove', interact);
+            card.addEventListener('pointerup', function (e) { if (e.pointerType !== 'mouse') { end(500); } });
+            card.addEventListener('pointercancel', function () { end(0); });
+            card.addEventListener('pointerleave', function () { end(100); });
         })();
         </script>
     </div>

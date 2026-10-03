@@ -120,39 +120,47 @@
     &:hover
         transform: rotate(0deg)
 
-    // glossy shimmer on tap: a light band with a faint holographic tint
-    // sweeps across the card (JS in about.md toggles .is-shining)
+    // holo foil + glare, modeled on simeydotme/pokemon-cards-css: a glare
+    // highlight sits under the finger/pointer, a rainbow foil layer
+    // (color-dodge) slides with it, and the card tilts toward the touch.
+    // JS in about.md drives the custom properties through springs, so it
+    // follows the touch and then eases back. Individual-transform `rotate`
+    // keeps the tilt independent of the float animation's `transform`.
+    --mx: 50%
+    --my: 50%
+    --bx: 50%
+    --by: 50%
+    --o: 0
+    rotate: var(--tilt, 0 0 1 0deg)
     cursor: pointer
     -webkit-tap-highlight-color: transparent
+    // sideways drags play with the foil; vertical swipes still scroll
+    touch-action: pan-y
 
-    &:after
-        content: ""
+    > .id-holo,
+    > .id-glare
         position: absolute
         inset: 0
         border-radius: inherit
         pointer-events: none
-        opacity: 0
+
+    // foil: diagonal spectrum bands, offset by pointer position
+    > .id-holo
+        opacity: calc(var(--o) * 0.55)
+        background-image: repeating-linear-gradient(110deg, hsl(283, 100%, 73%), hsl(228, 100%, 74%), hsl(176, 100%, 76%), hsl(93, 100%, 69%), hsl(53, 100%, 69%), hsl(2, 100%, 73%), hsl(283, 100%, 73%))
+        background-size: 400% 400%
+        background-position: calc(((50% - var(--bx)) * 2.6) + 50%) calc(((50% - var(--by)) * 3.5) + 50%)
+        mix-blend-mode: color-dodge
+        filter: brightness(0.5) contrast(1.4) saturate(0.8)
+
+    // glare: soft light at the pointer
+    > .id-glare
+        opacity: var(--o)
+        background-image: radial-gradient(farthest-corner circle at var(--mx) var(--my), rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.12) 22%, rgba(255, 255, 255, 0) 60%)
         mix-blend-mode: screen
-        background: linear-gradient(115deg, rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, 0.10) 42%, rgba(255, 255, 255, 0.34) 47%, rgba(186, 230, 253, 0.26) 50%, rgba(244, 114, 182, 0.18) 53%, rgba(255, 255, 255, 0.08) 58%, rgba(255, 255, 255, 0) 66%)
-        background-size: 250% 100%
-        background-repeat: no-repeat
-        background-position: 100% 0
 
-    &.is-shining:after
-        animation: id-shine 1.1s cubic-bezier(0.45, 0.05, 0.3, 1)
-
-@keyframes id-shine
-    0%
-        opacity: 1
-        background-position: 100% 0
-    80%
-        opacity: 1
-    100%
-        opacity: 0
-        // -30% (not 0%) carries the band fully off the right edge (~670ms)
-        // while it's still moving; at 0% it crept to a stop on the card from
-        // ~800ms and faded in place, which read as a hang
-        background-position: -30% 0
+.about-side
+    perspective: 900px
 
 @media (prefers-reduced-motion: no-preference)
     .id-card
