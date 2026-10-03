@@ -1,5 +1,5 @@
 ---
-title: "The dread and the promise are both real: Coming to terms with our AI reality"
+title: "The dread and promise are both real: Coming to terms with our AI reality"
 layout: post
 date: 2026-09-30 00:45
 image: /assets/images/no-fate-but-what-we-make.jpeg
