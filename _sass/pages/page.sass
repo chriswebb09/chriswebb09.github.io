@@ -492,84 +492,266 @@
 .vp-dcore
     position: absolute
     transform-style: preserve-3d
+    // resting pose (reduced motion, and while the Move tool slides it):
+    // a 3/4 view, so the fuselage doesn't collapse into a head-on box
+    transform: rotateY(-35deg)
 
-.vp-dbody
+// generic wireframe box shared by the drone and the person. The element
+// sets --w / --h / --d and the six faces (zf zb xl xr yt yb, any subset)
+// place themselves; the box is centered on its own origin so a transform
+// on it positions its center.
+.vp-bx
     position: absolute
-    width: 36px
-    height: 22px
-    margin: -11px 0 0 -18px
+    width: var(--w)
+    height: var(--h)
+    margin: calc(var(--h) * -0.5) 0 0 calc(var(--w) * -0.5)
     transform-style: preserve-3d
 
     > i
         position: absolute
         inset: 0
-        background: rgba(34, 211, 238, 0.09)
-        border: 1px solid rgba(34, 211, 238, 0.85)
-        box-shadow: inset 0 0 16px rgba(34, 211, 238, 0.10)
 
-        &.f-front
-            transform: translateZ(18px)
+        &.zf
+            transform: translateZ(calc(var(--d) * 0.5))
 
-        &.f-back
-            transform: rotateY(180deg) translateZ(18px)
+        &.zb
+            transform: rotateY(180deg) translateZ(calc(var(--d) * 0.5))
 
-        &.f-right
-            transform: rotateY(90deg) translateZ(18px)
+        &.xl,
+        &.xr
+            left: 50%
+            right: auto
+            width: var(--d)
+            margin-left: calc(var(--d) * -0.5)
 
-        &.f-left
-            transform: rotateY(-90deg) translateZ(18px)
+        &.xl
+            transform: rotateY(-90deg) translateZ(calc(var(--w) * 0.5))
 
-        &.f-top
-            height: 36px
+        &.xr
+            transform: rotateY(90deg) translateZ(calc(var(--w) * 0.5))
+
+        &.yt,
+        &.yb
             top: 50%
-            margin-top: -18px
-            transform: rotateX(90deg) translateZ(11px)
+            bottom: auto
+            height: var(--d)
+            margin-top: calc(var(--d) * -0.5)
 
+        &.yt
+            transform: rotateX(90deg) translateZ(calc(var(--h) * 0.5))
+
+        &.yb
+            transform: rotateX(-90deg) translateZ(calc(var(--h) * 0.5))
+
+// quadcopter, nose toward +Z: fuselage (hull + nose + tail boom) with a
+// canopy on top, a camera gimbal slung under the nose and landing skids
+.vp-dcore .vp-bx > i
+    background: rgba(34, 211, 238, 0.07)
+    border: 1px solid rgba(34, 211, 238, 0.8)
+    box-shadow: inset 0 0 10px rgba(34, 211, 238, 0.10)
+
+.vd-hull
+    --w: 26px
+    --h: 10px
+    --d: 44px
+
+    > i.yt
+        background: linear-gradient(to bottom, rgba(34, 211, 238, 0.05), rgba(34, 211, 238, 0.20))
+
+.vd-nose
+    --w: 16px
+    --h: 8px
+    --d: 9px
+    transform: translate3d(0, 0.5px, 26.5px)
+
+    // headlight
+    > i.zf
+        background: rgba(207, 250, 254, 0.55)
+        border-color: rgba(207, 250, 254, 0.95)
+        box-shadow: 0 0 12px rgba(34, 211, 238, 0.9)
+
+.vd-tail
+    --w: 9px
+    --h: 5px
+    --d: 13px
+    transform: translate3d(0, -0.5px, -28.5px)
+
+    // tail light
+    > i.zb
+        background: rgba(236, 72, 153, 0.6)
+        border-color: rgba(244, 114, 182, 0.95)
+        box-shadow: 0 0 10px rgba(236, 72, 153, 0.9)
+
+.vd-canopy
+    --w: 16px
+    --h: 6px
+    --d: 22px
+    transform: translate3d(0, -8px, 4px)
+
+    > i
+        background: rgba(129, 140, 248, 0.20)
+        border-color: rgba(165, 180, 252, 0.9)
+        box-shadow: inset 0 0 8px rgba(129, 140, 248, 0.25)
+
+.vd-gimbal
+    --w: 4px
+    --h: 4px
+    --d: 4px
+    transform: translate3d(0, 7px, 16px)
+
+    > i
+        border-color: rgba(34, 211, 238, 0.55)
+
+.vd-cam
+    --w: 9px
+    --h: 7px
+    --d: 8px
+    transform: translate3d(0, 12.5px, 17px) rotateX(-12deg)
+
+    > i
+        background: rgba(227, 237, 245, 0.10)
+        border-color: rgba(227, 237, 245, 0.8)
+
+    // lens
+    > i.zf:after
+        content: ""
+        position: absolute
+        left: 50%
+        top: 50%
+        width: 5px
+        height: 5px
+        margin: -2.5px
+        border-radius: 999px
+        background: #e3edf5
+        box-shadow: 0 0 6px rgba(34, 211, 238, 0.9)
+
+// landing skids: two struts and a rail per side, splayed outward
+.vp-skid
+    position: absolute
+    left: -13px
+    top: 5px
+    width: 26px
+    height: 11px
+    box-sizing: border-box
+    border: solid rgba(34, 211, 238, 0.65)
+    border-width: 0 1px
+    transform-origin: 50% 0
+
+    &:after
+        content: ""
+        position: absolute
+        left: -7px
+        right: -7px
+        bottom: -1px
+        height: 2px
+        background: rgba(34, 211, 238, 0.85)
+
+    &.sk-l
+        transform: translateX(-8px) rotateZ(18deg) rotateY(90deg)
+
+    &.sk-r
+        transform: translateX(8px) rotateZ(-18deg) rotateY(90deg)
+
+// four arms from the hull corners out to the motors; each is two crossed
+// planes so it reads from any angle
 .vp-arm
     position: absolute
-    width: 124px
-    height: 7px
-    margin: -3.5px 0 0 -62px
-    background: rgba(34, 211, 238, 0.10)
-    border: 1px solid rgba(34, 211, 238, 0.6)
+    width: 0
+    height: 0
+    transform-style: preserve-3d
+
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        left: 0
+        top: -2px
+        width: 42px
+        height: 4px
+        box-sizing: border-box
+        background: rgba(34, 211, 238, 0.10)
+        border: 1px solid rgba(34, 211, 238, 0.6)
+
+    &:after
+        transform: rotateX(90deg)
 
     &.va1
-        transform: rotateX(90deg) rotateZ(45deg)
+        transform: translateY(-1px) rotateY(-45deg) translateX(16px)
 
     &.va2
-        transform: rotateX(90deg) rotateZ(-45deg)
+        transform: translateY(-1px) rotateY(-135deg) translateX(16px)
 
+    &.va3
+        transform: translateY(-1px) rotateY(45deg) translateX(16px)
+
+    &.va4
+        transform: translateY(-1px) rotateY(135deg) translateX(16px)
+
+// rotor: prop-guard ring, a motor can hanging under it, and a blade disc
+// (<u>) whose conic sweep spins into a motion blur
 .vp-rotor
     position: absolute
-    width: 34px
-    height: 34px
-    margin: -17px
+    width: 40px
+    height: 40px
+    margin: -20px
     transform-style: preserve-3d
+
+    &:before
+        content: ""
+        position: absolute
+        inset: 0
+        border: 1px solid rgba(34, 211, 238, 0.5)
+        border-radius: 999px
+        background: radial-gradient(closest-side, transparent 55%, rgba(34, 211, 238, 0.10))
+
+    &:after
+        content: ""
+        position: absolute
+        left: 50%
+        top: 50%
+        width: 10px
+        height: 10px
+        margin: -5px
+        box-sizing: border-box
+        border: 1px solid rgba(207, 250, 254, 0.9)
+        border-radius: 999px
+        background: rgba(34, 211, 238, 0.35)
+        box-shadow: 0 0 8px rgba(34, 211, 238, 0.8)
+        transform: translateZ(-6px)
 
     > u
         position: absolute
-        inset: 0
-        border: 2px dashed rgba(34, 211, 238, 0.9)
+        inset: 2px
         border-radius: 999px
+        background: radial-gradient(circle, #e3edf5 0, #e3edf5 2px, transparent 2.6px), conic-gradient(from 0deg, rgba(34, 211, 238, 0) 0deg, rgba(34, 211, 238, 0.65) 62deg, rgba(34, 211, 238, 0) 64deg, rgba(34, 211, 238, 0) 180deg, rgba(34, 211, 238, 0.65) 242deg, rgba(34, 211, 238, 0) 244deg)
 
+    // front pair (+Z)
     &.vr1
-        transform: translate3d(44px, -4px, 44px) rotateX(90deg)
+        transform: translate3d(44px, -8px, 44px) rotateX(90deg)
 
     &.vr2
-        transform: translate3d(-44px, -4px, 44px) rotateX(90deg)
+        transform: translate3d(-44px, -8px, 44px) rotateX(90deg)
+
+    // rear pair: pink position lights on the motors
+    &.vr3,
+    &.vr4
+        &:after
+            border-color: rgba(251, 207, 232, 0.9)
+            background: rgba(236, 72, 153, 0.45)
+            box-shadow: 0 0 8px rgba(236, 72, 153, 0.9)
 
     &.vr3
-        transform: translate3d(44px, -4px, -44px) rotateX(90deg)
+        transform: translate3d(44px, -8px, -44px) rotateX(90deg)
 
     &.vr4
-        transform: translate3d(-44px, -4px, -44px) rotateX(90deg)
+        transform: translate3d(-44px, -8px, -44px) rotateX(90deg)
 
 // dashed selection bounds around the entity
 .vp-bounds
     position: absolute
     width: 168px
-    height: 96px
-    margin: -48px 0 0 -84px
+    height: 46px
+    margin: -25px 0 0 -84px
     transform-style: preserve-3d
 
     > i
@@ -766,7 +948,10 @@ $gz-iso: rotateX(-25.264deg) rotateY(-45deg)
     to
         transform: scale3d(1.18, 1.18, 1.18)
 
-// low-poly person entity (violet hologram), standing on the floor
+// low-poly person entity (violet hologram) standing on the floor, turned
+// toward the drone and holding a phone up at it. Limbs hang from zero-size
+// joints (.vp-jt) so each segment pivots where a real one would; the origin
+// of .vp-pcore is the ground between the feet, +Z is the way they face.
 .vp-person
     position: absolute
     left: 84%
@@ -779,102 +964,164 @@ $gz-iso: rotateX(-25.264deg) rotateY(-45deg)
 .vp-pcore
     position: absolute
     transform-style: preserve-3d
-    transform: rotateY(14deg)
+    transform: rotateY(-130deg)
 
-.vp-pp
+.vp-jt
     position: absolute
+    width: 0
+    height: 0
     transform-style: preserve-3d
 
+.vp-pcore .vp-bx > i
+    background: rgba(167, 139, 250, 0.10)
+    border: 1px solid rgba(167, 139, 250, 0.8)
+    box-shadow: inset 0 0 8px rgba(167, 139, 250, 0.10)
+
+// torso stack, measured up from the hip line
+.pj-torso
+    transform: translateY(-37px)
+
+.pp-pelvis
+    --w: 13px
+    --h: 7px
+    --d: 7.5px
+    transform: translateY(-2.5px)
+
+.pp-waist
+    --w: 11px
+    --h: 8px
+    --d: 6.5px
+    transform: translateY(-10px)
+
+.pp-chest
+    --w: 17px
+    --h: 11px
+    --d: 8.5px
+    transform: translateY(-19.5px)
+
     > i
-        position: absolute
-        inset: 0
-        background: rgba(167, 139, 250, 0.09)
-        border: 1px solid rgba(167, 139, 250, 0.8)
-        box-shadow: inset 0 0 10px rgba(167, 139, 250, 0.10)
+        background: rgba(167, 139, 250, 0.16)
 
-    &.pp-head
-        width: 12px
-        height: 12px
-        left: -6px
-        top: -64px
+.pp-neck
+    --w: 4px
+    --h: 3.5px
+    --d: 4px
+    transform: translateY(-26.5px)
 
-        > i.pf
-            transform: translateZ(6px)
+// head tipped back to look up at the drone
+.pj-head
+    transform: translateY(-28px) rotateX(14deg)
 
-        > i.pb
-            transform: rotateY(180deg) translateZ(6px)
+.pp-head
+    --w: 7.5px
+    --h: 9.5px
+    --d: 8.5px
+    transform: translateY(-5px)
 
-        > i.pl
-            transform: rotateY(-90deg) translateZ(6px)
+    > i
+        background: rgba(167, 139, 250, 0.16)
 
-        > i.pr
-            transform: rotateY(90deg) translateZ(6px)
+// arms: shoulder joint > upper arm > elbow joint > forearm + hand
+.pj-shl
+    transform: translate3d(-10.5px, -23px, 0) rotateZ(7deg) rotateX(-4deg)
 
-    &.pp-torso
-        width: 20px
-        height: 24px
-        left: -10px
-        top: -52px
+    > .pj-el
+        transform: translateY(12px) rotateX(12deg)
 
-        > i.pf
-            transform: translateZ(5px)
+// the near arm is raised, forearm up, holding the phone
+.pj-shr
+    transform: translate3d(10.5px, -23px, 0) rotateZ(-5deg) rotateX(55deg)
 
-        > i.pb
-            transform: rotateY(180deg) translateZ(5px)
+    > .pj-el
+        transform: translateY(12px) rotateX(80deg)
 
-        > i.pl
-            transform: rotateY(-90deg) translateZ(10px)
+.pp-uarm
+    --w: 4px
+    --h: 12px
+    --d: 4.5px
+    transform: translateY(6px)
 
-        > i.pr
-            transform: rotateY(90deg) translateZ(10px)
+.pp-farm
+    --w: 3.4px
+    --h: 11px
+    --d: 3.8px
+    transform: translateY(5.5px)
 
-    &.pp-arml,
-    &.pp-armr
-        width: 5px
-        height: 20px
-        top: -50px
+.pp-hand
+    --w: 3px
+    --h: 4px
+    --d: 4px
+    transform: translateY(13px)
 
-        > i.pf
-            transform: translateZ(2.5px)
+// phone: stood back upright against the arm's 135deg swing, then leaned
+// back to aim at the drone; the lit screen (zb) faces the user
+.pp-phone
+    --w: 7px
+    --h: 12.5px
+    --d: 1.2px
+    transform: translate3d(0, 14px, 0.5px) rotateX(-120deg) translateY(-4px)
 
-        > i.pb
-            transform: rotateY(180deg) translateZ(2.5px)
+    > i
+        background: rgba(34, 211, 238, 0.14)
+        border-color: rgba(207, 250, 254, 0.9)
 
-        > i.pl
-            transform: rotateY(-90deg) translateZ(2.5px)
+    > i.zb
+        background: linear-gradient(to bottom, rgba(34, 211, 238, 0.75), rgba(99, 102, 241, 0.55))
+        box-shadow: 0 0 10px rgba(34, 211, 238, 0.85)
 
-        > i.pr
-            transform: rotateY(90deg) translateZ(2.5px)
+// legs: hip joint > thigh > knee joint > shin + foot, in a relaxed stance
+.pj-hipl
+    transform: translate3d(-3.6px, -37px, 0) rotateZ(5deg) rotateX(11deg)
 
-    &.pp-arml
-        left: -16px
+    > .pj-kn
+        transform: translateY(17px) rotateX(-10deg)
 
-    &.pp-armr
-        left: 11px
+.pj-hipr
+    transform: translate3d(3.6px, -37px, 0) rotateZ(-5deg) rotateX(-8deg)
 
-    &.pp-legl,
-    &.pp-legr
-        width: 7px
-        height: 26px
-        top: -28px
+    > .pj-kn
+        transform: translateY(17px) rotateX(-3deg)
 
-        > i.pf
-            transform: translateZ(3.5px)
+.pp-thigh
+    --w: 5.6px
+    --h: 17px
+    --d: 6px
+    transform: translateY(8.5px)
 
-        > i.pb
-            transform: rotateY(180deg) translateZ(3.5px)
+.pp-shin
+    --w: 4.8px
+    --h: 17px
+    --d: 5.2px
+    transform: translateY(8.5px)
 
-        > i.pl
-            transform: rotateY(-90deg) translateZ(3.5px)
+.pp-foot
+    --w: 5px
+    --h: 3px
+    --d: 10px
+    transform: translate3d(0, 18.5px, 2.5px)
 
-        > i.pr
-            transform: rotateY(90deg) translateZ(3.5px)
+// body-tracking ring on the floor under the person (same tilt as .vp-floor)
+.vp-pring
+    position: absolute
+    width: 46px
+    height: 46px
+    margin: -23px
+    border: 1px dashed rgba(167, 139, 250, 0.75)
+    border-radius: 999px
+    background: radial-gradient(closest-side, rgba(167, 139, 250, 0.30), transparent 78%)
+    transform: rotateX(76deg)
 
-    &.pp-legl
-        left: -9px
-
-    &.pp-legr
-        left: 2px
+// scan ring that sweeps up the body; only shown while it animates
+.vp-pscan
+    position: absolute
+    width: 30px
+    height: 30px
+    margin: -15px
+    border: 1px solid rgba(221, 214, 254, 0.9)
+    border-radius: 999px
+    box-shadow: 0 0 8px rgba(167, 139, 250, 0.9), inset 0 0 8px rgba(167, 139, 250, 0.5)
+    opacity: 0
+    transform: translateY(-38px) rotateX(90deg)
 
 .vp-dust
     position: absolute
@@ -1068,7 +1315,15 @@ $gz-iso: rotateX(-25.264deg) rotateY(-45deg)
         animation: drone-fly 18s linear infinite
 
     .vp-rotor > u
-        animation: rotor-spin 0.55s linear infinite
+        animation: rotor-spin 0.3s linear infinite
+
+    // neighbouring props counter-rotate, like a real quad
+    .vp-rotor.vr2 > u,
+    .vp-rotor.vr3 > u
+        animation-direction: reverse
+
+    .vd-tail > i.zb
+        animation: light-blink 1.6s steps(1, end) infinite
 
     .vp-floor > .vp-waypoint
         animation: waypoint-pulse 2.2s ease-out infinite
@@ -1100,6 +1355,18 @@ $gz-iso: rotateX(-25.264deg) rotateY(-45deg)
     .vp-pcore
         animation: person-sway 7s ease-in-out infinite alternate
 
+    .pj-head
+        animation: person-look 7s ease-in-out infinite alternate
+
+    .pj-shr
+        animation: person-aim 7s ease-in-out infinite alternate
+
+    .vp-pring
+        animation: ring-turn 16s linear infinite
+
+    .vp-pscan
+        animation: person-scan 5.5s ease-in-out infinite
+
     .hud-anchor
         animation: hud-float 6s ease-in-out infinite alternate
 
@@ -1109,17 +1376,25 @@ $gz-iso: rotateX(-25.264deg) rotateY(-45deg)
         &.vp-user
             animation-delay: 3s
 
+// slow circling hover: the constant pitch/roll after the yaw banks the
+// drone into its turn
 @keyframes drone-fly
     0%
-        transform: translateY(0) rotateY(0deg)
+        transform: translateY(0) rotateY(0deg) rotateX(5deg) rotateZ(-5deg)
     25%
-        transform: translateY(-9px) rotateY(90deg)
+        transform: translateY(-9px) rotateY(90deg) rotateX(5deg) rotateZ(-5deg)
     50%
-        transform: translateY(0) rotateY(180deg)
+        transform: translateY(0) rotateY(180deg) rotateX(5deg) rotateZ(-5deg)
     75%
-        transform: translateY(-9px) rotateY(270deg)
+        transform: translateY(-9px) rotateY(270deg) rotateX(5deg) rotateZ(-5deg)
     100%
-        transform: translateY(0) rotateY(360deg)
+        transform: translateY(0) rotateY(360deg) rotateX(5deg) rotateZ(-5deg)
+
+@keyframes light-blink
+    0%, 100%
+        opacity: 1
+    55%
+        opacity: 0.25
 
 @keyframes rotor-spin
     from
@@ -1147,11 +1422,41 @@ $gz-iso: rotateX(-25.264deg) rotateY(-45deg)
     to
         transform: scale(1.1)
 
+// the person turns a little as they follow the drone, the head and the
+// phone arm easing up and down with it
 @keyframes person-sway
     from
-        transform: rotateY(22deg)
+        transform: rotateY(-118deg)
     to
-        transform: rotateY(-4deg)
+        transform: rotateY(-142deg)
+
+@keyframes person-look
+    from
+        transform: translateY(-28px) rotateX(9deg)
+    to
+        transform: translateY(-28px) rotateX(19deg)
+
+@keyframes person-aim
+    from
+        transform: translate3d(10.5px, -23px, 0) rotateZ(-5deg) rotateX(50deg)
+    to
+        transform: translate3d(10.5px, -23px, 0) rotateZ(-5deg) rotateX(60deg)
+
+@keyframes ring-turn
+    from
+        transform: rotateX(76deg) rotateZ(0deg)
+    to
+        transform: rotateX(76deg) rotateZ(360deg)
+
+@keyframes person-scan
+    0%
+        opacity: 0
+        transform: translateY(-1px) rotateX(90deg)
+    10%, 50%
+        opacity: 0.9
+    62%, 100%
+        opacity: 0
+        transform: translateY(-68px) rotateX(90deg)
 
 @keyframes dust-drift
     0%, 100%

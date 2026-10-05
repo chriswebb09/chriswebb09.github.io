@@ -32,12 +32,14 @@ title: Projects
                         </div>
                         <div class="vp-drone">
                             <div class="vp-dcore">
-                                <div class="vp-dbody">
-                                    <i class="f-front"></i><i class="f-back"></i>
-                                    <i class="f-left"></i><i class="f-right"></i>
-                                    <i class="f-top"></i>
-                                </div>
-                                <i class="vp-arm va1"></i><i class="vp-arm va2"></i>
+                                <div class="vp-bx vd-hull"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i><i class="yt"></i><i class="yb"></i></div>
+                                <div class="vp-bx vd-nose"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i><i class="yt"></i><i class="yb"></i></div>
+                                <div class="vp-bx vd-tail"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i><i class="yt"></i><i class="yb"></i></div>
+                                <div class="vp-bx vd-canopy"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i><i class="yt"></i></div>
+                                <div class="vp-bx vd-gimbal"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                <div class="vp-bx vd-cam"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i><i class="yb"></i></div>
+                                <i class="vp-skid sk-l"></i><i class="vp-skid sk-r"></i>
+                                <i class="vp-arm va1"></i><i class="vp-arm va2"></i><i class="vp-arm va3"></i><i class="vp-arm va4"></i>
                                 <b class="vp-rotor vr1"><u></u></b>
                                 <b class="vp-rotor vr2"><u></u></b>
                                 <b class="vp-rotor vr3"><u></u></b>
@@ -51,14 +53,46 @@ title: Projects
                             <div class="vp-gz vp-gz-rot"><i class="rx"></i><i class="ry"></i><i class="rz"></i></div>
                         </div>
                         <div class="vp-person">
+                            <i class="vp-pring"></i>
                             <div class="vp-pcore">
-                                <div class="vp-pp pp-head"><i class="pf"></i><i class="pb"></i><i class="pl"></i><i class="pr"></i></div>
-                                <div class="vp-pp pp-torso"><i class="pf"></i><i class="pb"></i><i class="pl"></i><i class="pr"></i></div>
-                                <div class="vp-pp pp-arml"><i class="pf"></i><i class="pb"></i><i class="pl"></i><i class="pr"></i></div>
-                                <div class="vp-pp pp-armr"><i class="pf"></i><i class="pb"></i><i class="pl"></i><i class="pr"></i></div>
-                                <div class="vp-pp pp-legl"><i class="pf"></i><i class="pb"></i><i class="pl"></i><i class="pr"></i></div>
-                                <div class="vp-pp pp-legr"><i class="pf"></i><i class="pb"></i><i class="pl"></i><i class="pr"></i></div>
+                                <div class="vp-jt pj-torso">
+                                    <div class="vp-bx pp-pelvis"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                    <div class="vp-bx pp-waist"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                    <div class="vp-bx pp-chest"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i><i class="yt"></i></div>
+                                    <div class="vp-bx pp-neck"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                    <div class="vp-jt pj-head"><div class="vp-bx pp-head"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i><i class="yt"></i></div></div>
+                                    <div class="vp-jt pj-sh pj-shl">
+                                        <div class="vp-bx pp-uarm"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                        <div class="vp-jt pj-el">
+                                            <div class="vp-bx pp-farm"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                            <div class="vp-bx pp-hand"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="vp-jt pj-sh pj-shr">
+                                        <div class="vp-bx pp-uarm"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                        <div class="vp-jt pj-el">
+                                            <div class="vp-bx pp-farm"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                            <div class="vp-bx pp-hand"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                            <div class="vp-bx pp-phone"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vp-jt pj-hip pj-hipl">
+                                    <div class="vp-bx pp-thigh"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                    <div class="vp-jt pj-kn">
+                                        <div class="vp-bx pp-shin"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                        <div class="vp-bx pp-foot"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i><i class="yt"></i></div>
+                                    </div>
+                                </div>
+                                <div class="vp-jt pj-hip pj-hipr">
+                                    <div class="vp-bx pp-thigh"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                    <div class="vp-jt pj-kn">
+                                        <div class="vp-bx pp-shin"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i></div>
+                                        <div class="vp-bx pp-foot"><i class="zf"></i><i class="zb"></i><i class="xl"></i><i class="xr"></i><i class="yt"></i></div>
+                                    </div>
+                                </div>
                             </div>
+                            <i class="vp-pscan"></i>
                         </div>
                     </div>
                 </div>
