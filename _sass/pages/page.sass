@@ -92,6 +92,9 @@
     justify-content: flex-end
     animation: fade-in-down 0.6s 0.2s both
 
+    @media #{$below}
+        justify-content: center
+
     &:before
         content: ""
         position: absolute
@@ -317,7 +320,16 @@
             margin: 0 6px
             color: $epsilon
 
-    @media #{$below}
+    // tablets: a fixed 300px viewport column (the phi split would leave
+    // it ~250px, too narrow for its title bar and HUD)
+    @media only screen and (min-width: 760px) and (max-width: 960px)
+        grid-template-columns: 1fr 300px
+        gap: 40px
+
+        .hero-stats
+            letter-spacing: 0.08em
+
+    @media only screen and (max-width: 759px)
         display: block
 
         > .projects-side
@@ -1026,6 +1038,30 @@ $gz-iso: rotateX(-25.264deg) rotateY(-45deg)
 
     .hud-anchor
         font-size: 0.95rem
+
+// tablets and narrow desktops: the viewport sits in a ~300-430px
+// column, where the floating labels collide and the status line wraps
+@media only screen and (min-width: 760px) and (max-width: 1240px)
+    .vp-way,
+    .vp-user
+        display: none
+
+    .hud-row
+        left: 14px
+        right: 14px
+        letter-spacing: 0.06em
+        white-space: nowrap
+
+// at the narrow end of that range, also keep the window title clear of
+// the traffic lights and tighten the status readout
+@media only screen and (min-width: 760px) and (max-width: 1100px)
+    .vp-window .terminal-title
+        box-sizing: border-box
+        padding: 0 12px 0 68px
+
+    .hud-row
+        font-size: 0.9rem
+        letter-spacing: 0.03em
 
 @media (prefers-reduced-motion: no-preference)
     .vp-dcore

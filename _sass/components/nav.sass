@@ -28,6 +28,12 @@
     @media #{$mobile}
         height: 58px
 
+    // same column as .wrapper-large on tablets, so the brand and the
+    // resume pill line up with the page content below them
+    @media #{$tablet}
+        width: 88%
+        max-width: 900px
+
 .topbar .brand
     display: inline-flex
     align-items: baseline

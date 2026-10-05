@@ -51,6 +51,11 @@
     @media #{$below}
         display: block
 
+    // tablets: a narrower media column, so the text beside it keeps a
+    // readable measure
+    @media only screen and (min-width: 781px) and (max-width: 1050px)
+        grid-template-columns: 42% 1fr
+
 .carousel-media
     position: relative
     display: flex
@@ -106,6 +111,14 @@
 
     @media #{$mobile}
         padding: 20px
+
+    // two-column slides on tablets and narrow desktops: the text column
+    // reaches the card edge there, so keep it clear of the next button
+    @media only screen and (min-width: 781px) and (max-width: 1240px)
+        padding-right: 72px
+
+    @media only screen and (min-width: 781px) and (max-width: 1050px)
+        padding-left: 32px
 
 .carousel-title
     margin: 0 0 10px

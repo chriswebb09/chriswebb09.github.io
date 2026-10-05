@@ -1,0 +1,188 @@
+/* Phone-layout fixes, imported last so they win over the component partials.
+   Breakpoints mirror $mobile (max-width: 480px); 360px covers small phones
+   such as the iPhone SE. Colors stay in the component partials: nothing in
+   here depends on the light/dark variable sets. */
+
+@media only screen and (max-width: 480px) {
+
+  /* --- top bar: same gutter as the page column, links never split --- */
+
+  .topbar-inner {
+    width: 88%;
+  }
+
+  .topbar .brand {
+    padding: 12px 10px 12px 0;
+  }
+
+  .topbar-links {
+    flex-shrink: 0;
+    gap: 2px;
+  }
+
+  .topbar-links a {
+    padding: 13px 7px;
+    white-space: nowrap;
+  }
+
+  .topbar-links a.resume {
+    padding: 9px 14px;
+  }
+
+  /* taller hit area for the pill without changing how it looks */
+  .topbar-links a.resume:before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 0;
+    bottom: -6px;
+    left: 0;
+  }
+
+  /* --- window chrome: keep the title clear of the traffic lights --- */
+
+  .terminal-bar > .terminal-title {
+    box-sizing: border-box;
+    padding: 0 12px 0 68px;
+    overflow: hidden;
+  }
+
+  /* --- home: date drops under the post title instead of squeezing it --- */
+
+  .recent-posts > li > a {
+    flex-wrap: wrap;
+    gap: 4px 16px;
+  }
+
+  .recent-posts > li > a > time {
+    flex-basis: 100%;
+    padding-left: 44px;
+  }
+
+  .section-heading {
+    gap: 16px;
+  }
+
+  /* --- projects hero --- */
+
+  .projects-hero .hero-stats {
+    letter-spacing: 0.06em;
+  }
+
+  .projects-hero .hero-stats > i {
+    margin: 0 3px;
+  }
+
+  .hud-row {
+    left: 14px;
+    right: 14px;
+    white-space: nowrap;
+  }
+
+  /* --- code: real code scrolls sideways, prose-style blocks still wrap --- */
+
+  pre {
+    padding: 16px;
+  }
+
+  figure.highlight pre,
+  .highlighter-rouge:not(.language-plaintext) pre {
+    white-space: pre;
+    word-break: normal;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .post-content {
+    overflow-wrap: break-word;
+  }
+
+  /* --- touch targets: grow the hit area, keep the layout --- */
+
+  .section-heading > .more {
+    padding: 14px 0 14px 14px;
+    margin: -14px 0;
+  }
+
+  .footer-bottom > .footer-links a {
+    display: inline-block;
+    padding: 14px 4px;
+    margin: -14px -4px;
+  }
+
+  .post-hero > .post-back {
+    padding: 14px 14px 14px 0;
+    margin: -14px 0 18px;
+  }
+
+  .post-hero > .post-tags {
+    gap: 10px;
+  }
+
+  .post-hero > .post-tags > .item {
+    padding: 11px 14px;
+  }
+
+  .tag-chip {
+    padding: 12px 14px;
+  }
+
+  .author-card .author-links a {
+    display: inline-block;
+    padding: 13px 0;
+    margin: -13px 0;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-dots > button,
+  .vp-tools > button {
+    position: relative;
+  }
+
+  .carousel-dots > button:after {
+    content: "";
+    position: absolute;
+    top: -16px;
+    right: -4px;
+    bottom: -16px;
+    left: -4px;
+  }
+
+  .vp-tools > button:after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: -8px;
+    bottom: -3px;
+    left: -8px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+
+  .topbar-links a {
+    padding: 13px 5px;
+  }
+
+  .topbar-links a.resume {
+    margin-left: 4px;
+    padding: 9px 12px;
+  }
+
+  .topbar-links a.resume > .dl {
+    display: none;
+  }
+
+  .projects-hero .hero-stats {
+    font-size: 1.1rem;
+  }
+
+  /* one status readout is all the viewport has room for */
+  .hud-row.hud-bottom > span:last-child {
+    display: none;
+  }
+}
