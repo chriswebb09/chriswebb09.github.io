@@ -1,7 +1,7 @@
 ---
 title: "Making peace and coming to terms with our AI reality"
 layout: post
-date: 2026-09-30 00:45
+date: 2026-10-05 00:45
 image: /assets/images/no-fate-but-what-we-make.jpeg
 headerImage: false
 tag:
