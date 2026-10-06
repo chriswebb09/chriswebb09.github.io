@@ -12,7 +12,7 @@ author: chriswebb
 description: New blog attempt
 ---
 
-It's been almost five years since I wrote anything here. There wasn't any special reason, just got busy with work, then school tookover my life 
+It's been almost five years since I wrote anything here. There wasn't any special reason, just got busy with work, then school took over my life 
 
 Coming back is a little strange. Some of the old posts read like they were written by someone else who was more confident than I remember feeling. I've thought about deleting them. I'm leaving them up.
 
