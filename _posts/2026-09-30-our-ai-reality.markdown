@@ -9,7 +9,7 @@ tag:
 - essay
 category: blog
 author: chriswebb
-description: "The dread and the promise of AI are both rea"
+description: "The dread and the promise of AI are both real"
 ---
 
 ![No fate](/assets/images/no-fate-but-what-we-make.jpeg)
