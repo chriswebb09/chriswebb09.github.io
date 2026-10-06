@@ -1,5 +1,5 @@
 ---
-title: "The dread and promise are both real: Coming to terms with our AI reality"
+title: "Making peace and coming to terms with our AI reality"
 layout: post
 date: 2026-10-05 00:45
 image: /assets/images/no-fate-but-what-we-make.jpeg
@@ -9,7 +9,7 @@ tag:
 - essay
 category: blog
 author: chriswebb
-description: "The technology is inevitable. The arrangement isn't."
+description: "The dread and the promise of AI are both rea"
 ---
 
 ![No fate](/assets/images/no-fate-but-what-we-make.jpeg)
